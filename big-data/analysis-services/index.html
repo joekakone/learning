@@ -26,7 +26,7 @@
     
     
       
-        <title>Création de cubes OLAP avec Analysis Services - Algo Jungle</title>
+        <title>Création de cubes avec Analysis Services - Algo Jungle</title>
       
     
     
@@ -83,7 +83,7 @@
     
     
     
-<meta property="og:title" content="Création de cubes OLAP avec Analysis Services">
+<meta property="og:title" content="Création de cubes avec Analysis Services">
 
 <meta property="og:description" content="Algo Junle - Learn Python and Data for free">
 
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#la-granularite" class="md-skip">
+        <a href="#olap-vs-oltp" class="md-skip">
           Aller au contenu
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Création de cubes OLAP avec Analysis Services
+              Création de cubes avec Analysis Services
             
           </span>
         </div>
@@ -16035,6 +16035,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#olap-vs-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      OLAP vs OLTP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-learning-yann-lecun-a-lusi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep learning - Yann LeCun, à l'USI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#la-granularite" class="md-nav__link">
     <span class="md-ellipsis">
       La granularité
@@ -16044,9 +16062,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#analysis-services" class="md-nav__link">
+  <a href="#sql-server-analysis-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Analysis Services
+      SQL Server Analysis Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-analysis-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Analysis Services
     </span>
   </a>
   
@@ -16093,7 +16120,7 @@
 	as the main headline.
 	-->
 	
-		<h1 style="margin-bottom: 0px; text-align: center;">Création de cubes OLAP avec Analysis Services</h1>
+		<h1 style="margin-bottom: 0px; text-align: center;">Création de cubes avec Analysis Services</h1>
 	
 
 	
@@ -16113,16 +16140,34 @@
 	</p>
 	
 
-	<p><img alt="" src="https://www.data-transitionnumerique.com/wp-content/uploads/2020/06/DICING-OLAP-1024x427.png" /></p>
+	<p>Afin de bien planter le décor, je vous propose de partir en immersion avec ces deux vidéos de Yann LeCun, le père des réseaux de neuronnes convolutionnels. Il est considéré comme l'un des pères de l'intelligence artificielle.</p>
+<h2 id="olap-vs-oltp">OLAP vs OLTP<a class="headerlink" href="#olap-vs-oltp" title="Permanent link">#</a></h2>
+<p>OLAP (for online analytical processing) is software for performing multidimensional analysis at high speeds on large volumes of data from a data warehouse, data mart, or some other unified, centralized data store. OLTP, or online transactional processing, enables the real-time execution of large numbers of database transactions by large numbers of people, typically over the internet. Watch master inventor Martin Keen explain and clarify the differences in a versus format.</p>
+<iframe width="1200" height="400" src="https://www.youtube.com/embed/iw-5kFzIdgY" title="OLAP vs OLTP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="deep-learning-yann-lecun-a-lusi">Deep learning - Yann LeCun, à l'USI<a class="headerlink" href="#deep-learning-yann-lecun-a-lusi" title="Permanent link">#</a></h2>
+<p>Professeur à l’Université de New York, Yann LeCun est aujourd’hui reconnu comme étant le spécialiste mondial de l’intelligence artificielle et a tout récemment rejoint Facebook pour travailler sur le nouveau programme FAIR (Facebook Artificial Intelligence Research) dont un des bureaux se trouve à Paris. Cette session vous initiera à ce qui sera au cœur de l'intelligence artificielle de demain et de la R&amp;D de Facebook.</p>
+<iframe width="1200" height="400" src="https://www.youtube.com/embed/RgUcQceqC_Y" title="Enseigner les algorithmes en mode « débranché » pour mieux les comprendre - Gérard Berry" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>La problématique des données volumineuses est un sujet ancien, </p>
+<p><img alt="" src="https://www.data-transitionnumerique.com/wp-content/uploads/2020/06/DICING-OLAP-1024x427.png" /></p>
 <p>Le directeur souhaite connaitre le chiffre d'affaiire par mois, par région et par catégore de produit. Il peut également demander le chiffre d'affaire par jour/heure, par ville, par produit et par client.</p>
+<p><img alt="" src="https://learn.microsoft.com/fr-fr/analysis-services/azure-analysis-services/media/analysis-services-overview/aas-overview-overall.png?view=asallproducts-allversions" /></p>
 <h2 id="la-granularite">La granularité<a class="headerlink" href="#la-granularite" title="Permanent link">#</a></h2>
 <p>Afin de mieux comprendre les données, il est souvent nécessaire d'aller au plus petit niveau de détail des données, la granularité. La granularité désigne le niveau de détails des données. Par exemple, </p>
 <p>Année &gt; Mois &gt; Date &gt; Continent &gt; Région &gt; Pays &gt; Région &gt; Département &gt; Ville &gt; Boutique &gt; Caissier &gt; Client</p>
 <p>Dans le cadre du reporting il n'est pas nécessaire d'avoir autant de détails, les données macros suffisent largement pour tirer l'information.</p>
 <p>Cela a un prix, l'espace de stockage est plus grand. En effet, plus le niveau de détails est grand, plus grand est la cardinalité.</p>
 <p>De manière générale, les entreprises ne gardent les données détaillés que sur une courte période. Les données historiques sont agrégées puis supprimer afin de libérer de l'espace de stockage.</p>
-<h2 id="analysis-services">Analysis Services<a class="headerlink" href="#analysis-services" title="Permanent link">#</a></h2>
 <p>Analysis Services est la solution de Microsoft pour créer des structures de données multidimensionnelles. C'est de loin l'outil le plus utlisé.</p>
+<h2 id="sql-server-analysis-services">SQL Server Analysis Services<a class="headerlink" href="#sql-server-analysis-services" title="Permanent link">#</a></h2>
+<p>Analysis Services est un moteur de données analytiques (VertiPaq) utilisé dans le support décisionnel et l’analytique métier.</p>
+<p>Pour en savoir plus, lisez <a href="https://learn.microsoft.com/fr-fr/analysis-services/analysis-services-overview?view=asallproducts-allversions">Qu’est-ce que Analysis Services ?</a></p>
+<h2 id="azure-analysis-services">Azure Analysis Services<a class="headerlink" href="#azure-analysis-services" title="Permanent link">#</a></h2>
+<p>Azure Analysis Services est une plateforme entièrement gérée en tant que service (PaaS) qui fournit des modèles de données de qualité professionnelle dans le cloud.</p>
+<iframe width="1200" height="400" src="https://www.youtube.com/embed/m1jnG1zIvTo" title="An introduction to Azure Analysis Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>Pour en savoir plus, lisez <a href="https://learn.microsoft.com/fr-fr/analysis-services/azure-analysis-services/analysis-services-overview?view=asallproducts-allversions">Présentation d’Azure Analysis Services</a></p>
 <h2 id="flux-de-travail">Flux de travail<a class="headerlink" href="#flux-de-travail" title="Permanent link">#</a></h2>
 <p>La mise en place d'un cube mutlidimensionnel peut être résumée en trois étapes</p>
 <ol>
