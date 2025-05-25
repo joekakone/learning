@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+        <meta name="description" content="Dans le monde l'informatique décisionnelle, l'analyse multidimensionnelle, Analysis Services est la solution de Microsoft pour créer des structures de données multi-dimensionnelle. C'est de loin l'outil le plus utlisé. ">
       
       
         <meta name="author" content="Joseph Konka">
@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://algojungle.github.io/big-data/analysis-services/creer-un-cube-multi-dimensionnel/">
       
       
-        <link rel="prev" href="../preparer-les-donnees/">
+        <link rel="prev" href="../creer-un-cube-tabulaire/">
       
       
         <link rel="next" href="../actualiser-un-cube/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Créer un cube multi-dimensionnel - Algo Jungle</title>
+        <title>Créer un cube multidimensionnel - Algo Jungle</title>
       
     
     
@@ -90,7 +90,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="big-data/analysis-services/creer-un-cube-multi-dimensionnel/">
 
-<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-multidimensional-cube.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creer-un-cube-multidimensionnel" class="md-skip">
+        <a href="#creer-un-projet-multidimensionnel" class="md-skip">
           Aller au contenu
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Créer un cube multi-dimensionnel
+              Créer un cube multidimensionnel
             
           </span>
         </div>
@@ -9797,7 +9797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creer-un-cube-tabulaire.md" class="md-nav__link">
+      <a href="../creer-un-cube-tabulaire/" class="md-nav__link">
         
   
   
@@ -9825,8 +9825,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -9859,8 +9857,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -16132,8 +16128,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -16216,13 +16210,38 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+  <!-- Content -->
 
+	<!-- Edit button -->
+	
 
+	<!--
+	Hack: check whether the content contains a h1 headline. If it
+	doesn't, the page title (or respectively site name) is used
+	as the main headline.
+	-->
+	
+		<h1 style="margin-bottom: 0px; text-align: center;">Créer un cube multidimensionnel</h1>
+	
 
-<h1 id="creer-un-cube-multidimensionnel">Créer un cube multidimensionnel<a class="headerlink" href="#creer-un-cube-multidimensionnel" title="Permanent link">#</a></h1>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-multidimensional-cube.png" /></p>
-<p>Pour notre premier cube de données, nous allons construire un cube qui permet d'analyser les données des ventes suivant plusieurs axes <code>Date</code>, <code>Client</code>, <code>Produit</code> et <code>Géographie</code>.</p>
+	
+
+	<!-- Tags -->
+	
+
+	<!-- description -->
+	
+	<p  style="text-align: justify;">Dans le monde l'informatique décisionnelle, l'analyse multidimensionnelle, Analysis Services est la solution de Microsoft pour créer des structures de données multi-dimensionnelle. C'est de loin l'outil le plus utlisé. </p>
+	
+
+	<!-- Cover Image -->
+	
+	<p>
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-multidimensional-cube.png">
+	</p>
+	
+
+	<p>Pour notre premier cube de données, nous allons construire un cube qui permet d'analyser les données des ventes suivant plusieurs axes <code>Date</code>, <code>Client</code>, <code>Produit</code> et <code>Géographie</code>.</p>
 <h2 id="creer-un-projet-multidimensionnel">Créer un projet multidimensionnel<a class="headerlink" href="#creer-un-projet-multidimensionnel" title="Permanent link">#</a></h2>
 <p>Dans le menu Démarrer, recherchez Visual Studio et lancez. Ensuite sélectionnez <strong>Créer un projet</strong><br>
 <img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/cube/create-project-01.png" /></p>
@@ -16357,20 +16376,39 @@ Dans l'onglet Explorateur de solutions, faites clique-droit sur <strong>Cubes</s
 <hr />
 <p><em>Bravo ! Vous venez de créer votre premier cube mutidimensionnel avec Analysis Services. Dans la prochaine section, nous verrons comment manipuler les données du cube dans Excel.</em></p>
 
+	<!-- Last update of source file -->
+	
+		
+	
+
+	<!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="joseph-koami-konka" data-version="v1" style="width: 100%;"></div> -->
+
+	<h2>Partagez sur les réseaux sociaux</h2>
+	<!-- ShareThis BEGIN -->
+	<div class="sharethis-inline-share-buttons"></div>
+	<!-- ShareThis END -->
+
+	<!-- Giscus - generated by https://giscus.app -->
+	<h2 id="__comments">Commentaires</h2>
+	<script src="https://giscus.app/client.js"
+		data-repo="joekakone/Departement-De-Maths"
+		data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+		data-category="General"
+		data-category-id="DIC_kwDOFBN7QM4CORj9"
+		data-mapping="pathname"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="bottom"
+		data-theme="dark"
+		data-lang="fr"
+		crossorigin="anonymous"
+		async>
+	</script>
+
+	<!-- LinkedIn -->
+	<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> -->
 
 
-
-
-
-
-
-
-  
-
-
-
-
-                
               </article>
             </div>
           
@@ -16395,7 +16433,7 @@ Dans l'onglet Explorateur de solutions, faites clique-droit sur <strong>Cubes</s
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../preparer-les-donnees/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Préparer les données">
+          <a href="../creer-un-cube-tabulaire/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Créer un cube tabulaire">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -16405,7 +16443,7 @@ Dans l'onglet Explorateur de solutions, faites clique-droit sur <strong>Cubes</s
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Préparer les données
+                Créer un cube tabulaire
               </div>
             </div>
           </a>

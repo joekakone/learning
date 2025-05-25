@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+        <meta name="description" content="Dans le monde l'informatique décisionnelle, l'analyse multidimensionnelle, Analysis Services est la solution de Microsoft pour créer des structures de données multi-dimensionnelle. C'est de loin l'outil le plus utlisé. ">
       
       
         <meta name="author" content="Joseph Konka">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Actualiser un cube - Algo Jungle</title>
+        <title>Actualiser un cube Analysis Services - Algo Jungle</title>
       
     
     
@@ -90,7 +90,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="big-data/analysis-services/actualiser-un-cube/">
 
-<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/analysis-services.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -114,6 +114,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#actualiser-depuis-visual-studio" class="md-skip">
+          Aller au contenu
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -147,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Actualiser un cube
+              Actualiser un cube Analysis Services
             
           </span>
         </div>
@@ -9792,7 +9797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creer-un-cube-tabulaire.md" class="md-nav__link">
+      <a href="../creer-un-cube-tabulaire/" class="md-nav__link">
         
   
   
@@ -9845,6 +9850,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Actualiser un cube
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -9856,6 +9874,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actualiser-depuis-visual-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualiser depuis Visual Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualiser-depuis-management-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualiser depuis Management Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualiser-avec-une-commande-xmla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualiser avec une commande XMLA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plannifier-avec-sql-server-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plannifier avec SQL Server Agent
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -16031,6 +16102,50 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actualiser-depuis-visual-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualiser depuis Visual Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualiser-depuis-management-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualiser depuis Management Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualiser-avec-une-commande-xmla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualiser avec une commande XMLA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plannifier-avec-sql-server-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plannifier avec SQL Server Agent
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -16041,41 +16156,143 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+  <!-- Content -->
 
+	<!-- Edit button -->
+	
 
+	<!--
+	Hack: check whether the content contains a h1 headline. If it
+	doesn't, the page title (or respectively site name) is used
+	as the main headline.
+	-->
+	
+		<h1 style="margin-bottom: 0px; text-align: center;">Actualiser un cube Analysis Services</h1>
+	
 
-  <h1>Actualiser un cube</h1>
+	
 
-<p>Avec une commande XMLA</p>
+	<!-- Tags -->
+	
+
+	<!-- description -->
+	
+	<p  style="text-align: justify;">Dans le monde l'informatique décisionnelle, l'analyse multidimensionnelle, Analysis Services est la solution de Microsoft pour créer des structures de données multi-dimensionnelle. C'est de loin l'outil le plus utlisé. </p>
+	
+
+	<!-- Cover Image -->
+	
+	<p>
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/analysis-services.png">
+	</p>
+	
+
+	<h2 id="actualiser-depuis-visual-studio">Actualiser depuis Visual Studio<a class="headerlink" href="#actualiser-depuis-visual-studio" title="Permanent link">#</a></h2>
+<p>C’est la méthode la plus simple et intuitive pour les développeurs.</p>
+<ol>
+<li>Ouvrez votre projet dans <strong>Visual Studio</strong>.</li>
+<li>Faites un clic droit sur le nom du modèle dans l’<strong>Explorateur de solutions</strong>.</li>
+<li>Cliquez sur <strong>Process</strong> ou <strong>Traiter</strong>.</li>
+<li>Choisissez les options d’actualisation souhaitées (full / incremental / automatic).</li>
+<li>Cliquez sur <strong>Run</strong>.</li>
+</ol>
+<h2 id="actualiser-depuis-management-studio">Actualiser depuis Management Studio<a class="headerlink" href="#actualiser-depuis-management-studio" title="Permanent link">#</a></h2>
+<ol>
+<li>Ouvrez <strong>SQL Server Management Studio (SSMS)</strong>.</li>
+<li>Connectez-vous à votre instance <strong>Analysis Services</strong>.</li>
+<li>Déployez le nœud <strong>Bases de données</strong> dans l’arborescence de l'instance.</li>
+<li>Faites un clic droit sur la base que vous souhaitez actualiser.</li>
+<li>Sélectionnez <strong>Processus</strong>.</li>
+<li>Choisissez les objets à actualiser (modèle, tables, partitions, etc.).</li>
+<li>Cliquez sur <strong>Run</strong>.</li>
+</ol>
+<h2 id="actualiser-avec-une-commande-xmla">Actualiser avec une commande XMLA<a class="headerlink" href="#actualiser-avec-une-commande-xmla" title="Permanent link">#</a></h2>
+<p>Vous pouvez automatiser ou tester l’actualisation à l’aide d’une commande XMLA.</p>
+<ol>
+<li>Dans <strong>SSMS</strong>, ouvrez un <strong>nouvel onglet XMLA</strong>.</li>
+<li>Copiez-collez la commande suivante :</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &quot;refresh&quot;: {
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &quot;type&quot;: &quot;full&quot;,
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &quot;objects&quot;: [
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      {
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        &quot;database&quot;: &quot;Cube_Momo_Profiling_Tabular&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        &quot;database&quot;: &quot;Cube_Tabular&quot;
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      }
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ]
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  }
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>}
 </code></pre></div>
+<ol>
+<li>Cliquez sur Exécuter pour lancer l’actualisation complète du cube.</li>
+</ol>
+<h2 id="plannifier-avec-sql-server-agent">Plannifier avec SQL Server Agent<a class="headerlink" href="#plannifier-avec-sql-server-agent" title="Permanent link">#</a></h2>
+<p>SQL Server Agent est outil de plannification de tâches de Microsoft SQL Server.</p>
+<p>Étapes :</p>
+<ol>
+<li>Ouvrez <strong>SQL Server Management Studio</strong>.</li>
+<li>Allez dans <strong>SQL Server Agent</strong> (assurez-vous qu'il est démarré).</li>
+<li>Sous Travaux, faites un clic droit → <strong>Nouveau travail</strong>.</li>
+<li>Donnez un <strong>nom</strong> au travail (ex : <code>Actualisation_Cube_Tabular</code>).</li>
+<li>Allez dans l'onglet <strong>Étapes → Nouvelle étape</strong>.</li>
+</ol>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-01.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-02.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-03.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-04.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-05.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-06.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-07.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-08.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-09.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-10.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-11.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-12.png" /></p>
+<p>Oups SQL Server Agent n'a pas les droits nécessaires pour traiter le cube. <code>NT SERVICE\SQLSERVERAGENT</code></p>
+<p>Alors vous devez :</p>
+<ul>
+<li>Ajouter ce compte dans <strong>les rôles du cube</strong> ou</li>
+<li>L’autoriser dans la base SQL Server si l'accès aux données est bloqué.</li>
+</ul>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-13.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-14.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/analysis-services-sql-server-agent-15.png" /></p>
 <hr />
-<p><em>.</em></p>
+<p><em>Dans la prochaine section, nous verrons comment manipuler un cube OLAP depuis Excel.</em></p>
+
+	<!-- Last update of source file -->
+	
+		
+	
+
+	<!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="joseph-koami-konka" data-version="v1" style="width: 100%;"></div> -->
+
+	<h2>Partagez sur les réseaux sociaux</h2>
+	<!-- ShareThis BEGIN -->
+	<div class="sharethis-inline-share-buttons"></div>
+	<!-- ShareThis END -->
+
+	<!-- Giscus - generated by https://giscus.app -->
+	<h2 id="__comments">Commentaires</h2>
+	<script src="https://giscus.app/client.js"
+		data-repo="joekakone/Departement-De-Maths"
+		data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+		data-category="General"
+		data-category-id="DIC_kwDOFBN7QM4CORj9"
+		data-mapping="pathname"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="bottom"
+		data-theme="dark"
+		data-lang="fr"
+		crossorigin="anonymous"
+		async>
+	</script>
+
+	<!-- LinkedIn -->
+	<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> -->
 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-                
               </article>
             </div>
           

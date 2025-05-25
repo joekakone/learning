@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+        <meta name="description" content="Un cube Aanalysis Services repose sur une datamart hébergée dans SQL Server. Pour rappel, une datamart est un ensemble de tables dédiées à un sujet d'analyse particulier.">
       
       
         <meta name="author" content="Joseph Konka">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../installer/">
       
       
-        <link rel="next" href="../creer-un-cube-multi-dimensionnel/">
+        <link rel="next" href="../creer-un-cube-tabulaire/">
       
       
       <link rel="icon" href="https://algojungle.github.io/algojungle-assets/assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Préparer les données - Algo Jungle</title>
+        <title>Préparer les données dans SQL Server - Algo Jungle</title>
       
     
     
@@ -90,7 +90,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="big-data/analysis-services/preparer-les-donnees/">
 
-<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-datamart-in-sql-server.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preparer-les-donnees-dans-sql-server" class="md-skip">
+        <a href="#telecharger-la-base-de-donnees" class="md-skip">
           Aller au contenu
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Préparer les données
+              Préparer les données dans SQL Server
             
           </span>
         </div>
@@ -9780,8 +9780,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -9813,8 +9811,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -9857,7 +9853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creer-un-cube-tabulaire.md" class="md-nav__link">
+      <a href="../creer-un-cube-tabulaire/" class="md-nav__link">
         
   
   
@@ -16087,8 +16083,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -16126,15 +16120,38 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+  <!-- Content -->
 
+	<!-- Edit button -->
+	
 
+	<!--
+	Hack: check whether the content contains a h1 headline. If it
+	doesn't, the page title (or respectively site name) is used
+	as the main headline.
+	-->
+	
+		<h1 style="margin-bottom: 0px; text-align: center;">Préparer les données dans SQL Server</h1>
+	
 
-<h1 id="preparer-les-donnees-dans-sql-server">Préparer les données dans SQL Server<a class="headerlink" href="#preparer-les-donnees-dans-sql-server" title="Permanent link">#</a></h1>
-<p>Un cube Aanalysis Services repose sur une datamart hébergée dans SQL Server. Pour rappel, une datamart est un ensemble de tables dédiées à un sujet d'analyse particulier.
-<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-datamart-in-sql-server.png" /></p>
-<p>Dans le cadre de la formation, nous allons utiliser la base de données <strong><code>AdventureWorks</code></strong>, suivez les instructions pour préparer les données.</p>
+	
+
+	<!-- Tags -->
+	
+
+	<!-- description -->
+	
+	<p  style="text-align: justify;">Un cube Aanalysis Services repose sur une datamart hébergée dans SQL Server. Pour rappel, une datamart est un ensemble de tables dédiées à un sujet d'analyse particulier.</p>
+	
+
+	<!-- Cover Image -->
+	
+	<p>
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-datamart-in-sql-server.png">
+	</p>
+	
+
+	<p>Dans le cadre de la formation, nous allons utiliser la base de données <strong><code>AdventureWorks</code></strong>, suivez les instructions pour préparer les données.</p>
 <h2 id="telecharger-la-base-de-donnees">Télécharger la base de données<a class="headerlink" href="#telecharger-la-base-de-donnees" title="Permanent link">#</a></h2>
 <p>Rendez-vous à cette adresse pour télécharger les données <a href="https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&amp;tabs=ssms">https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&amp;tabs=ssms</a>. Dans la colonne Data Warehouse, sélectionnez la version la plus récente.<br>
 <img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/download-data-backups-1.png" /></p>
@@ -16162,20 +16179,39 @@
 <hr />
 <p><em>La datamart est prête ! Dans la prochaine section, nous aborberons la création de cube avec Visual Studio.</em></p>
 
+	<!-- Last update of source file -->
+	
+		
+	
+
+	<!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="joseph-koami-konka" data-version="v1" style="width: 100%;"></div> -->
+
+	<h2>Partagez sur les réseaux sociaux</h2>
+	<!-- ShareThis BEGIN -->
+	<div class="sharethis-inline-share-buttons"></div>
+	<!-- ShareThis END -->
+
+	<!-- Giscus - generated by https://giscus.app -->
+	<h2 id="__comments">Commentaires</h2>
+	<script src="https://giscus.app/client.js"
+		data-repo="joekakone/Departement-De-Maths"
+		data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+		data-category="General"
+		data-category-id="DIC_kwDOFBN7QM4CORj9"
+		data-mapping="pathname"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="bottom"
+		data-theme="dark"
+		data-lang="fr"
+		crossorigin="anonymous"
+		async>
+	</script>
+
+	<!-- LinkedIn -->
+	<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> -->
 
 
-
-
-
-
-
-
-  
-
-
-
-
-                
               </article>
             </div>
           
@@ -16217,13 +16253,13 @@
         
         
           
-          <a href="../creer-un-cube-multi-dimensionnel/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Créer un cube multi-dimensionnel">
+          <a href="../creer-un-cube-tabulaire/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Créer un cube tabulaire">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Créer un cube multi-dimensionnel
+                Créer un cube tabulaire
               </div>
             </div>
             <div class="md-footer__button md-icon">
