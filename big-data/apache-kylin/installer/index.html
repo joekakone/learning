@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Lorsqu'il s'agit d'orchestrer des flux de travail data de plus en plus complexes avec Python, Apache Airflow est la solution qu'il vous faut. Il permet de créer des interfaces web pour les modèles de machine learning.">
+        <meta name="description" content="Apache Kylin peut être installé facilement avec Docker.">
       
       
         <meta name="author" content="Joseph Konka">
@@ -114,6 +114,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#installer-docker" class="md-skip">
+          Aller au contenu
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -9984,6 +9989,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Installer kylin
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -9995,6 +10013,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installer-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installer-apache-kylin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer Apache kylin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurer-postgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurer Postgres
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -16031,6 +16093,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installer-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installer-apache-kylin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer Apache kylin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurer-postgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurer Postgres
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -16062,7 +16159,7 @@
 
 	<!-- description -->
 	
-	<p  style="text-align: justify;">Lorsqu'il s'agit d'orchestrer des flux de travail data de plus en plus complexes avec Python, Apache Airflow est la solution qu'il vous faut. Il permet de créer des interfaces web pour les modèles de machine learning.</p>
+	<p  style="text-align: justify;">Apache Kylin peut être installé facilement avec Docker.</p>
 	
 
 	<!-- Cover Image -->
@@ -16072,7 +16169,9 @@
 	</p>
 	
 
-	<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>stop<span class="w"> </span>Kylin5-Machine
+	<h2 id="installer-docker">Installer Docker<a class="headerlink" href="#installer-docker" title="Permanent link">#</a></h2>
+<h2 id="installer-apache-kylin">Installer Apache kylin<a class="headerlink" href="#installer-apache-kylin" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>stop<span class="w"> </span>Kylin5-Machine
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>docker<span class="w"> </span>rm<span class="w"> </span>Kylin5-Machine
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
@@ -16109,6 +16208,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="configurer-postgres">Configurer Postgres<a class="headerlink" href="#configurer-postgres" title="Permanent link">#</a></h2>
+<p><code>/home/kylin/apache-kylin-5.0.2-bin/conf/kylin.properties</code> &gt; </p>
+<hr />
+<p>**</p>
 
 	<!-- Last update of source file -->
 	
