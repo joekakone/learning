@@ -9511,6 +9511,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#executer-des-taches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exécuter des tâches
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -16107,6 +16116,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#executer-des-taches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exécuter des tâches
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -16160,7 +16178,22 @@
 <a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>[2024-09-25T23:18:25.091+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;your_dag_id&#39;, &#39;rech_30d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/your_dag_id.py&#39;]
 </code></pre></div>
 <p>Avec l'
-<code>--reset-dagruns</code></p>
+<code>--reset-dagruns</code>: </p>
+<h2 id="executer-des-taches">Exécuter des tâches<a class="headerlink" href="#executer-des-taches" title="Permanent link">#</a></h2>
+<p>Il est également possible d'exécuter une tâche de façon unitaire.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>airflow<span class="w"> </span>tasks<span class="w"> </span><span class="nb">test</span><span class="w"> </span>&lt;dag-id&gt;<span class="w"> </span>&lt;task-id&gt;<span class="w"> </span>yyyy-mm-dd
+</code></pre></div></p>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[2025-06-26T09:33:18.492+0000] {manager.py:147} INFO - DAG bundles loaded: dags-folder
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[2025-06-26T09:33:18.958+0000] {dagbag.py:573} INFO - Filling up the DagBag from /opt/airflow/dags
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[2025-06-26T09:33:21.618+0000] {taskinstance.py:1311} INFO - Dependencies all met for dep_context=non-requeueable deps ti=&lt;TaskInstance: etl_ume_datamart.bulk_insert_sellout_day __airflow_temporary_run_2025-06-26T09:33:21.506585+00:00__ [None]&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>[2025-06-26T09:33:21.627+0000] {taskinstance.py:1311} INFO - Dependencies all met for dep_context=requeueable deps ti=&lt;TaskInstance: etl_ume_datamart.bulk_insert_sellout_day __airflow_temporary_run_2025-06-26T09:33:21.506585+00:00__ [None]&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[2025-06-26T09:33:21.627+0000] {taskinstance.py:1548} INFO - Starting attempt 0 of 3
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>[2025-06-26T09:33:21.628+0000] {taskinstance.py:1627} WARNING - cannot record queued_duration for task bulk_insert_sellout_day because previous state change time has not been saved
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>[2025-06-26T09:33:21.630+0000] {taskinstance.py:1571} INFO - Executing &lt;Task(PythonOperator): bulk_insert_sellout_day&gt; on 2025-01-05 00:00:00+00:00
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>[2025-06-26T09:33:21.826+0000] {taskinstance.py:2044} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL=&#39;Joseph.KONKA@YAS.TG&#39; AIRFLOW_CTX_DAG_OWNER=&#39;jkonka&#39; AIRFLOW_CTX_DAG_ID=&#39;etl_ume_datamart&#39; AIRFLOW_CTX_TASK_ID=&#39;bulk_insert_sellout_day&#39; AIRFLOW_CTX_LOGICAL_DATE=&#39;2025-01-05T00:00:00+00:00&#39; AIRFLOW_CTX_DAG_RUN_ID=&#39;__airflow_temporary_run_2025-06-26T09:33:21.506585+00:00__&#39;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>[2025-06-26T09:33:21.830+0000] {taskinstance.py:2158} INFO - ::endgroup::
+</code></pre></div>
+<p>airflow tasks test n’enregistre pas de DAG Run officiel dans l’interface, contrairement au backfill.</p>
 <hr />
 <p><em>.</em></p>
 
