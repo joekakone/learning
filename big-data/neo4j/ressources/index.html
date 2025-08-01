@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+        <meta name="description" content="Nous sommes arrivés au bout de cette formation, j'espère que vous avez apprécié l'aventure PySpark en ma compagine. Je partage avec vous une liste des ressources additionnelles qui vous permettront d'aller plus avec PySpark.">
       
       
         <meta name="author" content="Joseph Konka">
       
       
-        <link rel="canonical" href="https://algojungle.github.io/analytics/powerbi/05-deployer-des-livrables/pbi-report-server/publier-un-rapport/">
+        <link rel="canonical" href="https://algojungle.github.io/big-data/neo4j/ressources/">
       
       
         <link rel="prev" href="../installer/">
       
       
-        <link rel="next" href="../creer-un-plan-d-actualisation/">
+        <link rel="next" href="../../ressources/">
       
       
       <link rel="icon" href="https://algojungle.github.io/algojungle-assets/assets/favicon.png">
@@ -26,14 +26,14 @@
     
     
       
-        <title>Publier un rapport - Algo Jungle</title>
+        <title>Aller plus loin avec Neo4j - Algo Jungle</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,21 +52,21 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../../static/stylesheets/metadata.css">
+      <link rel="stylesheet" href="../../../static/stylesheets/metadata.css">
     
-      <link rel="stylesheet" href="../../../../../static/stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../static/stylesheets/custom.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-      <link rel="stylesheet" href="../../../../../css/ansi-colours.css">
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
     
-      <link rel="stylesheet" href="../../../../../css/jupyter-cells.css">
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
     
-      <link rel="stylesheet" href="../../../../../css/pandas-dataframe.css">
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -83,14 +83,14 @@
     
     
     
-<meta property="og:title" content="Publier un rapport">
+<meta property="og:title" content="Ressources">
 
 <meta property="og:description" content="Algo Junle - Learn Python and Data for free">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="analytics/powerbi/05-deployer-des-livrables/pbi-report-server/publier-un-rapport/">
+<meta property="og:url" content="big-data/neo4j/ressources/">
 
-<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/python-data-stack/covers/python-data-stack-pyspark.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#publier-un-rapport-sur-le-serveur" class="md-skip">
+        <a href="#docs-officielle" class="md-skip">
           Aller au contenu
         </a>
       
@@ -132,7 +132,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../../../.." title="Algo Jungle" class="md-header__button md-logo" aria-label="Algo Jungle" data-md-component="logo">
+    <a href="../../.." title="Algo Jungle" class="md-header__button md-logo" aria-label="Algo Jungle" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Publier un rapport
+              Aller plus loin avec Neo4j
             
           </span>
         </div>
@@ -274,7 +274,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -295,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../algorithmique/" class="md-tabs__link">
+        <a href="../../../algorithmique/" class="md-tabs__link">
           
   
   
@@ -317,7 +317,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../programmation/" class="md-tabs__link">
+        <a href="../../../programmation/" class="md-tabs__link">
           
   
   
@@ -339,7 +339,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../python/" class="md-tabs__link">
+        <a href="../../../python/" class="md-tabs__link">
           
   
   
@@ -361,7 +361,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../" class="md-tabs__link">
+        <a href="../../../analytics/" class="md-tabs__link">
           
   
   
@@ -383,7 +383,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../sql/" class="md-tabs__link">
+        <a href="../../../analytics/sql/" class="md-tabs__link">
           
   
   
@@ -401,13 +401,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../analytics/powerbi/" class="md-tabs__link">
           
   
   
@@ -425,11 +423,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../big-data/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -451,7 +451,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../machine-learning/" class="md-tabs__link">
+        <a href="../../../machine-learning/" class="md-tabs__link">
           
   
   
@@ -473,7 +473,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../machine-learning/tensorflow/" class="md-tabs__link">
+        <a href="../../../machine-learning/tensorflow/" class="md-tabs__link">
           
   
   
@@ -495,7 +495,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../mlops/" class="md-tabs__link">
+        <a href="../../../mlops/" class="md-tabs__link">
           
   
   
@@ -517,7 +517,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -539,7 +539,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../about/" class="md-tabs__link">
+        <a href="../../../about/" class="md-tabs__link">
           
   
   
@@ -581,7 +581,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Algo Jungle" class="md-nav__button md-logo" aria-label="Algo Jungle" data-md-component="logo">
+    <a href="../../.." title="Algo Jungle" class="md-nav__button md-logo" aria-label="Algo Jungle" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -611,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -666,7 +666,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../algorithmique/" class="md-nav__link ">
+            <a href="../../../algorithmique/" class="md-nav__link ">
               
   
   
@@ -738,7 +738,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../algorithmique/partie-1-les-bases/" class="md-nav__link ">
+            <a href="../../../algorithmique/partie-1-les-bases/" class="md-nav__link ">
               
   
   
@@ -773,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/les-variables/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/les-variables/" class="md-nav__link">
         
   
   
@@ -796,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/les-operations/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/les-operations/" class="md-nav__link">
         
   
   
@@ -819,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/affichage-et-saisie/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/affichage-et-saisie/" class="md-nav__link">
         
   
   
@@ -842,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/les-fonctions-predefnies/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/les-fonctions-predefnies/" class="md-nav__link">
         
   
   
@@ -865,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/les-conditions/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/les-conditions/" class="md-nav__link">
         
   
   
@@ -888,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/la-structure-de-choix/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/la-structure-de-choix/" class="md-nav__link">
         
   
   
@@ -911,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/les-boucles/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/les-boucles/" class="md-nav__link">
         
   
   
@@ -934,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-1-les-bases/outro/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-1-les-bases/outro/" class="md-nav__link">
         
   
   
@@ -994,7 +994,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../algorithmique/partie-2-les-tableaux/" class="md-nav__link ">
+            <a href="../../../algorithmique/partie-2-les-tableaux/" class="md-nav__link ">
               
   
   
@@ -1029,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-2-les-tableaux/les-tableaux-a-une-dimension/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-2-les-tableaux/les-tableaux-a-une-dimension/" class="md-nav__link">
         
   
   
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-2-les-tableaux/les-tableaux-a-deux-dimensions/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-2-les-tableaux/les-tableaux-a-deux-dimensions/" class="md-nav__link">
         
   
   
@@ -1075,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-2-les-tableaux/les-tableaux-a-plusieurs-dimensions/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-2-les-tableaux/les-tableaux-a-plusieurs-dimensions/" class="md-nav__link">
         
   
   
@@ -1098,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-2-les-tableaux/outro/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-2-les-tableaux/outro/" class="md-nav__link">
         
   
   
@@ -1158,7 +1158,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../algorithmique/partie-3-les-sous-programmes/" class="md-nav__link ">
+            <a href="../../../algorithmique/partie-3-les-sous-programmes/" class="md-nav__link ">
               
   
   
@@ -1193,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-3-les-sous-programmes/procedures/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-3-les-sous-programmes/procedures/" class="md-nav__link">
         
   
   
@@ -1216,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-3-les-sous-programmes/fonctions/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-3-les-sous-programmes/fonctions/" class="md-nav__link">
         
   
   
@@ -1239,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-3-les-sous-programmes/outro/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-3-les-sous-programmes/outro/" class="md-nav__link">
         
   
   
@@ -1262,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-3-les-sous-programmes/outro/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-3-les-sous-programmes/outro/" class="md-nav__link">
         
   
   
@@ -1324,7 +1324,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../algorithmique/partie-4-les-structures-de-donnees/" class="md-nav__link ">
+            <a href="../../../algorithmique/partie-4-les-structures-de-donnees/" class="md-nav__link ">
               
   
   
@@ -1359,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-4-les-structures-de-donnees/les-listes-chainees/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-4-les-structures-de-donnees/les-listes-chainees/" class="md-nav__link">
         
   
   
@@ -1382,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-4-les-structures-de-donnees/les-piles/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-4-les-structures-de-donnees/les-piles/" class="md-nav__link">
         
   
   
@@ -1405,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-4-les-structures-de-donnees/les-files/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-4-les-structures-de-donnees/les-files/" class="md-nav__link">
         
   
   
@@ -1428,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-4-les-structures-de-donnees/les-arbres/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-4-les-structures-de-donnees/les-arbres/" class="md-nav__link">
         
   
   
@@ -1451,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-4-les-structures-de-donnees/outro/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-4-les-structures-de-donnees/outro/" class="md-nav__link">
         
   
   
@@ -1533,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-5-problemes/probleme-1/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-5-problemes/probleme-1/" class="md-nav__link">
         
   
   
@@ -1556,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-5-problemes/probleme-2/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-5-problemes/probleme-2/" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-5-problemes/probleme-3/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-5-problemes/probleme-3/" class="md-nav__link">
         
   
   
@@ -1602,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/partie-5-problemes/probleme-4/" class="md-nav__link">
+      <a href="../../../algorithmique/partie-5-problemes/probleme-4/" class="md-nav__link">
         
   
   
@@ -1633,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../algorithmique/ressources/" class="md-nav__link">
+      <a href="../../../algorithmique/ressources/" class="md-nav__link">
         
   
   
@@ -1706,7 +1706,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../programmation/" class="md-nav__link ">
+            <a href="../../../programmation/" class="md-nav__link ">
               
   
   
@@ -1741,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/installer-codeblocks/" class="md-nav__link">
+      <a href="../../../programmation/installer-codeblocks/" class="md-nav__link">
         
   
   
@@ -1764,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/installer-cxxdroid/" class="md-nav__link">
+      <a href="../../../programmation/installer-cxxdroid/" class="md-nav__link">
         
   
   
@@ -1842,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-1-bases/affichage/" class="md-nav__link">
+      <a href="../../../programmation/partie-1-bases/affichage/" class="md-nav__link">
         
   
   
@@ -1865,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-1-bases/lecture-au-clavier/" class="md-nav__link">
+      <a href="../../../programmation/partie-1-bases/lecture-au-clavier/" class="md-nav__link">
         
   
   
@@ -1888,7 +1888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-1-bases/variables-et-constantes/" class="md-nav__link">
+      <a href="../../../programmation/partie-1-bases/variables-et-constantes/" class="md-nav__link">
         
   
   
@@ -1911,7 +1911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-1-bases/operations/" class="md-nav__link">
+      <a href="../../../programmation/partie-1-bases/operations/" class="md-nav__link">
         
   
   
@@ -1934,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-1-bases/les-boucles/" class="md-nav__link">
+      <a href="../../../programmation/partie-1-bases/les-boucles/" class="md-nav__link">
         
   
   
@@ -1957,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-1-bases/applications/" class="md-nav__link">
+      <a href="../../../programmation/partie-1-bases/applications/" class="md-nav__link">
         
   
   
@@ -2017,7 +2017,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../programmation/partie-2-fonctions/" class="md-nav__link ">
+            <a href="../../../programmation/partie-2-fonctions/" class="md-nav__link ">
               
   
   
@@ -2052,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-2-fonctions/les-fonctions/" class="md-nav__link">
+      <a href="../../../programmation/partie-2-fonctions/les-fonctions/" class="md-nav__link">
         
   
   
@@ -2075,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-2-fonctions/les-fonctions-recursives/" class="md-nav__link">
+      <a href="../../../programmation/partie-2-fonctions/les-fonctions-recursives/" class="md-nav__link">
         
   
   
@@ -2098,7 +2098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-2-fonctions/les-modules/" class="md-nav__link">
+      <a href="../../../programmation/partie-2-fonctions/les-modules/" class="md-nav__link">
         
   
   
@@ -2121,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-2-fonctions/applications/" class="md-nav__link">
+      <a href="../../../programmation/partie-2-fonctions/applications/" class="md-nav__link">
         
   
   
@@ -2181,7 +2181,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../programmation/partie-3-tableaux/" class="md-nav__link ">
+            <a href="../../../programmation/partie-3-tableaux/" class="md-nav__link ">
               
   
   
@@ -2216,7 +2216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-3-tableaux/tableaux/" class="md-nav__link">
+      <a href="../../../programmation/partie-3-tableaux/tableaux/" class="md-nav__link">
         
   
   
@@ -2239,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-3-tableaux/matrices/" class="md-nav__link">
+      <a href="../../../programmation/partie-3-tableaux/matrices/" class="md-nav__link">
         
   
   
@@ -2262,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-3-tableaux/algebre/" class="md-nav__link">
+      <a href="../../../programmation/partie-3-tableaux/algebre/" class="md-nav__link">
         
   
   
@@ -2285,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-3-tableaux/applications/" class="md-nav__link">
+      <a href="../../../programmation/partie-3-tableaux/applications/" class="md-nav__link">
         
   
   
@@ -2343,7 +2343,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../programmation/partie-4-pointeurs/" class="md-nav__link ">
+            <a href="../../../programmation/partie-4-pointeurs/" class="md-nav__link ">
               
   
   
@@ -2378,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-4-pointeurs/pointeurs-et-tableaux/" class="md-nav__link">
+      <a href="../../../programmation/partie-4-pointeurs/pointeurs-et-tableaux/" class="md-nav__link">
         
   
   
@@ -2401,7 +2401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-4-pointeurs/allocation-dynamique/" class="md-nav__link">
+      <a href="../../../programmation/partie-4-pointeurs/allocation-dynamique/" class="md-nav__link">
         
   
   
@@ -2424,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-4-pointeurs/applications/" class="md-nav__link">
+      <a href="../../../programmation/partie-4-pointeurs/applications/" class="md-nav__link">
         
   
   
@@ -2478,7 +2478,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../programmation/partie-5-structures/" class="md-nav__link ">
+            <a href="../../../programmation/partie-5-structures/" class="md-nav__link ">
               
   
   
@@ -2513,7 +2513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-5-structures/applications/" class="md-nav__link">
+      <a href="../../../programmation/partie-5-structures/applications/" class="md-nav__link">
         
   
   
@@ -2571,7 +2571,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../programmation/partie-6-chaines-de-caracteres/" class="md-nav__link ">
+            <a href="../../../programmation/partie-6-chaines-de-caracteres/" class="md-nav__link ">
               
   
   
@@ -2606,7 +2606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-6-chaines-de-caracteres/affichage/" class="md-nav__link">
+      <a href="../../../programmation/partie-6-chaines-de-caracteres/affichage/" class="md-nav__link">
         
   
   
@@ -2629,7 +2629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-6-chaines-de-caracteres/operations/" class="md-nav__link">
+      <a href="../../../programmation/partie-6-chaines-de-caracteres/operations/" class="md-nav__link">
         
   
   
@@ -2652,7 +2652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-6-chaines-de-caracteres/applications/" class="md-nav__link">
+      <a href="../../../programmation/partie-6-chaines-de-caracteres/applications/" class="md-nav__link">
         
   
   
@@ -2712,7 +2712,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../programmation/partie-7-fichiers/" class="md-nav__link ">
+            <a href="../../../programmation/partie-7-fichiers/" class="md-nav__link ">
               
   
   
@@ -2747,7 +2747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-7-fichiers/lecture-et-ecriture/" class="md-nav__link">
+      <a href="../../../programmation/partie-7-fichiers/lecture-et-ecriture/" class="md-nav__link">
         
   
   
@@ -2770,7 +2770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-7-fichiers/fichiers-csv/" class="md-nav__link">
+      <a href="../../../programmation/partie-7-fichiers/fichiers-csv/" class="md-nav__link">
         
   
   
@@ -2793,7 +2793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-7-fichiers/fichiers-binaires/" class="md-nav__link">
+      <a href="../../../programmation/partie-7-fichiers/fichiers-binaires/" class="md-nav__link">
         
   
   
@@ -2816,7 +2816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-7-fichiers/applications/" class="md-nav__link">
+      <a href="../../../programmation/partie-7-fichiers/applications/" class="md-nav__link">
         
   
   
@@ -2900,7 +2900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-8-problemes/probleme-01/" class="md-nav__link">
+      <a href="../../../programmation/partie-8-problemes/probleme-01/" class="md-nav__link">
         
   
   
@@ -2923,7 +2923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-8-problemes/probleme-02/" class="md-nav__link">
+      <a href="../../../programmation/partie-8-problemes/probleme-02/" class="md-nav__link">
         
   
   
@@ -2946,7 +2946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-8-problemes/probleme-03/" class="md-nav__link">
+      <a href="../../../programmation/partie-8-problemes/probleme-03/" class="md-nav__link">
         
   
   
@@ -2969,7 +2969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-8-problemes/probleme-04/" class="md-nav__link">
+      <a href="../../../programmation/partie-8-problemes/probleme-04/" class="md-nav__link">
         
   
   
@@ -2992,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/partie-8-problemes/probleme-05/" class="md-nav__link">
+      <a href="../../../programmation/partie-8-problemes/probleme-05/" class="md-nav__link">
         
   
   
@@ -3023,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../programmation/ressources/" class="md-nav__link">
+      <a href="../../../programmation/ressources/" class="md-nav__link">
         
   
   
@@ -3096,7 +3096,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/" class="md-nav__link ">
+            <a href="../../../python/" class="md-nav__link ">
               
   
   
@@ -3131,7 +3131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/installer/" class="md-nav__link">
+      <a href="../../../python/installer/" class="md-nav__link">
         
   
   
@@ -3189,7 +3189,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-1-les-bases/" class="md-nav__link ">
+            <a href="../../../python/partie-1-les-bases/" class="md-nav__link ">
               
   
   
@@ -3224,7 +3224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-1-les-bases/les-variables/" class="md-nav__link">
+      <a href="../../../python/partie-1-les-bases/les-variables/" class="md-nav__link">
         
   
   
@@ -3247,7 +3247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-1-les-bases/affichage-et-saisie/" class="md-nav__link">
+      <a href="../../../python/partie-1-les-bases/affichage-et-saisie/" class="md-nav__link">
         
   
   
@@ -3270,7 +3270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-1-les-bases/les-operations-arithmetiques/" class="md-nav__link">
+      <a href="../../../python/partie-1-les-bases/les-operations-arithmetiques/" class="md-nav__link">
         
   
   
@@ -3293,7 +3293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-1-les-bases/les-operations-logiques/" class="md-nav__link">
+      <a href="../../../python/partie-1-les-bases/les-operations-logiques/" class="md-nav__link">
         
   
   
@@ -3316,7 +3316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-1-les-bases/les-conditions/" class="md-nav__link">
+      <a href="../../../python/partie-1-les-bases/les-conditions/" class="md-nav__link">
         
   
   
@@ -3339,7 +3339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-1-les-bases/les-boucles/" class="md-nav__link">
+      <a href="../../../python/partie-1-les-bases/les-boucles/" class="md-nav__link">
         
   
   
@@ -3362,7 +3362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-1-les-bases/les-exceptions/" class="md-nav__link">
+      <a href="../../../python/partie-1-les-bases/les-exceptions/" class="md-nav__link">
         
   
   
@@ -3422,7 +3422,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-2-les-structures-de-donnees/" class="md-nav__link ">
+            <a href="../../../python/partie-2-les-structures-de-donnees/" class="md-nav__link ">
               
   
   
@@ -3457,7 +3457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-2-les-structures-de-donnees/listes/" class="md-nav__link">
+      <a href="../../../python/partie-2-les-structures-de-donnees/listes/" class="md-nav__link">
         
   
   
@@ -3480,7 +3480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-2-les-structures-de-donnees/tuples/" class="md-nav__link">
+      <a href="../../../python/partie-2-les-structures-de-donnees/tuples/" class="md-nav__link">
         
   
   
@@ -3503,7 +3503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-2-les-structures-de-donnees/dictionnaires/" class="md-nav__link">
+      <a href="../../../python/partie-2-les-structures-de-donnees/dictionnaires/" class="md-nav__link">
         
   
   
@@ -3526,7 +3526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-2-les-structures-de-donnees/sets/" class="md-nav__link">
+      <a href="../../../python/partie-2-les-structures-de-donnees/sets/" class="md-nav__link">
         
   
   
@@ -3582,7 +3582,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-3-les-fonctions/" class="md-nav__link ">
+            <a href="../../../python/partie-3-les-fonctions/" class="md-nav__link ">
               
   
   
@@ -3617,7 +3617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-3-les-fonctions/fonctions-recursives/" class="md-nav__link">
+      <a href="../../../python/partie-3-les-fonctions/fonctions-recursives/" class="md-nav__link">
         
   
   
@@ -3640,7 +3640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-3-les-fonctions/fonctions-anonymes/" class="md-nav__link">
+      <a href="../../../python/partie-3-les-fonctions/fonctions-anonymes/" class="md-nav__link">
         
   
   
@@ -3706,7 +3706,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-4-les-modules/" class="md-nav__link ">
+            <a href="../../../python/partie-4-les-modules/" class="md-nav__link ">
               
   
   
@@ -3741,7 +3741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-4-les-modules/module-os/" class="md-nav__link">
+      <a href="../../../python/partie-4-les-modules/module-os/" class="md-nav__link">
         
   
   
@@ -3764,7 +3764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-4-les-modules/module-sys/" class="md-nav__link">
+      <a href="../../../python/partie-4-les-modules/module-sys/" class="md-nav__link">
         
   
   
@@ -3787,7 +3787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-4-les-modules/module-random/" class="md-nav__link">
+      <a href="../../../python/partie-4-les-modules/module-random/" class="md-nav__link">
         
   
   
@@ -3810,7 +3810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-4-les-modules/module-datetime/" class="md-nav__link">
+      <a href="../../../python/partie-4-les-modules/module-datetime/" class="md-nav__link">
         
   
   
@@ -3833,7 +3833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-4-les-modules/module-math/" class="md-nav__link">
+      <a href="../../../python/partie-4-les-modules/module-math/" class="md-nav__link">
         
   
   
@@ -3856,7 +3856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-4-les-modules/module-statistics/" class="md-nav__link">
+      <a href="../../../python/partie-4-les-modules/module-statistics/" class="md-nav__link">
         
   
   
@@ -3879,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-4-les-modules/module-re/" class="md-nav__link">
+      <a href="../../../python/partie-4-les-modules/module-re/" class="md-nav__link">
         
   
   
@@ -3937,7 +3937,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-5-les-fichiers/" class="md-nav__link ">
+            <a href="../../../python/partie-5-les-fichiers/" class="md-nav__link ">
               
   
   
@@ -3972,7 +3972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-5-les-fichiers/fichiers-texte/" class="md-nav__link">
+      <a href="../../../python/partie-5-les-fichiers/fichiers-texte/" class="md-nav__link">
         
   
   
@@ -3995,7 +3995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-5-les-fichiers/fichiers-pickle/" class="md-nav__link">
+      <a href="../../../python/partie-5-les-fichiers/fichiers-pickle/" class="md-nav__link">
         
   
   
@@ -4018,7 +4018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-5-les-fichiers/fichiers-json/" class="md-nav__link">
+      <a href="../../../python/partie-5-les-fichiers/fichiers-json/" class="md-nav__link">
         
   
   
@@ -4072,7 +4072,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-6-chaines-de-caracteres/" class="md-nav__link ">
+            <a href="../../../python/partie-6-chaines-de-caracteres/" class="md-nav__link ">
               
   
   
@@ -4107,7 +4107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-6-chaines-de-caracteres/code-ascii/" class="md-nav__link">
+      <a href="../../../python/partie-6-chaines-de-caracteres/code-ascii/" class="md-nav__link">
         
   
   
@@ -4161,7 +4161,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-7-oriente-objet/" class="md-nav__link ">
+            <a href="../../../python/partie-7-oriente-objet/" class="md-nav__link ">
               
   
   
@@ -4196,7 +4196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-7-oriente-objet/heritage/" class="md-nav__link">
+      <a href="../../../python/partie-7-oriente-objet/heritage/" class="md-nav__link">
         
   
   
@@ -4250,7 +4250,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../python/partie-8-tests-unitaires/" class="md-nav__link ">
+            <a href="../../../python/partie-8-tests-unitaires/" class="md-nav__link ">
               
   
   
@@ -4285,7 +4285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-8-tests-unitaires/pytest/" class="md-nav__link">
+      <a href="../../../python/partie-8-tests-unitaires/pytest/" class="md-nav__link">
         
   
   
@@ -4365,7 +4365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-9-projets/projet-01/" class="md-nav__link">
+      <a href="../../../python/partie-9-projets/projet-01/" class="md-nav__link">
         
   
   
@@ -4388,7 +4388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-9-projets/projet-02/" class="md-nav__link">
+      <a href="../../../python/partie-9-projets/projet-02/" class="md-nav__link">
         
   
   
@@ -4411,7 +4411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/partie-9-projets/projet-03/" class="md-nav__link">
+      <a href="../../../python/partie-9-projets/projet-03/" class="md-nav__link">
         
   
   
@@ -4442,7 +4442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/ressources/" class="md-nav__link">
+      <a href="../../../python/ressources/" class="md-nav__link">
         
   
   
@@ -4517,7 +4517,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../../analytics/" class="md-nav__link ">
               
   
   
@@ -4552,7 +4552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data-monetization/" class="md-nav__link">
+      <a href="../../../analytics/data-monetization/" class="md-nav__link">
         
   
   
@@ -4575,7 +4575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data-warehousing/" class="md-nav__link">
+      <a href="../../../analytics/data-warehousing/" class="md-nav__link">
         
   
   
@@ -4598,7 +4598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data-governance/" class="md-nav__link">
+      <a href="../../../analytics/data-governance/" class="md-nav__link">
         
   
   
@@ -4621,7 +4621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data-workflow/" class="md-nav__link">
+      <a href="../../../analytics/data-workflow/" class="md-nav__link">
         
   
   
@@ -4644,7 +4644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data-visualization/" class="md-nav__link">
+      <a href="../../../analytics/data-visualization/" class="md-nav__link">
         
   
   
@@ -4704,7 +4704,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../excel/" class="md-nav__link ">
+            <a href="../../../analytics/excel/" class="md-nav__link ">
               
   
   
@@ -4739,7 +4739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/installer/" class="md-nav__link">
+      <a href="../../../analytics/excel/installer/" class="md-nav__link">
         
   
   
@@ -4762,7 +4762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/interface/" class="md-nav__link">
+      <a href="../../../analytics/excel/interface/" class="md-nav__link">
         
   
   
@@ -4785,7 +4785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/les-tableaux/" class="md-nav__link">
+      <a href="../../../analytics/excel/les-tableaux/" class="md-nav__link">
         
   
   
@@ -4808,7 +4808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/les-graphiques/" class="md-nav__link">
+      <a href="../../../analytics/excel/les-graphiques/" class="md-nav__link">
         
   
   
@@ -4831,7 +4831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/les-tableaux-croises-dynamiques/" class="md-nav__link">
+      <a href="../../../analytics/excel/les-tableaux-croises-dynamiques/" class="md-nav__link">
         
   
   
@@ -4854,7 +4854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/obtenir-des-donnees/" class="md-nav__link">
+      <a href="../../../analytics/excel/obtenir-des-donnees/" class="md-nav__link">
         
   
   
@@ -4877,7 +4877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/creer-un-modele-de-donnees/" class="md-nav__link">
+      <a href="../../../analytics/excel/creer-un-modele-de-donnees/" class="md-nav__link">
         
   
   
@@ -4900,7 +4900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../excel/ressources/" class="md-nav__link">
+      <a href="../../../analytics/excel/ressources/" class="md-nav__link">
         
   
   
@@ -4966,7 +4966,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../tableau/" class="md-nav__link ">
+            <a href="../../../analytics/tableau/" class="md-nav__link ">
               
   
   
@@ -5001,7 +5001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tableau/installer/" class="md-nav__link">
+      <a href="../../../analytics/tableau/installer/" class="md-nav__link">
         
   
   
@@ -5024,7 +5024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tableau/01-obtenir-les-donnees/" class="md-nav__link">
+      <a href="../../../analytics/tableau/01-obtenir-les-donnees/" class="md-nav__link">
         
   
   
@@ -5047,7 +5047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tableau/02-creer-des-champs-calcules/" class="md-nav__link">
+      <a href="../../../analytics/tableau/02-creer-des-champs-calcules/" class="md-nav__link">
         
   
   
@@ -5070,7 +5070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tableau/03-creer-des-visuels/" class="md-nav__link">
+      <a href="../../../analytics/tableau/03-creer-des-visuels/" class="md-nav__link">
         
   
   
@@ -5093,7 +5093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tableau/04-assembler-le-dashbord/" class="md-nav__link">
+      <a href="../../../analytics/tableau/04-assembler-le-dashbord/" class="md-nav__link">
         
   
   
@@ -5116,7 +5116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tableau/05-partager-sur-tableau-public/" class="md-nav__link">
+      <a href="../../../analytics/tableau/05-partager-sur-tableau-public/" class="md-nav__link">
         
   
   
@@ -5139,7 +5139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tableau/ressources/" class="md-nav__link">
+      <a href="../../../analytics/tableau/ressources/" class="md-nav__link">
         
   
   
@@ -5207,7 +5207,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../python/" class="md-nav__link ">
+            <a href="../../../analytics/python/" class="md-nav__link ">
               
   
   
@@ -5242,7 +5242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/installer-anaconda/" class="md-nav__link">
+      <a href="../../../analytics/python/installer-anaconda/" class="md-nav__link">
         
   
   
@@ -5265,7 +5265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/01-numpy/" class="md-nav__link">
+      <a href="../../../analytics/python/01-numpy/" class="md-nav__link">
         
   
   
@@ -5288,7 +5288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/02-pandas/" class="md-nav__link">
+      <a href="../../../analytics/python/02-pandas/" class="md-nav__link">
         
   
   
@@ -5311,7 +5311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/03-matplotlib/" class="md-nav__link">
+      <a href="../../../analytics/python/03-matplotlib/" class="md-nav__link">
         
   
   
@@ -5334,7 +5334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/04-bokeh/" class="md-nav__link">
+      <a href="../../../analytics/python/04-bokeh/" class="md-nav__link">
         
   
   
@@ -5357,7 +5357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/gradio/" class="md-nav__link">
+      <a href="../../../analytics/python/gradio/" class="md-nav__link">
         
   
   
@@ -5380,7 +5380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/dask/" class="md-nav__link">
+      <a href="../../../analytics/python/dask/" class="md-nav__link">
         
   
   
@@ -5403,7 +5403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/ressources/" class="md-nav__link">
+      <a href="../../../analytics/python/ressources/" class="md-nav__link">
         
   
   
@@ -5469,7 +5469,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../r/" class="md-nav__link ">
+            <a href="../../../analytics/r/" class="md-nav__link ">
               
   
   
@@ -5504,7 +5504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/installer/" class="md-nav__link">
+      <a href="../../../analytics/r/installer/" class="md-nav__link">
         
   
   
@@ -5566,7 +5566,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../r/bases/" class="md-nav__link ">
+            <a href="../../../analytics/r/bases/" class="md-nav__link ">
               
   
   
@@ -5601,7 +5601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/chemins/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/chemins/" class="md-nav__link">
         
   
   
@@ -5624,7 +5624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/objets/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/objets/" class="md-nav__link">
         
   
   
@@ -5647,7 +5647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/vecteurs/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/vecteurs/" class="md-nav__link">
         
   
   
@@ -5670,7 +5670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/facteurs/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/facteurs/" class="md-nav__link">
         
   
   
@@ -5693,7 +5693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/listes/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/listes/" class="md-nav__link">
         
   
   
@@ -5716,7 +5716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/matrices/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/matrices/" class="md-nav__link">
         
   
   
@@ -5739,7 +5739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/dataframes/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/dataframes/" class="md-nav__link">
         
   
   
@@ -5762,7 +5762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/import/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/import/" class="md-nav__link">
         
   
   
@@ -5785,7 +5785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/bases/export/" class="md-nav__link">
+      <a href="../../../analytics/r/bases/export/" class="md-nav__link">
         
   
   
@@ -5843,7 +5843,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../r/programmation/" class="md-nav__link ">
+            <a href="../../../analytics/r/programmation/" class="md-nav__link ">
               
   
   
@@ -5878,7 +5878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/programmation/conditions/" class="md-nav__link">
+      <a href="../../../analytics/r/programmation/conditions/" class="md-nav__link">
         
   
   
@@ -5901,7 +5901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/programmation/boucles/" class="md-nav__link">
+      <a href="../../../analytics/r/programmation/boucles/" class="md-nav__link">
         
   
   
@@ -5924,7 +5924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/programmation/fonctions/" class="md-nav__link">
+      <a href="../../../analytics/r/programmation/fonctions/" class="md-nav__link">
         
   
   
@@ -5976,7 +5976,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../r/statistique-descriptive/" class="md-nav__link ">
+            <a href="../../../analytics/r/statistique-descriptive/" class="md-nav__link ">
               
   
   
@@ -6035,7 +6035,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../r/probabilites/" class="md-nav__link ">
+            <a href="../../../analytics/r/probabilites/" class="md-nav__link ">
               
   
   
@@ -6100,7 +6100,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../r/statistique-inferentielle/" class="md-nav__link ">
+            <a href="../../../analytics/r/statistique-inferentielle/" class="md-nav__link ">
               
   
   
@@ -6135,7 +6135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/statistique-inferentielle/estimation/" class="md-nav__link">
+      <a href="../../../analytics/r/statistique-inferentielle/estimation/" class="md-nav__link">
         
   
   
@@ -6158,7 +6158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/statistique-inferentielle/intervalles-de-confiance/" class="md-nav__link">
+      <a href="../../../analytics/r/statistique-inferentielle/intervalles-de-confiance/" class="md-nav__link">
         
   
   
@@ -6181,7 +6181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/statistique-inferentielle/tests-d-hypotheses/" class="md-nav__link">
+      <a href="../../../analytics/r/statistique-inferentielle/tests-d-hypotheses/" class="md-nav__link">
         
   
   
@@ -6212,7 +6212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/ressources/" class="md-nav__link">
+      <a href="../../../analytics/r/ressources/" class="md-nav__link">
         
   
   
@@ -6268,7 +6268,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../knime/" class="md-nav__link ">
+            <a href="../../../analytics/knime/" class="md-nav__link ">
               
   
   
@@ -6303,7 +6303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knime/installer/" class="md-nav__link">
+      <a href="../../../analytics/knime/installer/" class="md-nav__link">
         
   
   
@@ -6326,7 +6326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knime/ressources/" class="md-nav__link">
+      <a href="../../../analytics/knime/ressources/" class="md-nav__link">
         
   
   
@@ -6384,7 +6384,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../sas/" class="md-nav__link ">
+            <a href="../../../analytics/sas/" class="md-nav__link ">
               
   
   
@@ -6419,7 +6419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sas/creer-un-compte-sas/" class="md-nav__link">
+      <a href="../../../analytics/sas/creer-un-compte-sas/" class="md-nav__link">
         
   
   
@@ -6442,7 +6442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sas/importer-des-donnees/" class="md-nav__link">
+      <a href="../../../analytics/sas/importer-des-donnees/" class="md-nav__link">
         
   
   
@@ -6465,7 +6465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sas/ressources/" class="md-nav__link">
+      <a href="../../../analytics/sas/ressources/" class="md-nav__link">
         
   
   
@@ -6496,7 +6496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ressources/" class="md-nav__link">
+      <a href="../../../analytics/ressources/" class="md-nav__link">
         
   
   
@@ -6571,7 +6571,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../sql/" class="md-nav__link ">
+            <a href="../../../analytics/sql/" class="md-nav__link ">
               
   
   
@@ -6606,7 +6606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/installer-postgres/" class="md-nav__link">
+      <a href="../../../analytics/sql/installer-postgres/" class="md-nav__link">
         
   
   
@@ -6629,7 +6629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/installer-sqlserver/" class="md-nav__link">
+      <a href="../../../analytics/sql/installer-sqlserver/" class="md-nav__link">
         
   
   
@@ -6652,7 +6652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/installer-dbeaver/" class="md-nav__link">
+      <a href="../../../analytics/sql/installer-dbeaver/" class="md-nav__link">
         
   
   
@@ -6675,7 +6675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-definition-language/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-definition-language/" class="md-nav__link">
         
   
   
@@ -6698,7 +6698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-manipulation-language/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-manipulation-language/" class="md-nav__link">
         
   
   
@@ -6721,7 +6721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-control-language/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-control-language/" class="md-nav__link">
         
   
   
@@ -6775,7 +6775,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../sql/data-query-language/" class="md-nav__link ">
+            <a href="../../../analytics/sql/data-query-language/" class="md-nav__link ">
               
   
   
@@ -6810,7 +6810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-query-language/filtrage-et-tri/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-query-language/filtrage-et-tri/" class="md-nav__link">
         
   
   
@@ -6833,7 +6833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-query-language/algebre/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-query-language/algebre/" class="md-nav__link">
         
   
   
@@ -6856,7 +6856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-query-language/les-sous-requetes/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-query-language/les-sous-requetes/" class="md-nav__link">
         
   
   
@@ -6879,7 +6879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-query-language/agregation/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-query-language/agregation/" class="md-nav__link">
         
   
   
@@ -6902,7 +6902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/data-query-language/jointures/" class="md-nav__link">
+      <a href="../../../analytics/sql/data-query-language/jointures/" class="md-nav__link">
         
   
   
@@ -6962,7 +6962,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../sql/programming/" class="md-nav__link ">
+            <a href="../../../analytics/sql/programming/" class="md-nav__link ">
               
   
   
@@ -6997,7 +6997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/programming/les-variables/" class="md-nav__link">
+      <a href="../../../analytics/sql/programming/les-variables/" class="md-nav__link">
         
   
   
@@ -7020,7 +7020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/programming/les-conditions/" class="md-nav__link">
+      <a href="../../../analytics/sql/programming/les-conditions/" class="md-nav__link">
         
   
   
@@ -7043,7 +7043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/programming/les-boucles/" class="md-nav__link">
+      <a href="../../../analytics/sql/programming/les-boucles/" class="md-nav__link">
         
   
   
@@ -7066,7 +7066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/programming/les-fonctions/" class="md-nav__link">
+      <a href="../../../analytics/sql/programming/les-fonctions/" class="md-nav__link">
         
   
   
@@ -7128,7 +7128,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../sql/python/" class="md-nav__link ">
+            <a href="../../../analytics/sql/python/" class="md-nav__link ">
               
   
   
@@ -7163,7 +7163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/python/01-sqlite/" class="md-nav__link">
+      <a href="../../../analytics/sql/python/01-sqlite/" class="md-nav__link">
         
   
   
@@ -7186,7 +7186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/python/02-postgres/" class="md-nav__link">
+      <a href="../../../analytics/sql/python/02-postgres/" class="md-nav__link">
         
   
   
@@ -7209,7 +7209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/python/03-sqlserver/" class="md-nav__link">
+      <a href="../../../analytics/sql/python/03-sqlserver/" class="md-nav__link">
         
   
   
@@ -7232,7 +7232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/python/04-pandas/" class="md-nav__link">
+      <a href="../../../analytics/sql/python/04-pandas/" class="md-nav__link">
         
   
   
@@ -7255,7 +7255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/python/5-db-analytics-tools/" class="md-nav__link">
+      <a href="../../../analytics/sql/python/5-db-analytics-tools/" class="md-nav__link">
         
   
   
@@ -7286,7 +7286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/no-sql/" class="md-nav__link">
+      <a href="../../../analytics/sql/no-sql/" class="md-nav__link">
         
   
   
@@ -7309,7 +7309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/application/" class="md-nav__link">
+      <a href="../../../analytics/sql/application/" class="md-nav__link">
         
   
   
@@ -7332,7 +7332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sql/ressources/" class="md-nav__link">
+      <a href="../../../analytics/sql/ressources/" class="md-nav__link">
         
   
   
@@ -7359,8 +7359,6 @@
       
   
   
-    
-  
   
   
     
@@ -7390,21 +7388,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../analytics/powerbi/" class="md-nav__link ">
               
   
   
@@ -7417,13 +7412,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Power BI
@@ -7439,7 +7434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installer/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/installer/" class="md-nav__link">
         
   
   
@@ -7489,7 +7484,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../01-preparer-les-donnees/" class="md-nav__link ">
+            <a href="../../../analytics/powerbi/01-preparer-les-donnees/" class="md-nav__link ">
               
   
   
@@ -7524,7 +7519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-preparer-les-donnees/obtenir-les-donnees/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/01-preparer-les-donnees/obtenir-les-donnees/" class="md-nav__link">
         
   
   
@@ -7547,7 +7542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-preparer-les-donnees/transformer-les-donnees/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/01-preparer-les-donnees/transformer-les-donnees/" class="md-nav__link">
         
   
   
@@ -7570,7 +7565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-preparer-les-donnees/applications/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/01-preparer-les-donnees/applications/" class="md-nav__link">
         
   
   
@@ -7640,7 +7635,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../02-modeliser-les-donnnees/" class="md-nav__link ">
+            <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/" class="md-nav__link ">
               
   
   
@@ -7675,7 +7670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/creer-un-calendrier/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/creer-un-calendrier/" class="md-nav__link">
         
   
   
@@ -7698,7 +7693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/creer-des-tables/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/creer-des-tables/" class="md-nav__link">
         
   
   
@@ -7721,7 +7716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/creer-des-colonnes/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/creer-des-colonnes/" class="md-nav__link">
         
   
   
@@ -7744,7 +7739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/concevoir-un-modele-de-donnees/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/concevoir-un-modele-de-donnees/" class="md-nav__link">
         
   
   
@@ -7767,7 +7762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/mettre-en-place-les-mesures/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/mettre-en-place-les-mesures/" class="md-nav__link">
         
   
   
@@ -7790,7 +7785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/modifier-le-contexte-de-filtre/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/modifier-le-contexte-de-filtre/" class="md-nav__link">
         
   
   
@@ -7813,7 +7808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/exploiter-la-time-intelligence/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/exploiter-la-time-intelligence/" class="md-nav__link">
         
   
   
@@ -7836,7 +7831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/creer-des-groupes-de-calcul/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/creer-des-groupes-de-calcul/" class="md-nav__link">
         
   
   
@@ -7859,7 +7854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02-modeliser-les-donnnees/applications/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/applications/" class="md-nav__link">
         
   
   
@@ -7921,7 +7916,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../03-visualiser-les-donnees/" class="md-nav__link ">
+            <a href="../../../analytics/powerbi/03-visualiser-les-donnees/" class="md-nav__link ">
               
   
   
@@ -7956,7 +7951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03-visualiser-les-donnees/les-cartes/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/03-visualiser-les-donnees/les-cartes/" class="md-nav__link">
         
   
   
@@ -7979,7 +7974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03-visualiser-les-donnees/les-cartes/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/03-visualiser-les-donnees/les-cartes/" class="md-nav__link">
         
   
   
@@ -8002,7 +7997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03-visualiser-les-donnees/les-tableaux-et-matrices/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/03-visualiser-les-donnees/les-tableaux-et-matrices/" class="md-nav__link">
         
   
   
@@ -8025,7 +8020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03-visualiser-les-donnees/les-sparklines/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/03-visualiser-les-donnees/les-sparklines/" class="md-nav__link">
         
   
   
@@ -8048,7 +8043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03-visualiser-les-donnees/applications/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/03-visualiser-les-donnees/applications/" class="md-nav__link">
         
   
   
@@ -8104,7 +8099,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../04-analyser-les-donnees/" class="md-nav__link ">
+            <a href="../../../analytics/powerbi/04-analyser-les-donnees/" class="md-nav__link ">
               
   
   
@@ -8139,7 +8134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../04-analyser-les-donnees/ajouter-une-ligne-de-reference/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/04-analyser-les-donnees/ajouter-une-ligne-de-reference/" class="md-nav__link">
         
   
   
@@ -8162,7 +8157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../04-analyser-les-donnees/applications/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/04-analyser-les-donnees/applications/" class="md-nav__link">
         
   
   
@@ -8190,8 +8185,6 @@
                 
   
   
-    
-  
   
   
     
@@ -8218,15 +8211,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_7" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../analytics/powerbi/05-deployer-des-livrables/" class="md-nav__link ">
               
   
   
@@ -8245,7 +8238,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_7">
             <span class="md-nav__icon md-icon"></span>
             Déployer les ressources
@@ -8261,7 +8254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../idee-de-design/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/idee-de-design/" class="md-nav__link">
         
   
   
@@ -8284,7 +8277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creer-un-compte-power-bi/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/creer-un-compte-power-bi/" class="md-nav__link">
         
   
   
@@ -8307,7 +8300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publier-en-ligne/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/publier-en-ligne/" class="md-nav__link">
         
   
   
@@ -8327,8 +8320,6 @@
                 
   
   
-    
-  
   
   
     
@@ -8353,15 +8344,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_7_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_7_5" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../analytics/powerbi/05-deployer-des-livrables/pbi-report-server/" class="md-nav__link ">
               
   
   
@@ -8380,7 +8371,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_7_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_7_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_7_5">
             <span class="md-nav__icon md-icon"></span>
             Power BI Report Server
@@ -8396,7 +8387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installer/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/pbi-report-server/installer/" class="md-nav__link">
         
   
   
@@ -8416,32 +8407,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Publier un rapport
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/pbi-report-server/publier-un-rapport/" class="md-nav__link">
         
   
   
@@ -8452,53 +8421,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#organiser-en-dossier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organiser en dossier
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uploader-le-fichier-pbix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uploader le fichier pbix
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publier-depuis-power-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publier depuis Power Desktop
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -8511,7 +8433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creer-un-plan-d-actualisation/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/pbi-report-server/creer-un-plan-d-actualisation/" class="md-nav__link">
         
   
   
@@ -8534,7 +8456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gerer-les-droits-d-acces/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/pbi-report-server/gerer-les-droits-d-acces/" class="md-nav__link">
         
   
   
@@ -8565,7 +8487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../applications/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/05-deployer-des-livrables/applications/" class="md-nav__link">
         
   
   
@@ -8596,7 +8518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projets-power-bi/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/projets-power-bi/" class="md-nav__link">
         
   
   
@@ -8619,7 +8541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ressources/" class="md-nav__link">
+      <a href="../../../analytics/powerbi/ressources/" class="md-nav__link">
         
   
   
@@ -8646,6 +8568,8 @@
       
   
   
+    
+  
   
   
     
@@ -8677,18 +8601,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -8701,13 +8628,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Big Data
@@ -8758,7 +8685,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/analysis-services/" class="md-nav__link ">
+            <a href="../../analysis-services/" class="md-nav__link ">
               
   
   
@@ -8793,7 +8720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/analysis-services/installer/" class="md-nav__link">
+      <a href="../../analysis-services/installer/" class="md-nav__link">
         
   
   
@@ -8816,7 +8743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/analysis-services/preparer-les-donnees/" class="md-nav__link">
+      <a href="../../analysis-services/preparer-les-donnees/" class="md-nav__link">
         
   
   
@@ -8839,7 +8766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/analysis-services/creer-un-cube-tabulaire/" class="md-nav__link">
+      <a href="../../analysis-services/creer-un-cube-tabulaire/" class="md-nav__link">
         
   
   
@@ -8862,7 +8789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/analysis-services/creer-un-cube-multi-dimensionnel/" class="md-nav__link">
+      <a href="../../analysis-services/creer-un-cube-multi-dimensionnel/" class="md-nav__link">
         
   
   
@@ -8885,7 +8812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/analysis-services/actualiser-un-cube/" class="md-nav__link">
+      <a href="../../analysis-services/actualiser-un-cube/" class="md-nav__link">
         
   
   
@@ -8908,7 +8835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/analysis-services/exploiter-un-cube-dans-excel/" class="md-nav__link">
+      <a href="../../analysis-services/exploiter-un-cube-dans-excel/" class="md-nav__link">
         
   
   
@@ -8931,7 +8858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/analysis-services/ressources/" class="md-nav__link">
+      <a href="../../analysis-services/ressources/" class="md-nav__link">
         
   
   
@@ -8991,7 +8918,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/apache-hadoop/" class="md-nav__link ">
+            <a href="../../apache-hadoop/" class="md-nav__link ">
               
   
   
@@ -9026,7 +8953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-hadoop/installer/" class="md-nav__link">
+      <a href="../../apache-hadoop/installer/" class="md-nav__link">
         
   
   
@@ -9049,7 +8976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-hadoop/get-started/" class="md-nav__link">
+      <a href="../../apache-hadoop/get-started/" class="md-nav__link">
         
   
   
@@ -9072,7 +8999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-hadoop/applications/" class="md-nav__link">
+      <a href="../../apache-hadoop/applications/" class="md-nav__link">
         
   
   
@@ -9095,7 +9022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-hadoop/ressources/" class="md-nav__link">
+      <a href="../../apache-hadoop/ressources/" class="md-nav__link">
         
   
   
@@ -9159,7 +9086,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/apache-spark/" class="md-nav__link ">
+            <a href="../../apache-spark/" class="md-nav__link ">
               
   
   
@@ -9194,7 +9121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-spark/installer/" class="md-nav__link">
+      <a href="../../apache-spark/installer/" class="md-nav__link">
         
   
   
@@ -9217,7 +9144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-spark/01-get-started/" class="md-nav__link">
+      <a href="../../apache-spark/01-get-started/" class="md-nav__link">
         
   
   
@@ -9240,7 +9167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-spark/02-import-export/" class="md-nav__link">
+      <a href="../../apache-spark/02-import-export/" class="md-nav__link">
         
   
   
@@ -9263,7 +9190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-spark/03-work-with-postgres/" class="md-nav__link">
+      <a href="../../apache-spark/03-work-with-postgres/" class="md-nav__link">
         
   
   
@@ -9286,7 +9213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-spark/applications/" class="md-nav__link">
+      <a href="../../apache-spark/applications/" class="md-nav__link">
         
   
   
@@ -9309,7 +9236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-spark/ressources/" class="md-nav__link">
+      <a href="../../apache-spark/ressources/" class="md-nav__link">
         
   
   
@@ -9381,7 +9308,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/apache-airflow/" class="md-nav__link ">
+            <a href="../../apache-airflow/" class="md-nav__link ">
               
   
   
@@ -9416,7 +9343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/installer/" class="md-nav__link">
+      <a href="../../apache-airflow/installer/" class="md-nav__link">
         
   
   
@@ -9439,7 +9366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/interface/" class="md-nav__link">
+      <a href="../../apache-airflow/interface/" class="md-nav__link">
         
   
   
@@ -9462,7 +9389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/get-started/" class="md-nav__link">
+      <a href="../../apache-airflow/get-started/" class="md-nav__link">
         
   
   
@@ -9485,7 +9412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/schedule-dags/" class="md-nav__link">
+      <a href="../../apache-airflow/schedule-dags/" class="md-nav__link">
         
   
   
@@ -9508,7 +9435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/run-dags/" class="md-nav__link">
+      <a href="../../apache-airflow/run-dags/" class="md-nav__link">
         
   
   
@@ -9531,7 +9458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/define-dependencies/" class="md-nav__link">
+      <a href="../../apache-airflow/define-dependencies/" class="md-nav__link">
         
   
   
@@ -9554,7 +9481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/airflow-cli-commands/" class="md-nav__link">
+      <a href="../../apache-airflow/airflow-cli-commands/" class="md-nav__link">
         
   
   
@@ -9577,7 +9504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/creer-une-connexion-de-source-de-donnees/" class="md-nav__link">
+      <a href="../../apache-airflow/creer-une-connexion-de-source-de-donnees/" class="md-nav__link">
         
   
   
@@ -9600,7 +9527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/applications/" class="md-nav__link">
+      <a href="../../apache-airflow/applications/" class="md-nav__link">
         
   
   
@@ -9623,7 +9550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-airflow/ressources/" class="md-nav__link">
+      <a href="../../apache-airflow/ressources/" class="md-nav__link">
         
   
   
@@ -9695,7 +9622,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/talend/" class="md-nav__link ">
+            <a href="../../talend/" class="md-nav__link ">
               
   
   
@@ -9730,7 +9657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/installer/" class="md-nav__link">
+      <a href="../../talend/installer/" class="md-nav__link">
         
   
   
@@ -9753,7 +9680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/decouvrir-interface/" class="md-nav__link">
+      <a href="../../talend/decouvrir-interface/" class="md-nav__link">
         
   
   
@@ -9776,7 +9703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/creer-une-connexion-de-base-de-donnees/" class="md-nav__link">
+      <a href="../../talend/creer-une-connexion-de-base-de-donnees/" class="md-nav__link">
         
   
   
@@ -9799,7 +9726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/creer-un-job/" class="md-nav__link">
+      <a href="../../talend/creer-un-job/" class="md-nav__link">
         
   
   
@@ -9822,7 +9749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/afficher-des-messages/" class="md-nav__link">
+      <a href="../../talend/afficher-des-messages/" class="md-nav__link">
         
   
   
@@ -9845,7 +9772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/fonctions-predefinies/" class="md-nav__link">
+      <a href="../../talend/fonctions-predefinies/" class="md-nav__link">
         
   
   
@@ -9868,7 +9795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/manipuler-les-dates/" class="md-nav__link">
+      <a href="../../talend/manipuler-les-dates/" class="md-nav__link">
         
   
   
@@ -9891,7 +9818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/exporter-un-job/" class="md-nav__link">
+      <a href="../../talend/exporter-un-job/" class="md-nav__link">
         
   
   
@@ -9914,7 +9841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/applications/" class="md-nav__link">
+      <a href="../../talend/applications/" class="md-nav__link">
         
   
   
@@ -9937,7 +9864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/talend/ressources/" class="md-nav__link">
+      <a href="../../talend/ressources/" class="md-nav__link">
         
   
   
@@ -9995,7 +9922,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/apache-kylin/" class="md-nav__link ">
+            <a href="../../apache-kylin/" class="md-nav__link ">
               
   
   
@@ -10030,7 +9957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-kylin/installer/" class="md-nav__link">
+      <a href="../../apache-kylin/installer/" class="md-nav__link">
         
   
   
@@ -10053,7 +9980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-kylin/applications/" class="md-nav__link">
+      <a href="../../apache-kylin/applications/" class="md-nav__link">
         
   
   
@@ -10076,7 +10003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/apache-kylin/ressources/" class="md-nav__link">
+      <a href="../../apache-kylin/ressources/" class="md-nav__link">
         
   
   
@@ -10136,7 +10063,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/mongo-db/" class="md-nav__link ">
+            <a href="../../mongo-db/" class="md-nav__link ">
               
   
   
@@ -10171,7 +10098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/mongo-db/installer/" class="md-nav__link">
+      <a href="../../mongo-db/installer/" class="md-nav__link">
         
   
   
@@ -10194,7 +10121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/mongo-db/interagir-avec-mongo-db/" class="md-nav__link">
+      <a href="../../mongo-db/interagir-avec-mongo-db/" class="md-nav__link">
         
   
   
@@ -10217,7 +10144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/mongo-db/applications/" class="md-nav__link">
+      <a href="../../mongo-db/applications/" class="md-nav__link">
         
   
   
@@ -10240,7 +10167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/mongo-db/ressources/" class="md-nav__link">
+      <a href="../../mongo-db/ressources/" class="md-nav__link">
         
   
   
@@ -10268,6 +10195,8 @@
                 
   
   
+    
+  
   
   
     
@@ -10290,15 +10219,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../big-data/neo4j/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -10317,7 +10246,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_9">
             <span class="md-nav__icon md-icon"></span>
             Neo4j
@@ -10333,7 +10262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/neo4j/installer/" class="md-nav__link">
+      <a href="../installer/" class="md-nav__link">
         
   
   
@@ -10356,7 +10285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/neo4j/applications.md" class="md-nav__link">
+      <a href="../applications.md" class="md-nav__link">
         
   
   
@@ -10376,10 +10305,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../big-data/neo4j/ressources/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ressources
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -10390,6 +10339,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docs-officielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docs Officielle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyspark-tutorial-freecodecamporg" class="md-nav__link">
+    <span class="md-ellipsis">
+      PySpark Tutorial (freeCodeCamp.org)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Références
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -10410,7 +10404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../big-data/ressources/" class="md-nav__link">
+      <a href="../../ressources/" class="md-nav__link">
         
   
   
@@ -10479,7 +10473,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/" class="md-nav__link ">
+            <a href="../../../machine-learning/" class="md-nav__link ">
               
   
   
@@ -10514,7 +10508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/installer/" class="md-nav__link">
+      <a href="../../../machine-learning/installer/" class="md-nav__link">
         
   
   
@@ -10537,7 +10531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/notion-d-apprentissage/" class="md-nav__link">
+      <a href="../../../machine-learning/notion-d-apprentissage/" class="md-nav__link">
         
   
   
@@ -10560,7 +10554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/ml-workflow/" class="md-nav__link">
+      <a href="../../../machine-learning/ml-workflow/" class="md-nav__link">
         
   
   
@@ -10616,7 +10610,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/apprentissage-supervise/" class="md-nav__link ">
+            <a href="../../../machine-learning/apprentissage-supervise/" class="md-nav__link ">
               
   
   
@@ -10651,7 +10645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-supervise/k-plus-proches-voisins/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-supervise/k-plus-proches-voisins/" class="md-nav__link">
         
   
   
@@ -10674,7 +10668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-supervise/regression-lineaire/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-supervise/regression-lineaire/" class="md-nav__link">
         
   
   
@@ -10697,7 +10691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-supervise/regression-logistique/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-supervise/regression-logistique/" class="md-nav__link">
         
   
   
@@ -10720,7 +10714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-supervise/separateurs-a-vastes-marges/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-supervise/separateurs-a-vastes-marges/" class="md-nav__link">
         
   
   
@@ -10743,7 +10737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-supervise/arbres-de-decision/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-supervise/arbres-de-decision/" class="md-nav__link">
         
   
   
@@ -10766,7 +10760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-supervise/forets-aleatoires/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-supervise/forets-aleatoires/" class="md-nav__link">
         
   
   
@@ -10826,7 +10820,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/apprentissage-non-supervise/" class="md-nav__link ">
+            <a href="../../../machine-learning/apprentissage-non-supervise/" class="md-nav__link ">
               
   
   
@@ -10861,7 +10855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-non-supervise/analyse-en-composantes-principales/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-non-supervise/analyse-en-composantes-principales/" class="md-nav__link">
         
   
   
@@ -10884,7 +10878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-non-supervise/k-moyennes/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-non-supervise/k-moyennes/" class="md-nav__link">
         
   
   
@@ -10907,7 +10901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-non-supervise/clustering-hierachique/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-non-supervise/clustering-hierachique/" class="md-nav__link">
         
   
   
@@ -10930,7 +10924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/apprentissage-non-supervise/regles-d-association/" class="md-nav__link">
+      <a href="../../../machine-learning/apprentissage-non-supervise/regles-d-association/" class="md-nav__link">
         
   
   
@@ -10961,7 +10955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/advanced-technics/" class="md-nav__link">
+      <a href="../../../machine-learning/advanced-technics/" class="md-nav__link">
         
   
   
@@ -10984,7 +10978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/deep-learning/" class="md-nav__link">
+      <a href="../../../machine-learning/deep-learning/" class="md-nav__link">
         
   
   
@@ -11034,7 +11028,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/projets/" class="md-nav__link ">
+            <a href="../../../machine-learning/projets/" class="md-nav__link ">
               
   
   
@@ -11069,7 +11063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/projets/projet-01/" class="md-nav__link">
+      <a href="../../../machine-learning/projets/projet-01/" class="md-nav__link">
         
   
   
@@ -11092,7 +11086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/projets/projet-02/" class="md-nav__link">
+      <a href="../../../machine-learning/projets/projet-02/" class="md-nav__link">
         
   
   
@@ -11115,7 +11109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/projets/projet-03/" class="md-nav__link">
+      <a href="../../../machine-learning/projets/projet-03/" class="md-nav__link">
         
   
   
@@ -11146,7 +11140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/ressources/" class="md-nav__link">
+      <a href="../../../machine-learning/ressources/" class="md-nav__link">
         
   
   
@@ -11213,7 +11207,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/tensorflow/" class="md-nav__link ">
+            <a href="../../../machine-learning/tensorflow/" class="md-nav__link ">
               
   
   
@@ -11248,7 +11242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/installer/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/installer/" class="md-nav__link">
         
   
   
@@ -11271,7 +11265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/demarrer/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/demarrer/" class="md-nav__link">
         
   
   
@@ -11319,7 +11313,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/tensorflow/01-neural-network/" class="md-nav__link ">
+            <a href="../../../machine-learning/tensorflow/01-neural-network/" class="md-nav__link ">
               
   
   
@@ -11354,7 +11348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/01-neural-network/perceptron/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/01-neural-network/perceptron/" class="md-nav__link">
         
   
   
@@ -11377,7 +11371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/01-neural-network/perceptron-multi-couches/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/01-neural-network/perceptron-multi-couches/" class="md-nav__link">
         
   
   
@@ -11433,7 +11427,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/tensorflow/02-image-classification/" class="md-nav__link ">
+            <a href="../../../machine-learning/tensorflow/02-image-classification/" class="md-nav__link ">
               
   
   
@@ -11468,7 +11462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/02-image-classification/reseaux-convolutifs/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/02-image-classification/reseaux-convolutifs/" class="md-nav__link">
         
   
   
@@ -11491,7 +11485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/02-image-classification/transfer-learning/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/02-image-classification/transfer-learning/" class="md-nav__link">
         
   
   
@@ -11547,7 +11541,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/tensorflow/03-natural-language-processing/" class="md-nav__link ">
+            <a href="../../../machine-learning/tensorflow/03-natural-language-processing/" class="md-nav__link ">
               
   
   
@@ -11582,7 +11576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/03-natural-language-processing/classification-de-texte/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/03-natural-language-processing/classification-de-texte/" class="md-nav__link">
         
   
   
@@ -11605,7 +11599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/03-natural-language-processing/creer-un-plognement-de-mots/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/03-natural-language-processing/creer-un-plognement-de-mots/" class="md-nav__link">
         
   
   
@@ -11663,7 +11657,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/tensorflow/04-time-series-sequences/" class="md-nav__link ">
+            <a href="../../../machine-learning/tensorflow/04-time-series-sequences/" class="md-nav__link ">
               
   
   
@@ -11698,7 +11692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/04-time-series-sequences/predict-time-series/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/04-time-series-sequences/predict-time-series/" class="md-nav__link">
         
   
   
@@ -11721,7 +11715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/03-natural-language-processing/generation-de-texte/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/03-natural-language-processing/generation-de-texte/" class="md-nav__link">
         
   
   
@@ -11744,7 +11738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/04-time-series-sequences/application/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/04-time-series-sequences/application/" class="md-nav__link">
         
   
   
@@ -11802,7 +11796,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../machine-learning/tensorflow/projets/" class="md-nav__link ">
+            <a href="../../../machine-learning/tensorflow/projets/" class="md-nav__link ">
               
   
   
@@ -11837,7 +11831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/projets/projet-01/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/projets/projet-01/" class="md-nav__link">
         
   
   
@@ -11860,7 +11854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/projets/projet-02/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/projets/projet-02/" class="md-nav__link">
         
   
   
@@ -11883,7 +11877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/projets/projet-03/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/projets/projet-03/" class="md-nav__link">
         
   
   
@@ -11914,7 +11908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../machine-learning/tensorflow/ressources/" class="md-nav__link">
+      <a href="../../../machine-learning/tensorflow/ressources/" class="md-nav__link">
         
   
   
@@ -11983,7 +11977,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/" class="md-nav__link ">
+            <a href="../../../mlops/" class="md-nav__link ">
               
   
   
@@ -12049,7 +12043,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/jupyter/" class="md-nav__link ">
+            <a href="../../../mlops/jupyter/" class="md-nav__link ">
               
   
   
@@ -12084,7 +12078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/jupyter/installer/" class="md-nav__link">
+      <a href="../../../mlops/jupyter/installer/" class="md-nav__link">
         
   
   
@@ -12107,7 +12101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/jupyter/configurer-jupyter/" class="md-nav__link">
+      <a href="../../../mlops/jupyter/configurer-jupyter/" class="md-nav__link">
         
   
   
@@ -12130,7 +12124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/jupyter/installer-extensions-jupyter/" class="md-nav__link">
+      <a href="../../../mlops/jupyter/installer-extensions-jupyter/" class="md-nav__link">
         
   
   
@@ -12153,7 +12147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/jupyter/serveur-distant/" class="md-nav__link">
+      <a href="../../../mlops/jupyter/serveur-distant/" class="md-nav__link">
         
   
   
@@ -12176,7 +12170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/jupyter/ressources/" class="md-nav__link">
+      <a href="../../../mlops/jupyter/ressources/" class="md-nav__link">
         
   
   
@@ -12234,7 +12228,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/mlflow/" class="md-nav__link ">
+            <a href="../../../mlops/mlflow/" class="md-nav__link ">
               
   
   
@@ -12269,7 +12263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/mlflow/installer/" class="md-nav__link">
+      <a href="../../../mlops/mlflow/installer/" class="md-nav__link">
         
   
   
@@ -12292,7 +12286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/mlflow/demarrer/" class="md-nav__link">
+      <a href="../../../mlops/mlflow/demarrer/" class="md-nav__link">
         
   
   
@@ -12315,7 +12309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/mlflow/ressources/" class="md-nav__link">
+      <a href="../../../mlops/mlflow/ressources/" class="md-nav__link">
         
   
   
@@ -12385,7 +12379,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/flask/" class="md-nav__link ">
+            <a href="../../../mlops/flask/" class="md-nav__link ">
               
   
   
@@ -12420,7 +12414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/installer/" class="md-nav__link">
+      <a href="../../../mlops/flask/installer/" class="md-nav__link">
         
   
   
@@ -12443,7 +12437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/demarrer/" class="md-nav__link">
+      <a href="../../../mlops/flask/demarrer/" class="md-nav__link">
         
   
   
@@ -12466,7 +12460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/structurer-le-projet/" class="md-nav__link">
+      <a href="../../../mlops/flask/structurer-le-projet/" class="md-nav__link">
         
   
   
@@ -12489,7 +12483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/ajouter-une-base-de-donnees/" class="md-nav__link">
+      <a href="../../../mlops/flask/ajouter-une-base-de-donnees/" class="md-nav__link">
         
   
   
@@ -12512,7 +12506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/creer-des-vues/" class="md-nav__link">
+      <a href="../../../mlops/flask/creer-des-vues/" class="md-nav__link">
         
   
   
@@ -12535,7 +12529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/creer-une-api-pour-scikit-learn/" class="md-nav__link">
+      <a href="../../../mlops/flask/creer-une-api-pour-scikit-learn/" class="md-nav__link">
         
   
   
@@ -12558,7 +12552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/deployer-avec-docker/" class="md-nav__link">
+      <a href="../../../mlops/flask/deployer-avec-docker/" class="md-nav__link">
         
   
   
@@ -12581,7 +12575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/fast-api/" class="md-nav__link">
+      <a href="../../../mlops/flask/fast-api/" class="md-nav__link">
         
   
   
@@ -12604,7 +12598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/flask/ressources/" class="md-nav__link">
+      <a href="../../../mlops/flask/ressources/" class="md-nav__link">
         
   
   
@@ -12662,7 +12656,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/gradio/" class="md-nav__link ">
+            <a href="../../../mlops/gradio/" class="md-nav__link ">
               
   
   
@@ -12697,7 +12691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/gradio/installer/" class="md-nav__link">
+      <a href="../../../mlops/gradio/installer/" class="md-nav__link">
         
   
   
@@ -12720,7 +12714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/gradio/demarrer/" class="md-nav__link">
+      <a href="../../../mlops/gradio/demarrer/" class="md-nav__link">
         
   
   
@@ -12743,7 +12737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/gradio/deployer-avec-docker/" class="md-nav__link">
+      <a href="../../../mlops/gradio/deployer-avec-docker/" class="md-nav__link">
         
   
   
@@ -12809,7 +12803,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/docker/" class="md-nav__link ">
+            <a href="../../../mlops/docker/" class="md-nav__link ">
               
   
   
@@ -12844,7 +12838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/docker/installer/" class="md-nav__link">
+      <a href="../../../mlops/docker/installer/" class="md-nav__link">
         
   
   
@@ -12867,7 +12861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/docker/create-docker-image/" class="md-nav__link">
+      <a href="../../../mlops/docker/create-docker-image/" class="md-nav__link">
         
   
   
@@ -12890,7 +12884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/docker/deploy-docker-container/" class="md-nav__link">
+      <a href="../../../mlops/docker/deploy-docker-container/" class="md-nav__link">
         
   
   
@@ -12913,7 +12907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/docker/interact-with-docker-container/" class="md-nav__link">
+      <a href="../../../mlops/docker/interact-with-docker-container/" class="md-nav__link">
         
   
   
@@ -12936,7 +12930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/docker/docker-hub/" class="md-nav__link">
+      <a href="../../../mlops/docker/docker-hub/" class="md-nav__link">
         
   
   
@@ -12959,7 +12953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/docker/docker-compose/" class="md-nav__link">
+      <a href="../../../mlops/docker/docker-compose/" class="md-nav__link">
         
   
   
@@ -12982,7 +12976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/docker/ressources/" class="md-nav__link">
+      <a href="../../../mlops/docker/ressources/" class="md-nav__link">
         
   
   
@@ -13044,7 +13038,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/bash/" class="md-nav__link ">
+            <a href="../../../mlops/bash/" class="md-nav__link ">
               
   
   
@@ -13079,7 +13073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/installer/" class="md-nav__link">
+      <a href="../../../mlops/bash/installer/" class="md-nav__link">
         
   
   
@@ -13165,7 +13159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/se-deplacer/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/se-deplacer/" class="md-nav__link">
         
   
   
@@ -13188,7 +13182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/contenu-d-un-repertoire/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/contenu-d-un-repertoire/" class="md-nav__link">
         
   
   
@@ -13211,7 +13205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/consulter-un-fichier/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/consulter-un-fichier/" class="md-nav__link">
         
   
   
@@ -13234,7 +13228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/creer-un-repertoire/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/creer-un-repertoire/" class="md-nav__link">
         
   
   
@@ -13257,7 +13251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/creer-un-fichier/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/creer-un-fichier/" class="md-nav__link">
         
   
   
@@ -13280,7 +13274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/copier-un-fichier/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/copier-un-fichier/" class="md-nav__link">
         
   
   
@@ -13303,7 +13297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/deplacer-un-fichier/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/deplacer-un-fichier/" class="md-nav__link">
         
   
   
@@ -13326,7 +13320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/supprimer-un-fichier/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/supprimer-un-fichier/" class="md-nav__link">
         
   
   
@@ -13349,7 +13343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/editer-un-fichier/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/editer-un-fichier/" class="md-nav__link">
         
   
   
@@ -13372,7 +13366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/commandes-usuelles/autres-commandes/" class="md-nav__link">
+      <a href="../../../mlops/bash/commandes-usuelles/autres-commandes/" class="md-nav__link">
         
   
   
@@ -13456,7 +13450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/programmation/affichage/" class="md-nav__link">
+      <a href="../../../mlops/bash/programmation/affichage/" class="md-nav__link">
         
   
   
@@ -13479,7 +13473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/programmation/saisie/" class="md-nav__link">
+      <a href="../../../mlops/bash/programmation/saisie/" class="md-nav__link">
         
   
   
@@ -13502,7 +13496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/programmation/conditions/" class="md-nav__link">
+      <a href="../../../mlops/bash/programmation/conditions/" class="md-nav__link">
         
   
   
@@ -13525,7 +13519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/programmation/choix/" class="md-nav__link">
+      <a href="../../../mlops/bash/programmation/choix/" class="md-nav__link">
         
   
   
@@ -13548,7 +13542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/programmation/boucles/" class="md-nav__link">
+      <a href="../../../mlops/bash/programmation/boucles/" class="md-nav__link">
         
   
   
@@ -13579,7 +13573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/bash/" class="md-nav__link">
+      <a href="../../../mlops/bash/bash/" class="md-nav__link">
         
   
   
@@ -13602,7 +13596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/bash/ressources/" class="md-nav__link">
+      <a href="../../../mlops/bash/ressources/" class="md-nav__link">
         
   
   
@@ -13666,7 +13660,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/git/" class="md-nav__link ">
+            <a href="../../../mlops/git/" class="md-nav__link ">
               
   
   
@@ -13701,7 +13695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/git/installer/" class="md-nav__link">
+      <a href="../../../mlops/git/installer/" class="md-nav__link">
         
   
   
@@ -13724,7 +13718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/git/demarrer-avec-git/" class="md-nav__link">
+      <a href="../../../mlops/git/demarrer-avec-git/" class="md-nav__link">
         
   
   
@@ -13747,7 +13741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/git/gerer-les-branches/" class="md-nav__link">
+      <a href="../../../mlops/git/gerer-les-branches/" class="md-nav__link">
         
   
   
@@ -13770,7 +13764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/git/creer-un-compte-github/" class="md-nav__link">
+      <a href="../../../mlops/git/creer-un-compte-github/" class="md-nav__link">
         
   
   
@@ -13793,7 +13787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/git/demarrer-avec-github/" class="md-nav__link">
+      <a href="../../../mlops/git/demarrer-avec-github/" class="md-nav__link">
         
   
   
@@ -13816,7 +13810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/git/ressources/" class="md-nav__link">
+      <a href="../../../mlops/git/ressources/" class="md-nav__link">
         
   
   
@@ -13876,7 +13870,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../mlops/cloud/" class="md-nav__link ">
+            <a href="../../../mlops/cloud/" class="md-nav__link ">
               
   
   
@@ -13911,7 +13905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/cloud/aws/" class="md-nav__link">
+      <a href="../../../mlops/cloud/aws/" class="md-nav__link">
         
   
   
@@ -13934,7 +13928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/cloud/azure/" class="md-nav__link">
+      <a href="../../../mlops/cloud/azure/" class="md-nav__link">
         
   
   
@@ -13957,7 +13951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/cloud/gcp/" class="md-nav__link">
+      <a href="../../../mlops/cloud/gcp/" class="md-nav__link">
         
   
   
@@ -13980,7 +13974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/cloud/ovh/" class="md-nav__link">
+      <a href="../../../mlops/cloud/ovh/" class="md-nav__link">
         
   
   
@@ -14011,7 +14005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mlops/ressources/" class="md-nav__link">
+      <a href="../../../mlops/ressources/" class="md-nav__link">
         
   
   
@@ -14088,7 +14082,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   
@@ -14152,7 +14146,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/informatique/" class="md-nav__link ">
+            <a href="../../../blog/posts/informatique/" class="md-nav__link ">
               
   
   
@@ -14187,7 +14181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/informatique/ordinateurs/" class="md-nav__link">
+      <a href="../../../blog/posts/informatique/ordinateurs/" class="md-nav__link">
         
   
   
@@ -14210,7 +14204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/informatique/systemes-d-exploitation/" class="md-nav__link">
+      <a href="../../../blog/posts/informatique/systemes-d-exploitation/" class="md-nav__link">
         
   
   
@@ -14233,7 +14227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/informatique/programmes-informatiques/" class="md-nav__link">
+      <a href="../../../blog/posts/informatique/programmes-informatiques/" class="md-nav__link">
         
   
   
@@ -14256,7 +14250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/informatique/metiers-de-l-informatique/" class="md-nav__link">
+      <a href="../../../blog/posts/informatique/metiers-de-l-informatique/" class="md-nav__link">
         
   
   
@@ -14326,7 +14320,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/programing-tips/" class="md-nav__link ">
+            <a href="../../../blog/posts/programing-tips/" class="md-nav__link ">
               
   
   
@@ -14361,7 +14355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/bonnes-pratiques/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/bonnes-pratiques/" class="md-nav__link">
         
   
   
@@ -14384,7 +14378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/premier-programme-c/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/premier-programme-c/" class="md-nav__link">
         
   
   
@@ -14407,7 +14401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/applications-du-c/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/applications-du-c/" class="md-nav__link">
         
   
   
@@ -14430,7 +14424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/echanger-deux-variables/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/echanger-deux-variables/" class="md-nav__link">
         
   
   
@@ -14453,7 +14447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/langage-c/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/langage-c/" class="md-nav__link">
         
   
   
@@ -14476,7 +14470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/pourquoi-le-c/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/pourquoi-le-c/" class="md-nav__link">
         
   
   
@@ -14499,7 +14493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/installer-un-ide/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/installer-un-ide/" class="md-nav__link">
         
   
   
@@ -14522,7 +14516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/python-vs-c-cpp/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/python-vs-c-cpp/" class="md-nav__link">
         
   
   
@@ -14545,7 +14539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/programing-tips/le-choix-des-technos/" class="md-nav__link">
+      <a href="../../../blog/posts/programing-tips/le-choix-des-technos/" class="md-nav__link">
         
   
   
@@ -14603,7 +14597,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/python-tips/" class="md-nav__link ">
+            <a href="../../../blog/posts/python-tips/" class="md-nav__link ">
               
   
   
@@ -14638,7 +14632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/python-tips/retirer-les-accents/" class="md-nav__link">
+      <a href="../../../blog/posts/python-tips/retirer-les-accents/" class="md-nav__link">
         
   
   
@@ -14661,7 +14655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/python-tips/export-python-to-exe/" class="md-nav__link">
+      <a href="../../../blog/posts/python-tips/export-python-to-exe/" class="md-nav__link">
         
   
   
@@ -14684,7 +14678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/python-tips/spliter-avec-plusieurs-separateurs/" class="md-nav__link">
+      <a href="../../../blog/posts/python-tips/spliter-avec-plusieurs-separateurs/" class="md-nav__link">
         
   
   
@@ -14748,7 +14742,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/sql-tips/" class="md-nav__link ">
+            <a href="../../../blog/posts/sql-tips/" class="md-nav__link ">
               
   
   
@@ -14783,7 +14777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/sql-tips/common-sql-queries/" class="md-nav__link">
+      <a href="../../../blog/posts/sql-tips/common-sql-queries/" class="md-nav__link">
         
   
   
@@ -14806,7 +14800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/sql-tips/importer-des-donnees-dans-sql-server/" class="md-nav__link">
+      <a href="../../../blog/posts/sql-tips/importer-des-donnees-dans-sql-server/" class="md-nav__link">
         
   
   
@@ -14829,7 +14823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/sql-tips/gerer-les-fichiers-de-log-de-sql-server/" class="md-nav__link">
+      <a href="../../../blog/posts/sql-tips/gerer-les-fichiers-de-log-de-sql-server/" class="md-nav__link">
         
   
   
@@ -14852,7 +14846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/sql-tips/rendre-sql-server-sensible-a-la-casse/" class="md-nav__link">
+      <a href="../../../blog/posts/sql-tips/rendre-sql-server-sensible-a-la-casse/" class="md-nav__link">
         
   
   
@@ -14875,7 +14869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/sql-tips/provisionner-une-instance-azure-sql-database/" class="md-nav__link">
+      <a href="../../../blog/posts/sql-tips/provisionner-une-instance-azure-sql-database/" class="md-nav__link">
         
   
   
@@ -14898,7 +14892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/sql-tips/sommes-cummulees/" class="md-nav__link">
+      <a href="../../../blog/posts/sql-tips/sommes-cummulees/" class="md-nav__link">
         
   
   
@@ -14958,7 +14952,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/powerbi-tips/" class="md-nav__link ">
+            <a href="../../../blog/posts/powerbi-tips/" class="md-nav__link ">
               
   
   
@@ -14993,7 +14987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/powerbi-tips/create-dynamic-title/" class="md-nav__link">
+      <a href="../../../blog/posts/powerbi-tips/create-dynamic-title/" class="md-nav__link">
         
   
   
@@ -15016,7 +15010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/powerbi-tips/create-dynamic-measure/" class="md-nav__link">
+      <a href="../../../blog/posts/powerbi-tips/create-dynamic-measure/" class="md-nav__link">
         
   
   
@@ -15039,7 +15033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/powerbi-tips/sort-filter-items/" class="md-nav__link">
+      <a href="../../../blog/posts/powerbi-tips/sort-filter-items/" class="md-nav__link">
         
   
   
@@ -15062,7 +15056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/powerbi-tips/block-last-date/" class="md-nav__link">
+      <a href="../../../blog/posts/powerbi-tips/block-last-date/" class="md-nav__link">
         
   
   
@@ -15146,7 +15140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/pydata-stack/packages-python-essentiels/" class="md-nav__link">
+      <a href="../../../blog/posts/pydata-stack/packages-python-essentiels/" class="md-nav__link">
         
   
   
@@ -15169,7 +15163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/pydata-stack/adopter-jupyterlab/" class="md-nav__link">
+      <a href="../../../blog/posts/pydata-stack/adopter-jupyterlab/" class="md-nav__link">
         
   
   
@@ -15192,7 +15186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/pydata-stack/lire-une-table-web-avec-pandas/" class="md-nav__link">
+      <a href="../../../blog/posts/pydata-stack/lire-une-table-web-avec-pandas/" class="md-nav__link">
         
   
   
@@ -15215,7 +15209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/pydata-stack/create-custom-data-generator/" class="md-nav__link">
+      <a href="../../../blog/posts/pydata-stack/create-custom-data-generator/" class="md-nav__link">
         
   
   
@@ -15238,7 +15232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/pydata-stack/creer-un-nuage-de-mots/" class="md-nav__link">
+      <a href="../../../blog/posts/pydata-stack/creer-un-nuage-de-mots/" class="md-nav__link">
         
   
   
@@ -15294,7 +15288,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/get-certified/" class="md-nav__link ">
+            <a href="../../../blog/posts/get-certified/" class="md-nav__link ">
               
   
   
@@ -15329,7 +15323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/get-certified/pl-300/" class="md-nav__link">
+      <a href="../../../blog/posts/get-certified/pl-300/" class="md-nav__link">
         
   
   
@@ -15352,7 +15346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/get-certified/dp-100/" class="md-nav__link">
+      <a href="../../../blog/posts/get-certified/dp-100/" class="md-nav__link">
         
   
   
@@ -15420,7 +15414,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/la-rubrique-ml/" class="md-nav__link ">
+            <a href="../../../blog/posts/la-rubrique-ml/" class="md-nav__link ">
               
   
   
@@ -15455,7 +15449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/01-le-test-de-turing/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/01-le-test-de-turing/" class="md-nav__link">
         
   
   
@@ -15478,7 +15472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/02-les-ateliers-de-dartmouth-college/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/02-les-ateliers-de-dartmouth-college/" class="md-nav__link">
         
   
   
@@ -15501,7 +15495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/03-le-perceptron/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/03-le-perceptron/" class="md-nav__link">
         
   
   
@@ -15524,7 +15518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/04-les-reseaux-convolutifs/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/04-les-reseaux-convolutifs/" class="md-nav__link">
         
   
   
@@ -15547,7 +15541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/05-deep-blue-ibm/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/05-deep-blue-ibm/" class="md-nav__link">
         
   
   
@@ -15570,7 +15564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/06-la-revelation-du-deep-learning/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/06-la-revelation-du-deep-learning/" class="md-nav__link">
         
   
   
@@ -15593,7 +15587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/07-la-nouvelle-ere-du-deep-learning/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/07-la-nouvelle-ere-du-deep-learning/" class="md-nav__link">
         
   
   
@@ -15616,7 +15610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/la-rubrique-ml/discover-docker-model/" class="md-nav__link">
+      <a href="../../../blog/posts/la-rubrique-ml/discover-docker-model/" class="md-nav__link">
         
   
   
@@ -15678,7 +15672,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../blog/posts/portraits/" class="md-nav__link ">
+            <a href="../../../blog/posts/portraits/" class="md-nav__link ">
               
   
   
@@ -15713,7 +15707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/portraits/alan-turing/" class="md-nav__link">
+      <a href="../../../blog/posts/portraits/alan-turing/" class="md-nav__link">
         
   
   
@@ -15736,7 +15730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/portraits/dennis-ritchie/" class="md-nav__link">
+      <a href="../../../blog/posts/portraits/dennis-ritchie/" class="md-nav__link">
         
   
   
@@ -15759,7 +15753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/portraits/guido-van-rossum/" class="md-nav__link">
+      <a href="../../../blog/posts/portraits/guido-van-rossum/" class="md-nav__link">
         
   
   
@@ -15782,7 +15776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/portraits/gerard-berry/" class="md-nav__link">
+      <a href="../../../blog/posts/portraits/gerard-berry/" class="md-nav__link">
         
   
   
@@ -15805,7 +15799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/portraits/yann-lecun/" class="md-nav__link">
+      <a href="../../../blog/posts/portraits/yann-lecun/" class="md-nav__link">
         
   
   
@@ -15885,7 +15879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/fiches-metiers/developpeur-python/" class="md-nav__link">
+      <a href="../../../blog/posts/fiches-metiers/developpeur-python/" class="md-nav__link">
         
   
   
@@ -15908,7 +15902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/fiches-metiers/data-analyst/" class="md-nav__link">
+      <a href="../../../blog/posts/fiches-metiers/data-analyst/" class="md-nav__link">
         
   
   
@@ -15931,7 +15925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/fiches-metiers/data-scientist/" class="md-nav__link">
+      <a href="../../../blog/posts/fiches-metiers/data-scientist/" class="md-nav__link">
         
   
   
@@ -15962,7 +15956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/posts/mlsa-program/" class="md-nav__link">
+      <a href="../../../blog/posts/mlsa-program/" class="md-nav__link">
         
   
   
@@ -16032,7 +16026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/author/josephkonka.md" class="md-nav__link">
+      <a href="../../../blog/author/josephkonka.md" class="md-nav__link">
         
   
   
@@ -16055,7 +16049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/author/team.md" class="md-nav__link">
+      <a href="../../../blog/author/team.md" class="md-nav__link">
         
   
   
@@ -16086,7 +16080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../tags/" class="md-nav__link">
         
   
   
@@ -16143,7 +16137,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../about/" class="md-nav__link ">
+            <a href="../../../about/" class="md-nav__link ">
               
   
   
@@ -16178,7 +16172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../about/mes-presentations/" class="md-nav__link">
+      <a href="../../../about/mes-presentations/" class="md-nav__link">
         
   
   
@@ -16201,7 +16195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../about/mes-projets/" class="md-nav__link">
+      <a href="../../../about/mes-projets/" class="md-nav__link">
         
   
   
@@ -16224,7 +16218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../about/contact/" class="md-nav__link">
+      <a href="../../../about/contact/" class="md-nav__link">
         
   
   
@@ -16264,8 +16258,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -16274,27 +16266,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#organiser-en-dossier" class="md-nav__link">
+  <a href="#docs-officielle" class="md-nav__link">
     <span class="md-ellipsis">
-      Organiser en dossier
+      Docs Officielle
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uploader-le-fichier-pbix" class="md-nav__link">
+  <a href="#pyspark-tutorial-freecodecamporg" class="md-nav__link">
     <span class="md-ellipsis">
-      Uploader le fichier pbix
+      PySpark Tutorial (freeCodeCamp.org)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publier-depuis-power-desktop" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Publier depuis Power Desktop
+      Références
     </span>
   </a>
   
@@ -16312,66 +16304,87 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+  <!-- Content -->
+
+	<!-- Edit button -->
+	
+
+	<!--
+	Hack: check whether the content contains a h1 headline. If it
+	doesn't, the page title (or respectively site name) is used
+	as the main headline.
+	-->
+	
+		<h1 style="margin-bottom: 0px; text-align: center;">Aller plus loin avec Neo4j</h1>
+	
+
+	
+
+	<!-- Tags -->
+	
+
+	<!-- description -->
+	
+	<p  style="text-align: justify;">Nous sommes arrivés au bout de cette formation, j'espère que vous avez apprécié l'aventure PySpark en ma compagine. Je partage avec vous une liste des ressources additionnelles qui vous permettront d'aller plus avec PySpark.</p>
+	
+
+	<!-- Cover Image -->
+	
+	<p>
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/python-data-stack/covers/python-data-stack-pyspark.png">
+	</p>
+	
+
+	<h2 id="docs-officielle">Docs Officielle<a class="headerlink" href="#docs-officielle" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://spark.apache.org/docs/latest/">Apache Spark - A Unified engine for large-scale data analytics</a></li>
+<li><a href="https://spark.apache.org/docs/latest/api/python/index.html">PySpark Overview</a></li>
+</ul>
+<h2 id="pyspark-tutorial-freecodecamporg">PySpark Tutorial (freeCodeCamp.org)<a class="headerlink" href="#pyspark-tutorial-freecodecamporg" title="Permanent link">#</a></h2>
+<p>Je vous invite à regarder ce tutoriel de freeCodeCamp sur PySpark</p>
+<iframe width="1200" height="400" src="https://www.youtube.com/embed/_C8kWso4ne4" title="PySpark Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="references">Références<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://spark.apache.org/docs/latest/index.html">Apache Spark - A Unified engine for large-scale data analytics</a></li>
+<li><a href="https://spark.apache.org/docs/latest/api/python/index.html">PySpark Overview — PySpark Documentation</a></li>
+</ul>
+<hr />
+<p><em>Si vous souhaitez devenir Data Engineer, Spark sera un grand atout sur votre CV, je vous invite à continuer votre apprentissage. Si vous avez des questions, n'hésitez pas à me contacter, je suis disposé à vous accompagner.</em></p>
+
+	<!-- Last update of source file -->
+	
+		
+	
+
+	<!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="joseph-koami-konka" data-version="v1" style="width: 100%;"></div> -->
+
+	<h2>Partagez sur les réseaux sociaux</h2>
+	<!-- ShareThis BEGIN -->
+	<div class="sharethis-inline-share-buttons"></div>
+	<!-- ShareThis END -->
+
+	<!-- Giscus - generated by https://giscus.app -->
+	<h2 id="__comments">Commentaires</h2>
+	<script src="https://giscus.app/client.js"
+		data-repo="joekakone/Departement-De-Maths"
+		data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+		data-category="General"
+		data-category-id="DIC_kwDOFBN7QM4CORj9"
+		data-mapping="pathname"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="bottom"
+		data-theme="dark"
+		data-lang="fr"
+		crossorigin="anonymous"
+		async>
+	</script>
+
+	<!-- LinkedIn -->
+	<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> -->
 
 
-
-<h1 id="publier-un-rapport-sur-le-serveur">Publier un rapport sur le serveur<a class="headerlink" href="#publier-un-rapport-sur-le-serveur" title="Permanent link">#</a></h1>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/covers/publish-pbi-report.png" /></p>
-<p>Il y a deux de manières de publier un rapport sur le serveur. Vous pouvez directement uploader le fichier .pbix ou l'enregistrer depuis Power BI Desktop.</p>
-<h2 id="organiser-en-dossier">Organiser en dossier<a class="headerlink" href="#organiser-en-dossier" title="Permanent link">#</a></h2>
-<p>Pour une gestion optimale et une navigation aisée, nous allons structurer notre contenu en créant des dossiers thématiques. Suivez ces étapes simples pour organiser vos ressources par sujet :</p>
-<p>Pour cela, cliquez sur <strong>Accueil</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-1.png" /></p>
-<p>Dans la barre de menu, cliquez sur <strong>Nouveau</strong> et sélectionnez l'option <strong>Dossier</strong>.<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-1.png" /></p>
-<p>Nommez votre Dossier puis cliquez sur le bouton <strong>Créer</strong> pour terminer la création.<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-1.png" /></p>
-<p>Donnez un nom significatif à votre dossier, reflétant le sujet ou la catégorie que vous souhaitez regrouper. Vous pouvez en créer autant que vous avez besoin.</p>
-<h2 id="uploader-le-fichier-pbix">Uploader le fichier pbix<a class="headerlink" href="#uploader-le-fichier-pbix" title="Permanent link">#</a></h2>
-<p>C'est la manière la plus simple de publier un rapport sur le serveur mais je vous déconseille.</p>
-<p>Ouvrez votre navigateur et rendez-vous à l'adresse <a href="http://localhost/Reports/browse">http://localhost/Reports/browse</a><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-1.png" /></p>
-<p>Cliquez sur le bouton <strong>Télécharger</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-2.png" /></p>
-<p>Sélectionnez le fichier pbix puis cliquez sur <strong>Ouvrir</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-3.png" /></p>
-<p>Sélectionnez le fichier pbix et cliquez sur <strong>Ouvrir</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-4.png" /></p>
-<p>Cliquez sur le rapport pour le visualiser<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/upload-pbi-report-5.png" /></p>
-<h2 id="publier-depuis-power-desktop">Publier depuis Power Desktop<a class="headerlink" href="#publier-depuis-power-desktop" title="Permanent link">#</a></h2>
-<p>Cliquer sur le menu fichier<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-01.png" /></p>
-<p>Cliquez sur Enregistrer sous<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-02.png" /></p>
-<p>Sélectionnez Power BI Report Server<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-03.png" /></p>
-<p>Copiez et collez l'adresse du serveur puis cliquez sur <strong>OK</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-04.png" /></p>
-<p>Ouvrez le dossier de destination<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-05.png" /></p>
-<p>Renommer le fichier si nécessaire<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-06.png" /></p>
-<p>Cliquer sur Enregistrer<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-07.png" /></p>
-<p>Cliquer sur le lien <strong>Accéder</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/pbi-report-server/pusblish-powerbi-report-08.png" /></p>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-                
               </article>
             </div>
           
@@ -16396,7 +16409,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../installer/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Installer PBI Report Server">
+          <a href="../installer/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Installer Neo4j">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -16406,20 +16419,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Installer PBI Report Server
+                Installer Neo4j
               </div>
             </div>
           </a>
         
         
           
-          <a href="../creer-un-plan-d-actualisation/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Créer un plan d&#39;actualisation">
+          <a href="../../ressources/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Ressources">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Créer un plan d'actualisation
+                Ressources
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -16614,7 +16627,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["header.autohide", "announce.dismiss", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link", "content.action.edit", "content.action.view", "toc.extend", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "announce.dismiss", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link", "content.action.edit", "content.action.view", "toc.extend", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
 <!-- Google tag (gtag.js) -->
