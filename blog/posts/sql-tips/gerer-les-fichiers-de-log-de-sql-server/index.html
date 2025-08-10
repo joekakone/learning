@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+        <meta name="description" content="Dans SQL Server, la taille des fichiers de log et de bases de données peut grandir très vite, ce qui peut causer un problème d'espace de stockage. Dans ce tutoriel, je vous montre comment gérer les fichiers de log et de bases de données dans SQL Server.">
       
       
         <meta name="author" content="Joseph Konka">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Gérer les fichiers de logs dans SQL Server - Algo Jungle</title>
+        <title>Gérer les fichiers de log de SQL Server - Algo Jungle</title>
       
     
     
@@ -90,7 +90,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="blog/posts/sql-tips/gerer-les-fichiers-de-log-de-sql-server/">
 
-<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/blog/sql-tips/covers/sql-server-files.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gerer-les-fichiers-de-log-de-sql-server" class="md-skip">
+        <a href="#arreter-sql-server" class="md-skip">
           Aller au contenu
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gérer les fichiers de logs dans SQL Server
+              Gérer les fichiers de log de SQL Server
             
           </span>
         </div>
@@ -14764,8 +14764,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -14797,8 +14795,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -16286,8 +16282,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -16358,15 +16352,70 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+  <!-- Content -->
 
+	<!-- Edit button -->
+	
 
+	<!--
+	Hack: check whether the content contains a h1 headline. If it
+	doesn't, the page title (or respectively site name) is used
+	as the main headline.
+	-->
+	
+		<h1 style="margin-bottom: 0px; text-align: center;">Gérer les fichiers de log de SQL Server</h1>
+	
 
-<h1 id="gerer-les-fichiers-de-log-de-sql-server">Gérer les fichiers de log de SQL Server<a class="headerlink" href="#gerer-les-fichiers-de-log-de-sql-server" title="Permanent link">#</a></h1>
-<p>Dans SQL Server, la taille des fichiers de log et de bases de données peut grandir très vite, ce qui peut causer un problème d'espace de stockage. Dans ce tutoriel, je vous montre comment gérer les fichiers de log et de bases de données dans SQL Server.</p>
+	
+	<!-- Markdown content -->
+	<aside class="mdx-author" style="display: flex; justify-content: center;">
+		<p>
+		<img class="no-border" src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone">
+		</p>
+		<p>
+		<span> 
+		<b>Joseph Konka</b> · <a href="https://github.com/joekakone">@joekakone</a>
+		</span>
+		<span>
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+			<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+			<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+			</svg> 03/03/2022 ·
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+			<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+			<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+			</svg> 3 min read
+		</span>
+		</p>
+	</aside>
+	
+
+	<!-- Tags -->
+	
+	<nav class="md-tags" style="display: flex; justify-content: center;">
+		
+		<a href="/algojungle/tags/#databases" class="md-tag"> databases </a>
+		
+		<a href="/algojungle/tags/#sql" class="md-tag"> sql </a>
+		
+	</nav>
+	
+
+	<!-- description -->
+	
+	<p  style="text-align: justify;">Dans SQL Server, la taille des fichiers de log et de bases de données peut grandir très vite, ce qui peut causer un problème d'espace de stockage. Dans ce tutoriel, je vous montre comment gérer les fichiers de log et de bases de données dans SQL Server.</p>
+	
+
+	<!-- Cover Image -->
+	
+	<p>
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/blog/sql-tips/covers/sql-server-files.png">
+	</p>
+	
+
+	<p>Le disque C de votre machine est preque plein. SQL Server y est pour quelque chose.</p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/blog/sql-tips/sqlserver-files/full-disk-sqlserver-00.png" /></p>
 <p><img alt="" src="https://c8.alamy.com/comp/P7DFHJ/character-man-in-different-ages-baby-child-teenager-adult-elderly-person-the-life-cycle-generation-of-people-and-stages-of-growing-up-vector-i-P7DFHJ.jpg" /></p>
-<p>Le disque C de votre machine est preque plein. SQL Server y est pour quelque chose.</p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/blog/sql-tips/full-disk-sqlserver-00.png" /></p>
 <p>Nous avons deux options:</p>
 <ol>
 <li>Déplacer les fichiers</li>
@@ -16427,23 +16476,39 @@
 <hr />
 <p><em>J'espère que vous avez pu résoludre votre problème d'espace.</em></p>
 
+	<!-- Last update of source file -->
+	
+		
+	
+
+	<!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="joseph-koami-konka" data-version="v1" style="width: 100%;"></div> -->
+
+	<h2>Partagez sur les réseaux sociaux</h2>
+	<!-- ShareThis BEGIN -->
+	<div class="sharethis-inline-share-buttons"></div>
+	<!-- ShareThis END -->
+
+	<!-- Giscus - generated by https://giscus.app -->
+	<h2 id="__comments">Commentaires</h2>
+	<script src="https://giscus.app/client.js"
+		data-repo="joekakone/Departement-De-Maths"
+		data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+		data-category="General"
+		data-category-id="DIC_kwDOFBN7QM4CORj9"
+		data-mapping="pathname"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="bottom"
+		data-theme="dark"
+		data-lang="fr"
+		crossorigin="anonymous"
+		async>
+	</script>
+
+	<!-- LinkedIn -->
+	<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> -->
 
 
-
-
-
-
-  
-  
-
-
-
-  
-
-
-
-
-                
               </article>
             </div>
           
