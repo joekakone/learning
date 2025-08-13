@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Un nuage de mot est une représentation visuelle des mots les plus fréquents d'un texte. Dans ce tutoriel, je vous montre comment créer un nuage de mots avec Python.">
+        <meta name="description" content="Pendant longtemps, le point a été de migrer les jobs Talend vers Apache Airflow et pourtant ils pouvaient se compléter et coexister dans un même environnement. Dans cet article, nous verrons comment planification l'exécution d'un job Talend sur Airflow.">
       
       
         <meta name="author" content="Joseph Konka">
@@ -16274,18 +16274,18 @@
 	
 	<nav class="md-tags" style="display: flex; justify-content: center;">
 		
-		<a href="/algojungle/tags/#wordcloud" class="md-tag"> wordcloud </a>
+		<a href="/algojungle/tags/#dataengineering" class="md-tag"> dataengineering </a>
 		
-		<a href="/algojungle/tags/#nlp" class="md-tag"> nlp </a>
+		<a href="/algojungle/tags/#talend" class="md-tag"> talend </a>
 		
-		<a href="/algojungle/tags/#matplotlib" class="md-tag"> matplotlib </a>
+		<a href="/algojungle/tags/#airflow" class="md-tag"> airflow </a>
 		
 	</nav>
 	
 
 	<!-- description -->
 	
-	<p  style="text-align: justify;">Un nuage de mot est une représentation visuelle des mots les plus fréquents d'un texte. Dans ce tutoriel, je vous montre comment créer un nuage de mots avec Python.</p>
+	<p  style="text-align: justify;">Pendant longtemps, le point a été de migrer les jobs Talend vers Apache Airflow et pourtant ils pouvaient se compléter et coexister dans un même environnement. Dans cet article, nous verrons comment planification l'exécution d'un job Talend sur Airflow.</p>
 	
 
 	<!-- Cover Image -->
@@ -16295,7 +16295,19 @@
 	</p>
 	
 
-	<div class="highlight"><span class="filename">Schedule Talend job on Apache Airflow</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sd">&quot;&quot;&quot;</span>
+	<p>Et si on arrêtait de comparer les outils et qu'on pensait plutôt à leur complémentarité. Talend et Airflow sont deux outils d'orchestration l'un low code et l'autre code-based, deux approches différentes.</p>
+<p>Talend génère plusieurs fichiers exécutables
+- .bat pour Windows 
+- .ps1 pour Power Shell
+- .sh pour Linux
+- .jar pour Java</p>
+<p>Habituellement sous Windows, on planifie l'exécution du fichier .bat dans le plannificateur de tâches Windows. Cela marche très bien, seul inconvénient
+- on n'a pas de traçabilité
+- il est impossible de définir des dépendances 
+- retenter automatiquement l'exécution après échec dans un délai donné.</p>
+<p>Et c'est là que Airflow intervient pour fournir ces éléments manquants. Mais comment allons-nous le faire ? Question </p>
+<p>Comment vous le savez si bien, Airflow peut exécuter un fichier Bash (.sh) c'est ce que nous allons exploiter. Le fichier .sh que Talend génère, nous allons plannifier son exécution avec Airflow et faire le suivi.</p>
+<div class="highlight"><span class="filename">Schedule Talend job on Apache Airflow</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="sd">    Name : Job Sales</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="sd">    Author : Joseph Konka</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="sd">    Creation Date : 2025.08.13</span>
@@ -16351,7 +16363,7 @@
 <a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    <span class="n">catchup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    <span class="n">max_active_runs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="p">)</span> <span class="k">as</span> <span class="n">dag</span><span class="p">:</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    <span class="c1">###################################################################################################################</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    <span class="c1">#################################################################################</span>
 <a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    <span class="c1"># Start</span>
 <a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    <span class="n">start_task</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>
@@ -16360,13 +16372,15 @@
 <a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>
 <a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    <span class="c1"># End</span>
 <a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    <span class="n">end_task</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    <span class="c1">###################################################################################################################</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    <span class="c1">#################################################################################</span>
 <a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>
-<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    <span class="c1">###################################################################################################################</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    <span class="c1">#################################################################################</span>
 <a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>    <span class="c1"># Flow</span>
 <a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    <span class="n">start_task</span> <span class="o">&gt;&gt;</span> <span class="n">talend_task</span> <span class="o">&gt;&gt;</span> <span class="n">end_task</span>
-<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    <span class="c1">###################################################################################################################</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    <span class="c1">#################################################################################</span>
 </code></pre></div>
+<hr />
+<p><em>N</em></p>
 
 	<!-- Last update of source file -->
 	
