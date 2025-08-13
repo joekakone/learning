@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+        <meta name="description" content="Dans ce tutoriel, nous allons extraire les données contenues dans un tableau d'une page web.">
       
       
         <meta name="author" content="Joseph Konka">
       
       
-        <link rel="canonical" href="https://algojungle.github.io/blog/posts/pydata-stack/packages-python-essentiels/">
+        <link rel="canonical" href="https://algojungle.github.io/blog/posts/data-tips/lire-une-table-web-avec-pandas/">
       
       
-        <link rel="prev" href="../../powerbi-tips/block-last-date/">
+        <link rel="prev" href="../adopter-jupyterlab/">
       
       
-        <link rel="next" href="../adopter-jupyterlab/">
+        <link rel="next" href="../create-custom-data-generator/">
       
       
       <link rel="icon" href="https://algojungle.github.io/algojungle-assets/assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Les incontournables packages Python pour la data science - Algo Jungle</title>
+        <title>Lire un tableau depuis une page web - Algo Jungle</title>
       
     
     
@@ -83,14 +83,14 @@
     
     
     
-<meta property="og:title" content="QlQ packages Python">
+<meta property="og:title" content="Pandas × Beautiful Soup">
 
 <meta property="og:description" content="Algo Junle - Learn Python and Data for free">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="blog/posts/pydata-stack/packages-python-essentiels/">
+<meta property="og:url" content="blog/posts/data-tips/lire-une-table-web-avec-pandas/">
 
-<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/03-blog/pandas-beautiful-soup.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-numpy" class="md-skip">
+        <a href="#installer-les-packages" class="md-skip">
           Aller au contenu
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les incontournables packages Python pour la data science
+              Lire un tableau depuis une page web
             
           </span>
         </div>
@@ -15053,7 +15053,7 @@
   
   
   <span class="md-ellipsis">
-    Data Science Python
+    Data Tips
     
   </span>
   
@@ -15064,7 +15064,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_7">
             <span class="md-nav__icon md-icon"></span>
-            Data Science Python
+            Data Tips
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -15072,30 +15072,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    QlQ packages Python
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../packages-python-essentiels/" class="md-nav__link">
         
   
   
@@ -15106,87 +15086,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-numpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Numpy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-pandas" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Pandas
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-matplotlib" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Matplotlib
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-seaborn" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Seaborn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-statsmodels" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Statsmodels
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-scikit-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Scikit-learn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-tensorflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Tensorflow
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -15219,10 +15118,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../lire-une-table-web-avec-pandas/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pandas × Beautiful Soup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -15233,6 +15152,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installer-les-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer les packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astuce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Astuce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implémentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code complet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Références
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -16302,63 +16284,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-numpy" class="md-nav__link">
+  <a href="#installer-les-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Numpy
+      Installer les packages
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-pandas" class="md-nav__link">
+  <a href="#astuce" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Pandas
+      Astuce
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-matplotlib" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Matplotlib
+      Implémentation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-seaborn" class="md-nav__link">
+  <a href="#code-complet" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Seaborn
+      Code complet
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-statsmodels" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Statsmodels
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-scikit-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Scikit-learn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-tensorflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Tensorflow
+      Références
     </span>
   </a>
   
@@ -16387,7 +16351,7 @@
 	as the main headline.
 	-->
 	
-		<h1 style="margin-bottom: 0px; text-align: center;">Les incontournables packages Python pour la data science</h1>
+		<h1 style="margin-bottom: 0px; text-align: center;">Lire un tableau depuis une page web</h1>
 	
 
 	
@@ -16416,28 +16380,120 @@
 
 	<!-- Tags -->
 	
+	<nav class="md-tags" style="display: flex; justify-content: center;">
+		
+		<a href="/algojungle/tags/#pandas" class="md-tag"> pandas </a>
+		
+		<a href="/algojungle/tags/#requests" class="md-tag"> requests </a>
+		
+		<a href="/algojungle/tags/#beautifulsoup" class="md-tag"> beautifulsoup </a>
+		
+		<a href="/algojungle/tags/#scraping" class="md-tag"> scraping </a>
+		
+	</nav>
+	
 
 	<!-- description -->
+	
+	<p  style="text-align: justify;">Dans ce tutoriel, nous allons extraire les données contenues dans un tableau d'une page web.</p>
 	
 
 	<!-- Cover Image -->
 	
+	<p>
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/03-blog/pandas-beautiful-soup.png">
+	</p>
+	
 
-	<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/packages-python.png" /></p>
-<h2 id="1-numpy">1. Numpy<a class="headerlink" href="#1-numpy" title="Permanent link">#</a></h2>
-<p>Représentation des données et Calcul parallèle</p>
-<h2 id="2-pandas">2. Pandas<a class="headerlink" href="#2-pandas" title="Permanent link">#</a></h2>
-<p>Traitement et Analyse de données</p>
-<h2 id="3-matplotlib">3. Matplotlib<a class="headerlink" href="#3-matplotlib" title="Permanent link">#</a></h2>
-<p>Visualisation de données</p>
-<h2 id="4-seaborn">4. Seaborn<a class="headerlink" href="#4-seaborn" title="Permanent link">#</a></h2>
-<p>Visualisation de données</p>
-<h2 id="5-statsmodels">5. Statsmodels<a class="headerlink" href="#5-statsmodels" title="Permanent link">#</a></h2>
-<p>Méthodes statistiques</p>
-<h2 id="6-scikit-learn">6. Scikit-learn<a class="headerlink" href="#6-scikit-learn" title="Permanent link">#</a></h2>
-<p>Apprentissage automatique</p>
-<h2 id="7-tensorflow">7. Tensorflow<a class="headerlink" href="#7-tensorflow" title="Permanent link">#</a></h2>
-<p>Apprentissage profond</p>
+	<p>Vous avez vu un table sur un site et vous souhaitez récupérer les données. Pandas et Beautiful Soup sont vos hommes. Dans ce tutoriel, je vous montre comment extraire les données d'une table à partir d'un site web sur internet.</p>
+<p>Ci-dessous, le tableau dont nous allons extraire les données <a href="https://www.donneesmondiales.com/pays-plus-riches.php">https://www.donneesmondiales.com/pays-plus-riches.php</a>.
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/blog/capture-donnees-mondiales-top-50-pays-riches.png" /></p>
+<h2 id="installer-les-packages">Installer les packages<a class="headerlink" href="#installer-les-packages" title="Permanent link">#</a></h2>
+<p>Nous avons besoin de trois packages qu'il faut d'abord installer:</p>
+<ul>
+<li><code>requests</code>: pour récupérer le code source de la page </li>
+<li><code>BeautifulSoup</code>: pour identifier la table</li>
+<li><code>pandas</code>: pour lire les données du tableau, les transformer et les sauvegarder dans un fichier.</li>
+</ul>
+<p>L'installion peut être faite depuis le dépôt PyPi
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>requests<span class="w"> </span>beatifulsoup<span class="w"> </span>pandas
+</code></pre></div></p>
+<h2 id="astuce">Astuce<a class="headerlink" href="#astuce" title="Permanent link">#</a></h2>
+<p>L'astuce consiste dans un premier temps à récupérer le code source (HTML) de la page web en question. Ensuite il faut extraire la section qui correspond au tableau (<code>&lt;table&gt; --- &lt;/table&gt;</code>) et passer ce bout de code à Pandas qui lira le tableau pour retourner un dataframe.</p>
+<h2 id="implementation">Implémentation<a class="headerlink" href="#implementation" title="Permanent link">#</a></h2>
+<p>On commence par importer les packages
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Packages</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</code></pre></div></p>
+<p>Il est commun de mettre l'URL de la page dans une constante, on indique également le nom du fichier de sauvegarde.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Paths</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.donneesmondiales.com/pays-plus-riches.php&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">OUTPUT_FILE</span> <span class="o">=</span> <span class="s2">&quot;./pays-plus-riches.csv&quot;</span>
+</code></pre></div></p>
+<p>On va utiliser Requests pour récupérer le code source de la page web qui contient le tableau dont nous voulons extraire les données.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Retreive source code</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">source</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">DATA_URL</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Une fois le code source récupéré, on convertit en objet Beautiful Soup afin de pouvoir naviguer dans les éléments HTML.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Convert into bs4 object</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Il faut spécifier le type de balise et bien évidemment, il s'agit d'une balise <code>table</code> et les propriétés CSS qui permettraient d'indentifier de manière unique la table qui nous intéresse. pour cela, il faut inspecter le code source de la page et récupérer les propriétés CSS, <code>class</code> et <code>id</code> sont les plus utilisées.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Extract table (specify table css properties)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tabsort&quot;</span><span class="p">})</span>
+</code></pre></div></p>
+<p>On passe l'élément <code>table</code> à Pandas qui va y extraire les données dans un dataframe. <code>pandas.read_html</code> retourne une liste de dataframes (un seul dans notre cas), on ajoute donc <code>[0]</code> pour récupérer le dataframe.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Get data into dataframe</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>   N°                 Pays PIB ajusté/habitant
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>0   1           Luxembourg           131.478 $
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>1   2            Singapour           116.486 $
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2   3              Irlande           106.543 $
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>3   4                Qatar           102.018 $
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>4   5           Bermudes *            88.185 $
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>5   6              Norvège            80.491 $
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>6   7  Émirats arabes unis            76.609 $
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>7   8               Suisse            75.961 $
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>8   9       Îles Caïmans *            74.155 $
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>9  10              Macao *            71.186 $
+</code></pre></div>
+<p>Il ne vous reste plus qu'à enrégistrer vos données, dans un fichier CSV pour l'exemple
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Export to CSV file</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="code-complet">Code complet<a class="headerlink" href="#code-complet" title="Permanent link">#</a></h2>
+<div class="highlight"><span class="filename">Lire un tableau depuis une page web - Code complet</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Packages</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1"># Paths</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">DATA_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.donneesmondiales.com/pays-plus-riches.php&quot;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">OUTPUT_FILE</span> <span class="o">=</span> <span class="s2">&quot;./pays-plus-riches.csv&quot;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="c1"># Retreive source code</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="n">source</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">DATA_URL</span><span class="p">)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="c1"># Convert into bs4 object</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="c1"># Extract table (specify table css properties)</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="n">table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tabsort&quot;</span><span class="p">})</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="c1"># Get data into dataframe</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="c1"># Export to CSV file</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="references">Références<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
+<ul>
+<li>Pandas : <a href="https://pandas.pydata.org/docs/">https://pandas.pydata.org/docs/</a></li>
+<li>Requests : <a href="https://requests.readthedocs.io/en/latest/">https://requests.readthedocs.io/en/latest/</a></li>
+<li>BeautifulSoup : <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></li>
+</ul>
 <hr />
 <p><em>.</em></p>
 
@@ -16498,7 +16554,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../../powerbi-tips/block-last-date/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Bloquer la dernière date">
+          <a href="../adopter-jupyterlab/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Migrez vers JupyterLab">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -16508,20 +16564,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Bloquer la dernière date
+                Migrez vers JupyterLab
               </div>
             </div>
           </a>
         
         
           
-          <a href="../adopter-jupyterlab/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Migrez vers JupyterLab">
+          <a href="../create-custom-data-generator/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Créer un générateur de données">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Migrez vers JupyterLab
+                Créer un générateur de données
               </div>
             </div>
             <div class="md-footer__button md-icon">

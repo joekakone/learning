@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="L'avènement des notebooks Jupyter a marqué un tournant dans le monde de la data science et de l'analyse de données. Ces environnements interactifs ont progressivement remplacé les scripts traditionnels grâce à leurs nombreux avantages. Si vous utilisez encore Jupyter Notebook pour travailler avec les notebooks alors il est temps de passer à JupyterLab.">
+        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
       
       
         <meta name="author" content="Joseph Konka">
       
       
-        <link rel="canonical" href="https://algojungle.github.io/blog/posts/pydata-stack/adopter-jupyterlab/">
+        <link rel="canonical" href="https://algojungle.github.io/blog/posts/data-tips/packages-python-essentiels/">
       
       
-        <link rel="prev" href="../packages-python-essentiels/">
+        <link rel="prev" href="../../powerbi-tips/block-last-date/">
       
       
-        <link rel="next" href="../lire-une-table-web-avec-pandas/">
+        <link rel="next" href="../adopter-jupyterlab/">
       
       
       <link rel="icon" href="https://algojungle.github.io/algojungle-assets/assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Passer de Jupyter Notebook à Jupyter Lab - Algo Jungle</title>
+        <title>Les incontournables packages Python pour la data science - Algo Jungle</title>
       
     
     
@@ -83,14 +83,14 @@
     
     
     
-<meta property="og:title" content="Migrez vers JupyterLab">
+<meta property="og:title" content="QlQ packages Python">
 
 <meta property="og:description" content="Algo Junle - Learn Python and Data for free">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="blog/posts/pydata-stack/adopter-jupyterlab/">
+<meta property="og:url" content="blog/posts/data-tips/packages-python-essentiels/">
 
-<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/jupyterlab-image.png">
+<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-simple" class="md-skip">
+        <a href="#1-numpy" class="md-skip">
           Aller au contenu
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Passer de Jupyter Notebook à Jupyter Lab
+              Les incontournables packages Python pour la data science
             
           </span>
         </div>
@@ -15053,7 +15053,7 @@
   
   
   <span class="md-ellipsis">
-    Data Science Python
+    Data Tips
     
   </span>
   
@@ -15064,32 +15064,9 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_7">
             <span class="md-nav__icon md-icon"></span>
-            Data Science Python
+            Data Tips
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../packages-python-essentiels/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    QlQ packages Python
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -15110,7 +15087,7 @@
   
   
   <span class="md-ellipsis">
-    Migrez vers JupyterLab
+    QlQ packages Python
     
   </span>
   
@@ -15123,7 +15100,7 @@
   
   
   <span class="md-ellipsis">
-    Migrez vers JupyterLab
+    QlQ packages Python
     
   </span>
   
@@ -15144,36 +15121,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-simple" class="md-nav__link">
+  <a href="#1-numpy" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation simple
+      1. Numpy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lancement" class="md-nav__link">
+  <a href="#2-pandas" class="md-nav__link">
     <span class="md-ellipsis">
-      Lancement
+      2. Pandas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#alternatives-en-ligne" class="md-nav__link">
+  <a href="#3-matplotlib" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternatives en ligne
+      3. Matplotlib
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#4-seaborn" class="md-nav__link">
     <span class="md-ellipsis">
-      Références
+      4. Seaborn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-statsmodels" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Statsmodels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-scikit-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Scikit-learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tensorflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Tensorflow
     </span>
   </a>
   
@@ -15183,6 +15187,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adopter-jupyterlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migrez vers JupyterLab
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -16275,36 +16302,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-simple" class="md-nav__link">
+  <a href="#1-numpy" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation simple
+      1. Numpy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lancement" class="md-nav__link">
+  <a href="#2-pandas" class="md-nav__link">
     <span class="md-ellipsis">
-      Lancement
+      2. Pandas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#alternatives-en-ligne" class="md-nav__link">
+  <a href="#3-matplotlib" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternatives en ligne
+      3. Matplotlib
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#4-seaborn" class="md-nav__link">
     <span class="md-ellipsis">
-      Références
+      4. Seaborn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-statsmodels" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Statsmodels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-scikit-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Scikit-learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tensorflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Tensorflow
     </span>
   </a>
   
@@ -16333,7 +16387,7 @@
 	as the main headline.
 	-->
 	
-		<h1 style="margin-bottom: 0px; text-align: center;">Passer de Jupyter Notebook à Jupyter Lab</h1>
+		<h1 style="margin-bottom: 0px; text-align: center;">Les incontournables packages Python pour la data science</h1>
 	
 
 	
@@ -16365,58 +16419,27 @@
 
 	<!-- description -->
 	
-	<p  style="text-align: justify;">L'avènement des notebooks Jupyter a marqué un tournant dans le monde de la data science et de l'analyse de données. Ces environnements interactifs ont progressivement remplacé les scripts traditionnels grâce à leurs nombreux avantages. Si vous utilisez encore Jupyter Notebook pour travailler avec les notebooks alors il est temps de passer à JupyterLab.</p>
-	
 
 	<!-- Cover Image -->
 	
-	<p>
-		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/jupyterlab-image.png">
-	</p>
-	
 
-	<p>L’histoire de Jupyter commence avec IPython, un shell Python interactif créé en 2001 par Fernando Pérez.</p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/jupyterlab-image.png" /></p>
-<p>L'avènement des cahiers (les fameux notebooks) a été une petite révolution dans le monde de la data science. Les praticiens les ont tout de suite adopté pour plusieurs raisons :
-Vous connaissez tous Jupyter Notebook et son interface aux multiples avantages:</p>
-<ul>
-<li>Exécuter le code par blocs (cellules)</li>
-<li>Documenter de faire du traitement de texte</li>
-<li>Afficher les graphiques à l'intérieur</li>
-<li>Possibilité d'exporter en PDF</li>
-<li>Partager son travail</li>
-</ul>
-<p>Les cahiers (notebook) ont ainsi envoyé les scripts sur le banc de touche. Toutefois, lorsque l'exécution doit prendre beaucoup de temps, ils sont convertis en scripts pour être exécutés, ce qui est très pratique. Ils permettent aux enseingants de mettre à disposition des apprenants des supports code et textes.</p>
-<p>Si Jupyter Notebook est plus connu, Jupyter Lab qui se rapproche plus d'un IDE va bientôt prendre le dessus et je vous invite à tester sinon à faire la migration tout simplement. Voici quelques particularités :</p>
-<ul>
-<li>Tout l'ensemble dans un seul onglet</li>
-<li>Une meilleure navigation dans les fichiers</li>
-<li>Un meilleur affichage des fichiers.csv
-L'expérience utilisateur est meilleure que sur Jupyter Notebook classique.</li>
-</ul>
-<h3 id="installation-simple">Installation simple<a class="headerlink" href="#installation-simple" title="Permanent link">#</a></h3>
-<p>Comment installer ?
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab
-</code></pre></div></p>
-<h3 id="lancement">Lancement<a class="headerlink" href="#lancement" title="Permanent link">#</a></h3>
-<p>Comment démarrer ?
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>jupyter-lab
-</code></pre></div>
-Votre navigateur par défaut s'ouvrira automatiquement sur l'interface Jupyter Lab.</p>
-<h3 id="alternatives-en-ligne">Alternatives en ligne<a class="headerlink" href="#alternatives-en-ligne" title="Permanent link">#</a></h3>
-<p>Pour ceux qui préfèrent travailler dans le cloud, voici les outils de notebook en ligne pour :</p>
-<ul>
-<li><strong>Google Colaboratory</strong> (intégration avec Google Drive)</li>
-<li><strong>Kaggle Notebooks</strong> (environnement compétition data)</li>
-<li><strong>Naas</strong> (notebooks automatisés)</li>
-</ul>
-<h2 id="references">Références<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="https://fr.wikipedia.org/wiki/Jupyter">https://fr.wikipedia.org/wiki/Jupyter</a></li>
-<li><a href="https://pypi.org/project/jupyterlab/">https://pypi.org/project/jupyterlab/</a></li>
-</ul>
+	<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/packages-python.png" /></p>
+<h2 id="1-numpy">1. Numpy<a class="headerlink" href="#1-numpy" title="Permanent link">#</a></h2>
+<p>Représentation des données et Calcul parallèle</p>
+<h2 id="2-pandas">2. Pandas<a class="headerlink" href="#2-pandas" title="Permanent link">#</a></h2>
+<p>Traitement et Analyse de données</p>
+<h2 id="3-matplotlib">3. Matplotlib<a class="headerlink" href="#3-matplotlib" title="Permanent link">#</a></h2>
+<p>Visualisation de données</p>
+<h2 id="4-seaborn">4. Seaborn<a class="headerlink" href="#4-seaborn" title="Permanent link">#</a></h2>
+<p>Visualisation de données</p>
+<h2 id="5-statsmodels">5. Statsmodels<a class="headerlink" href="#5-statsmodels" title="Permanent link">#</a></h2>
+<p>Méthodes statistiques</p>
+<h2 id="6-scikit-learn">6. Scikit-learn<a class="headerlink" href="#6-scikit-learn" title="Permanent link">#</a></h2>
+<p>Apprentissage automatique</p>
+<h2 id="7-tensorflow">7. Tensorflow<a class="headerlink" href="#7-tensorflow" title="Permanent link">#</a></h2>
+<p>Apprentissage profond</p>
 <hr />
-<p><em>Jupyter Lab représente l'avenir de l'écosystème Jupyter. Plus complet, plus flexible et plus puissant que Jupyter Notebook, il offre une expérience de travail considérablement améliorée. La migration est simple et les bénéfices immédiats. Si vous utilisez encore Jupyter Notebook au quotidien, le moment est venu de faire le pas vers Jupyter Lab. Votre productivité vous remerciera !</em></p>
+<p><em>.</em></p>
 
 	<!-- Last update of source file -->
 	
@@ -16475,7 +16498,7 @@ Votre navigateur par défaut s'ouvrira automatiquement sur l'interface Jupyter L
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../packages-python-essentiels/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: QlQ packages Python">
+          <a href="../../powerbi-tips/block-last-date/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Bloquer la dernière date">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -16485,20 +16508,20 @@ Votre navigateur par défaut s'ouvrira automatiquement sur l'interface Jupyter L
                 Précédent
               </span>
               <div class="md-ellipsis">
-                QlQ packages Python
+                Bloquer la dernière date
               </div>
             </div>
           </a>
         
         
           
-          <a href="../lire-une-table-web-avec-pandas/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Pandas × Beautiful Soup">
+          <a href="../adopter-jupyterlab/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Migrez vers JupyterLab">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Pandas × Beautiful Soup
+                Migrez vers JupyterLab
               </div>
             </div>
             <div class="md-footer__button md-icon">
