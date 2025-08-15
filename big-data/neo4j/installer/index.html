@@ -9688,6 +9688,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#deployer-neo4j" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déployer Neo4j
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installer-neo4j-desktop" class="md-nav__link">
     <span class="md-ellipsis">
       Installer Neo4j Desktop
@@ -15326,6 +15335,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#deployer-neo4j" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déployer Neo4j
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installer-neo4j-desktop" class="md-nav__link">
     <span class="md-ellipsis">
       Installer Neo4j Desktop
@@ -15377,7 +15395,10 @@
 	</p>
 	
 
-	<h2 id="install-docker-et-docker-compose">Install Docker et Docker Compose<a class="headerlink" href="#install-docker-et-docker-compose" title="Permanent link">#</a></h2>
+	<p>Docker est le moyen le plus simple pour déployer Neo4j.</p>
+<h2 id="install-docker-et-docker-compose">Install Docker et Docker Compose<a class="headerlink" href="#install-docker-et-docker-compose" title="Permanent link">#</a></h2>
+<h2 id="deployer-neo4j">Déployer Neo4j<a class="headerlink" href="#deployer-neo4j" title="Permanent link">#</a></h2>
+<p>Créez un fichier <code>docker-compose.yml</code> et copiez le code suivant</p>
 <div class="highlight"><span class="filename">docker-compose.yml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>services:
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  neo4j:
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    container_name: analytics-neo4j-1
@@ -15400,21 +15421,19 @@
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  analytics-network:
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    driver: bridge
 </code></pre></div>
+<p>Pour déployer, lancez la commande suivante
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker ps
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                                      NAMES
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>83cd38af061c   neo4j:latest   &quot;tini -g -- /startup…&quot;   5 days ago   Up 4 days   0.0.0.0:7474-&gt;7474/tcp, [::]:7474-&gt;7474/tcp, 0.0.0.0:7687-&gt;7687/tcp, [::]:7687-&gt;7687/tcp   analytics-neo4j-1
-</code></pre></div>
+</code></pre></div></p>
 <p>Vous pouvez vérifier l'état du conteneur Neo4j avec la commande suivante
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>ps
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>ps
 </code></pre></div>
-<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker ps
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                                      NAMES
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>83cd38af061c   neo4j:latest   &quot;tini -g -- /startup…&quot;   5 days ago   Up 4 days   0.0.0.0:7474-&gt;7474/tcp, [::]:7474-&gt;7474/tcp, 0.0.0.0:7687-&gt;7687/tcp, [::]:7687-&gt;7687/tcp   analytics-neo4j-1
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker ps
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                                      NAMES
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>83cd38af061c   neo4j:latest   &quot;tini -g -- /startup…&quot;   5 days ago   Up 4 days   0.0.0.0:7474-&gt;7474/tcp, [::]:7474-&gt;7474/tcp, 0.0.0.0:7687-&gt;7687/tcp, [::]:7687-&gt;7687/tcp   analytics-neo4j-1
 </code></pre></div></p>
 <p>Rendez-vous à l'adresse suivante <a href="http://localhost:7474/">http://localhost:7474/</a></p>
 <h2 id="installer-neo4j-desktop">Installer Neo4j Desktop<a class="headerlink" href="#installer-neo4j-desktop" title="Permanent link">#</a></h2>
+<p>Ouvrez votre navigateur et allez à l'adresse suivante <a href="https://neo4j.com/download/">https://neo4j.com/download/</a></p>
 <p><a href="https://neo4j.com/artifact.php?name=neo4j-desktop-2.0.2-setup.exe">https://neo4j.com/artifact.php?name=neo4j-desktop-2.0.2-setup.exe</a></p>
 <p><img alt="" src="https://dist.neo4j.com/wp-content/uploads/20241104084230/ImportMain.png" /></p>
 <p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/neo4j/install/install-neo4j-desktop-01.png" /></p>
