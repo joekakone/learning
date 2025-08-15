@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+        <meta name="description" content="MongoDB est un système de gestion de base de données orienté documents, qui repose sur le format BSON (Binary JSON). C’est une solution NoSQL populaire qui permet de stocker des données de manière flexible et évolutive. Utilisé dans de nombreux projets modernes, MongoDB s’adapte parfaitement aux besoins du Big Data, des applications web, mobiles et du temps réel.">
       
       
         <meta name="author" content="Joseph Konka">
@@ -90,7 +90,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="big-data/neo4j/installer/">
 
-<meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/7-big-data/neo4j/covers/install-neo4j.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installer-neo4j-avec-docker-compose" class="md-skip">
+        <a href="#install-docker-et-docker-compose" class="md-skip">
           Aller au contenu
         </a>
       
@@ -9679,9 +9679,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installer-neo4j-avec-docker-compose" class="md-nav__link">
+  <a href="#install-docker-et-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Installer Neo4j avec Docker Compose
+      Install Docker et Docker Compose
     </span>
   </a>
   
@@ -15317,9 +15317,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installer-neo4j-avec-docker-compose" class="md-nav__link">
+  <a href="#install-docker-et-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Installer Neo4j avec Docker Compose
+      Install Docker et Docker Compose
     </span>
   </a>
   
@@ -15346,12 +15346,38 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+  <!-- Content -->
 
+	<!-- Edit button -->
+	
 
-  <h1>Installer Neo4j</h1>
+	<!--
+	Hack: check whether the content contains a h1 headline. If it
+	doesn't, the page title (or respectively site name) is used
+	as the main headline.
+	-->
+	
+		<h1 style="margin-bottom: 0px; text-align: center;">Installer Neo4j</h1>
+	
 
-<h2 id="installer-neo4j-avec-docker-compose">Installer Neo4j avec Docker Compose<a class="headerlink" href="#installer-neo4j-avec-docker-compose" title="Permanent link">#</a></h2>
+	
+
+	<!-- Tags -->
+	
+
+	<!-- description -->
+	
+	<p  style="text-align: justify;">MongoDB est un système de gestion de base de données orienté documents, qui repose sur le format BSON (Binary JSON). C’est une solution NoSQL populaire qui permet de stocker des données de manière flexible et évolutive. Utilisé dans de nombreux projets modernes, MongoDB s’adapte parfaitement aux besoins du Big Data, des applications web, mobiles et du temps réel.</p>
+	
+
+	<!-- Cover Image -->
+	
+	<p>
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/7-big-data/neo4j/covers/install-neo4j.png">
+	</p>
+	
+
+	<h2 id="install-docker-et-docker-compose">Install Docker et Docker Compose<a class="headerlink" href="#install-docker-et-docker-compose" title="Permanent link">#</a></h2>
 <div class="highlight"><span class="filename">docker-compose.yml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>services:
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  neo4j:
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    container_name: analytics-neo4j-1
@@ -15374,13 +15400,14 @@
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  analytics-network:
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    driver: bridge
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker ps
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                                      NAMES
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>83cd38af061c   neo4j:latest   &quot;tini -g -- /startup…&quot;   5 days ago   Up 4 days   0.0.0.0:7474-&gt;7474/tcp, [::]:7474-&gt;7474/tcp, 0.0.0.0:7687-&gt;7687/tcp, [::]:7687-&gt;7687/tcp   analytics-neo4j-1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker ps
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                                      NAMES
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>83cd38af061c   neo4j:latest   &quot;tini -g -- /startup…&quot;   5 days ago   Up 4 days   0.0.0.0:7474-&gt;7474/tcp, [::]:7474-&gt;7474/tcp, 0.0.0.0:7687-&gt;7687/tcp, [::]:7687-&gt;7687/tcp   analytics-neo4j-1
 </code></pre></div>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>ps
+<p>Vous pouvez vérifier l'état du conteneur Neo4j avec la commande suivante
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>ps
 </code></pre></div>
 <div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker ps
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                                      NAMES
@@ -15399,20 +15426,39 @@
 <hr />
 <p><em>Votre environnement Neo4j est prêt. Rendez-vous dans la prochaine section pour attaquer les premières manipulations</em></p>
 
+	<!-- Last update of source file -->
+	
+		
+	
+
+	<!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="joseph-koami-konka" data-version="v1" style="width: 100%;"></div> -->
+
+	<h2>Partagez sur les réseaux sociaux</h2>
+	<!-- ShareThis BEGIN -->
+	<div class="sharethis-inline-share-buttons"></div>
+	<!-- ShareThis END -->
+
+	<!-- Giscus - generated by https://giscus.app -->
+	<h2 id="__comments">Commentaires</h2>
+	<script src="https://giscus.app/client.js"
+		data-repo="joekakone/Departement-De-Maths"
+		data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+		data-category="General"
+		data-category-id="DIC_kwDOFBN7QM4CORj9"
+		data-mapping="pathname"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="bottom"
+		data-theme="dark"
+		data-lang="fr"
+		crossorigin="anonymous"
+		async>
+	</script>
+
+	<!-- LinkedIn -->
+	<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> -->
 
 
-
-
-
-
-
-
-  
-
-
-
-
-                
               </article>
             </div>
           
