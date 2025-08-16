@@ -15557,7 +15557,7 @@
 
 
 <h1 id="regression-lineaire-simple-avec-tensorflow">Régression linéaire simple avec Tensorflow<a class="headerlink" href="#regression-lineaire-simple-avec-tensorflow" title="Permanent link">#</a></h1>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/tensorflow/covers/get-started-with-tensorflow.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/09-tensorflow/covers/get-started-with-tensorflow.png" /></p>
 <p>Dans cette première section de la formation Tensorflow, je vous présente les tenseurs élément fondamental et enfin vous verrez comment apprendre une régression linéaire.</p>
 <h2 id="importation">Importation<a class="headerlink" href="#importation" title="Permanent link">#</a></h2>
 <p>L'API Keras est très utilisée, donc on l'importe également. Pour rappel Keras a été intégré dans Tensorflow.
@@ -15620,7 +15620,7 @@ où a et b sont les paramètres du modèle et <span class="arithmatex">\(\epsilo
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tensorflow/demarrer/figure-1.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/09-tensorflow/demarrer/figure-1.png" /></p>
 <h2 id="premier-modele-avec-tensorflow">Premier modèle avec Tensorflow<a class="headerlink" href="#premier-modele-avec-tensorflow" title="Permanent link">#</a></h2>
 <p>Nous allons à présent créer le modèle en utilisant Keras.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,)))</span>
@@ -15661,7 +15661,7 @@ Les valeurs estimées pour <span class="arithmatex">\(a\)</span> et <span class=
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tensorflow/demarrer/figure-2.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/09-tensorflow/demarrer/figure-2.png" /></p>
 <p>On peut voir sur le graphique ci-dessus que le modèle rend assez bien compte des données.</p>
 <h2 id="comparaison-true-y-vs-predicated-y">Comparaison True Y vs Predicated Y<a class="headerlink" href="#comparaison-true-y-vs-predicated-y" title="Permanent link">#</a></h2>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
@@ -15672,7 +15672,7 @@ Les valeurs estimées pour <span class="arithmatex">\(a\)</span> et <span class=
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Predicted Y&quot;</span><span class="p">)</span>
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tensorflow/demarrer/figure-3.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/09-tensorflow/demarrer/figure-3.png" /></p>
 <p>Dans un monde parfait, on aurait eu une droite mais puisqu'il s'agit d'approximation les valeurs prédites sont très proches des vraies valeurs.</p>
 <h2 id="code-complet">Code complet<a class="headerlink" href="#code-complet" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Code complet</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>

@@ -15416,74 +15416,74 @@
 
 <h1 id="installer-docker-et-docker-compose">Installer Docker et Docker Compose<a class="headerlink" href="#installer-docker-et-docker-compose" title="Permanent link">#</a></h1>
 <p>Docker est disponible pour le système d'exploitation Linux et Mac OS. Microsoft supporte Docker depuis 201X...</p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/covers/install-docker.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/covers/install-docker.png" /></p>
 <h2 id="installer-docker-sur-ubuntu">Installer Docker sur Ubuntu<a class="headerlink" href="#installer-docker-sur-ubuntu" title="Permanent link">#</a></h2>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-install-ubuntu-01.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-ubuntu-01.png" /></p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-install-ubuntu-02.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-ubuntu-02.png" /></p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">0755</span><span class="w"> </span>-d<span class="w"> </span>/etc/apt/keyrings
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.gpg
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span>a+r<span class="w"> </span>/etc/apt/keyrings/docker.gpg
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-install-ubuntu-03.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-ubuntu-03.png" /></p>
 <p>Ajouter le référentiel de Docker
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="s2">&quot;deb [arch=&quot;</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2">&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s2">  &quot;</span><span class="k">$(</span>.<span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot; stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-install-ubuntu-04.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-ubuntu-04.png" /></p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-install-ubuntu-05.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-ubuntu-05.png" /></p>
 <p>Installer Docker
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-install-ubuntu-06.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-ubuntu-06.png" /></p>
 <p>Lancer le conteneur <code>hello world</code>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-install-ubuntu-06.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-ubuntu-06.png" /></p>
 <p><em>En cas de difficultés, merci de consulter la docs officielle <a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a>.</em></p>
 <h2 id="installer-docker-sur-windows">Installer Docker sur Windows<a class="headerlink" href="#installer-docker-sur-windows" title="Permanent link">#</a></h2>
 <p>Ouvrez PowerShell, cela peut prendre quelques minutes
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>wsl<span class="w"> </span>--set-default-version<span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/config-wsl-01.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/config-wsl-01.png" /></p>
 <p>Vérifiez que la version 2 a été appliquée
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>wsl<span class="w"> </span>-l<span class="w"> </span>-v
 </code></pre></div>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/config-wsl-02.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/config-wsl-02.png" /></p>
 <p>Créer un fichier <code>/etc/docker/daemon.json</code>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/docker/daemon.json
 </code></pre></div></p>
 <!-- ## Installer Docker sur Windows
 Rendez-vous sur cette page [https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-01.png)
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-01.png)
 
 Ouvrez votre dossier de téléchargement et lancer l'exécution.
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-02.png)
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-02.png)
 
 Ouvrez votre dossier de téléchargement et lancer l'exécution.
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-03.png)
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-03.png)
 
 Ouvrez votre dossier de téléchargement et lancer l'exécution.
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-04.png)
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-04.png)
 
 Ouvrez votre dossier de téléchargement et lancer l'exécution.
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-05.png)
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-05.png)
 
 Ouvrez votre dossier de téléchargement et lancer l'exécution.
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-06.png)
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-06.png)
 
 Ouvrez votre dossier de téléchargement et lancer l'exécution.
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-07.png)
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-07.png)
 
 [https://learn.microsoft.com/fr-fr/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package](https://learn.microsoft.com/fr-fr/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
-![](https://algojungle.github.io/algojungle-assets/images/docker/docker-install-08.png) -->
+![](https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-install-08.png) -->
 
 <!-- ## Installer Docker Compose -->
 
@@ -15491,7 +15491,7 @@ Ouvrez votre dossier de téléchargement et lancer l'exécution.
 <p>Comme le veut la tradition, nous allons lancer notre premier conteneur. Ouvrez votre terminal et lancez la commande suivante :
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </code></pre></div></p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/docker/docker-hello-world.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/docker-hello-world.png" /></p>
 <h2 id="ajouter-lutilisateur-au-groupe-docker">Ajouter l'utilisateur au groupe docker<a class="headerlink" href="#ajouter-lutilisateur-au-groupe-docker" title="Permanent link">#</a></h2>
 <ol>
 <li>
