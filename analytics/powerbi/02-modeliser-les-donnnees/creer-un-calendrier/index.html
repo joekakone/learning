@@ -15506,7 +15506,7 @@
 
 <h1 id="creer-une-table-de-dates-personnalisee">Créer une table de dates personnalisée<a class="headerlink" href="#creer-une-table-de-dates-personnalisee" title="Permanent link">#</a></h1>
 <p>La création d'une table de dates personnalisée est une étape importante dans la conception du modèle de données dans Power BI. Dans cet article, je vous montre comment en créer une.</p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/covers/create-calendar.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/06-powerbi/covers/create-calendar.png" /></p>
 <h2 id="defnition">Défnition<a class="headerlink" href="#defnition" title="Permanent link">#</a></h2>
 <p>Une table de dates ou un calendrier est une table de dimension des dates. Elle fournit des informations supplémentaires sur les dates telles que le jour de la semaine, le numéro du jour, la semaine, le mois, le trimestre, le semestre, l'année et bien d'autres. La table de dates a pour objectif de faciliter l'analyse temporelle.</p>
 <h2 id="pourquoi-creer-un-calendrier">Pourquoi créer un calendrier<a class="headerlink" href="#pourquoi-creer-un-calendrier" title="Permanent link">#</a></h2>
@@ -15514,11 +15514,11 @@
 <h2 id="desactiver-loption-time-intelligence">Désactiver l'option Time Intelligence<a class="headerlink" href="#desactiver-loption-time-intelligence" title="Permanent link">#</a></h2>
 <p>Comme expliqué plutôt, nous allons désactiver l'option <strong>Time Intelligence</strong>. Pour cela, suivez les instructions suivantes</p>
 <p>Cliquez sur l'onglet <strong>Fichier</strong>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/deactivate-time-intelligence-1.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/06-powerbi/deactivate-time-intelligence-1.png" /></p>
 <p>Séléctionnez <strong>Options et paramètres</strong>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/deactivate-time-intelligence-2.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/06-powerbi/deactivate-time-intelligence-2.png" /></p>
 <p>Séléctionnez <strong>Options</strong>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/deactivate-time-intelligence-3.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/06-powerbi/deactivate-time-intelligence-3.png" /></p>
 <p>Il y a deux façons de procéder, vous pouvez désactiver l'option glablement dans Power BI ou uniquement dans le fichier actif. Je vous recommande de désactiver l'option globalement.</p>
 <h2 id="creer-une-nouvelle-table">Créer une nouvelle table<a class="headerlink" href="#creer-une-nouvelle-table" title="Permanent link">#</a></h2>
 <p>La table de date est une table qui sera générer à partir d'une formule DAX, plus précisement par la fonction <code>CALENDAR</code>. 
@@ -15581,7 +15581,7 @@ La fonction <code>CALENDAR</code> prend en entrée deux paramètres:</p>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="s">&quot;Semaine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">FORMAT</span><span class="p">(</span><span class="na">[Date]</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yyyy&quot;</span><span class="p">)</span><span class="w"> </span>&amp; &quot;-S&quot; &amp; IF(WEEKNUM([Date])&lt;10,&quot;0&quot; &amp; WEEKNUM([Date]), WEEKNUM([Date]))
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">)</span>
 </code></pre></div>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/powerbi/02-data-modeling/date-table-view.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/06-powerbi/02-data-modeling/date-table-view.png" /></p>
 <h2 id="marquer-comme-table-de-dates">Marquer comme table de dates<a class="headerlink" href="#marquer-comme-table-de-dates" title="Permanent link">#</a></h2>
 <p>La dernière étape consiste à indiquer à Power BI que la table que l'on vient de créer est une table de date. Pour cela, on se rend dans vue <strong>Données</strong>. Pour cela, suivez les instructions suivantes.</p>
 <h2 id="indiquer-la-relation">Indiquer la relation<a class="headerlink" href="#indiquer-la-relation" title="Permanent link">#</a></h2>

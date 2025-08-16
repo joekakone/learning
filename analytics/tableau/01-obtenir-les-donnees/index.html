@@ -15428,24 +15428,24 @@
 
 <h1 id="obtenir-les-donnees-dans-tableau">Obtenir les données dans Tableau<a class="headerlink" href="#obtenir-les-donnees-dans-tableau" title="Permanent link">#</a></h1>
 <p>Cette première étape comme le nom l'indique consiste à se connecter aux sources de données afin de récupérer les données.</p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/covers/get-data.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/covers/get-data.png" /></p>
 <p>Dans le cadre de cette formation, nous allons utiliser deux sources de données à savoir un fichier Excel qui contient la liste des clients et un fichier JSON qui lui contient l'historique des ventes. Téléchargez le fichier <a href="https://public.tableau.com/app/learn/sample-data">Superstore Sales</a>.</p>
 <h2 id="connexion-aux-sources-de-donnees">Connexion aux sources de données<a class="headerlink" href="#connexion-aux-sources-de-donnees" title="Permanent link">#</a></h2>
 <p>Tableau propose de nombreux connecteurs pour se connecter à différentes sources de données : des fichiers (EXCEL, CSV, TXT, JSON,...), des bases de données relationnelles (SQL Server, Postgres, MySQL,...), des services en ligne.... Les connecteurs de bases de données ne sont pas disponibles dans la version Tableau Desktop Public.<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-00.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-00.png" /></p>
 <h3 id="connexion-a-un-fichier-excel">Connexion à un fichier Excel<a class="headerlink" href="#connexion-a-un-fichier-excel" title="Permanent link">#</a></h3>
 <p>Dans la partie gauche, vous retrouverez la liste des connecteurs dispobibles dans Tableau Public<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-01.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-01.png" /></p>
 <p>L'explorateur de fichier s'ouvre, allez à l'emplacement du fichier <code>sample_-_superstore.xls</code>, sélectionnez-le puis cliquez sur <strong>Ouvrir</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-02.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-02.png" /></p>
 <p>Tableau affiche l'ensemble des tableaux du fichier à gauche. À l'aide d'un glisser et déposer, déplacez la table <strong>Orders</strong> dans l'espace à droite<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-03.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-03.png" /></p>
 <p>Tableau affiche un aperçu des données avec les types des colonnes. Faites de même pour la table <strong>People</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-04.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-04.png" /></p>
 <p>Tableau détecte lui-même la relation entre les tables et effectue la jointure, nous y reviendrons dans la suite. Une dernière fois encore, glissez et déposez la table <strong>Returns</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-05.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-05.png" /></p>
 <p>Une fois de plus, Tableau va lui-même effectuer une jointure entre les tables <strong>Orders</strong> et <strong>Returns</strong>.<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-06.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-06.png" /></p>
 <h2 id="mise-en-place-des-relations">Mise en place des relations<a class="headerlink" href="#mise-en-place-des-relations" title="Permanent link">#</a></h2>
 <p>Comme la plupart des outils de Business Intelligence, Tableau repose également sur le modèle relationnel. Le schéma en étoile est le meilleur modèle pour organiser vos données.<br></p>
 <!-- ![](https://help.tableau.com/current/pro/desktop/fr-ca/Img/data_model_removerelationship.gif) -->
@@ -15462,7 +15462,7 @@
 <p>La capacité à créer des relations entre les tables est essentielle pour tirer pleinement parti de la puissance analytique de Tableau, offrant une vue holistique de vos données et facilitant la découverte de tendances et de relations cachées.</p>
 
 <p>.<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/tableau/donnees/get-data-06.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/04-analytics/tableau/donnees/get-data-06.png" /></p>
 <h2 id="mode-dimport">Mode d'import<a class="headerlink" href="#mode-dimport" title="Permanent link">#</a></h2>
 <p>Tableau propose deux modes de connexion pour importer des données : l'extraction et la connexion directe.</p>
 <table border="1">
