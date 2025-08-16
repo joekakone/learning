@@ -90,7 +90,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="big-data/analysis-services/preparer-les-donnees/">
 
-<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-datamart-in-sql-server.png">
+<meta property="og:image" content="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/covers/create-a-datamart-in-sql-server.png">
 
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
@@ -15396,35 +15396,35 @@
 	<!-- Cover Image -->
 	
 	<p>
-		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/covers/create-a-datamart-in-sql-server.png">
+		<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/covers/create-a-datamart-in-sql-server.png">
 	</p>
 	
 
 	<p>Dans le cadre de la formation, nous allons utiliser la base de données <strong><code>AdventureWorks</code></strong>, suivez les instructions pour préparer les données.</p>
 <h2 id="telecharger-la-base-de-donnees">Télécharger la base de données<a class="headerlink" href="#telecharger-la-base-de-donnees" title="Permanent link">#</a></h2>
 <p>Rendez-vous à cette adresse pour télécharger les données <a href="https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&amp;tabs=ssms">https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&amp;tabs=ssms</a>. Dans la colonne Data Warehouse, sélectionnez la version la plus récente.<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/download-data-backups-1.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/download-data-backups-1.png" /></p>
 <p>Une fois le télechargement terminé, deplacez le fichier <code>AdventureWorksDW2022.bak</code> dans le dossier <code>C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL</code><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/download-data-backups-2.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/download-data-backups-2.png" /></p>
 <h2 id="restaurer-la-base-de-donnees">Restaurer la base de données<a class="headerlink" href="#restaurer-la-base-de-donnees" title="Permanent link">#</a></h2>
 <p>Connectez-vous à SQL Serveur à partir du client SQL Server Manangement Studio. Dépliez le serveur, faites clique-droit sur <strong>Bases de données</strong> et sélectionnez <strong>Restaurer la base de données</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-1.png" /></p>
-<!-- ![](https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-2.png) -->
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-1.png" /></p>
+<!-- ![](https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-2.png) -->
 
 <p>Sélectionnez l'option <strong>Support</strong> puis cliuqez le bouton <strong>Parcourir</strong>, les trois points<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-3.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-3.png" /></p>
 <p>Cliquez sur le bouton <strong>Ajouter</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-4.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-4.png" /></p>
 <p>Allez dans le dossier <code>C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL</code> et sélectionner le fichier <code>AdventureWorksDW2022.bak</code><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-5.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-5.png" /></p>
 <p>Cliquez sur le bouton <strong>OK</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-6.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-6.png" /></p>
 <p>Cliquez sur le bouton <strong>OK</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-7.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-7.png" /></p>
 <p>La base de données est bien restaurée, cliquez sur le bouton <strong>OK</strong><br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-8.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-8.png" /></p>
 <p>Dépliez <strong>Bases de données</strong>, La base de données <strong>AdventureWorks</strong> est désormais disponible<br>
-<img alt="" src="https://algojungle.github.io/algojungle-assets/images/analysis-services/restore-database-9.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/analysis-services/restore-database-9.png" /></p>
 <hr />
 <p><em>La datamart est prête ! Dans la prochaine section, nous aborberons la création de cube avec Visual Studio.</em></p>
 

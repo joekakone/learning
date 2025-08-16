@@ -15306,7 +15306,7 @@
 
 <h1 id="definir-des-dependances">Définir des dépendances<a class="headerlink" href="#definir-des-dependances" title="Permanent link">#</a></h1>
 <p>Airflow propose plusieurs moyens d'exécuter des jobs, à partir de l'interface graphique ou en ligne de commande.</p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/apache-airflow/covers/go-further-with-apache-airflow.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/apache-airflow/covers/go-further-with-apache-airflow.png" /></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.sensors.external_task</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExternalTaskSensor</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">check_kpis_etl</span> <span class="o">=</span> <span class="n">ExternalTaskSensor</span><span class="p">(</span>
