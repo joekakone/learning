@@ -15455,10 +15455,10 @@ Cela ressemble à l'expression ternaire dans les langages de programmation class
 <p>```sql title = "Pivot Table"
 select 
     dt,
-    sum(case when product_category = 'Data Package' then amount else 0 end) data_pack_amount,
-    sum(case when product_category = 'Voice Package' then amount else 0 end) voice_pack_amount,
-    sum(case when product_category = 'Voice &amp; Data Package' then amount else 0 end) mix_pack_amount,
-    sum(case when product_category = 'Communication Credit' then amount else 0 end) credit_amount,
+    sum(case when product_category = 'Data' then amount else 0 end) data_pack_amount,
+    sum(case when product_category = 'Voice' then amount else 0 end) voice_pack_amount,
+    sum(case when product_category = 'Combo' then amount else 0 end) combo_pack_amount,
+    sum(case when product_category = 'Airtime' then amount else 0 end) airtime_amount,
     sum(case when product_category = 'Other' then amount else 0 end) other_amount
 from edw.fct_orders
 where dt = rundt
