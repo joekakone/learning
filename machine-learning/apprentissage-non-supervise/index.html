@@ -583,7 +583,6 @@
     <div class="sticky-top" style="top: 100px;">
         <div class="p-4 bg-white border rounded shadow-sm mb-4">
             
-
                 
             
                 
@@ -603,227 +602,230 @@
                 
             
                 
-                    <!-- Titre du module (ex: Python) -->
-                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title">Machine Learning</h5>
+                    <!-- Titre du module fixe -->
+                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title sticky-title">Machine Learning</h5>
                     
-                    <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
-                        
+                    <!-- Conteneur avec scroll -->
+                    <div class="sidebar-scroll-container">
+                        <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
                             
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../">
-                                    Les fondamentaux du Machine Learning
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../installer/">
-                                    Installer Scikit-learn
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../notion-d-apprentissage/">
-                                    Notion d'apprentissage
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../ml-workflow/">
-                                    Flux de travail
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-5" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Apprentissage supervisé</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../">
+                                        Les fondamentaux du Machine Learning
                                     </a>
-                                    
-                                    <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../apprentissage-supervise/">
-                                                    Apprentissage supervisé
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../apprentissage-supervise/k-plus-proches-voisins/">
-                                                    Les K plus proches voisins
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../apprentissage-supervise/regression-lineaire/">
-                                                    Régression linéaire
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../apprentissage-supervise/regression-logistique/">
-                                                    Régression logistique
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../apprentissage-supervise/separateurs-a-vastes-marges/">
-                                                    Séparateurs à Vastes Marges
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../apprentissage-supervise/arbres-de-decision/">
-                                                    Les arbres de décision
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../apprentissage-supervise/forets-aleatoires/">
-                                                    Les forêts aléatoires
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
+                                
+                                
                             
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center active-parent" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-6" 
-                                       role="button" 
-                                       aria-expanded="true">
-                                        <span>Apprentissage non-supervisé</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../installer/">
+                                        Installer Scikit-learn
                                     </a>
-                                    
-                                    <div class="collapse show" id="collapse-6" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link fw-bold text-dark" 
-                                                   href="./">
-                                                    Apprentissage non supervisé
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="analyse-en-composantes-principales/">
-                                                    L'ACP
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="k-moyennes/">
-                                                    Les K-Moyennes
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="clustering-hierachique/">
-                                                    Le clustering hiérachique
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="regles-d-association/">
-                                                    Les règles d'association
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
+                                
+                                
                             
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../advanced-technics/">
-                                    Techniques avancées
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../deep-learning/">
-                                    Deep Learning
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-9" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Projets</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../notion-d-apprentissage/">
+                                        Notion d'apprentissage
                                     </a>
-                                    
-                                    <div class="collapse " id="collapse-9" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../projets/">
-                                                    Apprenez TensorFlow par la pratique
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../projets/projet-01/">
-                                                    01 - Prediction du cancer Prostate
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../projets/projet-02/">
-                                                    02 - Prédiction du Churn
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../projets/projet-03/">
-                                                    03 -
-                                                </a>
-                                            
-                                        </nav>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../ml-workflow/">
+                                        Flux de travail
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-5" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Apprentissage supervisé</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../apprentissage-supervise/">
+                                                        Apprentissage supervisé
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../apprentissage-supervise/k-plus-proches-voisins/">
+                                                        Les K plus proches voisins
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../apprentissage-supervise/regression-lineaire/">
+                                                        Régression linéaire
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../apprentissage-supervise/regression-logistique/">
+                                                        Régression logistique
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../apprentissage-supervise/separateurs-a-vastes-marges/">
+                                                        Séparateurs à Vastes Marges
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../apprentissage-supervise/arbres-de-decision/">
+                                                        Les arbres de décision
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../apprentissage-supervise/forets-aleatoires/">
+                                                        Les forêts aléatoires
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
                                     </div>
-                                </div>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center active-parent" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-6" 
+                                        role="button" 
+                                        aria-expanded="true">
+                                            <span>Apprentissage non-supervisé</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse show" id="collapse-6" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link fw-bold text-dark" 
+                                                    href="./">
+                                                        Apprentissage non supervisé
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="analyse-en-composantes-principales/">
+                                                        L'ACP
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="k-moyennes/">
+                                                        Les K-Moyennes
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="clustering-hierachique/">
+                                                        Le clustering hiérachique
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="regles-d-association/">
+                                                        Les règles d'association
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
                             
-                        
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../advanced-technics/">
+                                        Techniques avancées
+                                    </a>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../deep-learning/">
+                                        Deep Learning
+                                    </a>
+                                
+                                
                             
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../ressources/">
-                                    Ressources
-                                </a>
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-9" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Projets</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-9" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/">
+                                                        Apprenez TensorFlow par la pratique
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/projet-01/">
+                                                        01 - Prediction du cancer Prostate
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/projet-02/">
+                                                        02 - Prédiction du Churn
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/projet-03/">
+                                                        03 -
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../ressources/">
+                                        Ressources
+                                    </a>
+                                
+                                
                             
-                        
+                        </div>
                     </div>
                 
             
@@ -833,7 +835,6 @@
             
                 
             
-
         </div>
         
         <div class="p-4 bg-primary text-white rounded shadow text-center">
@@ -895,6 +896,39 @@
     .sidebar-container::-webkit-scrollbar-thumb {
         background: #ddd;
         border-radius: 10px;
+    }
+    /* Scroll */
+    
+    .sidebar-scroll-container {
+        /* Définit une hauteur maximale (ajustable selon vos besoins) */
+        max-height: calc(100vh - 150px); 
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin; /* Pour Firefox */
+        scrollbar-color: #cbd5e0 transparent; /* Pour Firefox */
+    }
+
+    /* Personnalisation de la barre de défilement pour Chrome/Safari/Edge */
+    .sidebar-scroll-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-thumb {
+        background-color: #cbd5e0;
+        border-radius: 10px;
+    }
+
+    /* Empêcher le titre de bouger si nécessaire */
+    .sticky-title {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+        padding-bottom: 10px;
     }
 </style>
 

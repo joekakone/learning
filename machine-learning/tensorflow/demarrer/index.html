@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀" />
+      <meta name="description" content="Dans cette première section de la formation Tensorflow, je vous présente les tenseurs élément fondamental et enfin vous verrez comment apprendre une régression linéaire." />
     
 
     <!-- Page author -->
@@ -45,7 +45,7 @@
     Démarrer avec TensorFlow | Algo Jungle
   </title>
 
-  <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+  <meta name="description" content="Dans cette première section de la formation Tensorflow, je vous présente les tenseurs élément fondamental et enfin vous verrez comment apprendre une régression linéaire.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
@@ -541,14 +541,426 @@
 
   <!-- Bloc principal : Sera remplacé par home.html pour la page d'accueil -->
   
-    <main class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 markdown-content">
-          
-  <h1 id="regression-lineaire-simple-avec-tensorflow">Régression linéaire simple avec Tensorflow<a class="headerlink" href="#regression-lineaire-simple-avec-tensorflow" title="Permanent link">#</a></h1>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/09-tensorflow/covers/get-started-with-tensorflow.png" /></p>
-<p>Dans cette première section de la formation Tensorflow, je vous présente les tenseurs élément fondamental et enfin vous verrez comment apprendre une régression linéaire.</p>
-<h2 id="importation">Importation<a class="headerlink" href="#importation" title="Permanent link">#</a></h2>
+<div class="algo-jungle-article">
+
+    <!-- Header de l'Article -->
+    <section class="article-header bg-light border-bottom">
+        <div class="container py-5 text-center">
+            
+            <!-- Titre avec marge haute pour le descendre -->
+            <div class="pt-5 mt-4">
+                
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Régression linéaire simple avec Tensorflow</h1>
+                
+            </div>
+
+            <!-- Infos Auteur -->
+            
+
+            <!-- Tags -->
+            
+
+            <!-- Description / Overview centrée et justifiée -->
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
+                        Dans cette première section de la formation Tensorflow, je vous présente les tenseurs élément fondamental et enfin vous verrez comment apprendre une régression linéaire.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Structure Corps de page (Sidebar + Contenu) -->
+    <div class="container py-5">
+        <div class="row gx-lg-5">
+            
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+<aside class="col-lg-3 d-none d-lg-block">
+    <div class="sticky-top" style="top: 100px;">
+        <div class="p-4 bg-white border rounded shadow-sm mb-4">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <!-- Titre du module fixe -->
+                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title sticky-title">TensorFlow</h5>
+                    
+                    <!-- Conteneur avec scroll -->
+                    <div class="sidebar-scroll-container">
+                        <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../">
+                                        Deep Learning avec TensorFlow
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../installer/">
+                                        Installer TensorFlow
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link fw-bold text-primary" 
+                                    href="./">
+                                        Démarrer avec TensorFlow
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-4" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Neurals Network</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-4" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../01-neural-network/">
+                                                        Créer un réseau de neurones avec Tensorflow
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../01-neural-network/perceptron/">
+                                                        Perceptron Simple
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../01-neural-network/perceptron-multi-couches/">
+                                                        Perceptron Multi Couches
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-5" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Image Classification</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../02-image-classification/">
+                                                        Classification d'image avec Tensorflow
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../02-image-classification/reseaux-convolutifs/">
+                                                        Réseaux convolutifs
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../02-image-classification/transfer-learning/">
+                                                        Transfer Learning
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-6" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Natural Language Processing</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-6" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../03-natural-language-processing/">
+                                                        Natural Language Processing (NLP)
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../03-natural-language-processing/classification-de-texte/">
+                                                        Classification de texte
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../03-natural-language-processing/creer-un-plognement-de-mots/">
+                                                        Créer un plongement de mots
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-7" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Time Series & Sequences</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-7" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../04-time-series-sequences/">
+                                                        Time Series &amp; Sequences and Predictions
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../04-time-series-sequences/predict-time-series/">
+                                                        Génération de texte
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../03-natural-language-processing/generation-de-texte/">
+                                                        Génération de texte
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../04-time-series-sequences/application/">
+                                                        Prédire l'usage d'un client
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-8" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Projets TensorFlow</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-8" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/">
+                                                        Apprenez TensorFlow par la pratique
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/projet-01/">
+                                                        Projet 01 - Prostate Cancer Prediction
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/projet-02/">
+                                                        Projet 02
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../projets/projet-03/">
+                                                        Projet 03
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../ressources/">
+                                        Ressources
+                                    </a>
+                                
+                                
+                            
+                        </div>
+                    </div>
+                
+            
+                
+            
+                
+            
+        </div>
+        
+        <div class="p-4 bg-primary text-white rounded shadow text-center">
+            <p class="small mb-3">Besoin d'aide sur ce sujet ?</p>
+            <a href="https://joekakone.github.io/#contact" class="btn btn-outline-light btn-sm text-uppercase w-100">Me contacter</a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    /* Conteneur principal */
+    .sidebar-container {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Style des liens principaux */
+    .sidebar-nav .nav-link {
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+        color: #333;
+        border: none;
+        background: none;
+        transition: color 0.2s ease;
+    }
+
+    .sidebar-nav .nav-link:hover {
+        color: var(--bs-primary) !important;
+    }
+
+    /* Chevron et animation */
+    .chevron-icon {
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+        color: #666;
+    }
+
+    .nav-link[aria-expanded="true"] .chevron-icon {
+        transform: rotate(90deg); /* Oriente le chevron vers le bas */
+    }
+
+    /* Liens enfants (indentés) */
+    .grandchild-link {
+        font-size: 0.9rem !important;
+        padding-left: 1rem !important;
+        position: relative;
+    }
+
+    /* Optionnel : petite barre verticale pour les sous-menus */
+    .collapse nav {
+        border-left: 1px solid #eee;
+        margin-left: 0.5rem !important;
+    }
+
+    /* Masquer la scrollbar pour un look plus propre */
+    .sidebar-container::-webkit-scrollbar {
+        width: 4px;
+    }
+    .sidebar-container::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 10px;
+    }
+    /* Scroll */
+    
+    .sidebar-scroll-container {
+        /* Définit une hauteur maximale (ajustable selon vos besoins) */
+        max-height: calc(100vh - 150px); 
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin; /* Pour Firefox */
+        scrollbar-color: #cbd5e0 transparent; /* Pour Firefox */
+    }
+
+    /* Personnalisation de la barre de défilement pour Chrome/Safari/Edge */
+    .sidebar-scroll-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-thumb {
+        background-color: #cbd5e0;
+        border-radius: 10px;
+    }
+
+    /* Empêcher le titre de bouger si nécessaire */
+    .sticky-title {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+        padding-bottom: 10px;
+    }
+</style>
+
+            <!-- Contenu Principal -->
+            <main class="col-lg-9 col-md-12">
+                <article class="markdown-content bg-white p-4 p-md-5 border rounded shadow-sm">
+                    
+                    <div class="featured-image mb-5">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/09-tensorflow/covers/get-started-with-tensorflow.png" class="img-fluid rounded shadow-sm w-100" alt="Démarrer avec TensorFlow">
+                    </div>
+                    
+
+                    <h2 id="importation">Importation<a class="headerlink" href="#importation" title="Permanent link">#</a></h2>
 <p>L'API Keras est très utilisée, donc on l'importe également. Pour rappel Keras a été intégré dans Tensorflow.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">keras</span>
@@ -719,61 +1131,151 @@ Les valeurs estimées pour <span class="arithmatex">\(a\)</span> et <span class=
 <hr />
 <p><em>Bravo ! Vous venez de créer votre premier modèle avec Tensorflow. Dans la prochaine section, nous verrons comment créer des réseaux de neurones avec Tensorflow.</em></p>
 
+                </article>
+
+                <!-- Navigation Précédent / Suivant -->
+                <nav class="row mt-5 pt-4 border-top">
+                    <div class="col-6">
+                        
+                        <a href="../installer/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
+                            <span class="fw-bold text-primary">Installer TensorFlow</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-6 text-end">
+                        
+                        <a href="../01-neural-network/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
+                            <span class="fw-bold text-primary">Créer un réseau de neurones avec Tensorflow</span>
+                        </a>
+                        
+                    </div>
+                </nav>
+
+                <section class="mt-5 border-top pt-4">
+                    
+                    <div class="share-section mb-5">
+                        <h2 class="h4 mb-3">Partagez sur les réseaux sociaux</h2>
+                        <!-- ShareThis BEGIN -->
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <!-- ShareThis END -->
+                    </div>
+
+                    
+                    
+                    <div class="comments-section">
+                        <h2 id="__comments" class="h4 mb-4">Commentaires</h2>
+                        
+                        
+                        <script src="https://giscus.app/client.js"
+                                data-repo="joekakone/Departement-De-Maths"
+                                data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+                                data-category="General"
+                                data-category-id="DIC_kwDOFBN7QM4CORj9"
+                                data-mapping="pathname"
+                                data-reactions-enabled="1"
+                                data-emit-metadata="0"
+                                data-input-position="bottom"
+                                
+                                data-theme="preferred_color_scheme"
+                                data-lang="fr"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                    
+                </section>
+            </main>
+
         </div>
-      </div>
-    </main>
-  
+    </div>
+
+    <!-- CTA Final -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h3 class="text-uppercase mb-4">Inscrivez-vous à une formation complète</h3>
+            <a href="/#formations" class="btn btn-outline-light btn-lg text-uppercase px-5">Voir le catalogue</a>
+        </div>
+    </section>
+
+</div>
+
+<style type="text/css">
+    /* Intégration harmonieuse avec votre thème Home */
+    .algo-jungle-article {
+        background-color: #f8f9fa;
+    }
+
+    .article-header {
+        background: #fff;
+        padding-top: 40px;
+    }
+
+    .markdown-content {
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: #444;
+    }
+
+    .markdown-content h2, .markdown-content h3 {
+        margin-top: 2.5rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .markdown-content h2 { font-size: 1.6rem; border-left: 5px solid #007bff; padding-left: 15px; }
+
+    .markdown-content p { margin-bottom: 1.5rem; text-align: justify; }
+
+    /* Réutilisation de vos tags skill */
+    .skill-tag {
+        background: #e7f1ff;
+        padding: 6px 16px;
+        border-radius: 50px;
+        margin: 5px;
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #007bff;
+        border: 1px solid rgba(0,123,255,0.1);
+    }
+
+    .nav-link {
+        transition: all 0.2s;
+        border-radius: 4px;
+        margin-bottom: 2px;
+    }
+
+    .nav-link:hover {
+        background: #f1f8ff;
+        color: #007bff !important;
+    }
+
+    .featured-image img {
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    /* Styles pour le code (si présent dans l'article) */
+    pre {
+        background: #2d2d2d;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+    }
+</style>
+
 
 
   <!-- Tags --><!-- Footer-->
 <footer class="pt-0">
     <!-- Bande de Navigation Précédent / Suivant (Style Bootstrap Dark) -->
-    
-    <nav class="bg-dark text-white py-4 mb-5" aria-label="Navigation de bas de page">
-        <div class="container px-md-5">
-            <div class="d-flex justify-content-between align-items-center">
-                
-                <!-- Bloc Précédent -->
-                <div class="flex-fill">
-                    
-                    <a href="../installer/" class="d-flex align-items-center text-white text-decoration-none transition-hover">
-                        <div class="me-3">
-                            <i class="fas fa-arrow-left fa-lg"></i>
-                        </div>
-                        <div>
-                            <small class="text-uppercase text-muted d-block" style="font-size: 0.7rem; letter-spacing: 1px;">
-                                Précédent
-                            </small>
-                            <span class="h5 fw-bold mb-0 d-none d-sm-block">
-                                Installer TensorFlow
-                            </span>
-                        </div>
-                    </a>
-                    
-                </div>
-
-                <!-- Bloc Suivant -->
-                <div class="flex-fill text-end">
-                    
-                    <a href="../01-neural-network/" class="d-flex align-items-center justify-content-end text-white text-decoration-none transition-hover">
-                        <div class="text-end">
-                            <small class="text-uppercase text-muted d-block" style="font-size: 0.7rem; letter-spacing: 1px;">
-                                Suivant
-                            </small>
-                            <span class="h5 fw-bold mb-0 d-none d-sm-block">
-                                Créer un réseau de neurones avec Tensorflow
-                            </span>
-                        </div>
-                        <div class="ms-3">
-                            <i class="fas fa-arrow-right fa-lg"></i>
-                        </div>
-                    </a>
-                    
-                </div>
-
-            </div>
-        </div>
-    </nav>
     
     
     <div class="container text-center py-5">

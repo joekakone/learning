@@ -614,7 +614,6 @@
     <div class="sticky-top" style="top: 100px;">
         <div class="p-4 bg-white border rounded shadow-sm mb-4">
             
-
                 
             
                 
@@ -640,555 +639,557 @@
                 
             
                 
-                    <!-- Titre du module (ex: Python) -->
-                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title">Blog</h5>
+                    <!-- Titre du module fixe -->
+                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title sticky-title">Blog</h5>
                     
-                    <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
-                        
+                    <!-- Conteneur avec scroll -->
+                    <div class="sidebar-scroll-container">
+                        <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
                             
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../../../">
-                                    Bienvenue sur mon blog Algo Jungle
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-2" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Programing Tips</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../../../">
+                                        Bienvenue sur mon blog Algo Jungle
                                     </a>
-                                    
-                                    <div class="collapse " id="collapse-2" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/">
-                                                    Programing Tips - Les joies de la programmation
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/bonnes-pratiques/">
-                                                    Les bonnes pratiques C
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/premier-programme-c/">
-                                                    Votre premier programme C
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/applications-du-c/">
-                                                    Les applications du langage C
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/echanger-deux-variables/">
-                                                    Échanger deux variables
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/langage-c/">
-                                                    Le C aujourd'hui
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/pourquoi-le-c/">
-                                                    Pourquoi le C ?
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/installer-un-ide/">
-                                                    Installer un IDE
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/python-vs-c-cpp/">
-                                                    Python vs C/C++
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../programing-tips/le-choix-des-technos/">
-                                                    Le choix des technos
-                                                </a>
-                                            
-                                        </nav>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-2" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Programing Tips</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-2" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/">
+                                                        Programing Tips - Les joies de la programmation
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/bonnes-pratiques/">
+                                                        Les bonnes pratiques C
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/premier-programme-c/">
+                                                        Votre premier programme C
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/applications-du-c/">
+                                                        Les applications du langage C
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/echanger-deux-variables/">
+                                                        Échanger deux variables
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/langage-c/">
+                                                        Le C aujourd'hui
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/pourquoi-le-c/">
+                                                        Pourquoi le C ?
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/installer-un-ide/">
+                                                        Installer un IDE
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/python-vs-c-cpp/">
+                                                        Python vs C/C++
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../programing-tips/le-choix-des-technos/">
+                                                        Le choix des technos
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
                                     </div>
-                                </div>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-3" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Python Tips</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-3" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../python-tips/">
+                                                        Pyhton Tips
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../python-tips/retirer-les-accents/">
+                                                        Retirer les accents
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../python-tips/export-python-to-exe/">
+                                                        Exporter un script Python
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../python-tips/spliter-avec-plusieurs-separateurs/">
+                                                        Splitter une chaîne de caractères
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
                             
-                        
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center active-parent" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-4" 
+                                        role="button" 
+                                        aria-expanded="true">
+                                            <span>SQL Tips</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse show" id="collapse-4" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../">
+                                                        SQL Tips
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../gerer-la-casse/">
+                                                        Gérer la casse
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../common-sql-queries/">
+                                                        Les requêtes SQL usuelles
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../importer-des-donnees-dans-sql-server/">
+                                                        Importer des données dans SQL Server
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../gerer-les-fichiers-de-log-de-sql-server/">
+                                                        Gérer les fichiers de logs dans SQL Server
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../rendre-sql-server-sensible-a-la-casse/">
+                                                        Rendre SQL Server sensible à la casse
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link fw-bold text-dark" 
+                                                    href="./">
+                                                        Provisionner une instance Azure SQL Database
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../sommes-cummulees/">
+                                                        Calculer des sommes cummulées
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-5" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Power BI Tips</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../powerbi-tips/">
+                                                        Power BI Tips
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../powerbi-tips/create-dynamic-title/">
+                                                        Créer un titre dynamique
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../powerbi-tips/create-dynamic-measure/">
+                                                        Créer un mesure dynamique
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../powerbi-tips/sort-filter-items/">
+                                                        Trier les éléments d'un filtre
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../powerbi-tips/block-last-date/">
+                                                        Bloquer la dernière date
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
                             
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-3" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Python Tips</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-6" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Data Tips</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-6" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../data-tips/">
+                                                        Data Tips - Les coups de maître
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../data-tips/packages-python-essentiels/">
+                                                        QlQ packages Python
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../data-tips/adopter-jupyterlab/">
+                                                        Migrez vers JupyterLab
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../data-tips/lire-une-table-web-avec-pandas/">
+                                                        Pandas × Beautiful Soup
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../data-tips/create-custom-data-generator/">
+                                                        Créer un générateur de données
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../data-tips/creer-un-nuage-de-mots/">
+                                                        Créer un nuage de mots
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../data-tips/schedule-talend-job-on-airflow/">
+                                                        Le duo Talend × Airflow
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-7" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Get Certified</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-7" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../get-certified/">
+                                                        Get Certified - Reach the next level
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../get-certified/pl-300/">
+                                                        PL-300
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../get-certified/dp-100/">
+                                                        DP-100
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-8" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>La Rubrique ML</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-8" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/">
+                                                        La Rubrique ML - Histoire du Machine Learning
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/01-le-test-de-turing/">
+                                                        Le test de Turing
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/02-les-ateliers-de-dartmouth-college/">
+                                                        Ateliers de Dartmouth
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/03-le-perceptron/">
+                                                        Le perceptron
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/04-les-reseaux-convolutifs/">
+                                                        Les réseaux convolutifs
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/05-deep-blue-ibm/">
+                                                        DeepBlue IBM
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/06-la-revelation-du-deep-learning/">
+                                                        AlexNet (2012)
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/07-la-nouvelle-ere-du-deep-learning/">
+                                                        Un nouvel élan
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../la-rubrique-ml/discover-docker-model/">
+                                                        Docker Model
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-9" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Portraits</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-9" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../portraits/">
+                                                        Parcours d'hommes
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../portraits/alan-turing/">
+                                                        Alan Turing
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../portraits/dennis-ritchie/">
+                                                        Dennis Ritchie
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../portraits/guido-van-rossum/">
+                                                        Guido van Rossum
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../portraits/gerard-berry/">
+                                                        Gérard Berry
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../portraits/yann-lecun/">
+                                                        Yann LeCun
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-10" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Fiches métiers</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-10" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../fiches-metiers/">
+                                                        Data Analyst
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../fiches-metiers/developpeur-python/">
+                                                        Python Developer
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../fiches-metiers/data-analyst/">
+                                                        Data Analyst
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../fiches-metiers/data-scientist/">
+                                                        Data Scientist
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../../mlsa-program/">
+                                        MS Learn Ambassador
                                     </a>
-                                    
-                                    <div class="collapse " id="collapse-3" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../python-tips/">
-                                                    Pyhton Tips
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../python-tips/retirer-les-accents/">
-                                                    Retirer les accents
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../python-tips/export-python-to-exe/">
-                                                    Exporter un script Python
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../python-tips/spliter-avec-plusieurs-separateurs/">
-                                                    Splitter une chaîne de caractères
-                                                </a>
-                                            
-                                        </nav>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-12" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Auteurs</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-12" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../../author/josephkonka/">
+                                                        Joseph Konka
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../../../author/team/">
+                                                        Team Algo Jungle
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
                                     </div>
-                                </div>
+                                
+                                
                             
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center active-parent" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-4" 
-                                       role="button" 
-                                       aria-expanded="true">
-                                        <span>SQL Tips</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../../../../tags/">
+                                        Tags
                                     </a>
-                                    
-                                    <div class="collapse show" id="collapse-4" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../">
-                                                    SQL Tips
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../gerer-la-casse/">
-                                                    Gérer la casse
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../common-sql-queries/">
-                                                    Les requêtes SQL usuelles
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../importer-des-donnees-dans-sql-server/">
-                                                    Importer des données dans SQL Server
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../gerer-les-fichiers-de-log-de-sql-server/">
-                                                    Gérer les fichiers de logs dans SQL Server
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../rendre-sql-server-sensible-a-la-casse/">
-                                                    Rendre SQL Server sensible à la casse
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link fw-bold text-dark" 
-                                                   href="./">
-                                                    Provisionner une instance Azure SQL Database
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../sommes-cummulees/">
-                                                    Calculer des sommes cummulées
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
+                                
+                                
                             
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-5" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Power BI Tips</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
-                                    </a>
-                                    
-                                    <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../powerbi-tips/">
-                                                    Power BI Tips
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../powerbi-tips/create-dynamic-title/">
-                                                    Créer un titre dynamique
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../powerbi-tips/create-dynamic-measure/">
-                                                    Créer un mesure dynamique
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../powerbi-tips/sort-filter-items/">
-                                                    Trier les éléments d'un filtre
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../powerbi-tips/block-last-date/">
-                                                    Bloquer la dernière date
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-6" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Data Tips</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
-                                    </a>
-                                    
-                                    <div class="collapse " id="collapse-6" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../data-tips/">
-                                                    Data Tips - Les coups de maître
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../data-tips/packages-python-essentiels/">
-                                                    QlQ packages Python
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../data-tips/adopter-jupyterlab/">
-                                                    Migrez vers JupyterLab
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../data-tips/lire-une-table-web-avec-pandas/">
-                                                    Pandas × Beautiful Soup
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../data-tips/create-custom-data-generator/">
-                                                    Créer un générateur de données
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../data-tips/creer-un-nuage-de-mots/">
-                                                    Créer un nuage de mots
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../data-tips/schedule-talend-job-on-airflow/">
-                                                    Le duo Talend × Airflow
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-7" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Get Certified</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
-                                    </a>
-                                    
-                                    <div class="collapse " id="collapse-7" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../get-certified/">
-                                                    Get Certified - Reach the next level
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../get-certified/pl-300/">
-                                                    PL-300
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../get-certified/dp-100/">
-                                                    DP-100
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-8" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>La Rubrique ML</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
-                                    </a>
-                                    
-                                    <div class="collapse " id="collapse-8" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/">
-                                                    La Rubrique ML - Histoire du Machine Learning
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/01-le-test-de-turing/">
-                                                    Le test de Turing
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/02-les-ateliers-de-dartmouth-college/">
-                                                    Ateliers de Dartmouth
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/03-le-perceptron/">
-                                                    Le perceptron
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/04-les-reseaux-convolutifs/">
-                                                    Les réseaux convolutifs
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/05-deep-blue-ibm/">
-                                                    DeepBlue IBM
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/06-la-revelation-du-deep-learning/">
-                                                    AlexNet (2012)
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/07-la-nouvelle-ere-du-deep-learning/">
-                                                    Un nouvel élan
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../la-rubrique-ml/discover-docker-model/">
-                                                    Docker Model
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-9" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Portraits</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
-                                    </a>
-                                    
-                                    <div class="collapse " id="collapse-9" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../portraits/">
-                                                    Parcours d'hommes
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../portraits/alan-turing/">
-                                                    Alan Turing
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../portraits/dennis-ritchie/">
-                                                    Dennis Ritchie
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../portraits/guido-van-rossum/">
-                                                    Guido van Rossum
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../portraits/gerard-berry/">
-                                                    Gérard Berry
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../portraits/yann-lecun/">
-                                                    Yann LeCun
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-10" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Fiches métiers</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
-                                    </a>
-                                    
-                                    <div class="collapse " id="collapse-10" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../fiches-metiers/">
-                                                    Data Analyst
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../fiches-metiers/developpeur-python/">
-                                                    Python Developer
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../fiches-metiers/data-analyst/">
-                                                    Data Analyst
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../fiches-metiers/data-scientist/">
-                                                    Data Scientist
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../../mlsa-program/">
-                                    MS Learn Ambassador
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-12" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Auteurs</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
-                                    </a>
-                                    
-                                    <div class="collapse " id="collapse-12" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../../author/josephkonka/">
-                                                    Joseph Konka
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../../../author/team/">
-                                                    Team Algo Jungle
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../../../../tags/">
-                                    Tags
-                                </a>
-                            
-                            
-                        
+                        </div>
                     </div>
                 
             
-
         </div>
         
         <div class="p-4 bg-primary text-white rounded shadow text-center">
@@ -1250,6 +1251,39 @@
     .sidebar-container::-webkit-scrollbar-thumb {
         background: #ddd;
         border-radius: 10px;
+    }
+    /* Scroll */
+    
+    .sidebar-scroll-container {
+        /* Définit une hauteur maximale (ajustable selon vos besoins) */
+        max-height: calc(100vh - 150px); 
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin; /* Pour Firefox */
+        scrollbar-color: #cbd5e0 transparent; /* Pour Firefox */
+    }
+
+    /* Personnalisation de la barre de défilement pour Chrome/Safari/Edge */
+    .sidebar-scroll-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-thumb {
+        background-color: #cbd5e0;
+        border-radius: 10px;
+    }
+
+    /* Empêcher le titre de bouger si nécessaire */
+    .sticky-title {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+        padding-bottom: 10px;
     }
 </style>
 

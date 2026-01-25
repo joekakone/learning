@@ -583,7 +583,6 @@
     <div class="sticky-top" style="top: 100px;">
         <div class="p-4 bg-white border rounded shadow-sm mb-4">
             
-
                 
             
                 
@@ -597,262 +596,265 @@
                 
             
                 
-                    <!-- Titre du module (ex: Python) -->
-                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title">SQL</h5>
+                    <!-- Titre du module fixe -->
+                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title sticky-title">SQL</h5>
                     
-                    <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
-                        
+                    <!-- Conteneur avec scroll -->
+                    <div class="sidebar-scroll-container">
+                        <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
                             
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../">
-                                    Le langage SQL pour l'analyse de données
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../installer-postgres/">
-                                    Installer Postgres
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link fw-bold text-primary" 
-                                   href="./">
-                                    Installer SQL Server
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../installer-dbeaver/">
-                                    Installer DBeaver
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../data-definition-language/">
-                                    Partie 1 - Data Definition
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../data-manipulation-language/">
-                                    Partie 2 - Data Manipulation
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../data-control-language/">
-                                    Partie 3 - Data Control
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-8" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Partie 4 - Data Query</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../">
+                                        Le langage SQL pour l'analyse de données
                                     </a>
-                                    
-                                    <div class="collapse " id="collapse-8" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../data-query-language/">
-                                                    Data Query Language
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../data-query-language/filtrage-et-tri/">
-                                                    Filtrage et Tri
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../data-query-language/algebre/">
-                                                    Opérations
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../data-query-language/les-sous-requetes/">
-                                                    Les sous requêtes
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../data-query-language/agregation/">
-                                                    Les agrégations
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../data-query-language/jointures/">
-                                                    Les jointures
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
+                                
+                                
                             
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-9" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Partie 5 - Programming Language</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../installer-postgres/">
+                                        Installer Postgres
                                     </a>
-                                    
-                                    <div class="collapse " id="collapse-9" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../programming/">
-                                                    Les bases du langage PL/PGSQL
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../programming/les-variables/">
-                                                    Les variables
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../programming/les-conditions/">
-                                                    Les conditions
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../programming/les-boucles/">
-                                                    Les boucles
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../programming/les-fonctions/">
-                                                    Les fonctions
-                                                </a>
-                                            
-                                        </nav>
-                                    </div>
-                                </div>
+                                
+                                
                             
-                            
-                        
-                            
-                            
-                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
-                                <div class="nav-item mb-1">
-                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
-                                       data-bs-toggle="collapse" 
-                                       href="#collapse-10" 
-                                       role="button" 
-                                       aria-expanded="false">
-                                        <span>Partie 6 - SQL & Python</span>
-                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link fw-bold text-primary" 
+                                    href="./">
+                                        Installer SQL Server
                                     </a>
-                                    
-                                    <div class="collapse " id="collapse-10" data-bs-parent="#sidebarAccordion">
-                                        <nav class="nav flex-column ms-3 mt-1">
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../python/">
-                                                    Travailler avec SQL sous Python
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../python/01-sqlite/">
-                                                    S QLite3
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../python/02-postgres/">
-                                                    Postgres
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../python/03-sqlserver/">
-                                                    SQLServer
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../python/04-pandas/">
-                                                    Pandas
-                                                </a>
-                                            
-                                                <a class="nav-link py-1 grandchild-link text-muted" 
-                                                   href="../python/5-db-analytics-tools/">
-                                                    DB Analytics Tools
-                                                </a>
-                                            
-                                        </nav>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../installer-dbeaver/">
+                                        Installer DBeaver
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../data-definition-language/">
+                                        Partie 1 - Data Definition
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../data-manipulation-language/">
+                                        Partie 2 - Data Manipulation
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../data-control-language/">
+                                        Partie 3 - Data Control
+                                    </a>
+                                
+                                
+                            
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-8" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Partie 4 - Data Query</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-8" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../data-query-language/">
+                                                        Data Query Language
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../data-query-language/filtrage-et-tri/">
+                                                        Filtrage et Tri
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../data-query-language/algebre/">
+                                                        Opérations
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../data-query-language/les-sous-requetes/">
+                                                        Les sous requêtes
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../data-query-language/agregation/">
+                                                        Les agrégations
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../data-query-language/jointures/">
+                                                        Les jointures
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
                                     </div>
-                                </div>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-9" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Partie 5 - Programming Language</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-9" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../programming/">
+                                                        Les bases du langage PL/PGSQL
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../programming/les-variables/">
+                                                        Les variables
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../programming/les-conditions/">
+                                                        Les conditions
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../programming/les-boucles/">
+                                                        Les boucles
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../programming/les-fonctions/">
+                                                        Les fonctions
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
                             
-                        
+                                
+                                
+                                    <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                    <div class="nav-item mb-1">
+                                        <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                        data-bs-toggle="collapse" 
+                                        href="#collapse-10" 
+                                        role="button" 
+                                        aria-expanded="false">
+                                            <span>Partie 6 - SQL & Python</span>
+                                            <i class="fas fa-chevron-right chevron-icon"></i>
+                                        </a>
+                                        
+                                        <div class="collapse " id="collapse-10" data-bs-parent="#sidebarAccordion">
+                                            <nav class="nav flex-column ms-3 mt-1">
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../python/">
+                                                        Travailler avec SQL sous Python
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../python/01-sqlite/">
+                                                        S QLite3
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../python/02-postgres/">
+                                                        Postgres
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../python/03-sqlserver/">
+                                                        SQLServer
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../python/04-pandas/">
+                                                        Pandas
+                                                    </a>
+                                                
+                                                    <a class="nav-link py-1 grandchild-link text-muted" 
+                                                    href="../python/5-db-analytics-tools/">
+                                                        DB Analytics Tools
+                                                    </a>
+                                                
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../no-sql/">
+                                        Introduction au NoSQL
+                                    </a>
+                                
+                                
                             
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../no-sql/">
-                                    Introduction au NoSQL
-                                </a>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../application/">
+                                        Applications
+                                    </a>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../ressources/">
+                                        Ressources
+                                    </a>
+                                
+                                
                             
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../application/">
-                                    Applications
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../ressources/">
-                                    Ressources
-                                </a>
-                            
-                            
-                        
+                        </div>
                     </div>
                 
             
@@ -868,7 +870,6 @@
             
                 
             
-
         </div>
         
         <div class="p-4 bg-primary text-white rounded shadow text-center">
@@ -930,6 +931,39 @@
     .sidebar-container::-webkit-scrollbar-thumb {
         background: #ddd;
         border-radius: 10px;
+    }
+    /* Scroll */
+    
+    .sidebar-scroll-container {
+        /* Définit une hauteur maximale (ajustable selon vos besoins) */
+        max-height: calc(100vh - 150px); 
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin; /* Pour Firefox */
+        scrollbar-color: #cbd5e0 transparent; /* Pour Firefox */
+    }
+
+    /* Personnalisation de la barre de défilement pour Chrome/Safari/Edge */
+    .sidebar-scroll-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-thumb {
+        background-color: #cbd5e0;
+        border-radius: 10px;
+    }
+
+    /* Empêcher le titre de bouger si nécessaire */
+    .sticky-title {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+        padding-bottom: 10px;
     }
 </style>
 

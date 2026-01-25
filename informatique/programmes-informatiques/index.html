@@ -618,85 +618,87 @@
     <div class="sticky-top" style="top: 100px;">
         <div class="p-4 bg-white border rounded shadow-sm mb-4">
             
-
                 
             
                 
-                    <!-- Titre du module (ex: Python) -->
-                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title">Informatique</h5>
+                    <!-- Titre du module fixe -->
+                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title sticky-title">Informatique</h5>
                     
-                    <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
-                        
+                    <!-- Conteneur avec scroll -->
+                    <div class="sidebar-scroll-container">
+                        <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../">
+                                        Introduction générale à l'informatique
+                                    </a>
+                                
+                                
                             
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../">
-                                    Introduction générale à l'informatique
-                                </a>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../ordinateurs/">
+                                        Les ordinateurs
+                                    </a>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../systemes-d-exploitation/">
+                                        Les systèmes d'exploitation
+                                    </a>
+                                
+                                
                             
-                        
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link fw-bold text-primary" 
+                                    href="./">
+                                        Les programmes
+                                    </a>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../internet-et-le-web/">
+                                        Internet et le Web
+                                    </a>
+                                
+                                
                             
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../ordinateurs/">
-                                    Les ordinateurs
-                                </a>
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../metiers-de-l-informatique/">
+                                        Les métiers IT
+                                    </a>
+                                
+                                
                             
+                                
+                                
+                                    <!-- CAS SANS ENFANT : Lien simple -->
+                                    <a class="nav-link text-dark" 
+                                    href="../ressources/">
+                                        Aller plus loin
+                                    </a>
+                                
+                                
                             
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../systemes-d-exploitation/">
-                                    Les systèmes d'exploitation
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link fw-bold text-primary" 
-                                   href="./">
-                                    Les programmes
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../internet-et-le-web/">
-                                    Internet et le Web
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../metiers-de-l-informatique/">
-                                    Les métiers IT
-                                </a>
-                            
-                            
-                        
-                            
-                            
-                                <!-- CAS SANS ENFANT : Lien simple -->
-                                <a class="nav-link text-dark" 
-                                   href="../ressources/">
-                                    Aller plus loin
-                                </a>
-                            
-                            
-                        
+                        </div>
                     </div>
                 
             
@@ -722,7 +724,6 @@
             
                 
             
-
         </div>
         
         <div class="p-4 bg-primary text-white rounded shadow text-center">
@@ -784,6 +785,39 @@
     .sidebar-container::-webkit-scrollbar-thumb {
         background: #ddd;
         border-radius: 10px;
+    }
+    /* Scroll */
+    
+    .sidebar-scroll-container {
+        /* Définit une hauteur maximale (ajustable selon vos besoins) */
+        max-height: calc(100vh - 150px); 
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin; /* Pour Firefox */
+        scrollbar-color: #cbd5e0 transparent; /* Pour Firefox */
+    }
+
+    /* Personnalisation de la barre de défilement pour Chrome/Safari/Edge */
+    .sidebar-scroll-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar-scroll-container::-webkit-scrollbar-thumb {
+        background-color: #cbd5e0;
+        border-radius: 10px;
+    }
+
+    /* Empêcher le titre de bouger si nécessaire */
+    .sticky-title {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+        padding-bottom: 10px;
     }
 </style>
 
