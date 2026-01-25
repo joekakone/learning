@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀" />
+      <meta name="description" content="Dans ce tutoriel, je vous comment installer Talend Open Studio sur Windows." />
     
 
     <!-- Page author -->
@@ -45,7 +45,7 @@
     Installer KNIME | Algo Jungle
   </title>
 
-  <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+  <meta name="description" content="Dans ce tutoriel, je vous comment installer Talend Open Studio sur Windows.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
@@ -541,43 +541,593 @@
 
   <!-- Bloc principal : Sera remplacé par home.html pour la page d'accueil -->
   
-    <main class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 markdown-content">
-          
-  <h1 id="installer-knime">Installer KNIME<a class="headerlink" href="#installer-knime" title="Permanent link">#</a></h1>
-<p>Dans ce tutoriel, je vous comment installer Talend Open Studio sur Windows.
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/covers/install-talend.png" /></p>
-<h2 id="mettre-a-jour-java">Mettre à jour Java<a class="headerlink" href="#mettre-a-jour-java" title="Permanent link">#</a></h2>
+<div class="algo-jungle-article">
+
+    <!-- Header de l'Article -->
+    <section class="article-header bg-light border-bottom">
+        <div class="container py-5 text-center">
+            
+            <!-- Titre avec marge haute pour le descendre -->
+            <div class="pt-5 mt-4">
+                
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Installer Knime</h1>
+                
+            </div>
+
+            <!-- Infos Auteur -->
+            
+
+            <!-- Tags -->
+            
+
+            <!-- Description / Overview centrée et justifiée -->
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
+                        Dans ce tutoriel, je vous comment installer Talend Open Studio sur Windows.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Structure Corps de page (Sidebar + Contenu) -->
+    <div class="container py-5">
+        <div class="row gx-lg-5">
+            
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+<aside class="col-lg-3 d-none d-lg-block">
+    <div class="sticky-top" style="top: 100px;">
+        <div class="p-4 bg-white border rounded shadow-sm mb-4">
+            
+
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <!-- Titre du module (ex: Python) -->
+                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title">Analytics</h5>
+                    
+                    <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../">
+                                    Introduction générale à l'analyse de données
+                                </a>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../data-monetization/">
+                                    Data Monetization
+                                </a>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../data-warehousing/">
+                                    Data Warehousing
+                                </a>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../data-governance/">
+                                    Data Governance
+                                </a>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../data-workflow/">
+                                    Data Workflow
+                                </a>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../data-visualization/">
+                                    Data Visualization
+                                </a>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-7" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>Excel</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-7" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/">
+                                                    Analyse de données avec Microsoft Excel
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/installer/">
+                                                    Installer Excel
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/interface/">
+                                                    Découvrir l'interface
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/les-tableaux/">
+                                                    Les tableaux
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/les-graphiques/">
+                                                    Les graphiques
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/les-tableaux-croises-dynamiques/">
+                                                    Les tableaux croisés dynamiques
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/obtenir-des-donnees/">
+                                                    Obtenir des données
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/creer-un-modele-de-donnees/">
+                                                    Créer un modèle de données
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../excel/ressources/">
+                                                    Ressources
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-8" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>Tableau</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-8" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/">
+                                                    Visualisation de données avec Tableau
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/installer/">
+                                                    Installer Tableau
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/01-obtenir-les-donnees/">
+                                                    Obtenir les données
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/02-creer-des-champs-calcules/">
+                                                    Créer des champs calculés
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/03-creer-des-visuels/">
+                                                    Créer des visules
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/04-assembler-le-dashbord/">
+                                                    Assembler le rapport
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/05-partager-sur-tableau-public/">
+                                                    Publier sur Tableau Public
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../tableau/ressources/">
+                                                    Ressources
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-9" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>Python</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-9" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/">
+                                                    Les packages Python pour la Data Science
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/installer-anaconda/">
+                                                    Installer Anaconda
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/01-numpy/">
+                                                    Numpy NB
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/02-pandas/">
+                                                    Pandas NB
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/03-matplotlib/">
+                                                    Matplotlib NB
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/04-bokeh/">
+                                                    Bokeh NB
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/gradio/">
+                                                    Gradio
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/dask/">
+                                                    Dask
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../python/ressources/">
+                                                    Ressources
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-10" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>R</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-10" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../r/">
+                                                    Éléments d'analyse statistique avec R
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../r/installer/">
+                                                    Installer R
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../..">
+                                                    Les bases
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../..">
+                                                    Programmation
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../..">
+                                                    Statistique Descriptive
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../..">
+                                                    Probabilités
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../..">
+                                                    Statistique Inférentielle
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../r/ressources/">
+                                                    Ressources
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center active-parent" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-11" 
+                                       role="button" 
+                                       aria-expanded="true">
+                                        <span>KNIME</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse show" id="collapse-11" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../">
+                                                    Prise en main de Knime
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link fw-bold text-dark" 
+                                                   href="./">
+                                                    Installer KNIME
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../ressources/">
+                                                    Ressources
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-12" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>SAS Studio</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-12" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../sas/">
+                                                    Analyse de données avec SAS Studio
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../sas/creer-un-compte-sas/">
+                                                    Créer un compte SAS
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../sas/importer-des-donnees/">
+                                                    Importer des données
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../sas/ressources/">
+                                                    Ressources
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../ressources/">
+                                    Ressources
+                                </a>
+                            
+                            
+                        
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+        </div>
+        
+        <div class="p-4 bg-primary text-white rounded shadow text-center">
+            <p class="small mb-3">Besoin d'aide sur ce sujet ?</p>
+            <a href="https://joekakone.github.io/#contact" class="btn btn-outline-light btn-sm text-uppercase w-100">Me contacter</a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    /* Conteneur principal */
+    .sidebar-container {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Style des liens principaux */
+    .sidebar-nav .nav-link {
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+        color: #333;
+        border: none;
+        background: none;
+        transition: color 0.2s ease;
+    }
+
+    .sidebar-nav .nav-link:hover {
+        color: var(--bs-primary) !important;
+    }
+
+    /* Chevron et animation */
+    .chevron-icon {
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+        color: #666;
+    }
+
+    .nav-link[aria-expanded="true"] .chevron-icon {
+        transform: rotate(90deg); /* Oriente le chevron vers le bas */
+    }
+
+    /* Liens enfants (indentés) */
+    .grandchild-link {
+        font-size: 0.9rem !important;
+        padding-left: 1rem !important;
+        position: relative;
+    }
+
+    /* Optionnel : petite barre verticale pour les sous-menus */
+    .collapse nav {
+        border-left: 1px solid #eee;
+        margin-left: 0.5rem !important;
+    }
+
+    /* Masquer la scrollbar pour un look plus propre */
+    .sidebar-container::-webkit-scrollbar {
+        width: 4px;
+    }
+    .sidebar-container::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 10px;
+    }
+</style>
+
+            <!-- Contenu Principal -->
+            <main class="col-lg-9 col-md-12">
+                <article class="markdown-content bg-white p-4 p-md-5 border rounded shadow-sm">
+                    
+                    <div class="featured-image mb-5">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/04-analytics/knime/knime.png" class="img-fluid rounded shadow-sm w-100" alt="Installer KNIME">
+                    </div>
+                    
+
+                    <h2 id="mettre-a-jour-java">Mettre à jour Java<a class="headerlink" href="#mettre-a-jour-java" title="Permanent link">#</a></h2>
 <p>Talend 8.* requiert une version minimum de 11 de Java. Vous pouvez passer cette étape si vous avez déjà une version de Java 11+.</p>
 <h3 id="telechargement">Téléchargement<a class="headerlink" href="#telechargement" title="Permanent link">#</a></h3>
 <p>Rendez-vous à la page de téléechargement <a href="https://www.azul.com/downloads/#zulu">https://www.azul.com/downloads/#zulu</a>
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-java-zulu-01.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-java-zulu-01.png" /></p>
 <p>Si téléchargement ne se démarre pas, cliquez sur <strong><u>direct link</u></strong>
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-java-zulu-02.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-java-zulu-02.png" /></p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
 <p>Une fois le téléchargement terminé, rendez-vous dans votre dossier de téléchargement
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-01.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-02.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-03.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-04.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-05.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-06.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-07.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-08.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-09.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-01.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-02.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-03.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-04.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-05.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-06.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-07.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-08.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-09.png" /></p>
 <h3 id="configuration-de-java">Configuration de Java<a class="headerlink" href="#configuration-de-java" title="Permanent link">#</a></h3>
 <p>Afin de permettre à Talend d'utuliser Java, il faut définir la variable <code>JAVA_HOME</code> et ajouter Java à la variable <code>Path</code>.<br>
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-10.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-10.png" /></p>
 <p><strong>Définir JAVA_HOME</strong><br>
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-11.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-12.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-11.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-12.png" /></p>
 <p><strong>Mettre à jour la variable Path</strong><br>
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-13.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-14.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-13.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-14.png" /></p>
 <p><strong>Vérifier la version de Java</strong><br>
 Faites <strong>CTRL + ENTRER</strong> puis tapez <code>cmd</code> pour ouvrir l'invite de commandes
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-15.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-15.png" /></p>
 <p>Tapez la commande suivante <code>java --version</code> et faites <strong>ENTRER</strong></p>
 <div class="highlight"><pre><span></span><code>C:\Users\Administrateur&gt;java --version
 openjdk 17.0.7 2023-04-18 LTS
@@ -586,94 +1136,184 @@ OpenJDK 64-Bit Server VM Zulu17.42+19-CA (build 17.0.7+7-LTS, mixed mode, sharin
 
 C:\Users\Administrateur&gt;
 </code></pre></div>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-16.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-java-zulu-16.png" /></p>
 <h2 id="installer-talend">Installer Talend<a class="headerlink" href="#installer-talend" title="Permanent link">#</a></h2>
 <h3 id="telechargement_1">Téléchargement<a class="headerlink" href="#telechargement_1" title="Permanent link">#</a></h3>
 <p>TOS est disponible en téléchargement gratuit <a href="https://www.talend.com/lp/open-studio-for-data-integration/">https://www.talend.com/lp/open-studio-for-data-integration/</a>. Le lien ci-dessous vous redirigera vers le forulaire ci-dessous.
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-talend-01.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-talend-01.png" /></p>
 <p>Vérifiez votre boîte mail, vous devriez recevoir un mail avec le lien de téléchargement
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-talend-02.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/download-talend-02.png" /></p>
 <h3 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link">#</a></h3>
 <p>Une fois le téléchargement terminé, rendez-vous dans votre dossier de téléchargement
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-01.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-03.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-04.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-01.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-03.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-04.png" /></p>
 <p>Afin de modifier les variables d'environnment
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-05.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-05.png" /></p>
 <p>Sélectionnez la première option
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-06.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-07.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-08.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-06.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-07.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/install-talend-08.png" /></p>
 <h2 id="demarrage-de-talend">Démarrage de Talend<a class="headerlink" href="#demarrage-de-talend" title="Permanent link">#</a></h2>
 <p>Une fois l'installation terminée, une icône est créée sur le bureau, double-cliquez dessus pour lancer Talend Open Studio.
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-01.png" /></p>
-<p><img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-02.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-01.png" /></p>
+<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-02.png" /></p>
 <p>Cliquez sur <strong>J'accepte</strong> pour accepter les termes de l'accord de licence
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-03.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-03.png" /></p>
 <p>Cliquez sur <strong>Terminer</strong> pour créer un projet Talend 
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-04.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-04.png" /></p>
 <p>L'interface de Talend Open Studio s'ouvre avec une visite guidée qui est proposée
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-05.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-05.png" /></p>
 <p>Par défaut un job démo est ouvert
-<img alt="png" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-06.png" /></p>
+<img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/talend/run-talend-06.png" /></p>
 <hr />
 <p><em>Bravo ! Tout est en place maintenant. Rendez-vous dans la prochaine section pour découvrir l'interface de Talend Open Studio.</em></p>
 
+                </article>
+
+                <!-- Navigation Précédent / Suivant -->
+                <nav class="row mt-5 pt-4 border-top">
+                    <div class="col-6">
+                        
+                        <a href="../" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
+                            <span class="fw-bold text-primary">Prise en main de Knime</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-6 text-end">
+                        
+                        <a href="../ressources/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
+                            <span class="fw-bold text-primary">Ressources</span>
+                        </a>
+                        
+                    </div>
+                </nav>
+
+                <section class="mt-5 border-top pt-4">
+                    
+                    <div class="share-section mb-5">
+                        <h2 class="h4 mb-3">Partagez sur les réseaux sociaux</h2>
+                        <!-- ShareThis BEGIN -->
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <!-- ShareThis END -->
+                    </div>
+
+                    
+                    
+                    <div class="comments-section">
+                        <h2 id="__comments" class="h4 mb-4">Commentaires</h2>
+                        
+                        
+                        <script src="https://giscus.app/client.js"
+                                data-repo="joekakone/Departement-De-Maths"
+                                data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+                                data-category="General"
+                                data-category-id="DIC_kwDOFBN7QM4CORj9"
+                                data-mapping="pathname"
+                                data-reactions-enabled="1"
+                                data-emit-metadata="0"
+                                data-input-position="bottom"
+                                
+                                data-theme="preferred_color_scheme"
+                                data-lang="fr"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                    
+                </section>
+            </main>
+
         </div>
-      </div>
-    </main>
-  
+    </div>
+
+    <!-- CTA Final -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h3 class="text-uppercase mb-4">Inscrivez-vous à une formation complète</h3>
+            <a href="/#formations" class="btn btn-outline-light btn-lg text-uppercase px-5">Voir le catalogue</a>
+        </div>
+    </section>
+
+</div>
+
+<style type="text/css">
+    /* Intégration harmonieuse avec votre thème Home */
+    .algo-jungle-article {
+        background-color: #f8f9fa;
+    }
+
+    .article-header {
+        background: #fff;
+        padding-top: 40px;
+    }
+
+    .markdown-content {
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: #444;
+    }
+
+    .markdown-content h2, .markdown-content h3 {
+        margin-top: 2.5rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .markdown-content h2 { font-size: 1.6rem; border-left: 5px solid #007bff; padding-left: 15px; }
+
+    .markdown-content p { margin-bottom: 1.5rem; text-align: justify; }
+
+    /* Réutilisation de vos tags skill */
+    .skill-tag {
+        background: #e7f1ff;
+        padding: 6px 16px;
+        border-radius: 50px;
+        margin: 5px;
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #007bff;
+        border: 1px solid rgba(0,123,255,0.1);
+    }
+
+    .nav-link {
+        transition: all 0.2s;
+        border-radius: 4px;
+        margin-bottom: 2px;
+    }
+
+    .nav-link:hover {
+        background: #f1f8ff;
+        color: #007bff !important;
+    }
+
+    .featured-image img {
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    /* Styles pour le code (si présent dans l'article) */
+    pre {
+        background: #2d2d2d;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+    }
+</style>
+
 
 
   <!-- Tags --><!-- Footer-->
 <footer class="pt-0">
     <!-- Bande de Navigation Précédent / Suivant (Style Bootstrap Dark) -->
-    
-    <nav class="bg-dark text-white py-4 mb-5" aria-label="Navigation de bas de page">
-        <div class="container px-md-5">
-            <div class="d-flex justify-content-between align-items-center">
-                
-                <!-- Bloc Précédent -->
-                <div class="flex-fill">
-                    
-                    <a href="../" class="d-flex align-items-center text-white text-decoration-none transition-hover">
-                        <div class="me-3">
-                            <i class="fas fa-arrow-left fa-lg"></i>
-                        </div>
-                        <div>
-                            <small class="text-uppercase text-muted d-block" style="font-size: 0.7rem; letter-spacing: 1px;">
-                                Précédent
-                            </small>
-                            <span class="h5 fw-bold mb-0 d-none d-sm-block">
-                                Prise en main de Knime
-                            </span>
-                        </div>
-                    </a>
-                    
-                </div>
-
-                <!-- Bloc Suivant -->
-                <div class="flex-fill text-end">
-                    
-                    <a href="../ressources/" class="d-flex align-items-center justify-content-end text-white text-decoration-none transition-hover">
-                        <div class="text-end">
-                            <small class="text-uppercase text-muted d-block" style="font-size: 0.7rem; letter-spacing: 1px;">
-                                Suivant
-                            </small>
-                            <span class="h5 fw-bold mb-0 d-none d-sm-block">
-                                Ressources
-                            </span>
-                        </div>
-                        <div class="ms-3">
-                            <i class="fas fa-arrow-right fa-lg"></i>
-                        </div>
-                    </a>
-                    
-                </div>
-
-            </div>
-        </div>
-    </nav>
     
     
     <div class="container text-center py-5">
