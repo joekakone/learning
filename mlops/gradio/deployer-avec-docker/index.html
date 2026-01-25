@@ -548,7 +548,21 @@
   <h1 id="deployer-gradio-avec-docker">Déployer Gradio avec Docker<a class="headerlink" href="#deployer-gradio-avec-docker" title="Permanent link">#</a></h1>
 <p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/10-mlops/gradio/covers/deploy-gradio-with-docker.png" /></p>
 <h2 id="dockerfile">Dockerfile<a class="headerlink" href="#dockerfile" title="Permanent link">#</a></h2>
-<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<div class="highlight"><span class="filename">Gradio App Dockerfile</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:buster</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/app
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">7860</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
+</code></pre></div>
+<hr />
+<p><em>Pour en savoir plus, merci de consulter la documentation de Gradio ici <a href="https://gradio.app/">https://gradio.app/</a>.</em></p>
 
         </div>
       </div>
