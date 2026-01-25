@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀" />
+      <meta name="description" content="S’il y a bien une chose que l’on déteste quand on écrit des algorithmes ou des programmes informatiques, c’est la redondance, c’est-à-dire la répétition des instructions. Lorsque certaines instructions reviennent plusieurs fois, il est recommandé . Il s'agit également d'une question d'organisation d'où la modularité." />
     
 
     <!-- Page author -->
@@ -45,7 +45,7 @@
     Comparaison | Algo Jungle
   </title>
 
-  <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀">
+  <meta name="description" content="S’il y a bien une chose que l’on déteste quand on écrit des algorithmes ou des programmes informatiques, c’est la redondance, c’est-à-dire la répétition des instructions. Lorsque certaines instructions reviennent plusieurs fois, il est recommandé . Il s'agit également d'une question d'organisation d'où la modularité.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
@@ -541,81 +541,575 @@
 
   <!-- Bloc principal : Sera remplacé par home.html pour la page d'accueil -->
   
-    <main class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 markdown-content">
-          
-  <h1 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<div class="algo-jungle-article">
+
+    <!-- Header de l'Article -->
+    <section class="article-header bg-light border-bottom">
+        <div class="container py-5 text-center">
+            
+            <!-- Titre avec marge haute pour le descendre -->
+            <div class="pt-5 mt-4">
+                
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les sous-programmes</h1>
+                
+            </div>
+
+            <!-- Infos Auteur -->
+            
+
+            <!-- Tags -->
+            
+
+            <!-- Description / Overview centrée et justifiée -->
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
+                        S’il y a bien une chose que l’on déteste quand on écrit des algorithmes ou des programmes informatiques, c’est la redondance, c’est-à-dire la répétition des instructions. Lorsque certaines instructions reviennent plusieurs fois, il est recommandé . Il s'agit également d'une question d'organisation d'où la modularité.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Structure Corps de page (Sidebar + Contenu) -->
+    <div class="container py-5">
+        <div class="row gx-lg-5">
+            
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+<aside class="col-lg-3 d-none d-lg-block">
+    <div class="sticky-top" style="top: 100px;">
+        <div class="p-4 bg-white border rounded shadow-sm mb-4">
+            
+
+                
+            
+                
+            
+                
+                    <!-- Titre du module (ex: Python) -->
+                    <h5 class="h6 fw-bold text-primary mb-3 sidebar-title">Algorithmique</h5>
+                    
+                    <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../">
+                                    Introduction à l'algorithmique
+                                </a>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-2" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>Partie 1 - Les bases</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-2" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/">
+                                                    Les bases de l'algorithmique
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/les-variables/">
+                                                    Constantes & Variables
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/les-operations/">
+                                                    Opérations
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/affichage-et-saisie/">
+                                                    Affichage & Saisie
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/les-fonctions-predefnies/">
+                                                    Fonctions predéfinies
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/les-conditions/">
+                                                    Conditions
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/la-structure-de-choix/">
+                                                    Choix
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/les-boucles/">
+                                                    Boucles
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-1-les-bases/outro/">
+                                                    Outro
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-3" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>Partie 2 - Les tableaux</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-3" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-2-les-tableaux/">
+                                                    Les tableaux
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-2-les-tableaux/les-tableaux-a-une-dimension/">
+                                                    Tableaux à une dimension
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-2-les-tableaux/les-tableaux-a-deux-dimensions/">
+                                                    Tableaux à deux dimension
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-2-les-tableaux/les-tableaux-a-plusieurs-dimensions/">
+                                                    Tableaux à n dimension
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-2-les-tableaux/outro/">
+                                                    Outro
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center active-parent" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-4" 
+                                       role="button" 
+                                       aria-expanded="true">
+                                        <span>Partie 3 - Procédures et Fonctions</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse show" id="collapse-4" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../">
+                                                    Les sous-programmes
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../procedures/">
+                                                    Les procédures
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../fonctions/">
+                                                    Les fonctions
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link fw-bold text-dark" 
+                                                   href="./">
+                                                    Comparaison
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link fw-bold text-dark" 
+                                                   href="./">
+                                                    Comparaison
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-5" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>Partie 4 - Structures de données</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-4-les-structures-de-donnees/">
+                                                    Les structures de données
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-4-les-structures-de-donnees/les-listes-chainees/">
+                                                    Les listes chaînées
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-4-les-structures-de-donnees/les-piles/">
+                                                    Les piles
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-4-les-structures-de-donnees/les-files/">
+                                                    Les files
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-4-les-structures-de-donnees/les-arbres/">
+                                                    Les arbres
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-4-les-structures-de-donnees/outro/">
+                                                    Outro
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS AVEC ENFANTS : Menu dépliant -->
+                                <div class="nav-item mb-1">
+                                    <a class="nav-link d-flex justify-content-between align-items-center text-dark" 
+                                       data-bs-toggle="collapse" 
+                                       href="#collapse-6" 
+                                       role="button" 
+                                       aria-expanded="false">
+                                        <span>Partie 5 - Problèmes</span>
+                                        <i class="fas fa-chevron-right chevron-icon"></i>
+                                    </a>
+                                    
+                                    <div class="collapse " id="collapse-6" data-bs-parent="#sidebarAccordion">
+                                        <nav class="nav flex-column ms-3 mt-1">
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-5-problemes/probleme-1/">
+                                                    Problème 1
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-5-problemes/probleme-2/">
+                                                    Problème 2
+                                                </a>
+                                            
+                                                <a class="nav-link py-1 grandchild-link text-muted" 
+                                                   href="../../partie-5-problemes/probleme-3/">
+                                                    Problème 3
+                                                </a>
+                                            
+                                        </nav>
+                                    </div>
+                                </div>
+                            
+                            
+                        
+                            
+                            
+                                <!-- CAS SANS ENFANT : Lien simple -->
+                                <a class="nav-link text-dark" 
+                                   href="../../ressources/">
+                                    Ressources
+                                </a>
+                            
+                            
+                        
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
 
         </div>
-      </div>
-    </main>
-  
+        
+        <div class="p-4 bg-primary text-white rounded shadow text-center">
+            <p class="small mb-3">Besoin d'aide sur ce sujet ?</p>
+            <a href="https://joekakone.github.io/#contact" class="btn btn-outline-light btn-sm text-uppercase w-100">Me contacter</a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    /* Conteneur principal */
+    .sidebar-container {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Style des liens principaux */
+    .sidebar-nav .nav-link {
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+        color: #333;
+        border: none;
+        background: none;
+        transition: color 0.2s ease;
+    }
+
+    .sidebar-nav .nav-link:hover {
+        color: var(--bs-primary) !important;
+    }
+
+    /* Chevron et animation */
+    .chevron-icon {
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+        color: #666;
+    }
+
+    .nav-link[aria-expanded="true"] .chevron-icon {
+        transform: rotate(90deg); /* Oriente le chevron vers le bas */
+    }
+
+    /* Liens enfants (indentés) */
+    .grandchild-link {
+        font-size: 0.9rem !important;
+        padding-left: 1rem !important;
+        position: relative;
+    }
+
+    /* Optionnel : petite barre verticale pour les sous-menus */
+    .collapse nav {
+        border-left: 1px solid #eee;
+        margin-left: 0.5rem !important;
+    }
+
+    /* Masquer la scrollbar pour un look plus propre */
+    .sidebar-container::-webkit-scrollbar {
+        width: 4px;
+    }
+    .sidebar-container::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 10px;
+    }
+</style>
+
+            <!-- Contenu Principal -->
+            <main class="col-lg-9 col-md-12">
+                <article class="markdown-content bg-white p-4 p-md-5 border rounded shadow-sm">
+                    
+                    <div class="featured-image mb-5">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/01-algorithmique/covers/algorithmique.png" class="img-fluid rounded shadow-sm w-100" alt="Comparaison">
+                    </div>
+                    
+
+                    <p>Il s'agit de réorganiser l'algorithme en sous-programmes
+Dans la suite, on utilisera <code>programme</code> au lieu de <code>algorithme</code>.</p>
+<p>Par exemple si l’on doit</p>
+
+                </article>
+
+                <!-- Navigation Précédent / Suivant -->
+                <nav class="row mt-5 pt-4 border-top">
+                    <div class="col-6">
+                        
+                        <a href="./" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
+                            <span class="fw-bold text-primary">Comparaison</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-6 text-end">
+                        
+                        <a href="../../partie-4-les-structures-de-donnees/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
+                            <span class="fw-bold text-primary">Les structures de données</span>
+                        </a>
+                        
+                    </div>
+                </nav>
+
+                <section class="mt-5 border-top pt-4">
+                    
+                    <div class="share-section mb-5">
+                        <h2 class="h4 mb-3">Partagez sur les réseaux sociaux</h2>
+                        <!-- ShareThis BEGIN -->
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <!-- ShareThis END -->
+                    </div>
+
+                    
+                    
+                    <div class="comments-section">
+                        <h2 id="__comments" class="h4 mb-4">Commentaires</h2>
+                        
+                        
+                        <script src="https://giscus.app/client.js"
+                                data-repo="joekakone/Departement-De-Maths"
+                                data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+                                data-category="General"
+                                data-category-id="DIC_kwDOFBN7QM4CORj9"
+                                data-mapping="pathname"
+                                data-reactions-enabled="1"
+                                data-emit-metadata="0"
+                                data-input-position="bottom"
+                                
+                                data-theme="preferred_color_scheme"
+                                data-lang="fr"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                    
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- CTA Final -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h3 class="text-uppercase mb-4">Inscrivez-vous à une formation complète</h3>
+            <a href="/#formations" class="btn btn-outline-light btn-lg text-uppercase px-5">Voir le catalogue</a>
+        </div>
+    </section>
+
+</div>
+
+<style type="text/css">
+    /* Intégration harmonieuse avec votre thème Home */
+    .algo-jungle-article {
+        background-color: #f8f9fa;
+    }
+
+    .article-header {
+        background: #fff;
+        padding-top: 40px;
+    }
+
+    .markdown-content {
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: #444;
+    }
+
+    .markdown-content h2, .markdown-content h3 {
+        margin-top: 2.5rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .markdown-content h2 { font-size: 1.6rem; border-left: 5px solid #007bff; padding-left: 15px; }
+
+    .markdown-content p { margin-bottom: 1.5rem; text-align: justify; }
+
+    /* Réutilisation de vos tags skill */
+    .skill-tag {
+        background: #e7f1ff;
+        padding: 6px 16px;
+        border-radius: 50px;
+        margin: 5px;
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #007bff;
+        border: 1px solid rgba(0,123,255,0.1);
+    }
+
+    .nav-link {
+        transition: all 0.2s;
+        border-radius: 4px;
+        margin-bottom: 2px;
+    }
+
+    .nav-link:hover {
+        background: #f1f8ff;
+        color: #007bff !important;
+    }
+
+    .featured-image img {
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    /* Styles pour le code (si présent dans l'article) */
+    pre {
+        background: #2d2d2d;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+    }
+</style>
+
 
 
   <!-- Tags --><!-- Footer-->
 <footer class="pt-0">
     <!-- Bande de Navigation Précédent / Suivant (Style Bootstrap Dark) -->
-    
-    <nav class="bg-dark text-white py-4 mb-5" aria-label="Navigation de bas de page">
-        <div class="container px-md-5">
-            <div class="d-flex justify-content-between align-items-center">
-                
-                <!-- Bloc Précédent -->
-                <div class="flex-fill">
-                    
-                    <a href="./" class="d-flex align-items-center text-white text-decoration-none transition-hover">
-                        <div class="me-3">
-                            <i class="fas fa-arrow-left fa-lg"></i>
-                        </div>
-                        <div>
-                            <small class="text-uppercase text-muted d-block" style="font-size: 0.7rem; letter-spacing: 1px;">
-                                Précédent
-                            </small>
-                            <span class="h5 fw-bold mb-0 d-none d-sm-block">
-                                Comparaison
-                            </span>
-                        </div>
-                    </a>
-                    
-                </div>
-
-                <!-- Bloc Suivant -->
-                <div class="flex-fill text-end">
-                    
-                    <a href="../../partie-4-les-structures-de-donnees/" class="d-flex align-items-center justify-content-end text-white text-decoration-none transition-hover">
-                        <div class="text-end">
-                            <small class="text-uppercase text-muted d-block" style="font-size: 0.7rem; letter-spacing: 1px;">
-                                Suivant
-                            </small>
-                            <span class="h5 fw-bold mb-0 d-none d-sm-block">
-                                Les tableaux
-                            </span>
-                        </div>
-                        <div class="ms-3">
-                            <i class="fas fa-arrow-right fa-lg"></i>
-                        </div>
-                    </a>
-                    
-                </div>
-
-            </div>
-        </div>
-    </nav>
     
     
     <div class="container text-center py-5">
