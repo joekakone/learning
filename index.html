@@ -52,10 +52,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   <!-- Theme CSS -->
   <link rel="stylesheet" href="https://joekakone.github.io/static/css/style.blue.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/stylesheets/custom.css">
   
   <style>
     body {
@@ -541,15 +541,74 @@
   
 <div class="algo-jungle-home">
 
-    <!-- Hero Section -->
-  <section class="algo-header" style="background: url(https://joekakone.github.io/static/img/shutterstock-cover.jpg)">
-    <div class="container text-center">
+  <!-- Hero Section -->
+  <section class="algo-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://joekakone.github.io/static/img/shutterstock-cover.jpg'); background-size: cover; background-position: center; min-height: 75vh; display: flex; align-items: center;">
+    <div class="container text-center text-white">
       <p class="fw-bold text-primary text-uppercase letter-spacing-3 mb-3">Apprendre la Data & Python</p>
-      <h1 class="text-uppercase text-xl mb-4">Lancez votre carrière en <span class="text-primary">Data Science</span></h1>
+      <h1 class="text-uppercase display-4 fw-bold mb-4">Lancez votre carrière en <span class="text-primary">Data Science</span></h1>
       <p class="lead mx-auto col-lg-8 mb-5">Prêt à acquérir les compétences clés ? Je vous accompagne gratuitement dans la maîtrise de Python, SQL, Power BI et l'Intelligence Artificielle.</p>
-      <div>
-        <a href="informatique/" class="btn btn-primary btn-lg text-uppercase px-5 py-3 me-2 shadow">C'est parti ! 🚀</a>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="informatique/" class="btn btn-primary btn-lg text-uppercase px-5 py-3 shadow">C'est parti ! 🚀</a>
         <a href="blog/" class="btn btn-outline-light btn-lg text-uppercase px-5 py-3">Voir le blog</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="py-5 bg-light" id="about">
+    <div class="container py-5">
+      <header class="text-center mb-5">
+        <p class="fw-bold text-primary text-uppercase letter-spacing-3">Discover more about me</p>
+        <h2 class="h3 lined text-uppercase mx-auto">À Propos de moi</h2>
+      </header>
+      <div class="row gx-4 gx-lg-5 align-items-center">
+        <!-- Colonne Image -->
+        <div class="col-md-5 mb-5 mb-md-0">
+          <div class="p-2 bg-white shadow-sm border rounded">
+            <div class="overflow-hidden rounded">
+              <img class="img-fluid w-100" 
+                  src="https://joekakone.github.io/static/img/about-joseph-konka.png" 
+                  alt="Joseph Koami Konka"
+                  style="filter: grayscale(100%); transition: all 0.5s ease; cursor: pointer; transform: scale(1.02);"
+                  onmouseover="this.style.filter='grayscale(0%)'; this.style.transform='scale(1)';"
+                  onmouseout="this.style.filter='grayscale(100%)'; this.style.transform='scale(1.02)';"
+                  onerror="this.src='https://via.placeholder.com/500x600?text=Joseph+Koami+Konka'">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Colonne Texte -->
+        <div class="col-md-7">
+            <h2 class="display-5 fw-light mb-3" style="color: #2c3e50;">Joseph Koami Konka</h2>
+            <p class="lead text-muted mb-4">
+                Passionné de technologie et expert en analyse de données, je me consacre à la démocratisation des savoirs numériques.
+            </p>
+            <p class="text-secondary mb-4">
+                Diplômé d'une licence en Mathématiques de l'Université de Lomé, j'occupe actuellement le poste de 
+                <strong>Chargé Analytics Ad Hoc chez Togocom</strong>. Mon expertise s'étend de l'algorithmique au Machine Learning, 
+                avec une prédilection pour le langage Python et la Business Intelligence.
+            </p>
+            
+            <div class="mb-4">
+                <h5 class="text-uppercase small fw-bold mb-3 text-primary">Sujets d'intérêt</h5>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-white text-dark border px-3 py-2 fw-normal">Project Management</span>
+                    <span class="badge bg-white text-dark border px-3 py-2 fw-normal">Data Engineering</span>
+                    <span class="badge bg-white text-dark border px-3 py-2 fw-normal">Data Analytics</span>
+                    <span class="badge bg-white text-dark border px-3 py-2 fw-normal">Python Programming</span>
+                </div>
+            </div>
+
+            <!-- Réseaux Sociaux -->
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -564,11 +623,13 @@
       <div class="row gy-4">
         <!-- Data Engineer -->
         <div class="col-lg-4">
-          <div class="course-card">
-            <div class="icon-box"><i class="fas fa-tools"></i></div>
-            <h3 class="h5 text-uppercase">Data Engineer</h3>
-            <p class="text-muted text-sm cust-justify mb-4">Concevez et gérez les infrastructures. SQL, Spark, Airflow, Talend et gestion des bases de données.</p>
-            <iframe src="https://drive.google.com/file/d/1gDyZRaznTXH8zmcKqsv3aU1FRB6Jo1xx/preview" width="100%" height="180px" allow="autoplay"></iframe>
+          <div class="course-card h-100 p-4 border rounded shadow-sm">
+            <div class="icon-box mb-3 text-primary fs-2"><i class="fas fa-tools"></i></div>
+            <h3 class="h5 text-uppercase fw-bold">Data Engineer</h3>
+            <p class="text-muted text-sm mb-4">Concevez et gérez les infrastructures. SQL, Spark, Airflow, Talend et gestion des bases de données.</p>
+            <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                <iframe src="https://drive.google.com/file/d/1gDyZRaznTXH8zmcKqsv3aU1FRB6Jo1xx/preview" allow="autoplay"></iframe>
+            </div>
             <p class="small text-primary mb-2 pt-3"><i class="far fa-clock me-2"></i>Durée : 3 mois</p>
             <div class="price-badge mb-4">175.000 FCFA</div>
             <a href="#" class="btn btn-primary w-100 text-uppercase">S'inscrire</a>
@@ -576,11 +637,13 @@
         </div>
         <!-- Data Analyst -->
         <div class="col-lg-4">
-          <div class="course-card">
-            <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
-            <h3 class="h5 text-uppercase">Data Analyst</h3>
-            <p class="text-muted text-sm cust-justify mb-4">Collectez et analysez pour sortir des insights. Statistiques, SQL, Excel, Power BI et Python.</p>
-            <iframe src="https://drive.google.com/file/d/1qOhOlP5_DIlLQtyD-aeGWfvgzJ2bxn7y/preview" width="100%" height="180px" allow="autoplay"></iframe>
+          <div class="course-card h-100 p-4 border rounded shadow-sm">
+            <div class="icon-box mb-3 text-primary fs-2"><i class="fas fa-chart-pie"></i></div>
+            <h3 class="h5 text-uppercase fw-bold">Data Analyst</h3>
+            <p class="text-muted text-sm mb-4">Collectez et analysez pour sortir des insights. Statistiques, SQL, Excel, Power BI et Python.</p>
+            <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                <iframe src="https://drive.google.com/file/d/1qOhOlP5_DIlLQtyD-aeGWfvgzJ2bxn7y/preview" allow="autoplay"></iframe>
+            </div>
             <p class="small text-primary mb-2 pt-3"><i class="far fa-clock me-2"></i>Durée : 3 mois</p>
             <div class="price-badge mb-4">125.000 FCFA</div>
             <a href="#" class="btn btn-primary w-100 text-uppercase">S'inscrire</a>
@@ -588,11 +651,13 @@
         </div>
         <!-- Data Scientist -->
         <div class="col-lg-4">
-          <div class="course-card">
-            <div class="icon-box"><i class="fas fa-brain"></i></div>
-            <h3 class="h5 text-uppercase">Data Scientist</h3>
-            <p class="text-muted text-sm cust-justify mb-4">Exploitez le Machine Learning. Modèles prédictifs avec Scikit-learn, TensorFlow et MLflow.</p>
-            <iframe src="https://drive.google.com/file/d/1CEIKrnIJWyHxVPPZU_vWIl9by4Yn4tr6/preview" width="100%" height="180px" allow="autoplay"></iframe>
+          <div class="course-card h-100 p-4 border rounded shadow-sm">
+            <div class="icon-box mb-3 text-primary fs-2"><i class="fas fa-brain"></i></div>
+            <h3 class="h5 text-uppercase fw-bold">Data Scientist</h3>
+            <p class="text-muted text-sm mb-4">Exploitez le Machine Learning. Modèles prédictifs avec Scikit-learn, TensorFlow et MLflow.</p>
+            <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                <iframe src="https://drive.google.com/file/d/1CEIKrnIJWyHxVPPZU_vWIl9by4Yn4tr6/preview" allow="autoplay"></iframe>
+            </div>
             <p class="small text-primary mb-2 pt-3"><i class="far fa-clock me-2"></i>Durée : 3 mois</p>
             <div class="price-badge mb-4">225.000 FCFA</div>
             <a href="#" class="btn btn-primary w-100 text-uppercase">S'inscrire</a>
@@ -612,27 +677,33 @@
       <div class="row gy-4">
         <!-- Blog 1 -->
         <div class="col-lg-4">
-          <div class="info-card">
-            <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/python-tips/covers/blog-python-tips.webp" alt="Python Tips" class="card-img-top">
-            <h3 class="h6 text-uppercase mb-3">Blog Post : Python Tips 🐍</h3>
+          <div class="info-card h-100 bg-white border rounded p-3 shadow-sm d-flex flex-column">
+            <div class="overflow-hidden rounded mb-3">
+                <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/python-tips/covers/blog-python-tips.webp" alt="Python Tips" class="img-fluid w-100">
+            </div>
+            <h3 class="h6 text-uppercase mb-3 fw-bold">Blog Post : Python Tips 🐍</h3>
             <p class="text-muted text-sm mb-4">Découvrez des astuces quotidiennes pour rendre votre code Python plus propre, plus rapide et plus efficace.</p>
             <a href="blog/posts/python-tips/" class="text-primary fw-bold text-sm text-uppercase mt-auto">Lire l'article <i class="fas fa-arrow-right ms-2"></i></a>
           </div>
         </div>
         <!-- Blog 2 -->
         <div class="col-lg-4">
-          <div class="info-card">
-            <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/sql-tips/covers/blog-sql-tips.png" alt="SQL Analytics" class="card-img-top">
-            <h3 class="h6 text-uppercase mb-3">Blog Post : SQL Tips 🎲</h3>
+          <div class="info-card h-100 bg-white border rounded p-3 shadow-sm d-flex flex-column">
+            <div class="overflow-hidden rounded mb-3">
+                <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/sql-tips/covers/blog-sql-tips.png" alt="SQL Analytics" class="img-fluid w-100">
+            </div>
+            <h3 class="h6 text-uppercase mb-3 fw-bold">Blog Post : SQL Tips 🎲</h3>
             <p class="text-muted text-sm mb-4">Maîtrisez les requêtes complexes et l'optimisation de bases de données pour vos analyses de données.</p>
             <a href="blog/posts/sql-tips/" class="text-primary fw-bold text-sm text-uppercase mt-auto">Lire l'article <i class="fas fa-arrow-right ms-2"></i></a>
           </div>
         </div>
         <!-- Blog 3 -->
         <div class="col-lg-4">
-          <div class="info-card">
-            <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/powerbi-tips/covers/blog-powerbi-tips.webp" alt="Visualisation Power BI" class="card-img-top">
-            <h3 class="h6 text-uppercase mb-3">Blog Post : Power BI 📊</h3>
+          <div class="info-card h-100 bg-white border rounded p-3 shadow-sm d-flex flex-column">
+            <div class="overflow-hidden rounded mb-3">
+                <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/powerbi-tips/covers/blog-powerbi-tips.webp" alt="Visualisation Power BI" class="img-fluid w-100">
+            </div>
+            <h3 class="h6 text-uppercase mb-3 fw-bold">Blog Post : Power BI 📊</h3>
             <p class="text-muted text-sm mb-4">Apprenez à créer des visualisations percutantes qui racontent une histoire claire à partir de vos données brutes.</p>
             <a href="blog/posts/powerbi-tips/" class="text-primary fw-bold text-sm text-uppercase mt-auto">Lire l'article <i class="fas fa-arrow-right ms-2"></i></a>
           </div>
@@ -640,7 +711,7 @@
       </div>
       <div class="text-center mt-5">
         <p class="text-muted small">Abonnez-vous à la newsletter pour recevoir les nouveaux articles par mail.</p>
-        <a href="#tally-open=mJzBvX&tally-layout=modal&tally-emoji-text=👋&tally-emoji-animation=wave" class="btn btn-outline-primary text-uppercase px-4">S'abonner</a>
+        <a href="#tally-open=mJzBvX&tally-layout=modal&tally-emoji-text=👋&tally-emoji-animation=wave" class="btn btn-outline-primary text-uppercase px-4 shadow-sm">S'abonner</a>
       </div>
     </div>
   </section>
@@ -655,136 +726,134 @@
       <div class="row gy-4">
         <!-- Event 1 -->
         <div class="col-lg-4">
-          <div class="info-card">
+          <div class="info-card h-100 p-3 border rounded shadow-sm d-flex flex-column bg-light">
             <div class="d-flex align-items-center mb-3">
               <div class="bg-primary text-white p-2 rounded text-center me-3" style="min-width: 60px;">
                 <span class="d-block fw-bold h5 mb-0">25</span>
                 <span class="small text-uppercase">Jan</span>
               </div>
-              <h3 class="h6 text-uppercase mb-0">Masterclass Python</h3>
+              <h3 class="h6 text-uppercase mb-0 fw-bold">Masterclass Python</h3>
             </div>
-            <iframe width="100%" height="190px" src="https://www.youtube.com/embed/BhYnh4L-Jt0" title="Coding Workshop #03 - Host a static website on GitHub Pages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p class="text-muted text-sm mb-4 pt-3">Un webinaire intensif sur l'automatisation des tâches répétitives avec les scripts Python.</p>
+            <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/BhYnh4L-Jt0" title="Webinaire Python" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="text-muted text-sm mb-4">Un webinaire intensif sur l'automatisation des tâches répétitives avec les scripts Python.</p>
             <a href="#" class="btn btn-sm btn-outline-primary text-uppercase mt-auto">Réserver ma place</a>
           </div>
         </div>
         <!-- Event 2 -->
         <div class="col-lg-4">
-          <div class="info-card">
+          <div class="info-card h-100 p-3 border rounded shadow-sm d-flex flex-column bg-light">
             <div class="d-flex align-items-center mb-3">
               <div class="bg-primary text-white p-2 rounded text-center me-3" style="min-width: 60px;">
                 <span class="d-block fw-bold h5 mb-0">12</span>
                 <span class="small text-uppercase">Fév</span>
               </div>
-              <h3 class="h6 text-uppercase mb-0">Data Career Talk</h3>
+              <h3 class="h6 text-uppercase mb-0 fw-bold">Data Career Talk</h3>
             </div>
-          <iframe width="100%" height="190px" src="https://www.youtube.com/embed/3KjT2GVoBQo" title="Coding Workshop #03 - Host a static website on GitHub Pages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p class="text-muted text-sm mb-4 pt-3">Session de questions/réponses sur les métiers de la data et comment construire son portfolio.</p>
+            <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/3KjT2GVoBQo" title="Data Career" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="text-muted text-sm mb-4">Session de questions/réponses sur les métiers de la data et comment construire son portfolio.</p>
             <a href="#" class="btn btn-sm btn-outline-primary text-uppercase mt-auto">Réserver ma place</a>
           </div>
         </div>
         <!-- Event 3 -->
         <div class="col-lg-4">
-          <div class="info-card">
+          <div class="info-card h-100 p-3 border rounded shadow-sm d-flex flex-column bg-light">
             <div class="d-flex align-items-center mb-3">
               <div class="bg-primary text-white p-2 rounded text-center me-3" style="min-width: 60px;">
                 <span class="d-block fw-bold h5 mb-0">05</span>
                 <span class="small text-uppercase">Mar</span>
               </div>
-              <h3 class="h6 text-uppercase mb-0">Workshop Power BI</h3>
+              <h3 class="h6 text-uppercase mb-0 fw-bold">Workshop Power BI</h3>
             </div>
-          <iframe width="100%" height="190px" src="https://www.youtube.com/embed/1Jj4y3P7mBU" title="Coding Workshop #03 - Host a static website on GitHub Pages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p class="text-muted text-sm mb-4 pt-3">Atelier pratique pour construire votre premier rapport de vente interactif de A à Z.</p>
+            <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/1Jj4y3P7mBU" title="Power BI Workshop" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="text-muted text-sm mb-4">Atelier pratique pour construire votre premier rapport de vente interactif de A à Z.</p>
             <a href="#" class="btn btn-sm btn-outline-primary text-uppercase mt-auto">Réserver ma place</a>
           </div>
         </div>
       </div>
       <div class="text-center mt-5">
-        <p class="text-muted cust-justify mx-auto col-lg-8 small">Le savoir est la seule matière qui s’accroît quand on la partage. Rejoignez-nous lors de ces sessions gratuites de vulgarisation autour de la Data.</p>
+        <div class="mx-auto mb-4" style="max-width: 800px;">
+            <p class="text-muted fst-italic">
+              « Dans les métiers du code et de la Data, l'isolement est un frein à l'excellence. Le savoir est la seule ressource qui s'enrichit lorsqu'on la partage. 
+              Rejoignez notre communauté lors de nos sessions gratuites de vulgarisation et progressez ensemble. »
+            </p>
+        </div>
+        <a href="https://chat.whatsapp.com/FW2to0JQ7ULCY6b1z1q0gn" class="btn btn-outline-primary btn-lg text-uppercase px-4 shadow-sm" target="_blank">Rejoindre WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTENU MARKDOWN : Affiche le texte de index.md si besoin -->
-  
+  <!-- Partners Section -->
+  <section class="py-5 bg-light" id="partners">
+    <div class="container py-5">
+      <header class="text-center mb-5">
+        <p class="fw-bold text-primary text-uppercase letter-spacing-3">Écosystème & Synergie</p>
+        <h2 class="h3 lined text-uppercase mx-auto">Nos partenaires</h2>
+        <p class="text-muted mt-3 mx-auto" style="max-width: 700px;">
+          Nous collaborons avec des institutions académiques et des entreprises leaders pour promouvoir l'excellence dans le domaine de la data au Togo.
+        </p>
+      </header>
 
-  <!-- CTA -->
-  <section class="py-5 bg-primary text-white text-center">
-    <div class="container py-4">
-      <h2 class="text-uppercase mb-4">Prêt à valoriser vos données ?</h2>
-      <p class="lead mb-5">Transformons ensemble vos chiffres en outils de décision stratégique.</p>
-      <a href="https://joekakone.github.io/#contact" class="btn btn-outline-light btn-lg text-uppercase px-5">Me contacter</a>
+      <div class="row gy-4 justify-content-center">
+        <!-- Partenaire 1 -->
+        <div class="col-lg-5 col-md-6">
+          <div class="info-card h-100 bg-white p-4 text-center border rounded shadow-sm">
+            <div class="mb-3 d-flex align-items-center justify-content-center" style="height: 80px;">
+              <img src="https://celtiis.bj/_next/image?url=%2Fceltiis-logo-rounded.svg&w=128&q=75" alt="Yas Togo" class="img-fluid" style="max-height: 100%;">
+            </div>
+            <h3 class="h6 text-uppercase fw-bold mb-2">Celtis</h3>
+            <p class="text-primary small fw-bold text-uppercase mb-3">Entreprise de services numériques</p>
+            <p class="text-muted text-sm mb-0">
+              Expertise en transformation digitale et solutions technologiques innovantes pour le marché béninois.
+            </p>
+          </div>
+        </div>
+
+        <!-- Partenaire 2 -->
+        <div class="col-lg-5 col-md-6">
+          <div class="info-card h-100 bg-white p-4 text-center border rounded shadow-sm">
+            <div class="mb-3 d-flex align-items-center justify-content-center" style="height: 80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Epitech.png/1280px-Epitech.png" alt="Lomé Business School" class="img-fluid" style="max-height: 100%;">
+            </div>
+            <h3 class="h6 text-uppercase fw-bold mb-2">Epitech Bénin</h3>
+            <p class="text-primary small fw-bold text-uppercase mb-3">École de commerce & Technologie</p>
+            <p class="text-muted text-sm mb-0">
+              Formation d'élite des futurs cadres et experts en gestion et technologies de l'information au Bénin.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="text-muted small mb-3">Vous souhaitez collaborer avec nous ?</p>
+        <a href="mailto:contact@akonkaanalytics.com" class="text-primary fw-bold text-sm text-uppercase text-decoration-none">Nous contacter <i class="fas fa-envelope ms-2"></i></a>
+      </div>
     </div>
   </section>
 
-  <style type="text/css">
-    .cust-justify {
-      text-align: justify;
-    }
-    .algo-header {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551288049-bbbda536ad0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-      padding: 160px 0 100px;
-      color: white;
-    }
-    .course-card, .info-card {
-      border: 1px solid #eee;
-      padding: 40px 30px;
-      transition: all 0.3s;
-      height: 100%;
-      border-radius: 12px;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-    }
-    .course-card:hover, .info-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-      border-color: #007bff;
-    }
-    .icon-box {
-      width: 70px;
-      height: 70px;
-      background: #f8f9fa;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px;
-      color: #007bff;
-      font-size: 1.8rem;
-    }
-    .price-badge {
-      background: #e7f1ff;
-      color: #007bff;
-      padding: 5px 15px;
-      border-radius: 50px;
-      font-weight: 800;
-      font-size: 0.9rem;
-      margin-top: auto;
-      display: inline-block;
-    }
-    .skill-tag {
-      background: #f1f3f5;
-      padding: 5px 15px;
-      border-radius: 4px;
-      margin: 5px;
-      display: inline-block;
-      font-size: 0.85rem;
-      color: #495057;
-    }
-    .card-img-top {
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-  </style>
+  <!-- CONTENU MARKDOWN -->
+  
+
+</div>
 
 
 
-  <!-- Tags --><!-- Footer-->
+  <!-- Tags -->
+
+<!-- CTA FINAL -->
+<section class="py-5 bg-primary text-white text-center">
+<div class="container py-4">
+    <h3 class="text-uppercase mb-4">Inscrivez-vous à une formation complète</h3>
+    <a href="/#formations" class="btn btn-outline-light btn-lg text-uppercase px-5">Voir le catalogue</a>
+</div>
+</section>
+
+<!-- Footer-->
 <footer class="pt-0">
     <!-- Bande de Navigation Précédent / Suivant (Style Bootstrap Dark) -->
     
@@ -826,7 +895,7 @@
             <div class="col-lg-7 mx-auto">
                 <h2 class="text-uppercase mb-0">Joseph Konka </h2>
                 <h6 class="text-primary text-uppercase mb-0 letter-spacing-3">Senior Data Analyst | Data Scientist</h6>
-                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Machine Learning</p>
+                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Python Programming</p>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                     <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>

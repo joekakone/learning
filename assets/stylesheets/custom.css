@@ -1,0 +1,201 @@
+/* --- CONFIGURATION GLOBALE & VARIABLES --- */
+:root {
+    --aj-primary: #007bff;
+    --aj-primary-light: #e7f1ff;
+    --aj-dark: #2c3e50;
+    --aj-text-muted: #6c757d;
+    --aj-bg-light: #f8f9fa;
+    --aj-white: #ffffff;
+    --aj-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --aj-transition: all 0.3s ease-in-out;
+}
+
+/* --- UTILITAIRES --- */
+.algo-jungle-home, .algo-jungle-article { overflow-x: hidden; }
+.cust-justify { text-align: justify; }
+.letter-spacing-3 { letter-spacing: 3px; }
+.text-sm { font-size: 0.875rem; }
+
+/* --- TITRES "LINED" (Harmonisation du thème) --- */
+.lined { position: relative; padding-bottom: 15px; display: inline-block; }
+.lined::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--aj-primary);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --- HERO SECTION --- */
+.algo-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://joekakone.github.io/static/img/shutterstock-cover.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 160px 0 100px;
+    color: var(--aj-white);
+}
+
+/* --- CARTES (Formations, Blog, Events) --- */
+.course-card, .info-card {
+    border: 1px solid #eee;
+    padding: 30px;
+    transition: var(--aj-transition);
+    height: 100%;
+    border-radius: 12px;
+    background: var(--aj-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover, .info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--aj-shadow);
+    border-color: var(--aj-primary);
+}
+
+.icon-box {
+    width: 65px;
+    height: 65px;
+    background: var(--aj-bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--aj-primary);
+    font-size: 1.6rem;
+}
+
+.price-badge {
+    background: var(--aj-primary-light);
+    color: var(--aj-primary);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    margin-top: auto;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* --- SECTION ABOUT & IMAGES --- */
+.about-img-wrapper {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-img-effect {
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.about-img-effect:hover {
+    filter: grayscale(0%);
+    transform: scale(1);
+}
+
+/* --- SKILLS & TAGS --- */
+.skill-tag, .badge-custom {
+    background: var(--aj-primary-light);
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin: 4px;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--aj-primary);
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    text-transform: uppercase;
+}
+
+/* --- RESEAUX SOCIAUX --- */
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    color: #495057;
+    transition: var(--aj-transition);
+}
+
+.social-link:hover {
+    background-color: var(--aj-primary);
+    color: white !important;
+    border-color: var(--aj-primary) !important;
+    transform: translateY(-3px);
+}
+
+/* --- PARTENAIRES --- */
+.partner-logo-wrapper {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.partner-img {
+    max-height: 65px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.info-card:hover .partner-logo-wrapper {
+    transform: scale(1.1);
+}
+
+/* --- ARTICLE & MARKDOWN CONTENT --- */
+.markdown-content {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.markdown-content h2 {
+    font-size: 1.6rem;
+    border-left: 5px solid var(--aj-primary);
+    padding-left: 15px;
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.article-header-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.blog-post {margin-bottom: 30px;}
+
+/* .md-tag {font-size: medium;} */
+
+
+/* ****************************************** */
+/* Styles spécifiques pour améliorer le rendu Markdown */
+.article-body h2 { margin-top: 2rem; font-weight: 700; color: #2c3e50; border-bottom: 2px solid #f8f9fa; padding-bottom: 0.5rem; }
+.article-body h3 { margin-top: 1.5rem; font-weight: 600; color: #34495e; }
+.article-body p { line-height: 1.8; margin-bottom: 1.25rem; color: #444; }
+.article-body img { max-width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.article-body code { background: #f1f3f5; color: #e83e8c; padding: 0.2rem 0.4rem; border-radius: 4px; }
+.article-body pre code { background: none; color: inherit; padding: 0; }
+.article-body blockquote { border-left: 5px solid #0d6efd; padding-left: 1rem; color: #6c757d; font-style: italic; margin: 1.5rem 0; }
+
