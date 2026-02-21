@@ -16,17 +16,9 @@
 .letter-spacing-3 { letter-spacing: 3px; }
 .text-sm { font-size: 0.875rem; }
 
-/* --- TITRES "LINED" (Harmonisation du thème) --- */
-.lined { position: relative; padding-bottom: 15px; display: inline-block; }
+/* Ajustement de la bordure du bas pour le titre "lined" (cohérence avec votre thème) */
 .lined::after {
-    content: '';
-    width: 50px;
-    height: 3px;
-    background: var(--aj-primary);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    background-color: #007bff !important; /* On s'aligne sur votre bleu existant */
 }
 
 /* --- HERO SECTION --- */
