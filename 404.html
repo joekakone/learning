@@ -535,7 +535,18 @@
     <div class="container text-center py-5">
         <h1 class="display-1 fw-bold text-danger py-5 mt-5">404</h1>
         <p class="lead text-muted mb-4">Oups ! La page que vous cherchez n'existe pas.</p>
-        <a href="/" class="btn btn-primary btn-lg">Retour à l'accueil</a>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3"></div>
+            <!-- Bouton Page Précédente -->
+            <button onclick="window.history.back()" class="btn btn-outline-secondary btn-lg px-4">
+                <i class="fas fa-arrow-left me-2"></i>Page précédente
+            </button>
+
+            <!-- Bouton Accueil -->
+            <a href="/" class="btn btn-primary btn-lg px-4">
+                <i class="fas fa-home me-2"></i>Retour à l'accueil
+            </a>
+        </div>
     </div>
 
 </div>

@@ -11,7 +11,7 @@
 }
 
 /* --- UTILITAIRES --- */
-.algo-jungle-home, .algo-jungle-article { overflow-x: hidden; }
+/* .algo-jungle-home, .algo-jungle-article { overflow-x: hidden; } */
 .cust-justify { text-align: justify; }
 .letter-spacing-3 { letter-spacing: 3px; }
 .text-sm { font-size: 0.875rem; }
