@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀" />
+      <meta name="description" content="La planification de l'exécution des tâches est l'une des fonctionnalités phares d'Apache Airflow. Elle permet de définir quand et comment vos DAGs (Directed Acyclic Graphs) doivent s'exécuter, rendant vos workflows automatiques et fiables." />
     
 
     <!-- Page author -->
@@ -538,14 +538,641 @@
 
   <!-- Bloc principal : Sera remplacé par home.html pour la page d'accueil -->
   
-    <main class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 markdown-content">
-          
-  <h1 id="planifier-lexecution-dun-dag">Planifier l'exécution d'un DAG<a class="headerlink" href="#planifier-lexecution-dun-dag" title="Permanent link">#</a></h1>
-<p>La planification de l'exécution des tâches est l'une des fonctionnalités phares d'Apache Airflow. Elle permet de définir quand et comment vos DAGs (Directed Acyclic Graphs) doivent s'exécuter, rendant vos workflows automatiques et fiables.</p>
-<p><img alt="" src="https://algojungle.github.io/algojungle-assets/images/07-big-data/apache-airflow/covers/go-further-with-apache-airflow.png" /></p>
-<h2 id="cron">Cron<a class="headerlink" href="#cron" title="Permanent link">#</a></h2>
+<div class="algo-jungle-article">
+
+    <!-- Header de l'Article -->
+    <section class="article-header bg-light border-bottom">
+        <div class="container py-5 text-center">
+            
+            <!-- Titre avec marge haute pour le descendre -->
+            <div class="pt-5 mt-5">
+                
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Planifier l'exécution d'un DAG</h1>
+                
+            </div>
+
+            <!-- Infos Auteur -->
+            
+
+            <!-- Tags -->
+            
+
+            <!-- Description / Overview centrée et justifiée -->
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
+                        La planification de l'exécution des tâches est l'une des fonctionnalités phares d'Apache Airflow. Elle permet de définir quand et comment vos DAGs (Directed Acyclic Graphs) doivent s'exécuter, rendant vos workflows automatiques et fiables.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Structure Corps de page (Sidebar + Contenu) -->
+    <div class="container py-5">
+        <div class="row gx-lg-5">
+            
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+            <!-- <aside class="col-lg-3 d-none d-lg-block">
+                <div class="sticky-sidebar-container">
+                </div>
+            </aside> -->
+                <!-- Sidebar Navigation (droite) -->
+    <aside class="col-lg-3 d-none d-lg-block">
+        <!-- Conteneur Sticky -->
+        <div class="sticky-sidebar-container">
+            <div class="p-4 bg-white border rounded shadow-sm mb-4">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        <div class="sidebar-scroll-wrapper">
+                            <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
+                                
+                                    
+                                    
+                                        <!-- CAS LIEN SIMPLE -->
+                                        <a class="nav-link text-dark" 
+                                            href="../../">
+                                            Les fondamentaux du Big Data
+                                        </a>
+                                    
+                                
+                                    
+                                    
+                                        <!-- CAS SECTION (ex: Portraits) -->
+                                        <div class="nav-item mb-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                
+                                                
+                                                <a class="nav-link flex-grow-1 text-dark" 
+                                                    href="../../analysis-services/">
+                                                    Analysis Services
+                                                </a>
+                                                
+                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
+                                                        data-bs-toggle="collapse" 
+                                                        data-bs-target="#collapse-2" 
+                                                        aria-expanded="false">
+                                                    <i class="fas fa-chevron-right chevron-icon"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="collapse " id="collapse-2" data-bs-parent="#sidebarAccordion">
+                                                <nav class="nav flex-column ms-3 mt-1">
+                                                    
+                                                        
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../analysis-services/installer/">
+                                                                Installer Analysis Services
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../analysis-services/preparer-les-donnees/">
+                                                                Préparer les données
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../analysis-services/creer-un-cube-tabulaire/">
+                                                                Créer un cube tabulaire
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../analysis-services/creer-un-cube-multi-dimensionnel/">
+                                                                Créer un cube multi-dimensionnel
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../analysis-services/actualiser-un-cube/">
+                                                                Actualiser un cube
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../analysis-services/exploiter-un-cube-dans-excel/">
+                                                                Requêter un cube dans Excel
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../analysis-services/ressources/">
+                                                                Ressources
+                                                            </a>
+                                                        
+                                                    
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <!-- CAS SECTION (ex: Portraits) -->
+                                        <div class="nav-item mb-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                
+                                                
+                                                <a class="nav-link flex-grow-1 text-dark" 
+                                                    href="../../mongo-db/">
+                                                    MongoDB
+                                                </a>
+                                                
+                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
+                                                        data-bs-toggle="collapse" 
+                                                        data-bs-target="#collapse-3" 
+                                                        aria-expanded="false">
+                                                    <i class="fas fa-chevron-right chevron-icon"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="collapse " id="collapse-3" data-bs-parent="#sidebarAccordion">
+                                                <nav class="nav flex-column ms-3 mt-1">
+                                                    
+                                                        
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../mongo-db/installer/">
+                                                                Installer Mongo DB
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../mongo-db/interagir-avec-mongo-db/">
+                                                                Interagir avec Mongo DB
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../mongo-db/applications/">
+                                                                Applications
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../mongo-db/ressources/">
+                                                                Ressources
+                                                            </a>
+                                                        
+                                                    
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <!-- CAS SECTION (ex: Portraits) -->
+                                        <div class="nav-item mb-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                
+                                                
+                                                <a class="nav-link flex-grow-1 text-dark" 
+                                                    href="../../neo4j/">
+                                                    Neo4j
+                                                </a>
+                                                
+                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
+                                                        data-bs-toggle="collapse" 
+                                                        data-bs-target="#collapse-4" 
+                                                        aria-expanded="false">
+                                                    <i class="fas fa-chevron-right chevron-icon"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="collapse " id="collapse-4" data-bs-parent="#sidebarAccordion">
+                                                <nav class="nav flex-column ms-3 mt-1">
+                                                    
+                                                        
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../neo4j/installer/">
+                                                                Installer Neo4j
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../neo4j/creer-des-noeuds/">
+                                                                Créer des nœuds
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../neo4j/applications/">
+                                                                Applications
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../neo4j/ressources/">
+                                                                Ressources
+                                                            </a>
+                                                        
+                                                    
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <!-- CAS SECTION (ex: Portraits) -->
+                                        <div class="nav-item mb-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                
+                                                
+                                                <a class="nav-link flex-grow-1 text-dark" 
+                                                    href="../../apache-spark/">
+                                                    Apache Spark
+                                                </a>
+                                                
+                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
+                                                        data-bs-toggle="collapse" 
+                                                        data-bs-target="#collapse-5" 
+                                                        aria-expanded="false">
+                                                    <i class="fas fa-chevron-right chevron-icon"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
+                                                <nav class="nav flex-column ms-3 mt-1">
+                                                    
+                                                        
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../apache-spark/installer/">
+                                                                Installer PySpark
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../apache-spark/01-get-started/">
+                                                                Démarrer avec PySpark
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../apache-spark/02-import-export/">
+                                                                Import & Export
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../apache-spark/03-work-with-postgres/">
+                                                                Base de données
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../apache-spark/applications/">
+                                                                Applications
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../apache-spark/ressources/">
+                                                                Ressources
+                                                            </a>
+                                                        
+                                                    
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <!-- CAS SECTION (ex: Portraits) -->
+                                        <div class="nav-item mb-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                
+                                                
+                                                <a class="nav-link flex-grow-1 active-parent fw-bold" 
+                                                    href="../">
+                                                    Apache Airflow
+                                                </a>
+                                                
+                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
+                                                        data-bs-toggle="collapse" 
+                                                        data-bs-target="#collapse-6" 
+                                                        aria-expanded="true">
+                                                    <i class="fas fa-chevron-right chevron-icon"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="collapse show" id="collapse-6" data-bs-parent="#sidebarAccordion">
+                                                <nav class="nav flex-column ms-3 mt-1">
+                                                    
+                                                        
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../installer/">
+                                                                Installer Airflow
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../interface/">
+                                                                Interface Airflow
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../get-started/">
+                                                                Créer un DAG
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link fw-bold text-dark active-child" 
+                                                                href="./">
+                                                                Planifier un DAG
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../run-dags/">
+                                                                Exécuter un DAG
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../define-dependencies/">
+                                                                Définir des dépendances
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../airflow-cli-commands/">
+                                                                Commandes Airflow CLI
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../creer-une-connexion-de-source-de-donnees/">
+                                                                Créer une connexion
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../applications/">
+                                                                Applications
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../ressources/">
+                                                                Ressources
+                                                            </a>
+                                                        
+                                                    
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <!-- CAS SECTION (ex: Portraits) -->
+                                        <div class="nav-item mb-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                
+                                                
+                                                <a class="nav-link flex-grow-1 text-dark" 
+                                                    href="../../talend/">
+                                                    Talend (Data Integration)
+                                                </a>
+                                                
+                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
+                                                        data-bs-toggle="collapse" 
+                                                        data-bs-target="#collapse-7" 
+                                                        aria-expanded="false">
+                                                    <i class="fas fa-chevron-right chevron-icon"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="collapse " id="collapse-7" data-bs-parent="#sidebarAccordion">
+                                                <nav class="nav flex-column ms-3 mt-1">
+                                                    
+                                                        
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/installer/">
+                                                                Installer Talend
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/decouvrir-interface/">
+                                                                Découvrir l'interface
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/creer-une-connexion-de-base-de-donnees/">
+                                                                Créer une connexion de BD
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/creer-un-job/">
+                                                                Créer un job
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/afficher-des-messages/">
+                                                                Afficher des messages
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/fonctions-predefinies/">
+                                                                Fonctions prédéfinies
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/manipuler-les-dates/">
+                                                                Manipuler les dates
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/exporter-un-job/">
+                                                                Exporter un job
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/applications/">
+                                                                Applications
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                            <a class="nav-link py-1 grandchild-link text-muted" 
+                                                                href="../../talend/ressources/">
+                                                                Ressources
+                                                            </a>
+                                                        
+                                                    
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <!-- CAS LIEN SIMPLE -->
+                                        <a class="nav-link text-dark" 
+                                            href="../../ressources/">
+                                            Ressources
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+            
+            <!-- Bloc Abonnement -->
+            <div class="p-4 bg-primary text-white rounded shadow text-center">
+                <p class="small mb-3">Abonnez-vous à la newsletter !</p>
+                <a href="#tally-open=mJzBvX&tally-layout=modal&tally-emoji-text=👋&tally-emoji-animation=wave" 
+                    class="btn btn-outline-light btn-sm text-uppercase w-100">S'abonner</a>
+            </div>
+        </div>
+    </aside>
+
+    
+
+            <!-- Contenu Principal -->
+            <main class="col-lg-9 col-md-12">
+                <article class="markdown-content bg-white p-4 p-md-5 border rounded shadow-sm">
+                    
+                    <div class="featured-image mb-5">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/07-big-data/apache-airflow/covers/go-further-with-apache-airflow.png" class="img-fluid rounded shadow-sm w-100" alt="Planifier un DAG">
+                    </div>
+                    
+
+                    <h2 id="cron">Cron<a class="headerlink" href="#cron" title="Permanent link">#</a></h2>
 <p>Le cron est un outil natif des systèmes Linux/Unix permettant de planifier l’exécution automatique de tâches (scripts, commandes, programmes) à des moments précis ou à intervalles réguliers. Ces tâches sont définies dans un fichier appelé crontab (cron table), qui spécifie à quelle minute, heure, jour du mois, mois et jour de la semaine la commande doit être lancée. Ce système est très utile pour automatiser des routines telles que des sauvegardes, des mises à jour de données, ou l'envoi de rapports.</p>
 <p>La syntaxe d'une expression cron est composée de cinq champs obligatoires (minute, heure, jour du mois, mois, jour de la semaine), suivis de la commande à exécuter. Par exemple, <code>0 2 * * * /path/to/script.sh</code> exécute le script tous les jours à 2h00 du matin. Il est également possible d’utiliser des intervalles (<code>*/5</code> pour toutes les 5 minutes), des plages (<code>1-5</code>) ou des valeurs multiples (<code>1,15,30</code>) pour affiner le déclenchement. Des plateformes comme Apache Airflow reprennent cette logique pour orchestrer les workflows, en la rendant plus flexible et observable.</p>
 <!-- ![](https://contabo.com/blog/wp-content/uploads/2023/05/blog-head_syntax-of-cron.jpg) -->
@@ -665,10 +1292,69 @@ Valeur | Signification
 <hr />
 <p><em>Grâce à <code>schedule_interval</code>, vous pouvez automatiser l'exécution de vos workflows selon les besoins de votre projet. Dans la prochaine section, nous verrons comment gérer les dépendances entre les tâches pour structurer vos DAGs de manière optimale..</em></p>
 
+                </article>
+
+                <!-- Navigation Précédent / Suivant -->
+                <nav class="row mt-5 pt-4 border-top">
+                    <div class="col-6">
+                        
+                        <a href="../get-started/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
+                            <span class="fw-bold text-primary">Créer un DAG</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-6 text-end">
+                        
+                        <a href="../run-dags/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
+                            <span class="fw-bold text-primary">Exécuter un DAG</span>
+                        </a>
+                        
+                    </div>
+                </nav>
+
+                <section class="mt-5 border-top pt-4">
+                    
+                    <div class="share-section mb-5">
+                        <h2 class="h4 mb-3">Partagez sur les réseaux sociaux</h2>
+                        <!-- ShareThis BEGIN -->
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <!-- ShareThis END -->
+                    </div>
+
+                    
+                    
+                    <div class="comments-section">
+                        <h2 id="__comments" class="h4 mb-4">Commentaires</h2>
+                        
+                        
+                        <script src="https://giscus.app/client.js"
+                                data-repo="joekakone/Departement-De-Maths"
+                                data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+                                data-category="General"
+                                data-category-id="DIC_kwDOFBN7QM4CORj9"
+                                data-mapping="pathname"
+                                data-reactions-enabled="1"
+                                data-emit-metadata="0"
+                                data-input-position="bottom"
+                                
+                                data-theme="preferred_color_scheme"
+                                data-lang="fr"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                    
+                </section>
+            </main>
+
         </div>
-      </div>
-    </main>
-  
+    </div>
+
+</div>
+
+
 
 
   <!-- Tags -->
