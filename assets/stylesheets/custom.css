@@ -271,7 +271,7 @@ aside .col-lg-3 {
 /******************************************************************************
 ** Styles pour les blocs de code (Markdown) - Amélioration du rendu
 ******************************************************************************/
-/* Container principal */
+/* Container principal - unifié pour les deux structures */
 .highlight {
     background-color: #f8f9fb;
     border: 1px solid #eaebed;
@@ -283,61 +283,81 @@ aside .col-lg-3 {
     flex-direction: column;
 }
 
-/* Bande de titre (filename) */
-.highlight .filename {
+/* Bande de titre (pour th de tableau OU span direct) */
+.highlight .filename, 
+.highlight th.filename {
     background-color: #f1f2f4;
     border-bottom: 1px solid #eaebed;
     padding: 10px 16px;
     font-weight: 700;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 14px;
     color: #1a1a1a;
+    text-align: left;
+    display: table-cell; /* Important pour les tableaux */
+}
+
+/* Gestion spécifique du titre en dehors des tableaux */
+span.filename {
     display: block;
 }
 
-/* Zone de code */
-.highlight pre {
+/* Alignement du tableau de code */
+.highlighttable {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+}
+
+/* Zone de code et numéros de lignes */
+.highlight pre, 
+.highlighttable td.code pre, 
+.highlighttable td.linenos pre {
     margin: 0;
     padding: 16px;
-    color: #374151;
+    background: transparent;
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 0.95em;
     line-height: 1.6;
-    overflow-x: auto;
-    background: transparent;
 }
 
-/* Bouton Copier */
+/* Colonne des numéros de lignes */
+.highlighttable td.linenos {
+    background-color: #f8f9fb;
+    border-right: 1px solid #eaebed;
+    padding: 0;
+    width: 10px; /* Taille minimale */
+}
+
+.highlighttable td.linenos pre {
+    padding-right: 10px;
+    color: #9ca3af;
+    text-align: right;
+    user-select: none; /* Empêche la sélection des numéros */
+}
+
+/* Bouton Copier Premium */
 .copy-btn {
     position: absolute;
-    top: 8px;
+    top: 7px;
     right: 12px;
     background: white;
-    border: 1px solid #eaebed;
-    border-radius: 4px;
-    padding: 4px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    padding: 5px 10px;
     cursor: pointer;
     font-size: 12px;
-    color: #6b7280;
-    transition: all 0.2s;
-    z-index: 10;
+    font-weight: 500;
+    color: #4b5563;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 20;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .copy-btn:hover {
-    background: #f1f2f4;
-    color: #1a1a1a;
-}
-
-/* Cache le bouton si pas de titre pour éviter la superposition */
-.highlight:not(:has(.filename)) .copy-btn {
-    top: 12px;
-}
-
-/* Suppression des styles par défaut des liens de numérotation */
-.highlight a[id^="__codelineno"] {
-    text-decoration: none;
-    color: inherit;
-    user-select: none;
+    background: #f9fafb;
+    border-color: #9ca3af;
+    color: #111827;
 }
 /* ***************************************************************************** */
 
