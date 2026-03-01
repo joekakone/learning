@@ -1252,13 +1252,42 @@ La syntaxe du schedule_interval est basée sur le format cron, qui permet de sp�
 <p>Pour simplifier la création de ces expressions, vous pouvez tester vos expressions sans vous tromper, utilisez l'outil  <a href="https://crontab.guru/">Crontab Guru</a>.</p>
 <h2 id="les-raccourcis-airflow">Les raccourcis Airflow<a class="headerlink" href="#les-raccourcis-airflow" title="Permanent link">#</a></h2>
 <p>Parfois, une expression cron est un peu complexe à lire. Airflow propose des "presets" (raccourcis) pour les fréquences les plus courantes :</p>
-<p>Valeur | Équivalent Cron | Signification
--|-
-<code>@hourly</code> | <code>0 * * * *</code> | Chaque heure (à la minute 0)
-<code>@daily</code> | <code>0 0 * * *</code>  | Chaque jour à minuit
-<code>@weekly</code> | <code>0 0 * * 0</code>  | Chaque dimanche à minuit
-<code>@once</code> | <code>0 0 * * 0</code>  | Exécuté une seule fois (lors du premier déclenchement)
-<code>None</code> | <code>/</code>  | Le DAG n'est jamais lancé automatiquement (manuel uniquement)</p>
+<table>
+<thead>
+<tr>
+<th>Valeur</th>
+<th>Équivalent Cron</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@hourly</code></td>
+<td><code>0 * * * *</code></td>
+<td>Chaque heure (à la minute 0)</td>
+</tr>
+<tr>
+<td><code>@daily</code></td>
+<td><code>0 0 * * *</code></td>
+<td>Chaque jour à minuit</td>
+</tr>
+<tr>
+<td><code>@weekly</code></td>
+<td><code>0 0 * * 0</code></td>
+<td>Chaque dimanche à minuit</td>
+</tr>
+<tr>
+<td><code>@once</code></td>
+<td><code>0 0 * * 0</code></td>
+<td>Exécuté une seule fois (lors du premier déclenchement)</td>
+</tr>
+<tr>
+<td><code>None</code></td>
+<td><code>/</code></td>
+<td>Le DAG n'est jamais lancé automatiquement (manuel uniquement)</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <p><em>Grâce à <code>schedule_interval</code>, vous pouvez automatiser l'exécution de vos workflows selon les besoins de votre projet. Dans la prochaine section, nous verrons comment gérer les dépendances entre les tâches pour structurer vos DAGs de manière optimale.</em></p>
 
