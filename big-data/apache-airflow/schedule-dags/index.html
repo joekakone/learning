@@ -1173,11 +1173,19 @@
                     
 
                     <h2 id="cron">Cron<a class="headerlink" href="#cron" title="Permanent link">#</a></h2>
-<p>Le cron est un outil natif des systèmes Linux/Unix permettant de planifier l’exécution automatique de tâches (scripts, commandes, programmes) à des moments précis ou à intervalles réguliers. Ces tâches sont définies dans un fichier appelé crontab (cron table), qui spécifie à quelle minute, heure, jour du mois, mois et jour de la semaine la commande doit être lancée. Ce système est très utile pour automatiser des routines telles que des sauvegardes, des mises à jour de données, ou l'envoi de rapports.</p>
-<p>La syntaxe d'une expression cron est composée de cinq champs obligatoires (minute, heure, jour du mois, mois, jour de la semaine), suivis de la commande à exécuter. Par exemple, <code>0 2 * * * /path/to/script.sh</code> exécute le script tous les jours à 2h00 du matin. Il est également possible d’utiliser des intervalles (<code>*/5</code> pour toutes les 5 minutes), des plages (<code>1-5</code>) ou des valeurs multiples (<code>1,15,30</code>) pour affiner le déclenchement. Des plateformes comme Apache Airflow reprennent cette logique pour orchestrer les workflows, en la rendant plus flexible et observable.</p>
+<p>Le <strong>cron</strong> est un outil natif des systèmes Linux/Unix permettant de planifier l’exécution automatique de tâches (scripts, commandes, programmes) à des moments précis ou à intervalles réguliers.</p>
+<p>Ces tâches sont définies dans un fichier appelé <strong>crontab</strong> (cron table), qui spécifie à quelle minute, heure, jour du mois, mois et jour de la semaine la commande doit être lancée.</p>
+<p>Ce système est très utile pour automatiser des routines telles que des sauvegardes, des mises à jour de données, ou l'envoi de rapports.</p>
+<p>La syntaxe d'une expression cron est composée de cinq champs obligatoires (minute, heure, jour du mois, mois, jour de la semaine), suivis de la commande à exécuter. Par exemple, <code>0 2 * * * /path/to/script.sh</code> exécute le script tous les jours à 2h00 du matin. </p>
+<ul>
+<li><strong>Intervalles</strong> : <code>*/5</code> pour toutes les 5 minutes.</li>
+<li><strong>Plages</strong> : <code>1-5</code> pour les jours de 1 à 5.</li>
+<li><strong>Valeurs multiples</strong> : <code>1,15,30</code> pour déclencher à des moments précis.</li>
+</ul>
+<p>Il est également possible d’utiliser des intervalles (<code>*/5</code> pour toutes les 5 minutes), des plages (<code>1-5</code>) ou des valeurs multiples (<code>1,15,30</code>) pour affiner le déclenchement. Des plateformes comme Apache Airflow reprennent cette logique pour orchestrer les workflows, en la rendant plus flexible et observable.</p>
 <!-- ![](https://contabo.com/blog/wp-content/uploads/2023/05/blog-head_syntax-of-cron.jpg) -->
 <p><img alt="" src="https://miro.medium.com/v2/resize:fit:1200/1*8cphjbgjRS_dqwc5AlhDjA.jpeg" /></p>
-<h2 id="airflow">Airflow<a class="headerlink" href="#airflow" title="Permanent link">#</a></h2>
+<h2 id="la-planification-dans-airflow">La planification dans Airflow<a class="headerlink" href="#la-planification-dans-airflow" title="Permanent link">#</a></h2>
 <p>Airflow utilise synthase des crons pour gérer la planification des dags.
 La fréquence d'exécution d'un DAG est définie par le paramètre <code>schedule_interval</code>. Si vous avez déjà utilisé un cron sur Linux, ce concept vous sera familier. Sinon, pas de panique, nous allons tout expliquer.</p>
 <div class="highlight"><span class="filename">Airflow DAG</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dga</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span>
@@ -1282,13 +1290,33 @@ La fréquence d'exécution d'un DAG est définie par le paramètre <code>schedul
 <p>Voici un guide visuel pour vous aider à mieux comprendre :</p>
 <p><img alt="" src="https://linuxhandbook.com/content/images/2020/06/crontab-explanation.png" /></p>
 <p>Pour simplifier la création de ces expressions, vous pouvez visiter <a href="https://crontab.guru/">Crontab Guru</a>, un outil en ligne qui vous aide à définir et tester vos expressions cron.</p>
-<p>Pour finir voici quelques exemples qui répondent à d'autres besoins spécifiques :
-Valeur | Signification
--|-
-<code>@hourly</code> | Chaque heure
-<code>@daily</code> | Chaque jour
-<code>0 */4 * * *</code> | Chaque quatre heure
-<code>*/15 * * * *</code> | Chaque 15 minutes</p>
+<p>Pour finir voici quelques exemples qui répondent à d'autres besoins spécifiques :</p>
+<table>
+<thead>
+<tr>
+<th>Valeur</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@hourly</code></td>
+<td>Chaque heure</td>
+</tr>
+<tr>
+<td><code>@daily</code></td>
+<td>Chaque jour</td>
+</tr>
+<tr>
+<td><code>0 */4 * * *</code></td>
+<td>Chaque quatre heure</td>
+</tr>
+<tr>
+<td><code>*/15 * * * *</code></td>
+<td>Chaque 15 minutes</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <p><em>Grâce à <code>schedule_interval</code>, vous pouvez automatiser l'exécution de vos workflows selon les besoins de votre projet. Dans la prochaine section, nous verrons comment gérer les dépendances entre les tâches pour structurer vos DAGs de manière optimale..</em></p>
 
