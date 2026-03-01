@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Dans ce tutoriel, nous allons explorer comment créer un pipeline de données automatisé en utilisant Apache Airflow, un outil puissant pour la gestion des flux de travail. Notre objectif est de récupérer des données depuis GitHub et de les charger dans une base de données Postgres de manière régulière." />
+      <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀" />
     
 
     <!-- Page author -->
@@ -538,900 +538,228 @@
 
   <!-- Bloc principal : Sera remplacé par home.html pour la page d'accueil -->
   
-<div class="algo-jungle-article">
-
-    <!-- Header de l'Article -->
-    <section class="article-header bg-light border-bottom">
-        <div class="container py-5 text-center">
-            
-            <!-- Titre avec marge haute pour le descendre -->
-            <div class="pt-5 mt-5">
-                
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Créer un pipeline de données</h1>
-                
-            </div>
-
-            <!-- Infos Auteur -->
-            
-
-            <!-- Tags -->
-            
-
-            <!-- Description / Overview centrée et justifiée -->
-            
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-10">
-                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Dans ce tutoriel, nous allons explorer comment créer un pipeline de données automatisé en utilisant Apache Airflow, un outil puissant pour la gestion des flux de travail. Notre objectif est de récupérer des données depuis GitHub et de les charger dans une base de données Postgres de manière régulière.
-                    </p>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- Structure Corps de page (Sidebar + Contenu) -->
-    <div class="container py-5">
-        <div class="row gx-lg-5">
-            
-            <!-- Sidebar Navigation (Sous-sections du module actif) -->
-            <!-- <aside class="col-lg-3 d-none d-lg-block">
-                <div class="sticky-sidebar-container">
-                </div>
-            </aside> -->
-                <!-- Sidebar Navigation (droite) -->
-    <aside class="col-lg-3 d-none d-lg-block">
-        <!-- Conteneur Sticky -->
-        <div class="sticky-sidebar-container">
-            <div class="p-4 bg-white border rounded shadow-sm mb-4">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <div class="sidebar-scroll-wrapper">
-                            <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
-                                
-                                    
-                                    
-                                        <!-- CAS LIEN SIMPLE -->
-                                        <a class="nav-link text-dark" 
-                                            href="../../">
-                                            Les fondamentaux du Big Data
-                                        </a>
-                                    
-                                
-                                    
-                                    
-                                        <!-- CAS SECTION (ex: Portraits) -->
-                                        <div class="nav-item mb-1">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                
-                                                
-                                                <a class="nav-link flex-grow-1 text-dark" 
-                                                    href="../../analysis-services/">
-                                                    Analysis Services
-                                                </a>
-                                                
-                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
-                                                        data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapse-2" 
-                                                        aria-expanded="false">
-                                                    <i class="fas fa-chevron-right chevron-icon"></i>
-                                                </button>
-                                            </div>
-                                            
-                                            <div class="collapse " id="collapse-2" data-bs-parent="#sidebarAccordion">
-                                                <nav class="nav flex-column ms-3 mt-1">
-                                                    
-                                                        
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../analysis-services/installer/">
-                                                                Installer Analysis Services
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../analysis-services/preparer-les-donnees/">
-                                                                Préparer les données
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../analysis-services/creer-un-cube-tabulaire/">
-                                                                Créer un cube tabulaire
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../analysis-services/creer-un-cube-multi-dimensionnel/">
-                                                                Créer un cube multi-dimensionnel
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../analysis-services/actualiser-un-cube/">
-                                                                Actualiser un cube
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../analysis-services/exploiter-un-cube-dans-excel/">
-                                                                Requêter un cube dans Excel
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../analysis-services/ressources/">
-                                                                Ressources
-                                                            </a>
-                                                        
-                                                    
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <!-- CAS SECTION (ex: Portraits) -->
-                                        <div class="nav-item mb-1">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                
-                                                
-                                                <a class="nav-link flex-grow-1 text-dark" 
-                                                    href="../../mongo-db/">
-                                                    MongoDB
-                                                </a>
-                                                
-                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
-                                                        data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapse-3" 
-                                                        aria-expanded="false">
-                                                    <i class="fas fa-chevron-right chevron-icon"></i>
-                                                </button>
-                                            </div>
-                                            
-                                            <div class="collapse " id="collapse-3" data-bs-parent="#sidebarAccordion">
-                                                <nav class="nav flex-column ms-3 mt-1">
-                                                    
-                                                        
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../mongo-db/installer/">
-                                                                Installer Mongo DB
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../mongo-db/interagir-avec-mongo-db/">
-                                                                Interagir avec Mongo DB
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../mongo-db/applications/">
-                                                                Applications
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../mongo-db/ressources/">
-                                                                Ressources
-                                                            </a>
-                                                        
-                                                    
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <!-- CAS SECTION (ex: Portraits) -->
-                                        <div class="nav-item mb-1">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                
-                                                
-                                                <a class="nav-link flex-grow-1 text-dark" 
-                                                    href="../../neo4j/">
-                                                    Neo4j
-                                                </a>
-                                                
-                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
-                                                        data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapse-4" 
-                                                        aria-expanded="false">
-                                                    <i class="fas fa-chevron-right chevron-icon"></i>
-                                                </button>
-                                            </div>
-                                            
-                                            <div class="collapse " id="collapse-4" data-bs-parent="#sidebarAccordion">
-                                                <nav class="nav flex-column ms-3 mt-1">
-                                                    
-                                                        
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../neo4j/installer/">
-                                                                Installer Neo4j
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../neo4j/creer-des-noeuds/">
-                                                                Créer des nœuds
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../neo4j/applications/">
-                                                                Applications
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../neo4j/ressources/">
-                                                                Ressources
-                                                            </a>
-                                                        
-                                                    
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <!-- CAS SECTION (ex: Portraits) -->
-                                        <div class="nav-item mb-1">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                
-                                                
-                                                <a class="nav-link flex-grow-1 text-dark" 
-                                                    href="../../apache-spark/">
-                                                    Apache Spark
-                                                </a>
-                                                
-                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
-                                                        data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapse-5" 
-                                                        aria-expanded="false">
-                                                    <i class="fas fa-chevron-right chevron-icon"></i>
-                                                </button>
-                                            </div>
-                                            
-                                            <div class="collapse " id="collapse-5" data-bs-parent="#sidebarAccordion">
-                                                <nav class="nav flex-column ms-3 mt-1">
-                                                    
-                                                        
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../apache-spark/installer/">
-                                                                Installer PySpark
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../apache-spark/01-get-started/">
-                                                                Démarrer avec PySpark
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../apache-spark/02-import-export/">
-                                                                Import & Export
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../apache-spark/03-work-with-postgres/">
-                                                                Base de données
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../apache-spark/applications/">
-                                                                Applications
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../apache-spark/ressources/">
-                                                                Ressources
-                                                            </a>
-                                                        
-                                                    
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <!-- CAS SECTION (ex: Portraits) -->
-                                        <div class="nav-item mb-1">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                
-                                                
-                                                <a class="nav-link flex-grow-1 active-parent fw-bold" 
-                                                    href="../">
-                                                    Apache Airflow
-                                                </a>
-                                                
-                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
-                                                        data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapse-6" 
-                                                        aria-expanded="true">
-                                                    <i class="fas fa-chevron-right chevron-icon"></i>
-                                                </button>
-                                            </div>
-                                            
-                                            <div class="collapse show" id="collapse-6" data-bs-parent="#sidebarAccordion">
-                                                <nav class="nav flex-column ms-3 mt-1">
-                                                    
-                                                        
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../installer/">
-                                                                Installer Airflow
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../interface/">
-                                                                Interface Airflow
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link fw-bold text-dark active-child" 
-                                                                href="./">
-                                                                Créer un DAG
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../schedule-dags/">
-                                                                Planifier un DAG
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../run-dags/">
-                                                                Exécuter un DAG
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../define-dependencies/">
-                                                                Définir des dépendances
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../airflow-cli-commands/">
-                                                                Commandes Airflow CLI
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../creer-une-connexion-de-source-de-donnees/">
-                                                                Créer une connexion
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../applications/">
-                                                                Applications
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../ressources/">
-                                                                Ressources
-                                                            </a>
-                                                        
-                                                    
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <!-- CAS SECTION (ex: Portraits) -->
-                                        <div class="nav-item mb-1">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                
-                                                
-                                                <a class="nav-link flex-grow-1 text-dark" 
-                                                    href="../../talend/">
-                                                    Talend (Data Integration)
-                                                </a>
-                                                
-                                                <button class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger" 
-                                                        data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapse-7" 
-                                                        aria-expanded="false">
-                                                    <i class="fas fa-chevron-right chevron-icon"></i>
-                                                </button>
-                                            </div>
-                                            
-                                            <div class="collapse " id="collapse-7" data-bs-parent="#sidebarAccordion">
-                                                <nav class="nav flex-column ms-3 mt-1">
-                                                    
-                                                        
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/installer/">
-                                                                Installer Talend
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/decouvrir-interface/">
-                                                                Découvrir l'interface
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/creer-une-connexion-de-base-de-donnees/">
-                                                                Créer une connexion de BD
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/creer-un-job/">
-                                                                Créer un job
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/afficher-des-messages/">
-                                                                Afficher des messages
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/fonctions-predefinies/">
-                                                                Fonctions prédéfinies
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/manipuler-les-dates/">
-                                                                Manipuler les dates
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/exporter-un-job/">
-                                                                Exporter un job
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/applications/">
-                                                                Applications
-                                                            </a>
-                                                        
-                                                    
-                                                        
-                                                        
-                                                            <a class="nav-link py-1 grandchild-link text-muted" 
-                                                                href="../../talend/ressources/">
-                                                                Ressources
-                                                            </a>
-                                                        
-                                                    
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <!-- CAS LIEN SIMPLE -->
-                                        <a class="nav-link text-dark" 
-                                            href="../../ressources/">
-                                            Ressources
-                                        </a>
-                                    
-                                
-                            </div>
-                        </div>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </div>
-            
-            <!-- Bloc Abonnement -->
-            <div class="p-4 bg-primary text-white rounded shadow text-center">
-                <p class="small mb-3">Abonnez-vous à la newsletter !</p>
-                <a href="#tally-open=mJzBvX&tally-layout=modal&tally-emoji-text=👋&tally-emoji-animation=wave" 
-                    class="btn btn-outline-light btn-sm text-uppercase w-100">S'abonner</a>
-            </div>
-        </div>
-    </aside>
-
-    
-
-            <!-- Contenu Principal -->
-            <main class="col-lg-9 col-md-12">
-                <article class="markdown-content bg-white p-4 p-md-5 border rounded shadow-sm">
-                    
-                    <div class="featured-image mb-5">
-                        <img src="https://algojungle.github.io/algojungle-assets/images/07-big-data/apache-airflow/covers/apache-airflow.png" class="img-fluid rounded shadow-sm w-100" alt="Créer un DAG">
-                    </div>
-                    
-
-                    <p>Pour notre premier projet, nous allons créer un pipeline qui récupère des données depuis GitHub et les charge dans une base de données Postgres.</p>
-<h2 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h2>
+    <main class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 markdown-content">
+          
+  <p>Pour ce faire, dans le dossier <code>dags/</code> nous allons créer un fichier <code>etl_covid19.py</code>. Nous aurons également besoin du fichier <code>utils/first_pipeline.py</code> qui contient les fonctions métier <code>extract_data</code>, <code>transform_data</code> et <code>load_data</code>.</p>
+<h2 id="importation-des-packages">Importation des Packages<a class="headerlink" href="#importation-des-packages" title="Permanent link">#</a></h2>
+<p>Tout pipeline commence par l'importation des briques élémentaires. Ici, nous utilisons des <strong>Operators</strong>, qui sont des modèles de tâches préconfigurés.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">DAG</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.empty</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmptyOperator</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.postgres_operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">PostgresOperator</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.python</span><span class="w"> </span><span class="kn">import</span> <span class="n">PythonOperator</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.empty</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmptyOperator</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.common.sql.operators.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLExecuteQueryOperator</span> <span class="k">as</span> <span class="n">PostgresOperator</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.python</span><span class="w"> </span><span class="kn">import</span> <span class="n">PythonOperator</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils.first_pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">extract_data</span><span class="p">,</span> <span class="n">transform_data</span><span class="p">,</span> <span class="n">load_data</span>
-</code></pre></div>
-<h2 id="dag">DAG<a class="headerlink" href="#dag" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">dag</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="n">dag_id</span><span class="o">=</span><span class="s2">&quot;first_pipeline&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="n">description</span><span class="o">=</span><span class="s2">&quot;First Apache Airflow Pipeline&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="n">start_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2023</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="n">schedule_interval</span><span class="o">=</span><span class="s2">&quot;30 6 * * *&quot;</span><span class="p">,</span> <span class="c1"># Everyday at 6:00 AM</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">]</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">)</span>
-</code></pre></div>
-<h2 id="composants">Composants<a class="headerlink" href="#composants" title="Permanent link">#</a></h2>
-<p><strong>Start Pipeline</strong>
-<div class="highlight"><span class="filename">First Pipeline</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">start_pipeline</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;start_pipeline&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span>
 </code></pre></div></p>
-<p><strong>Setup table</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">create_table</span> <span class="o">=</span> <span class="n">PostgresOperator</span><span class="p">(</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;create_table&#39;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="n">postgres_conn_id</span><span class="o">=</span><span class="s1">&#39;postgres&#39;</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="n">sql</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&quot;&quot;create table if not exists covid19_daily_kpi (</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s2">    dt date,</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s2">    country varchar(200) not null,</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s2">    latitude numeric,</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s2">    longitude numeric,</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="s2">    confirmed integer,</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="s2">    deaths integer,</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="s2">    recovered integer,</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s2">    active integer,</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="s2">    load_datetime timestamp not null default now()</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s2">  )&quot;&quot;&quot;</span><span class="p">]</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">)</span>
+<h2 id="definition-du-dag">Définition du DAG<a class="headerlink" href="#definition-du-dag" title="Permanent link">#</a></h2>
+<p>Le DAG (Directed Acyclic Graph) est le conteneur de votre pipeline. C'est ici qu'on définit "quand" et "comment" le pipeline s'exécute.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Default Args</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">default_args</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;algojungle,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="s2">&quot;start_date&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># Date de début du pipeline</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s2">&quot;retries&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s2">&quot;retry_delay&quot;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># DAG</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">dag</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">dag_id</span><span class="o">=</span><span class="s2">&quot;first_pipeline&quot;</span><span class="p">,</span> <span class="c1"># Nom unique affiché dans l&#39;interface Airflow</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;First Apache Airflow Pipeline&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">default_args</span><span class="o">=</span><span class="n">default_args</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">schedule_interval</span><span class="o">=</span><span class="s2">&quot;30 6 * * *&quot;</span><span class="p">,</span> <span class="c1"># Planification (Cron) : Tous les jours à 06h30</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="s2">&quot;etl&quot;</span><span class="p">,</span> <span class="s2">&quot;covid19&quot;</span><span class="p">],</span> <span class="c1"># Pratique pour filtrer vos DAGs par projet</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">catchup</span><span class="o">=</span><span class="kc">False</span> <span class="c1"># Évite de lancer tous les runs passés depuis start_date</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">)</span>
 </code></pre></div></p>
-<p><strong>Extract data</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">extract</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">task_id</span> <span class="o">=</span> <span class="s1">&#39;extract_data&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">python_callable</span> <span class="o">=</span> <span class="n">extract_data</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span>
+<h2 id="les-composants-tasks">Les Composants (Tasks)<a class="headerlink" href="#les-composants-tasks" title="Permanent link">#</a></h2>
+<p><strong>Start Pipeline</strong><br>
+On commence souvent par un <code>EmptyOperator</code>. Il sert de point d'ancrage visuel dans l'interface pour marquer le début du flux.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">start</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p><strong>Transform data</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">transform</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">task_id</span> <span class="o">=</span> <span class="s1">&#39;transform_data&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">python_callable</span> <span class="o">=</span> <span class="n">transform_data</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span>  
+<p><strong>Setup table</strong><br>
+Avant de charger des données, il faut s'assurer que la table de destination existe. Le <code>PostgresOperator</code> s'occupe de communiquer avec la base de données.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="s2">create table if not exists covid19_daily_kpi (</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s2">    dt date,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s2">    country varchar(200) not null,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s2">    latitude numeric,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s2">    longitude numeric,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s2">    confirmed integer,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s2">    deaths integer,</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="s2">    recovered integer,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="s2">    active integer,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="s2">    load_datetime timestamp not null default now()</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s2">);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">create_table</span> <span class="o">=</span> <span class="n">PostgresOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;create_table&quot;</span><span class="p">,</span> <span class="n">postgres_conn_id</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span> <span class="n">sql</span><span class="o">=</span><span class="n">sql</span><span class="p">)</span>
 </code></pre></div></p>
-<p><strong>Load data</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">load</span>  <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">task_id</span> <span class="o">=</span> <span class="s1">&#39;load_data&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">python_callable</span> <span class="o">=</span> <span class="n">load_data</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span>
+<p><strong>Extract, Transform &amp; Load</strong><br>
+Pour ces étapes, nous utilisons le <code>PythonOperator</code>. Il fait le pont entre Airflow et vos scripts Python existants.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Extract : Récupération des données brutes</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">extract</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;extract&quot;</span><span class="p">,</span> <span class="n">python_callable</span><span class="o">=</span><span class="n">extract_data</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Transform : Nettoyage et préparation des données</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">transform</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">python_callable</span><span class="o">=</span><span class="n">transform_data</span><span class="p">)</span>  
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Load : Chargement final dans Postgres</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">load</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;load&quot;</span><span class="p">,</span> <span class="n">python_callable</span><span class="o">=</span><span class="n">load_data</span><span class="p">)</span>
 </code></pre></div></p>
-<p><strong>End Pipeline</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">end_pipeline</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;end_pipeline&quot;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span>
+<p><strong>End Pipeline</strong><br>
+Comme pour le début, on ferme le flux proprement.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">end</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<h2 id="orchestraction">Orchestraction<a class="headerlink" href="#orchestraction" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">start_pipeline</span> <span class="o">&gt;&gt;</span> <span class="n">setup</span> <span class="o">&gt;&gt;</span> <span class="n">extract</span> <span class="o">&gt;&gt;</span> <span class="n">transform</span> <span class="o">&gt;&gt;</span> <span class="n">load</span> <span class="o">&gt;&gt;</span> <span class="n">end_pipeline</span>
-</code></pre></div>
+<h2 id="orchestraction-le-flow">Orchestraction (Le Flow)<a class="headerlink" href="#orchestraction-le-flow" title="Permanent link">#</a></h2>
+<p>C'est ici que la magie opère. On définit l'ordre d'exécution à l'aide des opérateurs de bits &gt;&gt;. Airflow s'assurera qu'une étape ne commence que si la précédente a réussi.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">start</span> <span class="o">&gt;&gt;</span> <span class="n">setup</span> <span class="o">&gt;&gt;</span> <span class="n">extract</span> <span class="o">&gt;&gt;</span> <span class="n">transform</span> <span class="o">&gt;&gt;</span> <span class="n">load</span> <span class="o">&gt;&gt;</span> <span class="n">end</span>
+</code></pre></div></p>
 <h2 id="code-complet">Code complet<a class="headerlink" href="#code-complet" title="Permanent link">#</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Apache AIrflow DAG</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-9-10">10</a></span>
-<span class="normal"><a href="#__codelineno-9-11">11</a></span>
-<span class="normal"><a href="#__codelineno-9-12">12</a></span>
-<span class="normal"><a href="#__codelineno-9-13">13</a></span>
-<span class="normal"><a href="#__codelineno-9-14">14</a></span>
-<span class="normal"><a href="#__codelineno-9-15">15</a></span>
-<span class="normal"><a href="#__codelineno-9-16">16</a></span>
-<span class="normal"><a href="#__codelineno-9-17">17</a></span>
-<span class="normal"><a href="#__codelineno-9-18">18</a></span>
-<span class="normal"><a href="#__codelineno-9-19">19</a></span>
-<span class="normal"><a href="#__codelineno-9-20">20</a></span>
-<span class="normal"><a href="#__codelineno-9-21">21</a></span>
-<span class="normal"><a href="#__codelineno-9-22">22</a></span>
-<span class="normal"><a href="#__codelineno-9-23">23</a></span>
-<span class="normal"><a href="#__codelineno-9-24">24</a></span>
-<span class="normal"><a href="#__codelineno-9-25">25</a></span>
-<span class="normal"><a href="#__codelineno-9-26">26</a></span>
-<span class="normal"><a href="#__codelineno-9-27">27</a></span>
-<span class="normal"><a href="#__codelineno-9-28">28</a></span>
-<span class="normal"><a href="#__codelineno-9-29">29</a></span>
-<span class="normal"><a href="#__codelineno-9-30">30</a></span>
-<span class="normal"><a href="#__codelineno-9-31">31</a></span>
-<span class="normal"><a href="#__codelineno-9-32">32</a></span>
-<span class="normal"><a href="#__codelineno-9-33">33</a></span>
-<span class="normal"><a href="#__codelineno-9-34">34</a></span>
-<span class="normal"><a href="#__codelineno-9-35">35</a></span>
-<span class="normal"><a href="#__codelineno-9-36">36</a></span>
-<span class="normal"><a href="#__codelineno-9-37">37</a></span>
-<span class="normal"><a href="#__codelineno-9-38">38</a></span>
-<span class="normal"><a href="#__codelineno-9-39">39</a></span>
-<span class="normal"><a href="#__codelineno-9-40">40</a></span>
-<span class="normal"><a href="#__codelineno-9-41">41</a></span>
-<span class="normal"><a href="#__codelineno-9-42">42</a></span>
-<span class="normal"><a href="#__codelineno-9-43">43</a></span>
-<span class="normal"><a href="#__codelineno-9-44">44</a></span>
-<span class="normal"><a href="#__codelineno-9-45">45</a></span>
-<span class="normal"><a href="#__codelineno-9-46">46</a></span>
-<span class="normal"><a href="#__codelineno-9-47">47</a></span>
-<span class="normal"><a href="#__codelineno-9-48">48</a></span>
-<span class="normal"><a href="#__codelineno-9-49">49</a></span>
-<span class="normal"><a href="#__codelineno-9-50">50</a></span>
-<span class="normal"><a href="#__codelineno-9-51">51</a></span>
-<span class="normal"><a href="#__codelineno-9-52">52</a></span>
-<span class="normal"><a href="#__codelineno-9-53">53</a></span>
-<span class="normal"><a href="#__codelineno-9-54">54</a></span>
-<span class="normal"><a href="#__codelineno-9-55">55</a></span>
-<span class="normal"><a href="#__codelineno-9-56">56</a></span>
-<span class="normal"><a href="#__codelineno-9-57">57</a></span>
-<span class="normal"><a href="#__codelineno-9-58">58</a></span>
-<span class="normal"><a href="#__codelineno-9-59">59</a></span>
-<span class="normal"><a href="#__codelineno-9-60">60</a></span>
-<span class="normal"><a href="#__codelineno-9-61">61</a></span>
-<span class="normal"><a href="#__codelineno-9-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="sd">  First DAG</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">DAG</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.empty</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmptyOperator</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.postgres_operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">PostgresOperator</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.python</span><span class="w"> </span><span class="kn">import</span> <span class="n">PythonOperator</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils.first_pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">extract_data</span><span class="p">,</span> <span class="n">transform_data</span><span class="p">,</span> <span class="n">load_data</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="k">with</span> <span class="n">DAG</span><span class="p">(</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a>  <span class="n">dag_id</span><span class="o">=</span><span class="s2">&quot;first_pipeline&quot;</span><span class="p">,</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17"></a>  <span class="n">description</span><span class="o">=</span><span class="s2">&quot;First Apache Airflow Pipeline&quot;</span><span class="p">,</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a>  <span class="n">start_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2023</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a>  <span class="n">schedule_interval</span><span class="o">=</span><span class="s2">&quot;30 6 * * *&quot;</span><span class="p">,</span> <span class="c1"># Everyday at 6:00 AM</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a>  <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">]</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="p">)</span> <span class="k">as</span> <span class="n">dag</span><span class="p">:</span>
-<a id="__codelineno-9-22" name="__codelineno-9-22"></a>
-<a id="__codelineno-9-23" name="__codelineno-9-23"></a>  <span class="n">start_pipeline</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span>
-<a id="__codelineno-9-24" name="__codelineno-9-24"></a>        <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;start_pipeline&#39;</span><span class="p">,</span>
-<a id="__codelineno-9-25" name="__codelineno-9-25"></a>    <span class="p">)</span>
-<a id="__codelineno-9-26" name="__codelineno-9-26"></a>
-<a id="__codelineno-9-27" name="__codelineno-9-27"></a>  <span class="n">create_table</span> <span class="o">=</span> <span class="n">PostgresOperator</span><span class="p">(</span>
-<a id="__codelineno-9-28" name="__codelineno-9-28"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;create_table&#39;</span><span class="p">,</span>
-<a id="__codelineno-9-29" name="__codelineno-9-29"></a>    <span class="n">postgres_conn_id</span><span class="o">=</span><span class="s1">&#39;postgres&#39;</span><span class="p">,</span>
-<a id="__codelineno-9-30" name="__codelineno-9-30"></a>    <span class="n">sql</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&quot;&quot;create table if not exists covid19_daily_kpi (</span>
-<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="s2">      dt date,</span>
-<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="s2">      country varchar(200) not null,</span>
-<a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="s2">      latitude numeric,</span>
-<a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="s2">      longitude numeric,</span>
-<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="s2">      confirmed integer,</span>
-<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="s2">      deaths integer,</span>
-<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="s2">      recovered integer,</span>
-<a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="s2">      active integer,</span>
-<a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="s2">      load_datetime timestamp not null default now()</span>
-<a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="s2">    )&quot;&quot;&quot;</span><span class="p">]</span>
-<a id="__codelineno-9-41" name="__codelineno-9-41"></a>  <span class="p">)</span>
-<a id="__codelineno-9-42" name="__codelineno-9-42"></a>
-<a id="__codelineno-9-43" name="__codelineno-9-43"></a>  <span class="n">extract</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span>
-<a id="__codelineno-9-44" name="__codelineno-9-44"></a>    <span class="n">task_id</span> <span class="o">=</span> <span class="s1">&#39;extract_data&#39;</span><span class="p">,</span>
-<a id="__codelineno-9-45" name="__codelineno-9-45"></a>    <span class="n">python_callable</span> <span class="o">=</span> <span class="n">extract_data</span>
-<a id="__codelineno-9-46" name="__codelineno-9-46"></a>  <span class="p">)</span>
-<a id="__codelineno-9-47" name="__codelineno-9-47"></a>
-<a id="__codelineno-9-48" name="__codelineno-9-48"></a>  <span class="n">transform</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span>
-<a id="__codelineno-9-49" name="__codelineno-9-49"></a>    <span class="n">task_id</span> <span class="o">=</span> <span class="s1">&#39;transform_data&#39;</span><span class="p">,</span>
-<a id="__codelineno-9-50" name="__codelineno-9-50"></a>    <span class="n">python_callable</span> <span class="o">=</span> <span class="n">transform_data</span>
-<a id="__codelineno-9-51" name="__codelineno-9-51"></a>  <span class="p">)</span>  
-<a id="__codelineno-9-52" name="__codelineno-9-52"></a>
-<a id="__codelineno-9-53" name="__codelineno-9-53"></a>  <span class="n">load</span>  <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span>
-<a id="__codelineno-9-54" name="__codelineno-9-54"></a>    <span class="n">task_id</span> <span class="o">=</span> <span class="s1">&#39;load_data&#39;</span><span class="p">,</span>
-<a id="__codelineno-9-55" name="__codelineno-9-55"></a>    <span class="n">python_callable</span> <span class="o">=</span> <span class="n">load_data</span>
-<a id="__codelineno-9-56" name="__codelineno-9-56"></a>  <span class="p">)</span>
-<a id="__codelineno-9-57" name="__codelineno-9-57"></a>
-<a id="__codelineno-9-58" name="__codelineno-9-58"></a>  <span class="n">end_pipeline</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span>
-<a id="__codelineno-9-59" name="__codelineno-9-59"></a>      <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;end_pipeline&#39;</span><span class="p">,</span>
-<a id="__codelineno-9-60" name="__codelineno-9-60"></a>  <span class="p">)</span>
-<a id="__codelineno-9-61" name="__codelineno-9-61"></a>
-<a id="__codelineno-9-62" name="__codelineno-9-62"></a>  <span class="n">start_pipeline</span> <span class="o">&gt;&gt;</span> <span class="n">create_table</span> <span class="o">&gt;&gt;</span> <span class="n">extract</span> <span class="o">&gt;&gt;</span> <span class="n">transform</span> <span class="o">&gt;&gt;</span> <span class="n">load</span> <span class="o">&gt;&gt;</span> <span class="n">end_pipeline</span>
-</code></pre></div></td></tr></table></div>
+<p>Voici à quoi ressemble votre fichier final. Notez l'utilisation du bloc with <code>DAG(...)</code> : c'est la manière la plus propre et la plus moderne d'écrire vos pipelines.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">First Apache Airflow DAG</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span>
+<span class="normal"><a href="#__codelineno-7-33">33</a></span>
+<span class="normal"><a href="#__codelineno-7-34">34</a></span>
+<span class="normal"><a href="#__codelineno-7-35">35</a></span>
+<span class="normal"><a href="#__codelineno-7-36">36</a></span>
+<span class="normal"><a href="#__codelineno-7-37">37</a></span>
+<span class="normal"><a href="#__codelineno-7-38">38</a></span>
+<span class="normal"><a href="#__codelineno-7-39">39</a></span>
+<span class="normal"><a href="#__codelineno-7-40">40</a></span>
+<span class="normal"><a href="#__codelineno-7-41">41</a></span>
+<span class="normal"><a href="#__codelineno-7-42">42</a></span>
+<span class="normal"><a href="#__codelineno-7-43">43</a></span>
+<span class="normal"><a href="#__codelineno-7-44">44</a></span>
+<span class="normal"><a href="#__codelineno-7-45">45</a></span>
+<span class="normal"><a href="#__codelineno-7-46">46</a></span>
+<span class="normal"><a href="#__codelineno-7-47">47</a></span>
+<span class="normal"><a href="#__codelineno-7-48">48</a></span>
+<span class="normal"><a href="#__codelineno-7-49">49</a></span>
+<span class="normal"><a href="#__codelineno-7-50">50</a></span>
+<span class="normal"><a href="#__codelineno-7-51">51</a></span>
+<span class="normal"><a href="#__codelineno-7-52">52</a></span>
+<span class="normal"><a href="#__codelineno-7-53">53</a></span>
+<span class="normal"><a href="#__codelineno-7-54">54</a></span>
+<span class="normal"><a href="#__codelineno-7-55">55</a></span>
+<span class="normal"><a href="#__codelineno-7-56">56</a></span>
+<span class="normal"><a href="#__codelineno-7-57">57</a></span>
+<span class="normal"><a href="#__codelineno-7-58">58</a></span>
+<span class="normal"><a href="#__codelineno-7-59">59</a></span>
+<span class="normal"><a href="#__codelineno-7-60">60</a></span>
+<span class="normal"><a href="#__codelineno-7-61">61</a></span>
+<span class="normal"><a href="#__codelineno-7-62">62</a></span>
+<span class="normal"><a href="#__codelineno-7-63">63</a></span>
+<span class="normal"><a href="#__codelineno-7-64">64</a></span>
+<span class="normal"><a href="#__codelineno-7-65">65</a></span>
+<span class="normal"><a href="#__codelineno-7-66">66</a></span>
+<span class="normal"><a href="#__codelineno-7-67">67</a></span>
+<span class="normal"><a href="#__codelineno-7-68">68</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="sd">    ETL Covid-19 : Mon premier DAG Airflow</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="sd">    Auteur : AlgoJungle</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">DAG</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.empty</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmptyOperator</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.common.sql.operators.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLExecuteQueryOperator</span> <span class="k">as</span> <span class="n">PostgresOperator</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.python</span><span class="w"> </span><span class="kn">import</span> <span class="n">PythonOperator</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="kn">from</span><span class="w"> </span><span class="nn">utils.first_pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">extract_data</span><span class="p">,</span> <span class="n">transform_data</span><span class="p">,</span> <span class="n">load_data</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="c1"># Default Args</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="n">default_args</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;algojungle,</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>    <span class="s2">&quot;start_date&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># Date de début du pipeline</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>    <span class="s2">&quot;retries&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>    <span class="s2">&quot;retry_delay&quot;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="p">}</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="c1"># DAG</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="k">with</span> <span class="n">DAG</span><span class="p">(</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a>    <span class="n">dag_id</span><span class="o">=</span><span class="s2">&quot;first_pipeline&quot;</span><span class="p">,</span> <span class="c1"># Nom unique affiché dans l&#39;interface Airflow</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;First Apache Airflow Pipeline&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>    <span class="n">default_args</span><span class="o">=</span><span class="n">default_args</span><span class="p">,</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a>    <span class="n">schedule_interval</span><span class="o">=</span><span class="s2">&quot;30 6 * * *&quot;</span><span class="p">,</span> <span class="c1"># Planification (Cron) : Tous les jours à 06h30</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a>    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="s2">&quot;etl&quot;</span><span class="p">,</span> <span class="s2">&quot;covid19&quot;</span><span class="p">],</span> <span class="c1"># Pratique pour filtrer vos DAGs par projet</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a>    <span class="n">catchup</span><span class="o">=</span><span class="kc">False</span> <span class="c1"># Évite de lancer tous les runs passés depuis start_date</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="p">)</span> <span class="k">as</span> <span class="n">dag</span><span class="p">:</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a>
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a>    <span class="c1">#########################################################################################</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a>    <span class="c1"># Tasks</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a>    <span class="c1">#########################################################################################</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37"></a>    <span class="n">start</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38"></a>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a>    <span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="s2">    create table if not exists covid19_daily_kpi (</span>
+<a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="s2">        dt date,</span>
+<a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="s2">        country varchar(200) not null,</span>
+<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="s2">        latitude numeric,</span>
+<a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="s2">        longitude numeric,</span>
+<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="s2">        confirmed integer,</span>
+<a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="s2">        deaths integer,</span>
+<a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="s2">        recovered integer,</span>
+<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="s2">        active integer,</span>
+<a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="s2">        load_datetime timestamp not null default now()</span>
+<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="s2">    );</span>
+<a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-7-52" name="__codelineno-7-52"></a>    <span class="n">create_table</span> <span class="o">=</span> <span class="n">PostgresOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;create_table&quot;</span><span class="p">,</span> <span class="n">postgres_conn_id</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span> <span class="n">sql</span><span class="o">=</span><span class="n">sql</span><span class="p">)</span>
+<a id="__codelineno-7-53" name="__codelineno-7-53"></a>
+<a id="__codelineno-7-54" name="__codelineno-7-54"></a>    <span class="n">extract</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;extract&quot;</span><span class="p">,</span> <span class="n">python_callable</span><span class="o">=</span><span class="n">extract_data</span><span class="p">)</span>
+<a id="__codelineno-7-55" name="__codelineno-7-55"></a>
+<a id="__codelineno-7-56" name="__codelineno-7-56"></a>    <span class="n">transform</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">python_callable</span><span class="o">=</span><span class="n">transform_data</span><span class="p">)</span>  
+<a id="__codelineno-7-57" name="__codelineno-7-57"></a>
+<a id="__codelineno-7-58" name="__codelineno-7-58"></a>    <span class="n">load</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;load&quot;</span><span class="p">,</span> <span class="n">python_callable</span><span class="o">=</span><span class="n">load_data</span><span class="p">)</span>
+<a id="__codelineno-7-59" name="__codelineno-7-59"></a>
+<a id="__codelineno-7-60" name="__codelineno-7-60"></a>    <span class="n">end</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-61" name="__codelineno-7-61"></a>    <span class="c1">#########################################################################################</span>
+<a id="__codelineno-7-62" name="__codelineno-7-62"></a>
+<a id="__codelineno-7-63" name="__codelineno-7-63"></a>
+<a id="__codelineno-7-64" name="__codelineno-7-64"></a>    <span class="c1">#########################################################################################</span>
+<a id="__codelineno-7-65" name="__codelineno-7-65"></a>    <span class="c1"># Flow</span>
+<a id="__codelineno-7-66" name="__codelineno-7-66"></a>    <span class="c1">#########################################################################################</span>
+<a id="__codelineno-7-67" name="__codelineno-7-67"></a>    <span class="n">start</span> <span class="o">&gt;&gt;</span> <span class="n">create_table</span> <span class="o">&gt;&gt;</span> <span class="n">extract</span> <span class="o">&gt;&gt;</span> <span class="n">transform</span> <span class="o">&gt;&gt;</span> <span class="n">load</span> <span class="o">&gt;&gt;</span> <span class="n">end</span>
+<a id="__codelineno-7-68" name="__codelineno-7-68"></a>    <span class="c1">#########################################################################################</span>
+</code></pre></div></td></tr></table></div></p>
 <hr />
-<p><em>Bravo, vous avez créé votre premier pipeline avec Airflow. Dans la prochaine section, nous explorerons en détail chaque composant du pipeline et approfondirons votre compréhension d'Apache Airflow.</em></p>
-
-                </article>
-
-                <!-- Navigation Précédent / Suivant -->
-                <nav class="row mt-5 pt-4 border-top">
-                    <div class="col-6">
-                        
-                        <a href="../interface/" class="text-decoration-none">
-                            <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
-                            <span class="fw-bold text-primary">Interface Airflow</span>
-                        </a>
-                        
-                    </div>
-                    <div class="col-6 text-end">
-                        
-                        <a href="../schedule-dags/" class="text-decoration-none">
-                            <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
-                            <span class="fw-bold text-primary">Planifier un DAG</span>
-                        </a>
-                        
-                    </div>
-                </nav>
-
-                <section class="mt-5 border-top pt-4">
-                    
-                    <div class="share-section mb-5">
-                        <h2 class="h4 mb-3">Partagez sur les réseaux sociaux</h2>
-                        <!-- ShareThis BEGIN -->
-                        <div class="sharethis-inline-share-buttons"></div>
-                        <!-- ShareThis END -->
-                    </div>
-
-                    
-                    
-                    <div class="comments-section">
-                        <h2 id="__comments" class="h4 mb-4">Commentaires</h2>
-                        
-                        
-                        <script src="https://giscus.app/client.js"
-                                data-repo="joekakone/Departement-De-Maths"
-                                data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
-                                data-category="General"
-                                data-category-id="DIC_kwDOFBN7QM4CORj9"
-                                data-mapping="pathname"
-                                data-reactions-enabled="1"
-                                data-emit-metadata="0"
-                                data-input-position="bottom"
-                                
-                                data-theme="preferred_color_scheme"
-                                data-lang="fr"
-                                crossorigin="anonymous"
-                                async>
-                        </script>
-                    </div>
-                    
-                </section>
-            </main>
+<p><em>Bravo, vous avez créé votre premier pipeline avec Airflow. Dans la prochaine section, nous allons aborder en détail la planification des DAGs et comprendre comment gérer les échecs.</em></p>
 
         </div>
-    </div>
-
-</div>
-
-
+      </div>
+    </main>
+  
 
 
   <!-- Tags -->
