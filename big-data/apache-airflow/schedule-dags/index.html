@@ -1174,7 +1174,7 @@
                     </div>
                     
 
-                    <h2 id="cron">Cron<a class="headerlink" href="#cron" title="Permanent link">#</a></h2>
+                    <h2 id="le-concept-du-cron">Le concept du Cron<a class="headerlink" href="#le-concept-du-cron" title="Permanent link">#</a></h2>
 <p>Le <strong>cron</strong> est un outil natif des systèmes Linux/Unix permettant de planifier l’exécution automatique de tâches (scripts, commandes, programmes) à des moments précis ou à intervalles réguliers.</p>
 <p>Ces tâches sont définies dans un fichier appelé <strong>crontab</strong> (cron table), qui spécifie à quelle minute, heure, jour du mois, mois et jour de la semaine la commande doit être lancée.</p>
 <p>Ce système est très utile pour automatiser des routines telles que des sauvegardes, des mises à jour de données, ou l'envoi de rapports.</p>
@@ -1185,66 +1185,24 @@
 <li><strong>Valeurs multiples</strong> : <code>1,15,30</code> pour déclencher à des moments précis.</li>
 </ul>
 <p>Il est également possible d’utiliser des intervalles (<code>*/5</code> pour toutes les 5 minutes), des plages (<code>1-5</code>) ou des valeurs multiples (<code>1,15,30</code>) pour affiner le déclenchement. Des plateformes comme Apache Airflow reprennent cette logique pour orchestrer les workflows, en la rendant plus flexible et observable.</p>
-<!-- ![](https://contabo.com/blog/wp-content/uploads/2023/05/blog-head_syntax-of-cron.jpg) -->
-<p><img alt="" src="https://miro.medium.com/v2/resize:fit:1200/1*8cphjbgjRS_dqwc5AlhDjA.jpeg" /></p>
 <h2 id="la-planification-dans-airflow">La planification dans Airflow<a class="headerlink" href="#la-planification-dans-airflow" title="Permanent link">#</a></h2>
 <p>Airflow utilise synthase des crons pour gérer la planification des dags.
 La fréquence d'exécution d'un DAG est définie par le paramètre <code>schedule_interval</code>. Si vous avez déjà utilisé un cron sur Linux, ce concept vous sera familier. Sinon, pas de panique, nous allons tout expliquer.</p>
-<div class="highlight"><span class="filename">Airflow DAG</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dga</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span>
+<p><strong>Exemple de configuration</strong><br>
+Voici comment intégrer la planification dans la définition de votre DAG :</p>
+<div class="highlight"><span class="filename">Airflow DAG</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dag</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">dag_id</span><span class="o">=</span><span class="s2">&quot;etl_sales&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">default_args</span><span class="o">=</span><span class="n">default_args</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Sales ETL&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Sales ETL&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">default_args</span><span class="o">=</span><span class="n">default_args</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">schedule_interval</span><span class="o">=</span><span class="s2">&quot;0 6 * * *&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;reporting&quot;</span><span class="p">,</span> <span class="s2">&quot;daily&quot;</span><span class="p">,</span> <span class="s2">&quot;critical&quot;</span><span class="p">],</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">catchup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">max_active_runs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
 </code></pre></div>
-<p>Voici un exemple d'utilisation dans un DAG Airflow :
-<div class="highlight"><span class="filename">Airflow DAG</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Packages</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">DAG</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.dummy_operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">DummyOperator</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.operators.postgres_operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">PostgresOperator</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Define default_args and DAG</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">default_args</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;joekakone&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="s2">&quot;start_date&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="c1"># Use today date to avoid undesirable reruns</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="s2">&quot;retries&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="s2">&quot;retry_delay&quot;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;joseph.kakone@gmail.com&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="s1">&#39;email_on_failure&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="s1">&#39;email_on_retry&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1"># Create DAG instance</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">with</span> <span class="n">DAG</span><span class="p">(</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="n">dag_id</span><span class="o">=</span><span class="s2">&quot;etl_sales&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">default_args</span><span class="o">=</span><span class="n">default_args</span><span class="p">,</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Sales ETL&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="n">schedule_interval</span><span class="o">=</span><span class="s2">&quot;0 6 * * *&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;reporting&quot;</span><span class="p">,</span> <span class="s2">&quot;daily&quot;</span><span class="p">,</span> <span class="s2">&quot;critical&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">catchup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="n">max_active_runs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="p">)</span> <span class="k">as</span> <span class="n">dag</span><span class="p">:</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    <span class="c1"># Tasks</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    <span class="n">start_task</span> <span class="o">=</span> <span class="n">DummyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    <span class="n">sql_task</span> <span class="o">=</span> <span class="n">PostgresOperator</span><span class="p">(</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;sql_task&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>        <span class="n">postgres_conn_id</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>        <span class="n">sql</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;select edw.fn_rpt_performance_product(&#39;</span><span class="si">{</span><span class="n">RUN_DATE</span><span class="si">}</span><span class="s2">&#39;::date)&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        <span class="n">dag</span><span class="o">=</span><span class="n">dag</span><span class="p">,</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    <span class="p">)</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    <span class="n">end_task</span> <span class="o">=</span> <span class="n">DummyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    <span class="c1"># Flow</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    <span class="n">start_task</span> <span class="o">&gt;&gt;</span> <span class="n">sql_task</span> <span class="o">&gt;&gt;</span>  <span class="n">end_task</span>
-</code></pre></div></p>
-<p>La syntaxe du schedule_interval est basée sur le format cron, qui permet de spécifier des exécutions avec précision. Voici la signification des champs :</p>
+<h2 id="comprendre-la-syntaxe">Comprendre la syntaxe<a class="headerlink" href="#comprendre-la-syntaxe" title="Permanent link">#</a></h2>
+<p>Pour maîtriser le <code>schedule_interval</code>, il faut comprendre l'ordre des 5 colonnes :
+La syntaxe du schedule_interval est basée sur le format cron, qui permet de spécifier des exécutions avec précision. Voici la signification des champs :</p>
 <table>
 <thead>
 <tr>
@@ -1290,37 +1248,19 @@ La fréquence d'exécution d'un DAG est définie par le paramètre <code>schedul
 <li>Tous les jours de la semaine</li>
 </ul>
 <p>Voici un guide visuel pour vous aider à mieux comprendre :</p>
-<p><img alt="" src="https://linuxhandbook.com/content/images/2020/06/crontab-explanation.png" /></p>
-<p>Pour simplifier la création de ces expressions, vous pouvez visiter <a href="https://crontab.guru/">Crontab Guru</a>, un outil en ligne qui vous aide à définir et tester vos expressions cron.</p>
-<p>Pour finir voici quelques exemples qui répondent à d'autres besoins spécifiques :</p>
-<table>
-<thead>
-<tr>
-<th>Valeur</th>
-<th>Signification</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@hourly</code></td>
-<td>Chaque heure</td>
-</tr>
-<tr>
-<td><code>@daily</code></td>
-<td>Chaque jour</td>
-</tr>
-<tr>
-<td><code>0 */4 * * *</code></td>
-<td>Chaque quatre heure</td>
-</tr>
-<tr>
-<td><code>*/15 * * * *</code></td>
-<td>Chaque 15 minutes</td>
-</tr>
-</tbody>
-</table>
+<p><img alt="" src="https://miro.medium.com/v2/resize:fit:1200/1*8cphjbgjRS_dqwc5AlhDjA.jpeg" /></p>
+<p>Pour simplifier la création de ces expressions, vous pouvez tester vos expressions sans vous tromper, utilisez l'outil  <a href="https://crontab.guru/">Crontab Guru</a>.</p>
+<h2 id="les-raccourcis-airflow">Les raccourcis Airflow<a class="headerlink" href="#les-raccourcis-airflow" title="Permanent link">#</a></h2>
+<p>Parfois, une expression cron est un peu complexe à lire. Airflow propose des "presets" (raccourcis) pour les fréquences les plus courantes :</p>
+<p>Valeur | Équivalent Cron | Signification
+-|-
+<code>@hourly</code> | <code>0 * * * *</code> | Chaque heure (à la minute 0)
+<code>@daily</code> | <code>0 0 * * *</code>  | Chaque jour à minuit
+<code>@weekly</code> | <code>0 0 * * 0</code>  | Chaque dimanche à minuit
+<code>@once</code> | <code>0 0 * * 0</code>  | Exécuté une seule fois (lors du premier déclenchement)
+<code>None</code> | <code>/</code>  | Le DAG n'est jamais lancé automatiquement (manuel uniquement)</p>
 <hr />
-<p><em>Grâce à <code>schedule_interval</code>, vous pouvez automatiser l'exécution de vos workflows selon les besoins de votre projet. Dans la prochaine section, nous verrons comment gérer les dépendances entre les tâches pour structurer vos DAGs de manière optimale..</em></p>
+<p><em>Grâce à <code>schedule_interval</code>, vous pouvez automatiser l'exécution de vos workflows selon les besoins de votre projet. Dans la prochaine section, nous verrons comment gérer les dépendances entre les tâches pour structurer vos DAGs de manière optimale.</em></p>
 
                 </article>
 
