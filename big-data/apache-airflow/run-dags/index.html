@@ -1174,30 +1174,44 @@
                     </div>
                     
 
-                    <h2 id="executer-un-dag">Exécuter un DAG<a class="headerlink" href="#executer-un-dag" title="Permanent link">#</a></h2>
-<p>Avec le bouton à droite, vous pouvez déclenchez l'excécution</p>
-<h2 id="reexecuter-des-tasks">Réexécuter des Tasks<a class="headerlink" href="#reexecuter-des-tasks" title="Permanent link">#</a></h2>
-<p>Vous pouvez sélectionner une tâche et la réexécutier. Vous avez la possibilté d'exécuter les suivantes ou cette tâche seule.</p>
-<h2 id="reexecuter-des-dags">Réexécuter des DAGs<a class="headerlink" href="#reexecuter-des-dags" title="Permanent link">#</a></h2>
-<p>Si vous souhaitez rattraper des historiques de données, vous pouvez le faire depuis la ligne de commande. Pour accéder au conteneur, nous tapons la commande suivante :
+                    <h2 id="depuis-linterface-graphique-ui">Depuis l'interface graphique (UI)<a class="headerlink" href="#depuis-linterface-graphique-ui" title="Permanent link">#</a></h2>
+<p>C'est le moyen le plus simple et le plus visuel pour intervenir sur vos exécutions.</p>
+<h3 id="declencher-manuellement">Déclencher manuellement<a class="headerlink" href="#declencher-manuellement" title="Permanent link">#</a></h3>
+<p>Dans l'onglet <strong>DAGs</strong>, vous trouverez un bouton "Play" à droite.</p>
+<ul>
+<li><strong>Trigger DAG</strong> : Lance le DAG avec la date actuelle.</li>
+<li><strong>Trigger DAG w/ config</strong> : Vous permet de passer des paramètres JSON ou de choisir une <code>logical date</code> spécifique pour simuler un jour précis.</li>
+</ul>
+<h3 id="reexecuter-des-taches-clear">Réexécuter des tâches (Clear)<a class="headerlink" href="#reexecuter-des-taches-clear" title="Permanent link">#</a></h3>
+<p>Si une tâche échoue, vous n'avez pas besoin de relancer tout le pipeline.</p>
+<ul>
+<li>Cliquez sur le carré de la tâche échouée (souvent rouge).</li>
+<li>Cliquez sur le bouton <strong>Clear</strong>.</li>
+<li>Airflow va "effacer" l'état de la tâche, ce qui la remettra en file d'attente pour exécution. Vous pouvez choisir d'inclure les tâches en amont (<em>upstream</em>) ou en aval (<em>downstream</em>).</li>
+</ul>
+<h2 id="depuis-linvite-de-commandes-cli">Depuis l'invite de commandes (CLI)<a class="headerlink" href="#depuis-linvite-de-commandes-cli" title="Permanent link">#</a></h2>
+<p>La ligne de commande est indispensable pour les opérations de masse, comme le rattrapage d'un historique complet sur plusieurs mois.</p>
+<h3 id="acceder-au-conteneur">Accéder au conteneur<a class="headerlink" href="#acceder-au-conteneur" title="Permanent link">#</a></h3>
+<p>Si vous utilisez Docker, vous devez d'abord "entrer" dans le conteneur du serveur web ou du scheduler :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>apache-airflow-airflow-webserver-1<span class="w"> </span>bash
-</code></pre></div></p>
-<p>Une fois à l'intérieur du conteneur, vous tapez la commande suivante
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>airflow<span class="w"> </span>dags<span class="w"> </span>backfill<span class="w"> </span>--start-date<span class="w"> </span><span class="m">2024</span>-09-01<span class="w"> </span>--end-date<span class="w"> </span><span class="m">2024</span>-09-23<span class="w"> </span>&lt;your_dag_id&gt;
-</code></pre></div></p>
-<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>airflow@6951a05100d8:/opt/airflow$ airflow dags backfill --start-date 2024-09-02 --end-date 2024-09-23 your_dag_id 
+</code></pre></div>
+<h3 id="le-backfill-rattraper-lhistorique">Le Backfill : Rattraper l'historique<a class="headerlink" href="#le-backfill-rattraper-lhistorique" title="Permanent link">#</a></h3>
+<p>La commande <code>backfill</code> permet de lancer un DAG sur une plage de dates. Airflow créera automatiquement toutes les instances nécessaires entre la date de début et de fin.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>airflow<span class="w"> </span>dags<span class="w"> </span>backfill<span class="w"> </span>--start-date<span class="w"> </span><span class="m">2024</span>-09-01<span class="w"> </span>--end-date<span class="w"> </span><span class="m">2024</span>-09-30<span class="w"> </span>&lt;dag-id&gt;
+</code></pre></div>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>airflow@6951a05100d8:/opt/airflow$ airflow dags backfill --start-date 2024-09-02 --end-date 2024-09-23 dag_id 
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/dag_command.py:133 RemovedInAirflow3Warning: --ignore-first-depends-on-past is deprecated as the value is always set to True
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[2024-09-25T23:17:23.931+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>[2024-09-25T23:17:24.862+0000] {executor_loader.py:115} INFO - Loaded executor: CeleryExecutor
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[2024-09-25T23:17:25.234+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;your_dag_id&#39;, &#39;start&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/your_dag_id.py&#39;]
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[2024-09-25T23:17:25.234+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;dag_id&#39;, &#39;start&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/dag_id.py&#39;]
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>[2024-09-25T23:17:30.189+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 9 | succeeded: 0 | running: 1 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 9
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>[2024-09-25T23:17:34.983+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 9 | succeeded: 1 | running: 0 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 9
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>[2024-09-25T23:17:35.003+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;your_dag_id&#39;, &#39;rech_1d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/your_dag_id.py&#39;]
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>[2024-09-25T23:17:35.036+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;your_dag_id&#39;, &#39;rech_90d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/your_dag_id.py&#39;]
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>[2024-09-25T23:17:35.003+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;dag_id&#39;, &#39;rech_1d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/dag_id.py&#39;]
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>[2024-09-25T23:17:35.036+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;dag_id&#39;, &#39;rech_90d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/dag_id.py&#39;]
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>[2024-09-25T23:17:40.130+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 7 | succeeded: 1 | running: 2 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 7
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>[2024-09-25T23:17:44.993+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 7 | succeeded: 1 | running: 2 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 7
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>[2024-09-25T23:17:50.005+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 7 | succeeded: 2 | running: 1 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 7
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>[2024-09-25T23:17:50.027+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;your_dag_id&#39;, &#39;rech_7d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/your_dag_id.py&#39;]
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>[2024-09-25T23:17:50.027+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;dag_id&#39;, &#39;rech_7d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/dag_id.py&#39;]
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>[2024-09-25T23:17:55.046+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 6 | succeeded: 2 | running: 2 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 6
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>[2024-09-25T23:18:00.028+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 6 | succeeded: 2 | running: 2 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 6
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>[2024-09-25T23:18:05.028+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 6 | succeeded: 2 | running: 2 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 6
@@ -1205,14 +1219,13 @@
 <a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>[2024-09-25T23:18:15.054+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 6 | succeeded: 2 | running: 2 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 6
 <a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>[2024-09-25T23:18:20.051+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 6 | succeeded: 2 | running: 2 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 6
 <a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>[2024-09-25T23:18:25.069+0000] {backfill_job_runner.py:446} INFO - [backfill progress] | finished run 0 of 21 | tasks waiting: 6 | succeeded: 3 | running: 1 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 6
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>[2024-09-25T23:18:25.091+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;your_dag_id&#39;, &#39;rech_30d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/your_dag_id.py&#39;]
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>[2024-09-25T23:18:25.091+0000] {base_executor.py:146} INFO - Adding to queue: [&#39;airflow&#39;, &#39;tasks&#39;, &#39;run&#39;, &#39;dag_id&#39;, &#39;rech_30d_1&#39;, &#39;backfill__2024-09-02T11:00:00+00:00&#39;, &#39;--local&#39;, &#39;--pool&#39;, &#39;default_pool&#39;, &#39;--subdir&#39;, &#39;DAGS_FOLDER/dag_id.py&#39;]
 </code></pre></div>
-<p>Avec l'
-<code>--reset-dagruns</code>: </p>
-<h2 id="executer-des-taches">Exécuter des tâches<a class="headerlink" href="#executer-des-taches" title="Permanent link">#</a></h2>
-<p>Il est également possible d'exécuter une tâche de façon unitaire.
+<p><strong>Option utile</strong> : * <code>--reset-dagruns</code> : Supprime les exécutions existantes pour ces dates avant de les relancer.</p>
+<h3 id="tester-une-tache-airflow-tasks-test">Tester une tâche (Airflow Tasks Test)<a class="headerlink" href="#tester-une-tache-airflow-tasks-test" title="Permanent link">#</a></h3>
+<p>C'est l'outil préféré des développeurs. La commande <code>test</code> exécute une tâche localement <strong>sans enregistrer d'état dans la base de données</strong> et sans vérifier les dépendances. C'est idéal pour déboguer le code Python.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>airflow<span class="w"> </span>tasks<span class="w"> </span><span class="nb">test</span><span class="w"> </span>&lt;dag-id&gt;<span class="w"> </span>&lt;task-id&gt;<span class="w"> </span>yyyy-mm-dd
-</code></pre></div></p>
+</code></pre></div>
 <div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[2025-06-26T09:33:18.492+0000] {manager.py:147} INFO - DAG bundles loaded: dags-folder
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[2025-06-26T09:33:18.958+0000] {dagbag.py:573} INFO - Filling up the DagBag from /opt/airflow/dags
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[2025-06-26T09:33:21.618+0000] {taskinstance.py:1311} INFO - Dependencies all met for dep_context=non-requeueable deps ti=&lt;TaskInstance: etl_ume_datamart.bulk_insert_sellout_day __airflow_temporary_run_2025-06-26T09:33:21.506585+00:00__ [None]&gt;
@@ -1224,24 +1237,30 @@
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>[2025-06-26T09:33:21.830+0000] {taskinstance.py:2158} INFO - ::endgroup::
 </code></pre></div>
 <p>airflow tasks test n’enregistre pas de DAG Run officiel dans l’interface, contrairement au backfill.</p>
+<h2 id="automatiser-les-tests-avec-python">Automatiser les tests avec Python<a class="headerlink" href="#automatiser-les-tests-avec-python" title="Permanent link">#</a></h2>
+<p>Parfois, vous voulez tester une tâche sur une longue période sans utiliser le mécanisme de backfill (pour éviter de polluer l'historique de production). Vous pouvez utiliser un petit script Python pour boucler sur les dates :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">timedelta</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">dag_id</span> <span class="o">=</span> <span class="s2">&quot;etl_ume_datamart&quot;</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">task_id</span> <span class="o">=</span> <span class="s2">&quot;bulk_insert_sellout_day&quot;</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">start</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">end</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">26</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">end</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">delta</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">d</span> <span class="o">=</span> <span class="n">start</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">while</span> <span class="n">d</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">:</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="n">cmd</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;airflow tasks test </span><span class="si">{</span><span class="n">dag_id</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">task_id</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running: </span><span class="si">{</span><span class="n">cmd</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="n">d</span> <span class="o">+=</span> <span class="n">delta</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">while</span> <span class="n">d</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">:</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="c1"># On construit la commande CLI</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="n">cmd</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;airflow tasks test </span><span class="si">{</span><span class="n">dag_id</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">task_id</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exécution pour la date : </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="c1"># Exécution de la commande système</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="n">d</span> <span class="o">+=</span> <span class="n">delta</span>
 </code></pre></div>
 <hr />
-<p><em>.</em></p>
+<p><em>Félicitations ! Vous savez maintenant comment piloter vos pipelines à la main. Dans la prochaine section, nous verrons comment surveiller la santé de vos jobs et configurer des alertes en cas d'erreur.</em></p>
 
                 </article>
 

@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Dans ce tutoriel, nous allons explorer comment créer un pipeline de données automatisé en utilisant Apache Airflow, un outil puissant pour la gestion des flux de travail. Notre objectif est de récupérer des données depuis GitHub et de les charger dans une base de données Postgres de manière régulière." />
+      <meta name="description" content="Pour que votre pipeline puisse charger des données dans votre base de données, Airflow doit connaître l'adresse, ainsi que les identifiants. Pour des raisons de sécurité, on ne les écrit jamais directement dans le code du DAG. On utilise le menu Connections." />
     
 
     <!-- Page author -->
@@ -563,7 +563,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Dans ce tutoriel, nous allons explorer comment créer un pipeline de données automatisé en utilisant Apache Airflow, un outil puissant pour la gestion des flux de travail. Notre objectif est de récupérer des données depuis GitHub et de les charger dans une base de données Postgres de manière régulière.
+                        Pour que votre pipeline puisse charger des données dans votre base de données, Airflow doit connaître l'adresse, ainsi que les identifiants. Pour des raisons de sécurité, on ne les écrit jamais directement dans le code du DAG. On utilise le menu Connections.
                     </p>
                 </div>
             </div>
@@ -1174,7 +1174,42 @@
                     </div>
                     
 
-                    
+                    <h2 id="acceder-au-menu-des-connexions">Accéder au menu des connexions<a class="headerlink" href="#acceder-au-menu-des-connexions" title="Permanent link">#</a></h2>
+<ol>
+<li>Connectez-vous à l'interface web d'Airflow (généralement sur le port <code>8080</code>).</li>
+<li>Dans la barre de navigation supérieure, cliquez sur <strong>Admin</strong> puis sur <strong>Connections</strong>.</li>
+</ol>
+<h2 id="ajouter-une-nouvelle-connexion">Ajouter une nouvelle connexion<a class="headerlink" href="#ajouter-une-nouvelle-connexion" title="Permanent link">#</a></h2>
+<p>Cliquez sur le bouton + (Add a new record) pour ouvrir le formulaire de création. Remplissez les champs suivants :</p>
+<ul>
+<li><strong>Connection Id</strong> : <code>postgres_default</code> (C'est le nom que vous utiliserez dans votre code Python via le paramètre <code>postgres_conn_id</code>).</li>
+<li><strong>Connection Type</strong> : Sélectionnez <code>Postgres</code>.</li>
+<li><strong>Host</strong> : L'adresse de votre serveur (ex: <code>localhost</code> ou le nom du service docker <code>postgres</code>).</li>
+<li><strong>Schema</strong> : Le nom de votre base de données (ex: <code>my_database</code>).</li>
+<li><strong>Login</strong> : Votre nom d'utilisateur.</li>
+<li><strong>Password</strong> : Votre mot de passe.</li>
+<li><strong>Port</strong> : <code>5432</code>.</li>
+</ul>
+<p><strong>Note</strong> : Si vous utilisez Docker Compose, le "Host" est souvent le nom du service défini dans votre fichier YAML (par exemple <code>postgres</code>).</p>
+<h2 id="utiliser-la-connexion-dans-un-dag">Utiliser la connexion dans un DAG<a class="headerlink" href="#utiliser-la-connexion-dans-un-dag" title="Permanent link">#</a></h2>
+<p>Une fois la connexion enregistrée, vous pouvez l'appeler très simplement dans vos opérateurs. Airflow s'occupe de récupérer les secrets en arrière-plan.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.common.sql.operators.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLExecuteQueryOperator</span> <span class="k">as</span> <span class="n">PostgresOperator</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># ID &#39;postgres_default&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">setup_table</span> <span class="o">=</span> <span class="n">PostgresOperator</span><span class="p">(</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;create_table&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">postgres_conn_id</span><span class="o">=</span><span class="s2">&quot;postgres_default&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">sql</span><span class="o">=</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS my_table (id SERIAL PRIMARY KEY, data TEXT);&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="pourquoi-utiliser-les-connexions">Pourquoi utiliser les connexions ?<a class="headerlink" href="#pourquoi-utiliser-les-connexions" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>Sécurité</strong> : Vos mots de passe ne sont pas visibles sur GitHub ou dans vos fichiers de logs.</li>
+<li><strong>Portabilité</strong> : Vous pouvez avoir une connexion postgres_default sur votre environnement de test et une autre sur votre environnement de production avec le même code de DAG.</li>
+<li><strong>Maintenance</strong> : Si votre mot de passe change, vous le modifiez à un seul endroit dans l'UI d'Airflow.</li>
+</ol>
+<hr />
+<p><em>Félicitations ! Votre environnement est maintenant prêt à communiquer avec le monde extérieur. Dans le module suivant, nous allons mettre tout cela en pratique en créant notre premier script d'extraction de données depuis une API.</em></p>
 
                 </article>
 

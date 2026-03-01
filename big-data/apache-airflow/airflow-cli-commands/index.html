@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Airflow propose une interface en ligne de commande (CLI) puissante pour interagir avec vos DAGs, gérer vos configurations et diagnostiquer vos workflows. Que ce soit pour des tâches simples ou complexes, la CLI d’Airflow est un outil incontournable pour les administrateurs et les développeurs." />
+      <meta name="description" content="La CLI d’Airflow est un outil incontournable pour les administrateurs et les développeurs. Elle permet d'interagir avec vos DAGs, de gérer vos configurations et de diagnostiquer vos workflows sans passer par l'interface graphique." />
     
 
     <!-- Page author -->
@@ -563,7 +563,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Airflow propose une interface en ligne de commande (CLI) puissante pour interagir avec vos DAGs, gérer vos configurations et diagnostiquer vos workflows. Que ce soit pour des tâches simples ou complexes, la CLI d’Airflow est un outil incontournable pour les administrateurs et les développeurs.
+                        La CLI d’Airflow est un outil incontournable pour les administrateurs et les développeurs. Elle permet d'interagir avec vos DAGs, de gérer vos configurations et de diagnostiquer vos workflows sans passer par l'interface graphique.
                     </p>
                 </div>
             </div>
@@ -1174,52 +1174,70 @@
                     </div>
                     
 
-                    <p>Voici quelques commandes utiles pour débuter avec la CLI d'Airflow : </p>
-<h2 id="afficher-les-informations-sur-votre-installation">Afficher les informations sur votre installation<a class="headerlink" href="#afficher-les-informations-sur-votre-installation" title="Permanent link">#</a></h2>
-<p>Utilisez cette commande pour obtenir des détails sur la version d’Airflow, les dépendances installées et la configuration de votre environnement.
+                    <p>L'interface en ligne de commande (CLI) permet d'automatiser des actions de maintenance et de déboguer vos pipelines rapidement. Si vous utilisez Docker, n'oubliez pas d'entrer dans votre conteneur avant d'exécuter ces commandes : <code>docker exec -it &lt;container_name&gt; bash</code>.</p>
+<h2 id="informations-et-configuration">Informations et Configuration<a class="headerlink" href="#informations-et-configuration" title="Permanent link">#</a></h2>
+<p>Ces commandes permettent de vérifier l'état de santé de votre installation i.e les détails sur la version d’Airflow, les dépendances installées et la configuration de votre environnement.</p>
+<h3 id="afficher-les-informations-systeme">Afficher les informations système<a class="headerlink" href="#afficher-les-informations-systeme" title="Permanent link">#</a></h3>
+<p>Obtenez des détails sur la version d’Airflow, les chemins des dossiers (DAGS_FOLDER) et la base de données de métadonnées. Affiche tous les paramètres définis dans votre fichier airflow.cfg ou via les variables d'environnement.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>airflow<span class="w"> </span>info
-</code></pre></div></p>
-<h2 id="lister-la-configuration-actuelle">Lister la configuration actuelle<a class="headerlink" href="#lister-la-configuration-actuelle" title="Permanent link">#</a></h2>
-<p>Cette commande vous permet de consulter tous les paramètres de configuration définis dans Airflow.
+</code></pre></div>
+<h3 id="afficher-les-informations-sur-votre-installation">Afficher les informations sur votre installation<a class="headerlink" href="#afficher-les-informations-sur-votre-installation" title="Permanent link">#</a></h3>
+<p>Utilisez cette commande pour obtenir des détails sur la version d’Airflow, les dépendances installées et la configuration de votre environnement.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>airflow<span class="w"> </span>config<span class="w"> </span>list
-</code></pre></div></p>
-<h2 id="consulter-le-cheat-sheet-airflow">Consulter le cheat-sheet Airflow<a class="headerlink" href="#consulter-le-cheat-sheet-airflow" title="Permanent link">#</a></h2>
-<p>Pour une référence rapide des commandes les plus utilisées dans Airflow, le cheat-sheet est une ressource pratique.
+</code></pre></div>
+<h3 id="aide-memoire-rapide-cheat-sheet">Aide-mémoire rapide (Cheat-Sheet)<a class="headerlink" href="#aide-memoire-rapide-cheat-sheet" title="Permanent link">#</a></h3>
+<p>Pour une référence rapide des commandes les plus utilisées dans Airflow, le cheat-sheet est une ressource pratique.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>airflow<span class="w"> </span>cheat-sheet
-</code></pre></div></p>
-<h2 id="demarrer-le-scheduler">Démarrer le scheduler<a class="headerlink" href="#demarrer-le-scheduler" title="Permanent link">#</a></h2>
-<p>Le scheduler d’Airflow orchestre l'exécution des DAGs en fonction de leurs <code>schedule_interval</code>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>airflow<span class="w"> </span>scheduler
-</code></pre></div></p>
-<h2 id="demarrer-le-webserver">Démarrer le webserver<a class="headerlink" href="#demarrer-le-webserver" title="Permanent link">#</a></h2>
-<p>Le webserver d’Airflow lance l'interface utilisateur accessible via un navigateur.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>airflow<span class="w"> </span>webserver
-</code></pre></div></p>
-<h2 id="executer-un-dag">Exécuter un DAG<a class="headerlink" href="#executer-un-dag" title="Permanent link">#</a></h2>
-<p>Pour exécuter un DAG sur une plage de dates spécifique (historique), vous pouvez utiliser la commande suivante :
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>airflow<span class="w"> </span>dags<span class="w"> </span>backfill<span class="w"> </span>--start-date<span class="w"> </span><span class="m">2024</span>-09-01<span class="w"> </span>--end-date<span class="w"> </span><span class="m">2024</span>-09-23<span class="w"> </span>&lt;your_dag_id&gt;
-</code></pre></div></p>
+</code></pre></div>
+<h2 id="gestion-des-services">Gestion des Services<a class="headerlink" href="#gestion-des-services" title="Permanent link">#</a></h2>
+<p>Bien que gérés par Docker en production, vous pouvez avoir besoin de lancer les composants manuellement en développement.</p>
+<ul>
+<li><strong>Le Scheduler</strong> (Orchestre les tâches) : <code>airflow scheduler</code></li>
+<li><strong>Le Webserver</strong> (Interface UI) : <code>airflow webserver</code></li>
+</ul>
+<h2 id="operations-sur-les-dags">Opérations sur les DAGs<a class="headerlink" href="#operations-sur-les-dags" title="Permanent link">#</a></h2>
+<p>C'est la partie la plus utilisée au quotidien par les Data Engineers.</p>
+<h3 id="executer-un-historique-backfill">Exécuter un historique (Backfill)<a class="headerlink" href="#executer-un-historique-backfill" title="Permanent link">#</a></h3>
+<p>Pour rattraper des données sur une plage précise. Airflow créera les instances de DAG pour chaque intervalle.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Syntaxe : airflow dags backfill --start-date YYYY-MM-DD --end-date YYYY-MM-DD &lt;dag_id&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>airflow<span class="w"> </span>dags<span class="w"> </span>backfill<span class="w"> </span>--start-date<span class="w"> </span><span class="m">2024</span>-09-01<span class="w"> </span>--end-date<span class="w"> </span><span class="m">2024</span>-09-30<span class="w"> </span>&lt;dag_id&gt;
+</code></pre></div>
 <ul>
 <li><code>--start-date</code> : La date de début (au format YYYY-MM-DD) à partir de laquelle le DAG sera exécuté.</li>
 <li><code>--end-date</code> : La date de fin (au format YYYY-MM-DD) jusqu’à laquelle le DAG sera exécuté.</li>
-<li><code>&lt;your_dag_id&gt;</code> : Remplacez ce paramètre par l'identifiant de votre DAG.</li>
+<li><code>&lt;dag_id&gt;</code> : Remplacez ce paramètre par l'identifiant de votre DAG.</li>
 </ul>
-<p>Exemple :<br>
-Si votre DAG s'appelle <code>etl_sales</code>, la commande sera :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>airflow<span class="w"> </span>dags<span class="w"> </span>backfill<span class="w"> </span>--start-date<span class="w"> </span><span class="m">2024</span>-09-01<span class="w"> </span>--end-date<span class="w"> </span><span class="m">2024</span>-09-23<span class="w"> </span>etl_sales
+<h3 id="supprimer-un-dag">Supprimer un DAG<a class="headerlink" href="#supprimer-un-dag" title="Permanent link">#</a></h3>
+<p>Cette commande supprime le DAG de la base de données (attention, elle ne supprime pas le fichier <code>.py</code> sur le disque).
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>airflow<span class="w"> </span>dags<span class="w"> </span>delete<span class="w"> </span>&lt;dag_id&gt;<span class="w"> </span>--yes
+</code></pre></div></p>
+<h3 id="lister-les-dags">Lister les DAGs<a class="headerlink" href="#lister-les-dags" title="Permanent link">#</a></h3>
+<p>Affiche tous les DAGs actuellement chargés par Airflow.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>airflow<span class="w"> </span>dags<span class="w"> </span>list
 </code></pre></div>
-<h2 id="supprimer-un-dag">Supprimer un DAG<a class="headerlink" href="#supprimer-un-dag" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>airflow<span class="w"> </span>dags<span class="w"> </span>delete<span class="w"> </span>etl_sales<span class="w"> </span>-y
+<h2 id="operations-sur-les-taches">Opérations sur les Tâches<a class="headerlink" href="#operations-sur-les-taches" title="Permanent link">#</a></h2>
+<h3 id="reinitialiser-des-taches-clear">Réinitialiser des tâches (Clear)<a class="headerlink" href="#reinitialiser-des-taches-clear" title="Permanent link">#</a></h3>
+<p>Si vous voulez relancer une tâche spécifique sur une période donnée (par exemple après une correction de bug), utilisez <code>clear</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>airflow<span class="w"> </span>tasks<span class="w"> </span>clear<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>--task-regex<span class="w"> </span>&lt;task_id&gt;<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span>--start-date<span class="w"> </span><span class="m">2024</span>-09-01<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span>--end-date<span class="w"> </span><span class="m">2024</span>-09-30<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span>&lt;dag_id&gt;
 </code></pre></div>
-<h2 id="executer-une-tache">Exécuter une tâche<a class="headerlink" href="#executer-une-tache" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>airflow<span class="w"> </span>tasks<span class="w"> </span>clear<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>--task-regex<span class="w"> </span>task_extract_daily_sales<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>--start-date<span class="w"> </span><span class="m">2025</span>-09-18<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>--end-date<span class="w"> </span><span class="m">2025</span>-10-28<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span>etl_sales
+<h3 id="tester-une-tache-localement">Tester une tâche localement<a class="headerlink" href="#tester-une-tache-localement" title="Permanent link">#</a></h3>
+<p>Exécute une instance de tâche sans vérifier les dépendances et sans enregistrer de résultat en base de données. Parfait pour le développement.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>airflow<span class="w"> </span>tasks<span class="w"> </span><span class="nb">test</span><span class="w"> </span>&lt;dag_id&gt;<span class="w"> </span>&lt;task_id&gt;<span class="w"> </span><span class="m">2024</span>-09-01
+</code></pre></div>
+<h2 id="gestion-des-variables-et-connexions">Gestion des Variables et Connexions<a class="headerlink" href="#gestion-des-variables-et-connexions" title="Permanent link">#</a></h2>
+<p>Vous pouvez aussi gérer vos secrets via la CLI, ce qui est très utile pour les scripts de déploiement (CI/CD).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Lister les connexions</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>airflow<span class="w"> </span>connections<span class="w"> </span>list
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Exporter les variables vers un fichier JSON</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>airflow<span class="w"> </span>variables<span class="w"> </span><span class="nb">export</span><span class="w"> </span>mes_variables.json
 </code></pre></div>
 <hr />
-<p><em>Bravo, vous avez créé votre premier pipeline avec Airflow. Dans la prochaine section, nous explorerons en détail chaque composant du pipeline et approfondirons votre compréhension d'Apache Airflow.</em></p>
+<p><em>La maîtrise de la CLI vous rendra beaucoup plus efficace pour le diagnostic d'erreurs complexes. Dans la prochaine section, nous explorerons comment monitorer vos pipelines et configurer des alertes.</em></p>
 
                 </article>
 

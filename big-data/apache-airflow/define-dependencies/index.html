@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="L'interface web Apache Airflow permet de superviser et de gérer les DAGs (Directed Acyclic Graphs) de manière visuelle. Cette interface intuitive facilite la gestion des workflows, leur planification, et la surveillance des tâches. Dans cette section, nous allons explorer les principales sections de l'interface d'Apache Airflow et comment naviguer à travers ses fonctionnalités." />
+      <meta name="description" content="Dans Airflow, l'ordre d'exécution est primordial. On distingue deux types de dépendances : les dépendances intra-DAG (entre tâches d'un même fichier) et les dépendances inter-DAG (entre deux pipelines distincts)." />
     
 
     <!-- Page author -->
@@ -563,7 +563,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        L'interface web Apache Airflow permet de superviser et de gérer les DAGs (Directed Acyclic Graphs) de manière visuelle. Cette interface intuitive facilite la gestion des workflows, leur planification, et la surveillance des tâches. Dans cette section, nous allons explorer les principales sections de l'interface d'Apache Airflow et comment naviguer à travers ses fonctionnalités.
+                        Dans Airflow, l'ordre d'exécution est primordial. On distingue deux types de dépendances : les dépendances intra-DAG (entre tâches d'un même fichier) et les dépendances inter-DAG (entre deux pipelines distincts).
                     </p>
                 </div>
             </div>
@@ -1174,19 +1174,51 @@
                     </div>
                     
 
-                    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.sensors.external_task</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExternalTaskSensor</span>
+                    <h2 id="dependances-entre-taches-intra-dag">Dépendances entre tâches (Intra-DAG)<a class="headerlink" href="#dependances-entre-taches-intra-dag" title="Permanent link">#</a></h2>
+<p>C'est la méthode la plus courante. On utilise les opérateurs <code>&gt;&gt;</code> (amont vers aval) et <code>&lt;&lt;</code> (aval vers amont).</p>
+<h1 id="la-tache-b-attend-que-a-reussisse">La tâche B attend que A réussisse<a class="headerlink" href="#la-tache-b-attend-que-a-reussisse" title="Permanent link">#</a></h1>
+<p>task_a &gt;&gt; task_b</p>
+<h1 id="on-peut-aussi-chainer-plusieurs-taches">On peut aussi chaîner plusieurs tâches<a class="headerlink" href="#on-peut-aussi-chainer-plusieurs-taches" title="Permanent link">#</a></h1>
+<p>task_a &gt;&gt; [task_b, task_c] &gt;&gt; task_d</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># La tâche B attend que A réussisse</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">task_a</span> <span class="o">&gt;&gt;</span> <span class="n">task_b</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># On peut aussi chaîner plusieurs tâches</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">task_a</span> <span class="o">&gt;&gt;</span> <span class="p">[</span><span class="n">task_b</span><span class="p">,</span> <span class="n">task_c</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">task_d</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">check_kpis_etl</span> <span class="o">=</span> <span class="n">ExternalTaskSensor</span><span class="p">(</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;check_previous_etl&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">external_dag_id</span><span class="o">=</span><span class="s2">&quot;fecth_oltp_data&quot;</span><span class="p">,</span>  
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">external_task_id</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">execution_delta</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">40</span><span class="p">),</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;reschedule&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">)</span>
+<h2 id="dependances-entre-dags-inter-dag">Dépendances entre DAGs (Inter-DAG)<a class="headerlink" href="#dependances-entre-dags-inter-dag" title="Permanent link">#</a></h2>
+<p>Parfois, votre pipeline de "Reporting" ne doit démarrer que si le pipeline "Ingestion" est terminé. Comme ce sont deux fichiers différents, l'opérateur <code>&gt;&gt;</code> ne fonctionne pas. C'est là qu'interviennent les <strong>Sensors</strong>.</p>
+<h3 id="lexternaltasksensor">L'ExternalTaskSensor<a class="headerlink" href="#lexternaltasksensor" title="Permanent link">#</a></h3>
+<p>Le <code>ExternalTaskSensor</code> est un capteur qui "écoute" l'état d'une tâche dans un autre DAG.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">timedelta</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.sensors.external_task</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExternalTaskSensor</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">check_kpis_etl</span> <span class="o">=</span> <span class="n">ExternalTaskSensor</span><span class="p">(</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;check_previous_etl&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">external_dag_id</span><span class="o">=</span><span class="s2">&quot;fecth_oltp_data&quot;</span><span class="p">,</span> <span class="c1"># Le DAG cible</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">external_task_id</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="c1"># La tâche spécifique à attendre</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">execution_delta</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">40</span><span class="p">),</span> <span class="c1"># le delta entre les deux DAGs est de 40 minutes.</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;reschedule&quot;</span><span class="p">,</span> <span class="c1"># Mode &#39;reschedule&#39; : libère le worker entre deux vérifications</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="c1"># Temps maximum d&#39;attente avant d&#39;échouer (en secondes)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="les-regles-de-declenchement-trigger-rules">Les règles de déclenchement (Trigger Rules)<a class="headerlink" href="#les-regles-de-declenchement-trigger-rules" title="Permanent link">#</a></h2>
+<p>Par défaut, une tâche ne s'exécute que si toutes les tâches précédentes ont réussi (<code>all_success</code>). Mais vous pouvez modifier ce comportement :</p>
+<ul>
+<li><code>all_done</code> : La tâche s'exécute dès que les précédentes sont finies, peu importe le résultat (succès ou échec).</li>
+<li><code>one_success</code> : Dès qu'au moins une tâche parente réussit.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.models.trigger_rule</span><span class="w"> </span><span class="kn">import</span> <span class="n">TriggerRule</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.python</span><span class="w"> </span><span class="kn">import</span> <span class="n">PythonOperator</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">cleanup_task</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;cleanup&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">python_callable</span><span class="o">=</span><span class="n">clean_temp_files</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">trigger_rule</span><span class="o">=</span><span class="n">TriggerRule</span><span class="o">.</span><span class="n">ALL_DONE</span> <span class="c1"># S&#39;exécute même en cas d&#39;erreur avant</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">)</span>
 </code></pre></div>
 <hr />
-<p><em>.</em></p>
+<p><em>Maîtriser les dépendances est la clé pour créer des systèmes de données résilients. Dans le module suivant, nous verrons comment gérer les variables et les connexions pour ne plus jamais écrire de mots de passe en dur dans vos codes.</em></p>
 
                 </article>
 
