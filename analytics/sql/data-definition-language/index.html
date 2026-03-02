@@ -983,15 +983,19 @@ Cette requête crée la table <code>Produits</code> de trois colonnes <code>idPr
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">idProduit</span><span class="p">;</span>
 </code></pre></div>
+<h3 id="modifier-la-valeur-par-defaut-dune-colonne">Modifier la valeur par défaut d'une colonne<a class="headerlink" href="#modifier-la-valeur-par-defaut-dune-colonne" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">prixUnitaire</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</code></pre></div>
 <h2 id="supprimer-une-table">Supprimer une table<a class="headerlink" href="#supprimer-une-table" title="Permanent link">#</a></h2>
 <p>Tout d'abord, nous avons besoin d'une table
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Produits</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Produits</span><span class="p">;</span>
 </code></pre></div></p>
 <p>Pour éviter d'avoir une erreur lorsque la tablle n'existe pas on peut rajouter une vérification.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">Produits</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">Produits</span><span class="p">;</span>
 </code></pre></div></p>
 <p>Dans certaines situations l'on souhaite simplement supprimer les lignes d'une table sans supprimer la table elle-même.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">TRUNCATE</span><span class="w"> </span><span class="n">Produits</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">TRUNCATE</span><span class="w"> </span><span class="n">Produits</span><span class="p">;</span>
 </code></pre></div></p>
 <hr />
 <p><em>Pour découvrir les autres requêtes sur les objets, je vous recommande cette lecture</em></p>
