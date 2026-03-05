@@ -1,5 +1,36 @@
 
 
+/******************************************************************************
+** JavaScript pour gérer la pagination du blog
+******************************************************************************/
+// Logique pour gérer le changement de page et les couleurs
+document.addEventListener('DOMContentLoaded', function() {
+    const navButtons = document.querySelectorAll('.page-number');
+    const allPages = document.querySelectorAll('.blog-page');
+
+    navButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetPage = document.getElementById(targetId);
+
+            if (targetPage) {
+                // 1. Retirer la classe active de tous les boutons
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // 2. Retirer la classe active de toutes les pages
+                allPages.forEach(page => page.classList.remove('active'));
+
+                // 3. Ajouter la classe active sur les éléments cliqués
+                this.classList.add('active');
+                targetPage.classList.add('active');
+
+                // 4. Retour en haut de la zone de contenu
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+});
+
 
 /******************************************************************************
 ** JavaScript pour copier les blocs de code
