@@ -445,181 +445,170 @@ white-space: nowrap;
 /******************************************************************************/
 /* --- Mise en page globale --- */
 .md-typeset {
-font-family: 'Work Sans', sans-serif;
-color: #333;
-line-height: 1.6;
-max-width: 900px;
-margin: 0 auto;
-padding: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* --- Gestion de l'affichage des pages --- /
-/ Masque toutes les pages par défaut */
-.pages .page {
-display: none;
+/* Seule la page avec la classe .active est affichée */
+.pages .page.active {
+    display: block !important;
+    animation: fadeIn 0.3s ease;
 }
 
-/* Affiche la page 1 par défaut au chargement ou si aucune ancre n'est présente */
-.pages .page:first-child {
-display: block;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
+/******************************************************************************/
 
-/* Affiche la page ciblée par l'URL (ex: #page2) */
-.pages .page:target {
-display: block !important;
-}
-
-/* Masque la première page si une autre page est ciblée */
-.pages:has(.page:target) .page:first-child:not(:target) {
-display: none;
-}
 
 /* --- Conteneur des articles --- */
 .blog-post {
-background: #ffffff;
-border-radius: 12px;
-padding: 24px;
-margin-bottom: 30px;
-box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-border: 1px solid #f0f0f0;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blog-post:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-/* --- Titres des articles --- */
 .blog-post-title {
-margin-top: 0;
-margin-bottom: 8px;
-font-size: 1.6rem;
-font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .blog-post-title .link {
-color: #2c3e50;
-text-decoration: none;
-transition: color 0.2s;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 .blog-post-title .link:hover {
-color: #3498db;
+    color: #3498db;
 }
 
 /* --- Métadonnées (Date) --- */
 .blog-post-extra {
-font-size: 0.85rem;
-color: #7f8c8d;
-margin-bottom: 15px;
-display: flex;
-align-items: center;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .blog-post-extra::before {
-content: "📅";
-margin-right: 8px;
+    content: "📅";
+    margin-right: 8px;
 }
+/******************************************************************************/
 
 /* --- Tags --- */
 .blogging-tags-grid {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
 }
 
 .blogging-tag {
-text-decoration: none;
+    text-decoration: none;
 }
 
 .blogging-tag code {
-background: #eef2f7;
-color: #475569;
-padding: 4px 10px;
-border-radius: 20px;
-font-size: 0.8rem;
-border: none;
-transition: background 0.2s, color 0.2s;
-font-family: inherit;
+    background: #eef2f7;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
 }
 
 .blogging-tag:hover code {
-background: #3498db;
-color: #ffffff;
+    background: #3498db;
+    color: #ffffff;
 }
 
 /* --- Description --- */
 .blog-post-description {
-color: #555;
-margin-bottom: 20px;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-overflow: hidden;
+    color: #555;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* --- Bouton Lire Plus --- */
 .md-button {
-display: inline-block;
-padding: 8px 20px;
-background-color: #3498db;
-color: white !important;
-border-radius: 6px;
-text-decoration: none;
-font-weight: 600;
-font-size: 0.9rem;
-transition: background 0.3s;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #3498db;
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
 }
 
 .md-button:hover {
-background-color: #2980b9;
+    background-color: #2980b9;
 }
+/******************************************************************************/
 
-/* --- Pagination --- */
+
+/* --- Pagination UI --- */
 .blog-center {
-margin-top: 50px;
-text-align: center;
-border-top: 1px solid #eee;
-padding-top: 30px;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
 }
 
 .blog-pagination {
-display: flex;
-justify-content: center;
-gap: 10px;
-margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .page-number {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 40px;
-height: 40px;
-border-radius: 8px;
-background: #f8f9fa;
-color: #333;
-text-decoration: none;
-font-weight: bold;
-border: 1px solid #dee2e6;
-transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
 }
 
 .page-number:hover {
-background: #e9ecef;
-border-color: #adb5bd;
+    background: #e9ecef;
+    border-color: #adb5bd;
 }
 
 .page-number.active {
-background-color: #3498db !important;
-color: white !important;
-border-color: #3498db !important;
-}
-
-.blog-center div {
-font-size: 0.9rem;
-color: #95a5a6;
+    background-color: #3498db !important;
+    color: white !important;
+    border-color: #3498db !important;
 }
 /******************************************************************************/
