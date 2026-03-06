@@ -10,6 +10,20 @@
     --aj-transition: all 0.3s ease-in-out;
 }
 
+
+/* .container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  width: 100% !important;
+  padding-right: var(1rem) !important;
+  padding-left: var(1rem) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+} */
+
+
 /* --- UTILITAIRES --- */
 /* .algo-jungle-home, .algo-jungle-article { overflow-x: hidden; } */
 .cust-justify { text-align: justify; }

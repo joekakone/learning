@@ -4,45 +4,45 @@
 ** JavaScript pour gérer la pagination du blog
 ******************************************************************************/
 // Logique pour gérer le changement de page et les couleurs
-// document.addEventListener('DOMContentLoaded', function() {
-//     const navButtons = document.querySelectorAll('.page-number');
-//     const allPages = document.querySelectorAll('.pages .page');
+document.addEventListener('DOMContentLoaded', function() {
+    const navButtons = document.querySelectorAll('.page-number');
+    const allPages = document.querySelectorAll('.pages .page');
 
-//     navButtons.forEach(button => {
-//         button.addEventListener('click', function(e) {
-//             // Empêche le saut brusque de l'ancre
-//             e.preventDefault();
+    navButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Empêche le saut brusque de l'ancre
+            e.preventDefault();
 
-//             const targetId = this.getAttribute('data-target');
-//             const targetPage = document.getElementById(targetId);
+            const targetId = this.getAttribute('data-target');
+            const targetPage = document.getElementById(targetId);
 
-//             if (targetPage) {
-//                 // 1. Nettoyage : Retire la classe active de TOUT (boutons et pages)
-//                 navButtons.forEach(btn => btn.classList.remove('active'));
-//                 allPages.forEach(page => page.classList.remove('active'));
+            if (targetPage) {
+                // 1. Nettoyage : Retire la classe active de TOUT (boutons et pages)
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                allPages.forEach(page => page.classList.remove('active'));
 
-//                 // 2. Activation : Ajoute la classe active sur les éléments ciblés
-//                 this.classList.add('active');
-//                 targetPage.classList.add('active');
+                // 2. Activation : Ajoute la classe active sur les éléments ciblés
+                this.classList.add('active');
+                targetPage.classList.add('active');
 
-//                 // 3. Navigation visuelle (Scroll haut de page)
-//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+                // 3. Navigation visuelle (Scroll haut de page)
+                window.scrollTo({ top: 0, behavior: 'smooth' });
                 
-//                 // 4. (Optionnel) Mise à jour de l'URL sans rechargement pour l'historique
-//                 history.pushState(null, null, '#' + targetId);
-//             }
-//         });
-//     });
+                // 4. (Optionnel) Mise à jour de l'URL sans rechargement pour l'historique
+                history.pushState(null, null, '#' + targetId);
+            }
+        });
+    });
 
-//     // Gestion du bouton "Précédent/Suivant" du navigateur
-//     window.addEventListener('popstate', function() {
-//         const hash = window.location.hash.replace('#', '');
-//         if (hash) {
-//             const btn = document.querySelector(`.page-number[data-target="${hash}"]`);
-//             if (btn) btn.click();
-//         }
-//     });
-// });
+    // Gestion du bouton "Précédent/Suivant" du navigateur
+    window.addEventListener('popstate', function() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+            const btn = document.querySelector(`.page-number[data-target="${hash}"]`);
+            if (btn) btn.click();
+        }
+    });
+});
 
 
 /******************************************************************************
