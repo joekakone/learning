@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Vous souhaitez partager une image Docker et vous vous demandez comment procéder, Docker Hub est l'homme de la situtation." />
+      <meta name="description" content="La CLI d’Airflow est un outil incontournable pour les administrateurs et les développeurs. Elle permet d'interagir avec vos DAGs, de gérer vos configurations et de diagnostiquer vos workflows sans passer par l'interface graphique." />
     
 
     <!-- Page author -->
@@ -21,17 +21,17 @@
 
     <!-- Canonical -->
     
-      <link rel="canonical" href="https://algojungle.github.io/mlops/docker/docker-hub/" />
+      <link rel="canonical" href="https://algojungle.github.io/big-data/apache-airflow/config-mailing/" />
     
 
     <!-- Previous page -->
     
-      <link rel="prev" href="../interact-with-docker-container/" />
+      <link rel="prev" href="../airflow-cli-commands/" />
     
 
     <!-- Next page -->
     
-      <link rel="next" href="../docker-compose/" />
+      <link rel="next" href="../creer-une-connexion-de-source-de-donnees/" />
     
 
     <!-- Favicon -->
@@ -42,7 +42,7 @@
   
 
   <title>
-    Publier sur Docker Hub | Algo Jungle
+    Configurer l'envoi de mail | Algo Jungle
   </title>
 
   <!-- Google Fonts -->
@@ -360,6 +360,8 @@
   <!-- Determine classes -->
   
   
+    
+  
 
   <!-- Navigation item with nested items -->
   
@@ -369,7 +371,7 @@
     
       <li class="nav-item">
         
-        <a href="../../../big-data/" class="nav-link link-scroll">
+        <a href="../../" class="nav-link link-scroll active">
           
   
 
@@ -462,8 +464,6 @@
   <!-- Determine classes -->
   
   
-    
-  
 
   <!-- Navigation item with nested items -->
   
@@ -473,7 +473,7 @@
     
       <li class="nav-item">
         
-        <a href="../../" class="nav-link link-scroll active">
+        <a href="../../../mlops/" class="nav-link link-scroll">
           
   
 
@@ -548,7 +548,7 @@
             <!-- Titre avec marge haute pour le descendre -->
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Publier votre image sur Docker Hub</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Configurer l'envoi de mail</h1>
                 
             </div>
 
@@ -563,7 +563,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Vous souhaitez partager une image Docker et vous vous demandez comment procéder, Docker Hub est l'homme de la situtation.
+                        La CLI d’Airflow est un outil incontournable pour les administrateurs et les développeurs. Elle permet d'interagir avec vos DAGs, de gérer vos configurations et de diagnostiquer vos workflows sans passer par l'interface graphique.
                     </p>
                 </div>
             </div>
@@ -612,12 +612,6 @@
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
             
             
 
@@ -626,7 +620,7 @@
             <a class="nav-link py-1 text-muted"
                 href="../../"
                 style="padding-left: 0px; font-size: 1.0rem;">
-                Introduction aux Opérations de Machine Learning
+                Les fondamentaux du Big Data
             </a>
             
             
@@ -644,19 +638,19 @@
                     
                     
                     <a class="nav-link flex-grow-1 text-dark"
-                        href="../../jupyter/" style="padding-left: 0px;">
-                        JupyterLab
+                        href="../../analysis-services/" style="padding-left: 0px;">
+                        Analysis Services
                     </a>
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2667"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1498"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-2667">
+                <div class="collapse " id="collapse-1498">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -671,9 +665,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../jupyter/installer/"
+                href="../../analysis-services/installer/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Installer JupyterLab
+                Installer Analysis Services
             </a>
             
             
@@ -688,9 +682,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../jupyter/configurer-jupyter/"
+                href="../../analysis-services/preparer-les-donnees/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Configurer JupyterLab
+                Préparer les données
             </a>
             
             
@@ -705,9 +699,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../jupyter/installer-extensions-jupyter/"
+                href="../../analysis-services/creer-un-cube-tabulaire/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Installer des extensions
+                Créer un cube tabulaire
             </a>
             
             
@@ -722,9 +716,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../jupyter/serveur-distant/"
+                href="../../analysis-services/creer-un-cube-multi-dimensionnel/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Déployer sur un serveur distant
+                Créer un cube multi-dimensionnel
             </a>
             
             
@@ -739,7 +733,41 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../jupyter/ressources/"
+                href="../../analysis-services/actualiser-un-cube/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Actualiser un cube
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../analysis-services/exploiter-un-cube-dans-excel/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Requêter un cube dans Excel
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../analysis-services/ressources/"
                 style="padding-left: 15px; font-size: 0.95rem;">
                 Ressources
             </a>
@@ -769,19 +797,19 @@
                     
                     
                     <a class="nav-link flex-grow-1 text-dark"
-                        href="../../mlflow/" style="padding-left: 0px;">
-                        MLFlow
+                        href="../../mongo-db/" style="padding-left: 0px;">
+                        MongoDB
                     </a>
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7621"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-460"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7621">
+                <div class="collapse " id="collapse-460">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -796,9 +824,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../mlflow/installer/"
+                href="../../mongo-db/installer/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Installer MLFlow
+                Installer Mongo DB
             </a>
             
             
@@ -813,9 +841,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../mlflow/demarrer/"
+                href="../../mongo-db/interagir-avec-mongo-db/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Démarrer avec MLflow
+                Interagir avec Mongo DB
             </a>
             
             
@@ -830,7 +858,24 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../mlflow/ressources/"
+                href="../../mongo-db/applications/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Applications
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../mongo-db/ressources/"
                 style="padding-left: 15px; font-size: 0.95rem;">
                 Ressources
             </a>
@@ -860,19 +905,19 @@
                     
                     
                     <a class="nav-link flex-grow-1 text-dark"
-                        href="../../flask/" style="padding-left: 0px;">
-                        Flask
+                        href="../../neo4j/" style="padding-left: 0px;">
+                        Neo4j
                     </a>
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4374"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6004"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-4374">
+                <div class="collapse " id="collapse-6004">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -887,9 +932,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../flask/installer/"
+                href="../../neo4j/installer/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Installer Flask
+                Installer Neo4j
             </a>
             
             
@@ -904,9 +949,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../flask/demarrer/"
+                href="../../neo4j/creer-des-noeuds/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Démarrer avec Flask
+                Créer des nœuds
             </a>
             
             
@@ -921,9 +966,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../flask/structurer-le-projet/"
+                href="../../neo4j/applications/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Structurer un projet Flask
+                Applications
             </a>
             
             
@@ -938,92 +983,7 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../flask/ajouter-une-base-de-donnees/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Ajouter une base de données
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../flask/creer-des-vues/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Créer des vues
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../flask/creer-une-api-pour-scikit-learn/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Créer une API pour Scikit-learn
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../flask/deployer-avec-docker/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Déployer avec Docker
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../flask/fast-api/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Prendre en main FastAPI
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../flask/ressources/"
+                href="../../neo4j/ressources/"
                 style="padding-left: 15px; font-size: 0.95rem;">
                 Ressources
             </a>
@@ -1053,19 +1013,19 @@
                     
                     
                     <a class="nav-link flex-grow-1 text-dark"
-                        href="../../gradio/" style="padding-left: 0px;">
-                        Gradio
+                        href="../../apache-spark/" style="padding-left: 0px;">
+                        Apache Spark
                     </a>
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4827"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5315"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-4827">
+                <div class="collapse " id="collapse-5315">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -1080,9 +1040,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../gradio/installer/"
+                href="../../apache-spark/installer/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Installer Gradio
+                Installer PySpark
             </a>
             
             
@@ -1097,9 +1057,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../gradio/demarrer/"
+                href="../../apache-spark/01-get-started/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Démarrer avec Gradio
+                Démarrer avec PySpark
             </a>
             
             
@@ -1114,9 +1074,60 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../gradio/deployer-avec-docker/"
+                href="../../apache-spark/02-import-export/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Déployer avec Docker
+                Import & Export
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../apache-spark/03-work-with-postgres/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Base de données
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../apache-spark/applications/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Applications
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../apache-spark/ressources/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ressources
             </a>
             
             
@@ -1145,18 +1156,18 @@
                     
                     <a class="nav-link flex-grow-1 active-parent fw-bold"
                         href="../" style="padding-left: 0px;">
-                        Docker
+                        Apache Airflow
                     </a>
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9865"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-293"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-9865">
+                <div class="collapse show" id="collapse-293">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -1173,7 +1184,7 @@
             <a class="nav-link py-1 text-muted"
                 href="../installer/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Installer Docker
+                Installer Airflow
             </a>
             
             
@@ -1188,9 +1199,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../create-docker-image/"
+                href="../interface/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Créer une image
+                Interface Airflow
             </a>
             
             
@@ -1205,9 +1216,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../deploy-docker-container/"
+                href="../get-started/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Déployer un conteneur
+                Créer un DAG
             </a>
             
             
@@ -1222,9 +1233,60 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../interact-with-docker-container/"
+                href="../schedule-dags/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Interagir avec un conteneur
+                Planifier un DAG
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../run-dags/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Exécuter un DAG
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../define-dependencies/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Définir des dépendances
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../airflow-cli-commands/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Commandes Airflow CLI
             </a>
             
             
@@ -1241,7 +1303,7 @@
             <a class="nav-link py-1 fw-bold text-primary active-child"
                 href="./"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Publier sur Docker Hub
+                Configurer l'envoi de mail
             </a>
             
             
@@ -1256,9 +1318,26 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../docker-compose/"
+                href="../creer-une-connexion-de-source-de-donnees/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Docker Compose
+                Créer une connexion
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../applications/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Applications
             </a>
             
             
@@ -1303,19 +1382,19 @@
                     
                     
                     <a class="nav-link flex-grow-1 text-dark"
-                        href="../../bash/" style="padding-left: 0px;">
-                        BASH
+                        href="../../talend/" style="padding-left: 0px;">
+                        Talend (Data Integration)
                     </a>
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7475"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1100"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7475">
+                <div class="collapse " id="collapse-1100">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -1330,58 +1409,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../bash/installer/"
+                href="../../talend/installer/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Installer Git Bash
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- SECTION AVEC ENFANTS -->
-            <div class="nav-item mb-1">
-                <div class="d-flex justify-content-between align-items-center">
-
-                    
-                    
-                    <a class="nav-link flex-grow-1 text-dark"
-                        href="../../bash/commandes-usuelles/se-deplacer/" style="padding-left: 10px;">
-                        Commandes usuelles
-                    </a>
-
-                    <button
-                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-719"
-                        aria-expanded="false">
-                        <i class="fas fa-chevron-right chevron-icon"></i>
-                    </button>
-                </div>
-
-                <div class="collapse " id="collapse-719">
-                    <nav class="nav flex-column ms-2 mt-1">
-
-                        
-                        
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/contenu-d-un-repertoire/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.2 Contenu d'un répertoire
+                Installer Talend
             </a>
             
             
@@ -1396,265 +1426,9 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/consulter-un-fichier/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.3 Consulter un fichier
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/creer-un-repertoire/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.4 Créer un répertoire
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/creer-un-fichier/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.5 Créer un fichier
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/copier-un-fichier/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.6 Copier un fichier
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/deplacer-un-fichier/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.7 Déplacer un fichier
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/supprimer-un-fichier/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.8 Supprimer un fichier
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/editer-un-fichier/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.9 Éditer un fichier
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/commandes-usuelles/autres-commandes/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                1.10 Autres commandes
-            </a>
-            
-            
-            
-                        
-                        
-
-                    </nav>
-                </div>
-            </div>
-
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- SECTION AVEC ENFANTS -->
-            <div class="nav-item mb-1">
-                <div class="d-flex justify-content-between align-items-center">
-
-                    
-                    
-                    <a class="nav-link flex-grow-1 text-dark"
-                        href="../../bash/programmation/affichage/" style="padding-left: 10px;">
-                        Programmation
-                    </a>
-
-                    <button
-                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-3204"
-                        aria-expanded="false">
-                        <i class="fas fa-chevron-right chevron-icon"></i>
-                    </button>
-                </div>
-
-                <div class="collapse " id="collapse-3204">
-                    <nav class="nav flex-column ms-2 mt-1">
-
-                        
-                        
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/programmation/saisie/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                2.2 Saisie
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/programmation/conditions/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                2.3 Conditions
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/programmation/choix/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                2.4 Choix
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/programmation/boucles/"
-                style="padding-left: 30px; font-size: 0.9rem;">
-                2.5 Boucle
-            </a>
-            
-            
-            
-                        
-                        
-
-                    </nav>
-                </div>
-            </div>
-
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../bash/bash/"
+                href="../../talend/decouvrir-interface/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                Bash
+                Découvrir l'interface
             </a>
             
             
@@ -1669,259 +1443,128 @@
             
             <!-- LIEN SIMPLE -->
             <a class="nav-link py-1 text-muted"
-                href="../../bash/ressources/"
+                href="../../talend/creer-une-connexion-de-base-de-donnees/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer une connexion de BD
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../talend/creer-un-job/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer un job
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../talend/afficher-des-messages/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Afficher des messages
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../talend/fonctions-predefinies/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Fonctions prédéfinies
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../talend/manipuler-les-dates/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Manipuler les dates
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../talend/exporter-un-job/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Exporter un job
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../talend/applications/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Applications
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../talend/ressources/"
                 style="padding-left: 15px; font-size: 0.95rem;">
                 Ressources
-            </a>
-            
-            
-            
-                        
-                        
-
-                    </nav>
-                </div>
-            </div>
-
-            
-            
-            
-                    
-                    
-            
-            
-
-            
-            <!-- SECTION AVEC ENFANTS -->
-            <div class="nav-item mb-1">
-                <div class="d-flex justify-content-between align-items-center">
-
-                    
-                    
-                    <a class="nav-link flex-grow-1 text-dark"
-                        href="../../git/" style="padding-left: 0px;">
-                        Git et Github
-                    </a>
-
-                    <button
-                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-576"
-                        aria-expanded="false">
-                        <i class="fas fa-chevron-right chevron-icon"></i>
-                    </button>
-                </div>
-
-                <div class="collapse " id="collapse-576">
-                    <nav class="nav flex-column ms-2 mt-1">
-
-                        
-                        
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../git/installer/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Installer Git Bash
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../git/demarrer-avec-git/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Démarrer avec Git
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../git/gerer-les-branches/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Gérer les branches
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../git/creer-un-compte-github/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Créer un compte GitHub
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../git/demarrer-avec-github/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Démarrer avec GitHub
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../git/ressources/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Ressources
-            </a>
-            
-            
-            
-                        
-                        
-
-                    </nav>
-                </div>
-            </div>
-
-            
-            
-            
-                    
-                    
-            
-            
-
-            
-            <!-- SECTION AVEC ENFANTS -->
-            <div class="nav-item mb-1">
-                <div class="d-flex justify-content-between align-items-center">
-
-                    
-                    
-                    <a class="nav-link flex-grow-1 text-dark"
-                        href="../../cloud/" style="padding-left: 0px;">
-                        Cloud
-                    </a>
-
-                    <button
-                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-3633"
-                        aria-expanded="false">
-                        <i class="fas fa-chevron-right chevron-icon"></i>
-                    </button>
-                </div>
-
-                <div class="collapse " id="collapse-3633">
-                    <nav class="nav flex-column ms-2 mt-1">
-
-                        
-                        
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../cloud/aws/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Amazon Web Services
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../cloud/azure/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Microsoft Azure
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../cloud/gcp/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                Google Cloud Platform
-            </a>
-            
-            
-            
-                        
-                        
-                        
-                        
-            
-            
-
-            
-            <!-- LIEN SIMPLE -->
-            <a class="nav-link py-1 text-muted"
-                href="../../cloud/ovh/"
-                style="padding-left: 15px; font-size: 0.95rem;">
-                OVH
             </a>
             
             
@@ -1956,6 +1599,12 @@
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
                 </div>
             </div>
 
@@ -1980,7 +1629,7 @@
 
                     
                     <div class="featured-image mb-5">
-                        <img src="https://algojungle.github.io/algojungle-assets/images/10-mlops/docker/covers/publish-on-docker-hub.png" class="img-fluid rounded shadow-sm w-100" alt="Publier sur Docker Hub">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/07-big-data/apache-airflow/covers/apache-airflow.png" class="img-fluid rounded shadow-sm w-100" alt="Configurer l'envoi de mail">
                     </div>
                     
 
@@ -1988,25 +1637,61 @@
 
                         
 
-                        <h2 id="docker-hub">Docker Hub<a class="headerlink" href="#docker-hub" title="Permanent link">#</a></h2>
-<p>Docker Hub est un répertoire d'images Docker. Il permet de partager et gérer les images Docker. </p>
-<h2 id="creer-un-compte">Créer un compte<a class="headerlink" href="#creer-un-compte" title="Permanent link">#</a></h2>
-<p>Pour créer un compte Docker, <a href="https://hub.docker.com/signup">rendez-vous ici</a>. Le forumulaire d'inscription s'affiche</p>
-<h2 id="taggerrenommer-limage">Tagger/renommer l'image<a class="headerlink" href="#taggerrenommer-limage" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>image<span class="w"> </span>tag<span class="w"> </span>&lt;nom<span class="w"> </span>de<span class="w"> </span>l’image&gt;<span class="w"> </span>&lt;docker<span class="w"> </span>username&gt;/&lt;nom<span class="w"> </span>de<span class="w"> </span>l’image&gt;:latest
+                        <p>Dans le fichier <code>docker-compose.yml</code> </p>
+<div class="highlight"><span class="filename">docker-compose.yml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">### MAIL CONFIGURATION ###</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">AIRFLOW__EMAIL__EMAIL_BACKEND</span><span class="p">:</span> <span class="n">airflow</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">send_email_smtp</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">AIRFLOW__SMTP__SMTP_HOST</span><span class="p">:</span> <span class="s1">&#39;smtp.gmail.com&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">AIRFLOW__SMTP__SMTP_PORT</span><span class="p">:</span> <span class="s1">&#39;587&#39;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">AIRFLOW__SMTP__SMTP_STARTTLS</span><span class="p">:</span> <span class="kc">True</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">AIRFLOW__SMTP__SMTP_MAIL_FROM</span><span class="p">:</span> <span class="s1">&#39;Joseph Konka &lt;joseph.kakone@gmail.com&gt;&#39;</span>
 </code></pre></div>
-<!-- ```sh
-docker image tag <nom de l’image> <domaine du registery>:<port>/<nom de l’image>:latest
-``` -->
-
-<h2 id="publier-votre-image">Publier votre image<a class="headerlink" href="#publier-votre-image" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>image<span class="w"> </span>push<span class="w"> </span>&lt;domaine<span class="w"> </span>du<span class="w"> </span>registery&gt;:&lt;port&gt;/&lt;nom<span class="w"> </span>de<span class="w"> </span>l’image&gt;:latest
-</code></pre></div>
-<h2 id="recuperer-une-image-depuis-le-registry">Récupérer une image depuis le registry<a class="headerlink" href="#recuperer-une-image-depuis-le-registry" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>&lt;domaine<span class="w"> </span>du<span class="w"> </span>registery&gt;:&lt;port&gt;/&lt;nom<span class="w"> </span>de<span class="w"> </span>l’image&gt;:latest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">DAG</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.empty</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmptyOperator</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.smtp.operators.smtp</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailOperator</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Define default_args and DAG</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">default_args</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;algojungle,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="s2">&quot;start_date&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># Date de début du pipeline</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="s2">&quot;retries&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="s2">&quot;retry_delay&quot;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;joseph.kakone@gmail.com&quot;</span><span class="p">],</span> <span class="c1"># Mail en cas d&#39;échec</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="s1">&#39;email_on_failure&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="s1">&#39;email_on_retry&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="k">with</span> <span class="n">DAG</span><span class="p">(</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">dag_id</span><span class="o">=</span><span class="s2">&quot;mail_pipeline&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Mailing Pipeline&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">default_args</span><span class="o">=</span><span class="n">default_args</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">schedule_interval</span><span class="o">=</span><span class="s2">&quot;30 6 * * *&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="s2">&quot;mail&quot;</span><span class="p">],</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">catchup</span><span class="o">=</span><span class="kc">False</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="p">)</span> <span class="k">as</span> <span class="n">dag</span><span class="p">:</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="c1">########################################################################################</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    <span class="c1"># START</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    <span class="n">start_task</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    <span class="c1"># SEND MAIL</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    <span class="n">send_email</span> <span class="o">=</span> <span class="n">EmailOperator</span><span class="p">(</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>        <span class="n">task_id</span><span class="o">=</span><span class="s2">&quot;send_email&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        <span class="n">to</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;joseph.kakone@gmail.com&quot;</span><span class="p">],</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>        <span class="n">cc</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;joseph.kakone@gmail.com&quot;</span><span class="p">],</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>        <span class="n">subject</span><span class="o">=</span><span class="s2">&quot;Mail Airflow&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        <span class="n">html_content</span><span class="o">=</span><span class="s2">&quot;Hello,&lt;br&gt;Ceci est un mail Airflow.&lt;br&gt;Merci&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>        <span class="n">dag</span><span class="o">=</span><span class="n">dag</span><span class="p">,</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    <span class="p">)</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    <span class="c1"># END</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    <span class="n">end_task</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;end&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    <span class="c1">########################################################################################</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    <span class="n">start_task</span> <span class="o">&gt;</span> <span class="n">send_email</span> <span class="o">&gt;</span> <span class="n">end_task</span>
 </code></pre></div>
 <hr />
-<p><em>Attention, si votre entreprise dispose d'un registery alors vous devriez publier dessus en moins d'avoir un abonnement pour publier en privé.</em></p>
+<p><em>.</em></p>
 
                     </section>
 
@@ -2016,17 +1701,17 @@ docker image tag <nom de l’image> <domaine du registery>:<port>/<nom de l’im
                 <nav class="row mt-5 pt-4 border-top">
                     <div class="col-6">
                         
-                        <a href="../interact-with-docker-container/" class="text-decoration-none">
+                        <a href="../airflow-cli-commands/" class="text-decoration-none">
                             <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
-                            <span class="fw-bold text-primary">Interagir avec un conteneur</span>
+                            <span class="fw-bold text-primary">Commandes Airflow CLI</span>
                         </a>
                         
                     </div>
                     <div class="col-6 text-end">
                         
-                        <a href="../docker-compose/" class="text-decoration-none">
+                        <a href="../creer-une-connexion-de-source-de-donnees/" class="text-decoration-none">
                             <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
-                            <span class="fw-bold text-primary">Docker Compose</span>
+                            <span class="fw-bold text-primary">Créer une connexion</span>
                         </a>
                         
                     </div>
