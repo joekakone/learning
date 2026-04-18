@@ -128,7 +128,7 @@
 }
 
 /* --- RESEAUX SOCIAUX --- */
-.social-link {
+/*.social-link {
     width: 40px;
     height: 40px;
     display: flex;
@@ -146,7 +146,7 @@
     border-color: var(--aj-primary) !important;
     transform: translateY(-3px);
 }
-
+*/
 /* --- PARTENAIRES --- */
 .partner-logo-wrapper {
     height: 100px;
