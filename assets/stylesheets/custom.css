@@ -25,10 +25,10 @@
 
 
 /* --- UTILITAIRES --- */
-/* .algo-jungle-home, .algo-jungle-article { overflow-x: hidden; } */
+/* .algo-jungle-home, .algo-jungle-article { overflow-x: hidden; }
 .cust-justify { text-align: justify; }
 .letter-spacing-3 { letter-spacing: 3px; }
-.text-sm { font-size: 0.875rem; }
+.text-sm { font-size: 0.875rem; }*/
 
 /* Ajustement de la bordure du bas pour le titre "lined" (cohérence avec votre thème) */
 .lined::after {
