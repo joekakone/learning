@@ -195,7 +195,122 @@
 /* .md-tag {font-size: medium;} */
 
 
-/* ****************************************** */
+/* ************************************************************************************ */
+/* --- FOOTER ALGO JUNGLE DARK --- */
+.algo-footer {
+  background-color: #0f172a; /* Fond bleu nuit très sombre */
+  color: #f8fafc;
+  padding: 80px 0 40px 0;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-brand-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.footer-brand-container img {
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+  filter: brightness(1.1); /* Légère brillance pour le logo */
+}
+
+.footer-brand-container h5 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #ffffff; /* Texte blanc */
+  letter-spacing: -0.5px;
+}
+
+.footer-tagline {
+  color: #94a3b8; /* Gris clair bleuté pour le contraste */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+.algo-footer h6 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #ffffff; /* Titres blancs */
+  text-transform: none;
+}
+
+.algo-footer .footer-link {
+  color: #60a5fa; /* Bleu clair pour meilleure lisibilité sur fond sombre */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.algo-footer .footer-link:hover {
+  text-decoration: underline;
+  color: #93c5fd;
+}
+
+.social-icons-footer {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons-footer a {
+  color: #60a5fa;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons-footer a:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.newsletter-text {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.btn-tally {
+  border: 2px solid #3b82f6;
+  color: #ffffff;
+  background: #3b82f6; /* Bouton plein pour ressortir sur le sombre */
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-tally:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #1e293b; /* Bordure sombre discrète */
+}
+/* ************************************************************************************ */
+
+
+/* ************************************************************************************ */
 /* Styles spécifiques pour améliorer le rendu Markdown */
 .article-body h2 { margin-top: 2rem; font-weight: 700; color: #2c3e50; border-bottom: 2px solid #f8f9fa; padding-bottom: 0.5rem; }
 .article-body h3 { margin-top: 1.5rem; font-weight: 600; color: #34495e; }
