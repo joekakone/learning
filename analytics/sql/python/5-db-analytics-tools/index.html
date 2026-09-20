@@ -680,13 +680,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-151"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1477"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-151">
+                <div class="collapse " id="collapse-1477">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -805,13 +805,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2875"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2410"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-2875">
+                <div class="collapse " id="collapse-2410">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -913,13 +913,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2909"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5311"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-2909">
+                <div class="collapse show" id="collapse-5311">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -936,7 +936,7 @@
             <a class="nav-link py-1 text-muted"
                 href="../01-sqlite/"
                 style="padding-left: 15px; font-size: 0.95rem;">
-                S QLite3
+                SQLite3
             </a>
             
             
@@ -1168,12 +1168,12 @@
 <li>SQLAlchemy</li>
 <li>Streamlit</li>
 </ul>
-<p>DB Analytics Tools peut être installé avec pip
+<p>DB Analytics Tools peut être installé avec pip</p>
 <div class="highlight"><span class="filename">Install DB Analytics Tools</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>db-analytics-tools
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">#</a></h2>
 <h3 id="connexion-a-la-base-de-donnees">Connexion à la base de données<a class="headerlink" href="#connexion-a-la-base-de-donnees" title="Permanent link">#</a></h3>
-<p>Comme les clients de bases de données traditionnels, nous devons fournir l'adresse IP, le port et les informations d'identification du serveur de base de données. DB Analytics Tools prend en charge Postgres et SQL Server.
+<p>Comme les clients de bases de données traditionnels, nous devons fournir l'adresse IP, le port et les informations d'identification du serveur de base de données. DB Analytics Tools prend en charge Postgres et SQL Server.</p>
 <div class="highlight"><span class="filename">Setup client</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Import DB Analytics Tools</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">db_analytics_tools</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">db</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -1186,13 +1186,13 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">PASSWORD</span> <span class="o">=</span> <span class="s2">"admin"</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># Setup client</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">client</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">HOST</span><span class="p">,</span> 
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                   <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">,</span> 
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                   <span class="n">database</span><span class="o">=</span><span class="n">DATABASE</span><span class="p">,</span> 
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                   <span class="n">username</span><span class="o">=</span><span class="n">USER</span><span class="p">,</span> 
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                   <span class="n">password</span><span class="o">=</span><span class="n">PASSWORD</span><span class="p">,</span> 
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">client</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">HOST</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                   <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                   <span class="n">database</span><span class="o">=</span><span class="n">DATABASE</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                   <span class="n">username</span><span class="o">=</span><span class="n">USER</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                   <span class="n">password</span><span class="o">=</span><span class="n">PASSWORD</span><span class="p">,</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>                   <span class="n">engine</span><span class="o">=</span><span class="n">ENGINE</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>DB Analytics Tools offres les mêmes fonctionnalités que les clients traditionnels ie, exécuter tous les types de requêtes à savoir</p>
 <ul>
 <li>Data Definition Language (<code>client.execute</code>)</li>
@@ -1237,7 +1237,7 @@
 <a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="n">client</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="data-query-language">Data Query Language<a class="headerlink" href="#data-query-language" title="Permanent link">#</a></h3>
-<p><div class="highlight"><span class="filename">Get data</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
+<div class="highlight"><span class="filename">Get data</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="s2">----- GET DATA -----</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="s2">select *</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="s2">from public.transactions</span>
@@ -1253,16 +1253,16 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2               3        103    Product C       Category 1         2          200.0   400.0
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>3               4        102    Product A       Category 1         7          100.0   700.0
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>4               5        105    Product B       Category 2         4           50.0   200.0
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="implement-sql-based-etl">Implement SQL based ETL<a class="headerlink" href="#implement-sql-based-etl" title="Permanent link">#</a></h2>
-<p>ETL API is in the integration module <code>db_analytics_tools.integration</code>. Let's import it ans create an ETL object.
+<p>ETL API is in the integration module <code>db_analytics_tools.integration</code>. Let's import it ans create an ETL object.</p>
 <div class="highlight"><span class="filename">Setup ETL</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Import Integration module</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">db_analytics_tools.integration</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dbi</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Setup ETL</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">etl</span> <span class="o">=</span> <span class="n">dbi</span><span class="o">.</span><span class="n">ETL</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="n">client</span><span class="p">)</span>
-</code></pre></div></p>
-<p>ETLs for DB Analytics Tools consists in functions with date parameters. Everything is done in one place i.e on the database. So first create a function on the database like this :
+</code></pre></div>
+<p>ETLs for DB Analytics Tools consists in functions with date parameters. Everything is done in one place i.e on the database. So first create a function on the database like this :</p>
 <div class="highlight"><span class="filename">Create a procedure (function)</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="s2">----- CREATE FUNCTION ON DB -----</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="s2">create or replace function public.fn_test(rundt date) returns integer</span>
@@ -1285,9 +1285,9 @@
 <a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="s2">"""</span>
 <a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
 <a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="n">client</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="executer-une-fonction">Exécuter une fonction<a class="headerlink" href="#executer-une-fonction" title="Permanent link">#</a></h3>
-<p>Then ETL function can easily be run using the ETL class via the method <code>ETL.run()</code>
+<p>Then ETL function can easily be run using the ETL class via the method <code>ETL.run()</code></p>
 <div class="highlight"><span class="filename">Run function</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># ETL Function</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">FUNCTION</span> <span class="o">=</span> <span class="s2">"public.fn_test"</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
@@ -1296,10 +1296,10 @@
 <a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">STOP</span> <span class="o">=</span> <span class="s2">"2023-08-05"</span>
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># Run ETL</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">etl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">function</span><span class="o">=</span><span class="n">FUNCTION</span><span class="p">,</span> 
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        <span class="n">start_date</span><span class="o">=</span><span class="n">START</span><span class="p">,</span> 
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="n">stop_date</span><span class="o">=</span><span class="n">STOP</span><span class="p">,</span> 
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        <span class="n">freq</span><span class="o">=</span><span class="s2">"d"</span><span class="p">,</span> 
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">etl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">function</span><span class="o">=</span><span class="n">FUNCTION</span><span class="p">,</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        <span class="n">start_date</span><span class="o">=</span><span class="n">START</span><span class="p">,</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="n">stop_date</span><span class="o">=</span><span class="n">STOP</span><span class="p">,</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        <span class="n">freq</span><span class="o">=</span><span class="s2">"d"</span><span class="p">,</span>
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Function    : public.fn_test
@@ -1310,9 +1310,9 @@
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>[Runing Date: 2023-08-03] [Function: public.fn_test] Execution time: 0:00:00.049409
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>[Runing Date: 2023-08-04] [Function: public.fn_test] Execution time: 0:00:00.050019
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>[Runing Date: 2023-08-05] [Function: public.fn_test] Execution time: 0:00:00.108267
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="executer-plusieurs-fonctions">Exécuter plusieurs fonctions<a class="headerlink" href="#executer-plusieurs-fonctions" title="Permanent link">#</a></h3>
-<p>Most of time, several ETL must be run and DB Analytics Tools supports running functions as pipelines.
+<p>Most of time, several ETL must be run and DB Analytics Tools supports running functions as pipelines.</p>
 <div class="highlight"><span class="filename">Run several functions</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">## ETL Functions</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">FUNCTIONS</span> <span class="o">=</span> <span class="p">[</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="s2">"public.fn_test"</span><span class="p">,</span>
@@ -1325,10 +1325,10 @@
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="n">STOP</span> <span class="o">=</span> <span class="s2">"2023-08-05"</span>
 <a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
 <a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c1"># Run ETLs</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="n">etl</span><span class="o">.</span><span class="n">run_multiple</span><span class="p">(</span><span class="n">functions</span><span class="o">=</span><span class="n">FUNCTIONS</span><span class="p">,</span> 
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>                 <span class="n">start_date</span><span class="o">=</span><span class="n">START</span><span class="p">,</span> 
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>                 <span class="n">stop_date</span><span class="o">=</span><span class="n">STOP</span><span class="p">,</span> 
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>                 <span class="n">freq</span><span class="o">=</span><span class="s2">"d"</span><span class="p">,</span> 
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="n">etl</span><span class="o">.</span><span class="n">run_multiple</span><span class="p">(</span><span class="n">functions</span><span class="o">=</span><span class="n">FUNCTIONS</span><span class="p">,</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>                 <span class="n">start_date</span><span class="o">=</span><span class="n">START</span><span class="p">,</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>                 <span class="n">stop_date</span><span class="o">=</span><span class="n">STOP</span><span class="p">,</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>                 <span class="n">freq</span><span class="o">=</span><span class="s2">"d"</span><span class="p">,</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>                 <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Functions   : ['public.fn_test', 'public.fn_test_long', 'public.fn_test_very_long']
@@ -1355,7 +1355,7 @@
 <a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>[Runing Date: 2023-08-05] [Function: public.fn_test_long.....] Execution time: 0:00:00.111157
 <a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>[Runing Date: 2023-08-05] [Function: public.fn_test_very_long] Execution time: 0:00:00.077731
 <a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>*********************************************************************************************
-</code></pre></div></p>
+</code></pre></div>
 <hr />
 <p><em>Pour en savoir plus sur Databases Analytics Tools, merci de consulter la documentation officielle <a href="https://joekakone.github.io/db-analytics-tools">https://joekakone.github.io/db-analytics-tools</a>.</em></p>
 
