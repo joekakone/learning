@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Meta tags -->
+  
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Page description -->
+    
+      <meta name="description" content="Pendant longtemps, le point a été de migrer les jobs Talend vers Apache Airflow. Pourtant, ils peuvent se compléter et coexister dans un même environnement. Dans cet article, nous verrons comment planifier l'exécution d'un job Talend sur Airflow." />
+    
+
+    <!-- Page author -->
+    
+      <meta name="author" content="Joseph Konka" />
+    
+
+    <!-- Canonical -->
+    
+      <link rel="canonical" href="https://josephkonkathedataguy.com/learning/blog/data-tips/schedule-talend-job-on-airflow/" />
+    
+
+    <!-- Previous page -->
+    
+      <link rel="prev" href="../creer-un-nuage-de-mots/" />
+    
+
+    <!-- Next page -->
+    
+      <link rel="next" href="../../get-certified/" />
+    
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://algojungle.github.io/algojungle-assets/assets/favicon.png" />
+
+    <!-- Generator banner -->
+    <meta name="generator" content="mkdocs-1.6.1, $md-name$-$md-version$" />
+  
+
+  <title>
+    Le duo Talend × Airflow | Algo Jungle
+  </title>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,800&display=swap">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="https://joekakone.github.io/static/css/style.blue.css">
+  <link rel="stylesheet" href="https://joekakone.github.io/static/css/custom.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css">
+  
+  <style>
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background-color: #fcfcfc;
+    }
+    /* Style par défaut pour le contenu Markdown */
+    .markdown-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+  
+  
+    <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+  
+    <link href="../../../assets/stylesheets/paginate.css" rel="stylesheet" />
+  
+    <link href="../../../assets/stylesheets/pygments.css" rel="stylesheet" />
+  
+    <link href="../../../css/ansi-colours.css" rel="stylesheet" />
+  
+    <link href="../../../css/jupyter-cells.css" rel="stylesheet" />
+  
+    <link href="../../../css/pandas-dataframe.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+
+  <!-- navbar-->
+<header class="header">
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="navbar">
+    <div class="container"><a class="navbar-brand" href="/learning"><img
+          src="https://algojungle.github.io/algojungle-assets/assets/favicon.png" alt="" height="36.14"></a>
+      <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation"><i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+  <ul class="navbar-nav ms-auto">
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+  <li class="nav-item">
+    <a href="../../.." class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Accueil
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../informatique/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Informatique
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../algorithmique/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Algorithmique
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../programmation/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Programmation
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../python/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Python
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../analytics/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Analytics
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../analytics/sql/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  SQL
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../analytics/powerbi/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Power BI
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../big-data/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Big Data
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../machine-learning/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Machine Learning
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../machine-learning/tensorflow/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  TensorFlow
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../../mlops/" class="nav-link link-scroll ">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  MLOps
+
+    </a>
+  </li>
+
+    
+      
+  
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  <li class="nav-item">
+    <a href="../../" class="nav-link link-scroll active">
+      
+  
+
+  <!-- Navigation link icon -->
+  
+    
+  
+
+  <!-- Navigation link title -->
+  Blog
+
+    </a>
+  </li>
+
+    
+  </ul>
+
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+  
+
+  <!-- Bloc principal : Sera remplacé par home.html pour la page d'accueil -->
+  
+<div class="algo-jungle-article">
+
+    <!-- Header de l'Article -->
+    
+    <section class="article-header bg-light border-bottom">
+        <div class="container py-5 text-center">
+            
+            <div class="pt-5 mt-5">
+                
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Plannifier un job Talend sur Airflow</h1>
+                
+            </div>
+
+            <!-- Infos Auteur -->
+            
+
+            <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#dataengineering">
+                            <span class="skill-tag text-uppercase">dataengineering</span>
+                        </a>
+                    
+                        <a href="/tags/#talend">
+                            <span class="skill-tag text-uppercase">talend</span>
+                        </a>
+                    
+                        <a href="/tags/#airflow">
+                            <span class="skill-tag text-uppercase">airflow</span>
+                        </a>
+                    
+                </div>
+            
+
+            <!-- Description / Overview centrée et justifiée -->
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
+                        Pendant longtemps, le point a été de migrer les jobs Talend vers Apache Airflow. Pourtant, ils peuvent se compléter et coexister dans un même environnement. Dans cet article, nous verrons comment planifier l'exécution d'un job Talend sur Airflow.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <!-- Structure Corps de page (Sidebar + Contenu) -->
+    <div class="container py-5">
+        <div class="row gx-lg-5">
+            
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+            <!-- <aside class="col-lg-3 d-none d-lg-block">
+                <div class="sticky-sidebar-container">
+                </div>
+            </aside> -->
+            <!-- Sidebar Navigation (droite) -->
+
+<aside class="col-lg-3 d-none d-lg-block">
+    <div class="sticky-sidebar-container">
+        <div class="p-4 bg-white border rounded shadow-sm mb-4">
+
+            
+
+            <!-- Initialisation navigation -->
+            <div class="sidebar-scroll-wrapper">
+                <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Blog
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../programing-tips/" style="padding-left: 0px;">
+                        Programing Tips
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6682"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-6682">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/bonnes-pratiques/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Les bonnes pratiques C
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/premier-programme-c/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Votre premier programme C
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/applications-du-c/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Les applications du langage C
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/echanger-deux-variables/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Échanger deux variables
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/langage-c/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Le C aujourd'hui
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/pourquoi-le-c/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Pourquoi le C ?
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/installer-un-ide/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Installer un IDE
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/python-vs-c-cpp/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Python vs C/C++
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programing-tips/le-choix-des-technos/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Le choix des technos
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../python-tips/" style="padding-left: 0px;">
+                        Python Tips
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3935"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-3935">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../python-tips/retirer-les-accents/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Retirer les accents
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../python-tips/export-python-to-exe/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Exporter un script Python
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../python-tips/spliter-avec-plusieurs-separateurs/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Splitter une chaîne de caractères
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../sql-tips/" style="padding-left: 0px;">
+                        SQL Tips
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6205"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-6205">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../sql-tips/gerer-la-casse/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Gérer la casse
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../sql-tips/common-sql-queries/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Les requêtes SQL usuelles
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../sql-tips/importer-des-donnees-dans-sql-server/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Importer des données dans SQL Server
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../sql-tips/gerer-les-fichiers-de-log-de-sql-server/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Gérer les fichiers de logs dans SQL Server
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../sql-tips/rendre-sql-server-sensible-a-la-casse/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Rendre SQL Server sensible à la casse
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../sql-tips/provisionner-une-instance-azure-sql-database/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Provisionner une instance Azure SQL Database
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../sql-tips/sommes-cummulees/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Calculer des sommes cummulées
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../powerbi-tips/" style="padding-left: 0px;">
+                        Power BI Tips
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5301"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-5301">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../powerbi-tips/create-dynamic-title/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer un titre dynamique
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../powerbi-tips/create-dynamic-measure/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer un mesure dynamique
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../powerbi-tips/sort-filter-items/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Trier les éléments d'un filtre
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../powerbi-tips/block-last-date/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Bloquer la dernière date
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 active-parent fw-bold"
+                        href="../" style="padding-left: 0px;">
+                        Data Tips
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5517"
+                        aria-expanded="true">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse show" id="collapse-5517">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../packages-python-essentiels/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                QlQ packages Python
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../adopter-jupyterlab/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Migrez vers JupyterLab
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../lire-une-table-web-avec-pandas/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Pandas × Beautiful Soup
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../create-custom-data-generator/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer un générateur de données
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../creer-un-nuage-de-mots/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer un nuage de mots
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 fw-bold text-primary active-child"
+                href="./"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Le duo Talend × Airflow
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../get-certified/" style="padding-left: 0px;">
+                        Get Certified
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-9722"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-9722">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../get-certified/pl-300/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                PL-300
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../get-certified/dp-100/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                DP-100
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../la-rubrique-ml/" style="padding-left: 0px;">
+                        La Rubrique ML
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1437"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-1437">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/01-le-test-de-turing/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Le test de Turing
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/02-les-ateliers-de-dartmouth-college/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ateliers de Dartmouth
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/03-le-perceptron/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Le perceptron
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/04-les-reseaux-convolutifs/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Les réseaux convolutifs
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/05-deep-blue-ibm/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                DeepBlue IBM
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/06-la-revelation-du-deep-learning/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                AlexNet (2012)
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/07-la-nouvelle-ere-du-deep-learning/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Un nouvel élan
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../la-rubrique-ml/discover-docker-model/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Docker Model
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../portraits/" style="padding-left: 0px;">
+                        Portraits
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6761"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-6761">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../portraits/alan-turing/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Alan Turing
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../portraits/dennis-ritchie/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Dennis Ritchie
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../portraits/guido-van-rossum/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Guido van Rossum
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../portraits/gerard-berry/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Gérard Berry
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../portraits/yann-lecun/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Yann LeCun
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../fiches-metiers/" style="padding-left: 0px;">
+                        Fiches métiers
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-4323"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-4323">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../fiches-metiers/developpeur-python/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Python Developer
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../fiches-metiers/data-analyst/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Data Analyst
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../fiches-metiers/data-scientist/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Data Scientist
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../mlsa-program/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                MS Learn Ambassador
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tags/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Tags
+            </a>
+            
+            
+            
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bloc Abonnement -->
+        <div class="p-4 bg-primary text-white rounded shadow text-center">
+            <p class="small mb-3">Abonnez-vous à la newsletter !</p>
+            <a href="#tally-open=mJzBvX&tally-layout=modal&tally-emoji-text=👋&tally-emoji-animation=wave"
+                class="btn btn-outline-light btn-sm text-uppercase w-100">
+                S'abonner
+            </a>
+        </div>
+
+    </div>
+</aside>
+
+            <!-- Contenu Principal -->
+            <main class="col-lg-9 col-md-12">
+                <article class="markdown-content bg-white p-4 p-md-5 border rounded shadow-sm">                        
+                    
+
+                    
+                    <div class="featured-image mb-5">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/data-tips/covers/execute-talend-on-airflow.png" class="img-fluid rounded shadow-sm w-100" alt="Le duo Talend × Airflow">
+                    </div>
+                    
+
+                    <section class="" id="blog">
+
+                        
+
+                        <!-- ::: scripts.talend_to_airflow -->
+<p>Apprendre à exécuter et superviser un job Talend via Apache Airflow en utilisant un script shell généré automatiquement par Talend.</p>
+<!-- ::: -->
+
+<h2 id="introduction-complementarite-pas-concurrence">Introduction : Complémentarité, pas concurrence<a class="headerlink" href="#introduction-complementarite-pas-concurrence" title="Permanent link">#</a></h2>
+<p>Depuis l’annonce de l’abandon progressif du projet <strong>Talend Open Studio for Data Integration</strong>, la communauté data engineering s’interroge : comment continuer à tirer parti de Talend tout en modernisant son orchestration ?</p>
+<p>Plutôt que de voir <strong>Talend</strong> et <strong>Apache Airflow</strong> comme des outils concurrents, pourquoi ne pas les considérer comme <strong>complémentaires</strong> ?<br />
+Talend, avec son approche <strong>low-code</strong>, permet de concevoir rapidement des flux ETL/ELT visuels.<br />
+Airflow, lui, est un outil d’orchestration <strong>code-first</strong>, puissant, traçable, et capable de gérer des dépendances, des retries, et des alertes.</p>
+<p>Dans cet article, nous allons voir <strong>comment exécuter un job Talend depuis Airflow</strong>, en tirant parti du script shell généré par Talend, et en bénéficiant de toute la puissance d’Airflow pour le monitorer, le relancer en cas d’échec, ou encore déclencher des alertes.</p>
+<hr />
+<h2 id="pourquoi-executer-talend-via-airflow">Pourquoi exécuter Talend via Airflow ?<a class="headerlink" href="#pourquoi-executer-talend-via-airflow" title="Permanent link">#</a></h2>
+<p>Avant, on lançait les jobs Talend via le <strong>Planificateur de tâches Windows</strong> (<code>.bat</code>) ou <code>cron</code> (Linux, <code>.sh</code>). Cela fonctionne, mais présente plusieurs limites :</p>
+<ul>
+<li>❌ Pas de traçabilité claire des exécutions</li>
+<li>❌ Impossible de gérer des dépendances entre jobs</li>
+<li>❌ Aucun mécanisme de retry automatique</li>
+<li>❌ Pas d’interface de supervision centralisée</li>
+</ul>
+<p>Airflow corrige tous ces points. En intégrant Talend à Airflow, on obtient :</p>
+<p>✅ Suivi en temps réel des exécutions<br />
+✅ Gestion des dépendances entre tâches<br />
+✅ Retentatives automatiques en cas d’échec<br />
+✅ Alertes par email ou Slack<br />
+✅ Interface web intuitive</p>
+<hr />
+<h2 id="etape-1-generer-le-script-executable-depuis-talend">Étape 1 : Générer le script exécutable depuis Talend<a class="headerlink" href="#etape-1-generer-le-script-executable-depuis-talend" title="Permanent link">#</a></h2>
+<p>Talend peut exporter un job en plusieurs formats exécutables :</p>
+<ul>
+<li><code>.bat</code> → Windows</li>
+<li><code>.ps1</code> → PowerShell</li>
+<li><code>.sh</code> → Shell (Linux/macOS)</li>
+<li><code>.jar</code> → Java (indépendant du système)</li>
+</ul>
+<p>Nous allons utiliser le <strong>fichier <code>.sh</code></strong> car Airflow gère très bien les commandes Bash via l’opérateur <code>BashOperator</code>.</p>
+<h3 id="comment-generer-le-sh">Comment générer le <code>.sh</code> ?<a class="headerlink" href="#comment-generer-le-sh" title="Permanent link">#</a></h3>
+<ol>
+<li>Ouvre ton projet dans <strong>Talend Open Studio</strong></li>
+<li>Fais un clic droit sur ton job (ex: <code>job_rpt_sales_day</code>)</li>
+<li>Sélectionne <strong>"Build Job"</strong></li>
+<li>Choisis le format <strong>"Shell script"</strong></li>
+<li>Exporte le dossier dans un emplacement accessible depuis ton environnement Airflow</li>
+</ol>
+<p>Exemple de structure :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dags/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└── talend/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>└── job_rpt_sales_day/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── job_rpt_sales_day_run.sh
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── lib/
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>└── context/
+</code></pre></div></p>
+<blockquote>
+<p>💡 Astuce : Place ce dossier dans le répertoire <code>dags/talend/</code> de ton Airflow pour qu’il soit accessible au scheduler.</p>
+</blockquote>
+<hr />
+<h2 id="etape-2-preparer-lenvironnement-airflow">Étape 2 : Préparer l’environnement Airflow<a class="headerlink" href="#etape-2-preparer-lenvironnement-airflow" title="Permanent link">#</a></h2>
+<p>Assure-toi que :
+- Airflow est installé et fonctionnel
+- Le script <code>.sh</code> est accessible depuis le container ou serveur Airflow
+- Les dépendances (Java, variables d’environnement, accès réseau) sont configurées</p>
+<p>Tu peux tester manuellement le script dans ton terminal :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sh<span class="w"> </span>/chemin/vers/job_rpt_sales_day_run.sh
+</code></pre></div></p>
+<p>Si cela fonctionne, tu es prêt à l’intégrer à Airflow.</p>
+<h2 id="etape-3-creer-le-dag-airflow">Étape 3 : Créer le DAG Airflow<a class="headerlink" href="#etape-3-creer-le-dag-airflow" title="Permanent link">#</a></h2>
+<p>Voici un DAG complet pour planifier l’exécution de ton job Talend.</p>
+<div class="highlight"><span class="filename">Schedule Talend job on Apache Airflow</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="sd">"""</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="sd">    Name : Job Sales</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="sd">    Author : Joseph Konka</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="sd">    Creation Date : 2025.08.13</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="sd">    Last Update : 2025.08.13</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="sd">    Long Description</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="sd">    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. </span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="sd">    Diam ut venenatis tellus in metus vulputate eu. Volutpat diam ut venenatis tellus in metus.</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="sd">    Et egestas quis ipsum suspendisse ultrices gravida. Aliquam nulla facilisi cras fermentum odio eu. </span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="sd">    Blandit massa enim nec dui. Lorem ipsum dolor sit amet consectetur adipiscing.</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="sd">"""</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">DAG</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.empty</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmptyOperator</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.standard.operators.bash</span><span class="w"> </span><span class="kn">import</span> <span class="n">BashOperator</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="c1"># Config &amp; Parameters</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">CONNECTION_ID</span> <span class="o">=</span> <span class="s2">"dwh"</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">OWNER_USERNAME</span> <span class="o">=</span> <span class="s2">"joekakone"</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="n">START_DATE</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="c1"># Use today date to avoid undesirable reruns</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="n">DAG_NAME</span> <span class="o">=</span> <span class="s2">"etl_sales_day"</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="n">DAG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"ETL Sales Day"</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="n">DAG_FREQUENCY</span> <span class="o">=</span> <span class="s2">"15 08 * * *"</span>  <span class="c1"># Every day at 08:15 AM</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="n">DAG_TAGS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"prod"</span><span class="p">,</span> <span class="s2">"sales"</span><span class="p">,</span> <span class="s2">"etl"</span><span class="p">,</span> <span class="s2">"daily"</span><span class="p">,</span> <span class="s2">"08H"</span><span class="p">]</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="c1">############################################################</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="n">AIRFLOW_EMAIL_LIST</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    <span class="s2">"konka.dataanalytics@gmail.com"</span><span class="p">,</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="p">]</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="n">BASE_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"AIRFLOW_HOME"</span><span class="p">)</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="n">TALEND_BASH_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s2">"dags/talend/job_rpt_sales_day/job_rpt_sales_day_run.sh"</span><span class="p">)</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="n">TALEND_COMMAND</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="sa">f</span><span class="s2">"sh '</span><span class="si">{</span><span class="n">TALEND_BASH_PATH</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="c1"># Define default_args and DAG</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="n">default_args</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    <span class="s2">"owner"</span><span class="p">:</span> <span class="n">OWNER_USERNAME</span><span class="p">,</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    <span class="s2">"start_date"</span><span class="p">:</span> <span class="n">START_DATE</span><span class="p">,</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="p">}</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="k">with</span> <span class="n">DAG</span><span class="p">(</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    <span class="n">dag_id</span><span class="o">=</span><span class="n">DAG_NAME</span><span class="p">,</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>    <span class="n">default_args</span><span class="o">=</span><span class="n">default_args</span><span class="p">,</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>    <span class="n">description</span><span class="o">=</span><span class="n">DAG_DESCRIPTION</span><span class="p">,</span>
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>    <span class="n">schedule</span><span class="o">=</span><span class="n">DAG_FREQUENCY</span><span class="p">,</span>
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>    <span class="n">tags</span><span class="o">=</span><span class="n">DAG_TAGS</span><span class="p">,</span>
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>    <span class="n">catchup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>    <span class="n">max_active_runs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="p">)</span> <span class="k">as</span> <span class="n">dag</span><span class="p">:</span>
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>    <span class="c1">#################################################################################</span>
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>    <span class="c1"># Start</span>
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>    <span class="n">start_task</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">"start"</span><span class="p">)</span>
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>    <span class="c1"># Talend Task</span>
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>    <span class="n">talend_task</span> <span class="o">=</span> <span class="n">BashOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s1">'talend_task'</span><span class="p">,</span> <span class="n">bash_command</span><span class="o">=</span><span class="n">TALEND_COMMAND</span><span class="p">)</span>
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>    <span class="c1"># End</span>
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>    <span class="n">end_task</span> <span class="o">=</span> <span class="n">EmptyOperator</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">"end"</span><span class="p">)</span>
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>    <span class="c1">#################################################################################</span>
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>    <span class="c1">#################################################################################</span>
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>    <span class="c1"># Flow</span>
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>    <span class="n">start_task</span> <span class="o">&gt;&gt;</span> <span class="n">talend_task</span> <span class="o">&gt;&gt;</span> <span class="n">end_task</span>
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>    <span class="c1">#################################################################################</span>
+</code></pre></div>
+<p>Explications clés du DAG</p>
+<ul>
+<li><code>BashOperator</code> : Exécute le script .sh généré par Talend.</li>
+<li><code>retries</code> et <code>retry_delay</code> : En cas d’échec, Airflow relance automatiquement le job.</li>
+<li><code>email_on_failure</code> : Envoie une alerte si le job échoue.</li>
+<li><code>catchup=False</code> : Évite l’exécution de runs passés si le scheduler a été arrêté.</li>
+<li><code>max_active_runs=1</code> : Garantit qu’une seule instance tourne à la fois.</li>
+</ul>
+<blockquote>
+<p>⚠️ Attention : Assure-toi que Java est disponible dans l’environnement où Airflow exécute le script, car Talend dépend de la JVM. </p>
+</blockquote>
+<h2 id="etape-4-deployer-et-tester">Étape 4 : Déployer et tester<a class="headerlink" href="#etape-4-deployer-et-tester" title="Permanent link">#</a></h2>
+<ol>
+<li>Copie le fichier .py dans ton dossier dags/</li>
+<li>Redémarre (ou attends le refresh) d’Airflow</li>
+<li>Active le DAG dans l’interface web</li>
+<li>Lance un test manuel via le bouton "Trigger DAG"</li>
+<li>Consulte les logs pour vérifier que le job Talend s’exécute correctement</li>
+</ol>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>Intégrer Talend à Airflow n’est pas une migration, mais une évolution stratégique. Tu continues à tirer parti de la rapidité de développement de Talend, tout en bénéficiant de la robustesse, traçabilité et automatisation d’Airflow.</p>
+<p>Avec cette approche, tu peux :</p>
+<ul>
+<li>Ordonnancer tous tes jobs Talend depuis une seule interface</li>
+<li>Corréler les exécutions avec d’autres tâches (scripts Python, SQL, APIs)</li>
+<li>Centraliser la supervision de ton data pipeline</li>
+</ul>
+<!-- ::: scripts.talend_to_airflow -->
+<p>Talend et Airflow ne sont pas en concurrence. Ensemble, ils forment un duo redoutable pour l’orchestration de données.</p>
+<!-- ::: -->
+
+<hr />
+<p><em>Nous sommes arrivés à la fin de ce tutoriel. J’espère qu’il t’a été utile ! N’hésite pas à poser des questions en commentaire ou à partager ton retour d’expérience. À très bientôt !</em></p>
+<!-- 
+Depuis l'annonce de l'abandon du projet "Talend Open Studio for Data Integration", trouver une alternative à Talend est devenu un sujet sérieux et urgent.
+
+Et si on arrêtait de comparer les outils et qu'on pensait plutôt à leur complémentarité. Talend et Airflow sont deux outils d'orchestration l'un low code et l'autre code-based, deux approches différentes.
+
+
+Talend génère plusieurs fichiers exécutables
+- .bat pour Windows 
+- .ps1 pour Power Shell
+- .sh pour Linux
+- .jar pour Java
+
+Habituellement sous Windows, on planifie l'exécution du fichier .bat dans le plannificateur de tâches Windows. Cela marche très bien, seul inconvénient
+- on n'a pas de traçabilité
+- il est impossible de définir des dépendances 
+- retenter automatiquement l'exécution après échec dans un délai donné.
+
+Et c'est là que Airflow intervient pour fournir ces éléments manquants. Mais comment allons-nous le faire ? Question 
+
+Comment vous le savez si bien, Airflow peut exécuter un fichier Bash (.sh) c'est ce que nous allons exploiter. Le fichier .sh que Talend génère, nous allons plannifier son exécution avec Airflow et faire le suivi.
+
+
+ -->
+
+                    </section>
+
+                </article>
+
+                <!-- Navigation Précédent / Suivant -->
+                <nav class="row mt-5 pt-4 border-top">
+                    <div class="col-6">
+                        
+                        <a href="../creer-un-nuage-de-mots/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
+                            <span class="fw-bold text-primary">Créer un nuage de mots</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-6 text-end">
+                        
+                        <a href="../../get-certified/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
+                            <span class="fw-bold text-primary">Get Certified - Reach the next level</span>
+                        </a>
+                        
+                    </div>
+                </nav>
+
+                <section class="mt-5 border-top pt-4">
+                    
+                    <div class="share-section mb-5">
+                        <h2 class="h4 mb-3">Partagez sur les réseaux sociaux</h2>
+                        <!-- ShareThis BEGIN -->
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <!-- ShareThis END -->
+                    </div>
+
+                    
+                    
+                    <div class="comments-section">
+                        <h2 id="__comments" class="h4 mb-4">Commentaires</h2>
+                        
+                        
+                        <script src="https://giscus.app/client.js"
+                                data-repo="joekakone/Departement-De-Maths"
+                                data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+                                data-category="General"
+                                data-category-id="DIC_kwDOFBN7QM4CORj9"
+                                data-mapping="pathname"
+                                data-reactions-enabled="1"
+                                data-emit-metadata="0"
+                                data-input-position="bottom"
+                                
+                                data-theme="preferred_color_scheme"
+                                data-lang="fr"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                    
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+  <!-- Tags --><!-- CTA FINAL -->
+<section class="py-5 bg-primary text-white text-center">
+<div class="container py-4">
+    <h3 class="text-uppercase mb-4">Inscrivez-vous à une formation complète</h3>
+    <a href="/#formations" class="btn btn-outline-light btn-lg text-uppercase px-5">Voir le catalogue</a>
+</div>
+</section>
+
+<!-- Bande de Navigation Précédent / Suivant (Style Bootstrap Dark) -->
+
+
+<!-- Footer Algo Jungle -->
+<footer class="algo-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        
+        <!-- Colonne 1: Brand & Bio -->
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-brand-container">
+            <img src="https://algojungle.github.io/algojungle-assets/assets/logo.png" alt="Algo Jungle Logo" width="50" onerror="this.src='https://placehold.co/50x50/3b82f6/ffffff?text=AJ'">
+            <h5>Algo Jungle</h5>
+          </div>
+          <p class="footer-tagline">
+            Apprenez Python et la Data à partir de zéro avec des ressources adaptées et des projets concrets.
+          </p>
+          <div class="social-icons-footer">
+            <a href="https://github.com/algojungle" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://youtube.com/@algojungle" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+    
+        <!-- Colonne 2: Liens Rapides -->
+        <div class="col-lg-2 col-md-4">
+          <h6>Liens rapides</h6>
+          <nav>
+            <a href="/learning/blog" class="footer-link">Blog</a>
+            <a href="https://joekakone.github.io/shop" class="footer-link">Boutique</a>
+            <a href="/learning/about" class="footer-link">À Propos</a>
+            <a href="https://joekakone.github.io/#contact" class="footer-link">Contact</a>
+          </nav>
+        </div>
+    
+        <!-- Colonne 3: Ressources -->
+        <div class="col-lg-2 col-md-4">
+          <h6>Autres liens</h6>
+          <nav>
+            <a href="https://joekakone.github.io/db-analytics-tools/" class="footer-link">DB Analytics Tools</a>
+            <a href="https://joekakone.github.io/maths-and-data" class="footer-link">Maths & Data</a>
+            <a href="#" class="footer-link">Confidentialité</a>
+            <a href="#" class="footer-link">CGU</a>
+          </nav>
+        </div>
+    
+        <!-- Colonne 4: Newsletter -->
+        <div class="col-lg-3 col-md-4">
+          <h6>Newsletter</h6>
+          <p class="newsletter-text">
+            Abonnez-vous pour recevoir nos derniers articles et tutoriels directement par mail.
+          </p>
+          <div class="newsletter-action">
+            <a href="#tally-open=mJzBvX&tally-layout=modal" class="btn-tally">
+              S'abonner
+            </a>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+</footer>
+
+<!-- Footer-->
+<footer class="pt-0">    
+    <div class="container text-center py-5">
+        <div class="row px-4">
+            <div class="col-lg-7 mx-auto">
+                <h2 class="text-uppercase mb-0">Joseph Konka </h2>
+                <h6 class="text-primary text-uppercase mb-0 letter-spacing-3">Senior Data Analyst | Data Scientist</h6>
+                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Backend Python</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyrights px-4">
+        <div class="container py-4 border-top text-center">
+        <p class="mb-0 text-muted py-2">&copy; All rights reserved. Template designed by <a
+            href="https://bootstrapious.com/p/bootstrap-resume">Bootstrapious</a>. </p>
+        </div>
+    </div>
+</footer>
+  
+
+  <!-- JS -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
+  <script src="../../../assets/javascripts/custom.js"></script>
+
+  
+  <!-- JavaScript files-->
+  <script src="https://joekakone.github.io/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://joekakone.github.io/static/js/front.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPL3847T5N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-YPL3847T5N');
+  </script>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1677099741796'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1100px'; vizElement.style.height = '627px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1100px'; vizElement.style.height = '627px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1327px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2980760029476176"
+      crossorigin="anonymous"></script>
+
+  <!-- ShareThis -->
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=649bd6c6a6672f0012d186bd&product=sop' async='async'></script>
+
+  <!-- Tally -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <!-- Facebook -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v20.0&appId=564181564271850"></script>
+
+  <!-- Messenger Plugin de discussion Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Plugin de discussion code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "2130664133866857");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v12.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Contact Form Utils -->
+  <script>
+    function buildMailtoUrl(event) {
+      event.preventDefault(); // Prevent form submission
+
+      var emailInputFirstName = document.getElementById('InputFirstName').value;
+      var emailInputLastName = document.getElementById('InputLastName').value;
+      var emailInputEmail = document.getElementById('InputEmail').value;
+      var emailInputPhone = document.getElementById('InputPhone').value;
+      var emailInputSubject = document.getElementById('InputSubject').value;
+      var emailInputMessage = document.getElementById('InputMessage').value;
+
+      var emailContent = `${emailInputMessage} \n\nFull Name : ${emailInputFirstName} ${emailInputLastName}\nPhone Number : ${emailInputPhone}\nEmail : ${emailInputEmail}`;
+
+      var subject = encodeURIComponent(emailInputSubject);
+      var body = encodeURIComponent(emailContent);
+
+      var mailtoLink = 'mailto:konka.datanalytics@gmail.com' + '?subject=' + subject + '&body=' + body;
+
+      window.location.href = mailtoLink;
+    }
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2980760029476176"
+    crossorigin="anonymous"></script>
+
+
+  <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  
+    <script src="../../../assets/javascripts/custom.js"></script>
+  
+    <script src="../../../assets/javascripts/paginate.js"></script>
+  
+</body>
+</html>

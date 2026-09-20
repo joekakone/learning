@@ -1,0 +1,53 @@
+/* Conteneur principal de la pagination */
+.pagination-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2.5rem 0 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+/* Style des boutons (précédent, numéros, suivant) */
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  padding: 0 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--md-default-fg-color--lighter, #d4d4d4);
+  background-color: var(--md-default-bg-color, #ffffff);
+  color: var(--md-default-fg-color, #333333);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Effet au survol */
+.pagination-btn:hover:not(:disabled) {
+  border-color: #3498db;
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+/* Bouton de la page actuellement affichée */
+.pagination-btn.active {
+  border-color: #3498db;
+  background-color: #3498db;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Boutons inactifs (ex: Précédent sur la 1ère page) */
+.pagination-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: var(--md-default-fg-color--lightest, #ececec);
+}
+/* Hide native mkdocs-blogging-plugin pagination unconditionally */
+.blog-center { display: none !important; }
+

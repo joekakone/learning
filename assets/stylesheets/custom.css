@@ -741,3 +741,9 @@ white-space: nowrap;
     border-color: #3498db !important;
 }
 /******************************************************************************/
+
+ / *   S u p p r i m e r   l e   s u r l i g n a g e   d e s   b l o c s   d e   c o d e   d a n s   l e s   n o t e b o o k s   * / 
+ . i n p u t   c o d e ,   . i n p u t   p r e   { 
+         b a c k g r o u n d - c o l o r :   t r a n s p a r e n t   ! i m p o r t a n t ; 
+ }  
+ 
