@@ -89,18 +89,13 @@
 
   <!-- navbar-->
 <header class="header">
-  <nav class="navbar navbar-light fixed-top" id="navbar">
-    <div class="container">
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="navbar">
+    <div class="container d-flex align-items-center justify-content-between">
       <a class="navbar-brand" href="/learning">
         <img src="https://algojungle.github.io/algojungle-assets/assets/favicon.png" alt="Algo Jungle" height="36.14">
       </a>
 
-      <!-- Bouton Hamburger Mobile (visible sur <= 768px) -->
-      <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Ouvrir le menu">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Barre de navigation Desktop (visible sur >= 769px) -->
+      <!-- Barre de navigation Desktop (visible uniquement en mode PC >= 769px, strictement horizontale) -->
       <div class="desktop-nav-wrapper">
         
 <ul class="navbar-nav ms-auto">
@@ -483,6 +478,11 @@
   
 </ul>
       </div>
+
+      <!-- Bouton Hamburger Mobile (visible uniquement en mode Téléphone <= 768px) -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+      </button>
 
       <!-- Menu Tiroir & Overlay Mobile (drilldown récursif) -->
       
