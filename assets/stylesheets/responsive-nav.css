@@ -9,53 +9,8 @@
 
 /* --- Mode Desktop (>= 769px) --- */
 @media (min-width: 769px) {
-  /* Afficher la barre de navigation desktop et forcer le flux strictement horizontal */
-  .desktop-nav-wrapper {
-    display: flex !important;
-    align-items: center !important;
-    margin-left: auto !important;
-  }
-
-  .desktop-nav-wrapper .navbar-nav {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-    gap: 4px !important;
-  }
-
-  .desktop-nav-wrapper .navbar-nav .nav-item {
-    display: inline-flex !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .desktop-nav-wrapper .navbar-nav .nav-link {
-    display: inline-block !important;
-    padding: 8px 12px !important;
-    white-space: nowrap !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-    color: #2c3e50 !important;
-    text-decoration: none !important;
-    transition: color 0.2s ease;
-  }
-
-  .desktop-nav-wrapper .navbar-nav .nav-link:hover,
-  .desktop-nav-wrapper .navbar-nav .nav-link.active {
-    color: #007bff !important;
-    font-weight: 600 !important;
-  }
-
-  /* Masquer complètement le hamburger et le tiroir mobile sur Desktop */
-  .mobile-nav-toggle {
-    display: none !important;
-  }
-
+  /* Masquer complètement le bouton hamburger et le tiroir mobile sur Desktop */
+  .mobile-nav-toggle,
   .mobile-nav-drawer,
   .mobile-nav-overlay {
     display: none !important;
@@ -64,13 +19,13 @@
 
 /* --- Mode Mobile / Tablette (<= 768px) --- */
 @media (max-width: 768px) {
-  /* Masquer complètement la barre de navigation desktop sur Mobile */
-  .desktop-nav-wrapper {
+  /* Masquer le menu déroulant desktop Bootstrap pour laisser place au tiroir mobile */
+  .navbar .collapse.navbar-collapse#navbarSupportedContent {
     display: none !important;
   }
 
   /* Afficher le bouton hamburger */
-  .mobile-nav-toggle {
+  .navbar-toggler.mobile-nav-toggle {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
