@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="```r res <- matrix(1:25, nrow=5, ncol=5) for (i in 1:5) { res[i,] <- sample(1:90, 5, replace=FALSE) } print(res) ```" />
+      <meta name="description" content="Apprenez à maîtriser les boucles for et while en R, découvrez les instructions break et next, et adoptez les bonnes pratiques de pré-allocation mémoire." />
     
 
     <!-- Page author -->
@@ -4976,7 +4976,7 @@
         <li class="drilldown-row ">
           
           <a href="../../" class="drilldown-link ">
-            Analyse de données avec R
+            Analyse de données et statistiques avec R
           </a>
 
           
@@ -5479,7 +5479,7 @@
         <li class="drilldown-row ">
           
           <a href="../../statistique-descriptive/" class="drilldown-link ">
-            Statistique Descriptive avec R
+            Statistique Descriptive avec R : Résumer et explorer les données
           </a>
 
           
@@ -5526,7 +5526,7 @@
         <li class="drilldown-row ">
           
           <a href="../../probabilites/" class="drilldown-link ">
-            Probabilités avec R
+            Probabilités avec R : Lois discrètes, continues et simulation
           </a>
 
           
@@ -5573,7 +5573,7 @@
         <li class="drilldown-row ">
           
           <a href="../../statistique-inferentielle/" class="drilldown-link ">
-            Statistique inférentielle
+            Statistique Inférentielle avec R : De l'échantillon à la population
           </a>
 
           
@@ -11791,7 +11791,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/index.md" class="drilldown-link ">
             Get Certified
           </a>
 
@@ -12697,8 +12697,8 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/" class="drilldown-link ">
-            Get Certified - Reach the next level
+          <a href="../../../../blog/get-certified/index.md" class="drilldown-link ">
+            None
           </a>
 
           
@@ -12713,7 +12713,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/pl-300/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/pl-300.md" class="drilldown-link ">
             PL-300
           </a>
 
@@ -12729,7 +12729,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/dp-100/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/dp-100.md" class="drilldown-link ">
             DP-100
           </a>
 
@@ -12908,7 +12908,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/la-rubrique-ml/discover-docker-model/" class="drilldown-link ">
+          <a href="../../../../mlops/docker/discover-docker-model/" class="drilldown-link ">
             Docker Model
           </a>
 
@@ -12972,7 +12972,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../../blog/portraits/" class="drilldown-link ">
-            Parcours d'hommes
+            Portraits : Les pionniers qui ont façonné l'informatique
           </a>
 
           
@@ -13109,7 +13109,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../../blog/fiches-metiers/" class="drilldown-link ">
-            Data Analyst
+            Fiches Métiers : Les carrières de la Data et du Développement
           </a>
 
           
@@ -13204,7 +13204,7 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les boucles while et for</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les boucles en R : for, while et bonnes pratiques d'optimisation</h1>
                 
             </div>
 
@@ -13222,9 +13222,9 @@
                         
                     </p>
                     <p class="small text-muted mb-0">
-                        <i class="far fa-calendar-alt me-1"></i> 20/09/2026 
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
                         <span class="mx-2">·</span> 
-                        <i class="far fa-clock me-1"></i> 1 min
+                        <i class="far fa-clock me-1"></i> 6 min
                     </p>
                 </div>
             </div>
@@ -13234,16 +13234,20 @@
             
                 <div class="tags">
                     
-                        <a href="/tags/#programmation">
-                            <span class="skill-tag text-uppercase">programmation</span>
-                        </a>
-                    
                         <a href="/tags/#r">
                             <span class="skill-tag text-uppercase">r</span>
                         </a>
                     
-                        <a href="/tags/#fondamentaux">
-                            <span class="skill-tag text-uppercase">fondamentaux</span>
+                        <a href="/tags/#boucles">
+                            <span class="skill-tag text-uppercase">boucles</span>
+                        </a>
+                    
+                        <a href="/tags/#for">
+                            <span class="skill-tag text-uppercase">for</span>
+                        </a>
+                    
+                        <a href="/tags/#while">
+                            <span class="skill-tag text-uppercase">while</span>
                         </a>
                     
                         <a href="/tags/#analytics">
@@ -13258,7 +13262,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        ```r res <- matrix(1:25, nrow=5, ncol=5) for (i in 1:5) { res[i,] <- sample(1:90, 5, replace=FALSE) } print(res) ```
+                        Apprenez à maîtriser les boucles for et while en R, découvrez les instructions break et next, et adoptez les bonnes pratiques de pré-allocation mémoire.
                     </p>
                 </div>
             </div>
@@ -13408,13 +13412,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-8829"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6440"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-8829">
+                <div class="collapse " id="collapse-6440">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13584,13 +13588,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7969"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1834"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7969">
+                <div class="collapse " id="collapse-1834">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13743,13 +13747,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-617"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-786"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-617">
+                <div class="collapse " id="collapse-786">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13885,13 +13889,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-8646"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-9465"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-8646">
+                <div class="collapse show" id="collapse-9465">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13934,13 +13938,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2970"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2758"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-2970">
+                <div class="collapse " id="collapse-2758">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14129,13 +14133,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2180"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6928"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-2180">
+                <div class="collapse show" id="collapse-6928">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14222,13 +14226,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9293"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6709"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-9293">
+                <div class="collapse " id="collapse-6709">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14264,13 +14268,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9819"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1644"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-9819">
+                <div class="collapse " id="collapse-1644">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14306,13 +14310,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1923"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7924"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1923">
+                <div class="collapse " id="collapse-7924">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14461,7 +14465,7 @@
 
                     
                     <div class="featured-image mb-5">
-                        <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/covers/algo-jungle-blog.webp" class="img-fluid rounded shadow-sm w-100" alt="Les boucles">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/04-analytics/r/covers/programming-with-r.png" class="img-fluid rounded shadow-sm w-100" alt="Les boucles">
                     </div>
                     
 
@@ -14469,14 +14473,106 @@
 
                         
 
-                        <h1 id="les-boucles-while-et-for">Les boucles while et for<a class="headerlink" href="#les-boucles-while-et-for" title="Permanent link">#</a></h1>
-<h2 id="la-boucle-for-pour">La boucle for (POUR)<a class="headerlink" href="#la-boucle-for-pour" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">,]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+                        <p>Les <strong>boucles</strong> permettent d'exécuter un ensemble d'instructions de manière répétée. En R, comme dans la plupart des langages, on utilise principalement deux types de boucles :
+* La boucle <strong><code>for</code></strong> : lorsque le nombre d'itérations est connu à l'avance.
+* La boucle <strong><code>while</code></strong> : lorsque l'itération doit continuer tant qu'une condition reste vraie.</p>
+<hr />
+<h2 id="1-la-boucle-for">1. La boucle <code>for</code><a class="headerlink" href="#1-la-boucle-for" title="Permanent link">#</a></h2>
+<p>La syntaxe d'une boucle <code>for</code> itère sur chaque élément d'un vecteur ou d'une séquence :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Itérer sur les éléments d'un vecteur</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">prenoms</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span><span class="w"> </span><span class="s">"Bob"</span><span class="p">,</span><span class="w"> </span><span class="s">"Charlie"</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">prenoms</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">"Bonjour"</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">))</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
 </code></pre></div>
+<p>Sortie :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">"Bonjour Alice"</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">"Bonjour Bob"</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">"Bonjour Charlie"</span>
+</code></pre></div></p>
+<h3 id="iterer-par-les-indices-avec-seq_along">Itérer par les indices avec <code>seq_along()</code><a class="headerlink" href="#iterer-par-les-indices-avec-seq_along" title="Permanent link">#</a></h3>
+<p>Pour modifier un vecteur en place ou accéder à plusieurs variables en parallèle, on itère sur les indices numériques :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">valeurs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">seq_along</span><span class="p">(</span><span class="n">valeurs</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">"À l'indice"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s">", la valeur est"</span><span class="p">,</span><span class="w"> </span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>[!TIP]
+<strong>Pourquoi préférer <code>seq_along(x)</code> à <code>1:length(x)</code> ?</strong><br />
+Si votre vecteur <code>x</code> est vide (<code>length(x) == 0</code>), l'écriture <code>1:length(x)</code> va générer la séquence <code>1:0</code> (deux itérations indésirables qui provoquent un bug). La fonction <code>seq_along(x)</code> gère parfaitement les vecteurs de longueur nulle sans générer d'erreur.</p>
+</blockquote>
+<hr />
+<h2 id="2-la-boucle-while">2. La boucle <code>while</code><a class="headerlink" href="#2-la-boucle-while" title="Permanent link">#</a></h2>
+<p>La boucle <code>while</code> évalue sa condition avant chaque tour et s'arrête dès que la condition devient fausse :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Exemple d'accumulation</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">solde</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">interet</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.05</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">annee</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kr">while</span><span class="w"> </span><span class="p">(</span><span class="n">solde</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1500</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="n">solde</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">solde</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">interet</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="n">annee</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">"Objectif atteint en"</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="s">"ans avec un solde de"</span><span class="p">,</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">solde</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="s">"€"</span><span class="p">))</span>
+</code></pre></div>
+<p>Sortie :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">"Objectif atteint en 9 ans avec un solde de 1551.33 €"</span>
+</code></pre></div></p>
+<hr />
+<h2 id="3-controle-des-boucles-break-et-next">3. Contrôle des boucles : <code>break</code> et <code>next</code><a class="headerlink" href="#3-controle-des-boucles-break-et-next" title="Permanent link">#</a></h2>
+<ul>
+<li><strong><code>break</code> :</strong> Interrompt immédiatement la boucle et passe à la suite du script.</li>
+<li><strong><code>next</code> :</strong> Saute directement à l'itération suivante sans exécuter le reste du bloc (équivalent de <code>continue</code> en Python ou en C).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="c1"># Sauter les nombres pairs</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kr">next</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="c1"># Arrêter la boucle dès qu'on dépasse 7</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">7</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="kr">break</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c1"># Affichera 1, 3, 5, 7</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-la-regle-dor-en-r-la-pre-allocation-de-memoire">4. La règle d'or en R : La pré-allocation de mémoire<a class="headerlink" href="#4-la-regle-dor-en-r-la-pre-allocation-de-memoire" title="Permanent link">#</a></h2>
+<blockquote>
+<p>[!WARNING]
+<strong>Le piège fatal de la lenteur en R : Faire grandir un objet dynamiquement</strong><br />
+Dans beaucoup de langages, on a tendance à écrire :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># MAUVAISE PRATIQUE (Très lent pour des milliers d'itérations !)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">resultat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="n">resultat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">resultat</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="c1"># R réalloue toute la mémoire à chaque tour</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+</code></pre></div>
+<strong>BONNE PRATIQUE : Pré-allouer la taille finale à l'avance :</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># CORRECT ET RAPIDE</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">resultat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">numeric</span><span class="p">(</span><span class="m">10000</span><span class="p">)</span><span class="w"> </span><span class="c1"># Vecteur de 10 000 zéros alloué en une fois</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="n">resultat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">i</span><span class="o">^</span><span class="m">2</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<p>Mieux encore : en R, cette opération s'écrit en une seule ligne vectorisée sans aucune boucle :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># LA VOIE IDIOMATIQUE EN R (Instantanné)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">resultat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10000</span><span class="p">)</span><span class="o">^</span><span class="m">2</span>
+</code></pre></div></p>
+<hr />
+<h2 id="mise-en-pratique">Mise en pratique<a class="headerlink" href="#mise-en-pratique" title="Permanent link">#</a></h2>
+<ol>
+<li>Écrivez une boucle <code>for</code> qui calcule la factorielle d'un entier <span class="arithmatex">\(n = 6\)</span> (<span class="arithmatex">\(6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1\)</span>).</li>
+<li>À l'aide d'une boucle <code>while</code>, simulez le lancer répété d'un dé à 6 faces (<code>sample(1:6, 1)</code>) et arrêtez-vous dès que vous obtenez le chiffre 6. Affichez le nombre de lancers nécessaires.</li>
+<li>Soit un vecteur de 5 nombres aléatoires : <code>notes &lt;- c(12, 8, 15, 6, 14)</code>. Écrivez une boucle qui affiche chaque note accompagnée de la mention <code>"Admis"</code> ou <code>"Ajourné"</code>.</li>
+</ol>
 
                     </section>
 

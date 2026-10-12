@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀" />
+      <meta name="description" content="Maîtrisez l'importation de fichiers dans R : fichiers textes (.txt), CSV anglo-saxons et européens (read.csv, read.csv2), classeurs Excel (.xlsx) et gestion des encodages." />
     
 
     <!-- Page author -->
@@ -4976,7 +4976,7 @@
         <li class="drilldown-row ">
           
           <a href="../../" class="drilldown-link ">
-            Analyse de données avec R
+            Analyse de données et statistiques avec R
           </a>
 
           
@@ -5479,7 +5479,7 @@
         <li class="drilldown-row ">
           
           <a href="../../statistique-descriptive/" class="drilldown-link ">
-            Statistique Descriptive avec R
+            Statistique Descriptive avec R : Résumer et explorer les données
           </a>
 
           
@@ -5526,7 +5526,7 @@
         <li class="drilldown-row ">
           
           <a href="../../probabilites/" class="drilldown-link ">
-            Probabilités avec R
+            Probabilités avec R : Lois discrètes, continues et simulation
           </a>
 
           
@@ -5573,7 +5573,7 @@
         <li class="drilldown-row ">
           
           <a href="../../statistique-inferentielle/" class="drilldown-link ">
-            Statistique inférentielle
+            Statistique Inférentielle avec R : De l'échantillon à la population
           </a>
 
           
@@ -11791,7 +11791,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/index.md" class="drilldown-link ">
             Get Certified
           </a>
 
@@ -12697,8 +12697,8 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/" class="drilldown-link ">
-            Get Certified - Reach the next level
+          <a href="../../../../blog/get-certified/index.md" class="drilldown-link ">
+            None
           </a>
 
           
@@ -12713,7 +12713,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/pl-300/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/pl-300.md" class="drilldown-link ">
             PL-300
           </a>
 
@@ -12729,7 +12729,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/dp-100/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/dp-100.md" class="drilldown-link ">
             DP-100
           </a>
 
@@ -12908,7 +12908,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/la-rubrique-ml/discover-docker-model/" class="drilldown-link ">
+          <a href="../../../../mlops/docker/discover-docker-model/" class="drilldown-link ">
             Docker Model
           </a>
 
@@ -12972,7 +12972,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../../blog/portraits/" class="drilldown-link ">
-            Parcours d'hommes
+            Portraits : Les pionniers qui ont façonné l'informatique
           </a>
 
           
@@ -13109,7 +13109,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../../blog/fiches-metiers/" class="drilldown-link ">
-            Data Analyst
+            Fiches Métiers : Les carrières de la Data et du Développement
           </a>
 
           
@@ -13195,30 +13195,1424 @@
 
   <!-- Bloc principal : Sera remplacé par home.html pour la page d'accueil -->
   
-    <main class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 markdown-content">
-          
-  <h1 id="import-des-donnees-depuis-une-source-externe"><strong><code>Import des données depuis une source externe</code></strong><a class="headerlink" href="#import-des-donnees-depuis-une-source-externe" title="Permanent link">#</a></h1>
-<p>R offre la possibilité d'importer des données tabulaires depuis des sources externes, des fichiers, des bases de onnées ou encore des APIs. Passons en revue l'importation des sources les plus fréquentes.</p>
-<h2 id="fichier-txt">Fichier .TXT<a class="headerlink" href="#fichier-txt" title="Permanent link">#</a></h2>
-<!--```r - Import from plain text file-->
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">";"</span><span class="p">,</span><span class="w"> </span><span class="n">dec</span><span class="o">=</span><span class="s">"."</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="fichier-csv">Fichier .CSV<a class="headerlink" href="#fichier-csv" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">";"</span><span class="p">,</span><span class="w"> </span><span class="n">dec</span><span class="o">=</span><span class="s">"."</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="fichier-json">Fichier .JSON<a class="headerlink" href="#fichier-json" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.json</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">";"</span><span class="p">,</span><span class="w"> </span><span class="n">dec</span><span class="o">=</span><span class="s">"."</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="fichier-xlsx">Fichier .XLSX<a class="headerlink" href="#fichier-xlsx" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.excel</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">";"</span><span class="p">,</span><span class="w"> </span><span class="n">dec</span><span class="o">=</span><span class="s">"."</span><span class="p">)</span>
-</code></pre></div>
+<div class="algo-jungle-article">
+
+    <!-- Header de l'Article -->
+    
+    <section class="article-header bg-light border-bottom">
+        <div class="container py-5 text-center">
+            
+            <div class="pt-5 mt-5">
+                
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Importer des données en R depuis des sources externes</h1>
+                
+            </div>
+
+            <!-- Infos Auteur -->
+            
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 6 min
+                    </p>
+                </div>
+            </div>
+            
+
+            <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#r">
+                            <span class="skill-tag text-uppercase">r</span>
+                        </a>
+                    
+                        <a href="/tags/#import">
+                            <span class="skill-tag text-uppercase">import</span>
+                        </a>
+                    
+                        <a href="/tags/#csv">
+                            <span class="skill-tag text-uppercase">csv</span>
+                        </a>
+                    
+                        <a href="/tags/#excel">
+                            <span class="skill-tag text-uppercase">excel</span>
+                        </a>
+                    
+                        <a href="/tags/#analytics">
+                            <span class="skill-tag text-uppercase">analytics</span>
+                        </a>
+                    
+                </div>
+            
+
+            <!-- Description / Overview centrée et justifiée -->
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
+                        Maîtrisez l'importation de fichiers dans R : fichiers textes (.txt), CSV anglo-saxons et européens (read.csv, read.csv2), classeurs Excel (.xlsx) et gestion des encodages.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <!-- Structure Corps de page (Sidebar + Contenu) -->
+    <div class="container py-5">
+        <div class="row gx-lg-5">
+            
+            <!-- Sidebar Navigation (Sous-sections du module actif) -->
+            <!-- <aside class="col-lg-3 d-none d-lg-block">
+                <div class="sticky-sidebar-container">
+                </div>
+            </aside> -->
+            <!-- Sidebar Navigation (droite) -->
+
+<aside class="col-lg-3 d-none d-lg-block">
+    <div class="sticky-sidebar-container">
+        <div class="p-4 bg-white border rounded shadow-sm mb-4">
+
+            
+
+            <!-- Initialisation navigation -->
+            <div class="sidebar-scroll-wrapper">
+                <div class="nav flex-column sidebar-nav" id="sidebarAccordion">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Introduction générale à l'analyse de données
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../data-monetization/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Data Monetization
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../data-warehousing/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Data Warehousing
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../data-governance/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Data Governance
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../data-workflow/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Data Workflow
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../data-visualization/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Data Visualization
+            </a>
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../../excel/" style="padding-left: 0px;">
+                        Excel
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2027"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-2027">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/installer/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Installer Excel
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/interface/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Découvrir l'interface
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/les-tableaux/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Les tableaux
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/les-graphiques/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Les graphiques
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/les-tableaux-croises-dynamiques/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Les tableaux croisés dynamiques
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/obtenir-des-donnees/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Obtenir des données
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/creer-un-modele-de-donnees/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer un modèle de données
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../excel/ressources/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ressources
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../../tableau/" style="padding-left: 0px;">
+                        Tableau
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6831"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-6831">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tableau/installer/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Installer Tableau
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tableau/01-obtenir-les-donnees/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Obtenir les données
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tableau/02-creer-des-champs-calcules/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer des champs calculés
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tableau/03-creer-des-visuels/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Créer des visules
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tableau/04-assembler-le-dashbord/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Assembler le rapport
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tableau/05-partager-sur-tableau-public/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Publier sur Tableau Public
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../tableau/ressources/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ressources
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../../python/" style="padding-left: 0px;">
+                        Python
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2658"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-2658">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../python/installer-anaconda/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Installer Anaconda
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../python/01-numpy/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Numpy
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../python/02-pandas/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Pandas
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../python/03-matplotlib/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Matplotlib
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../python/04-bokeh/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Bokeh
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../python/ressources/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ressources
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 active-parent fw-bold"
+                        href="../../" style="padding-left: 0px;">
+                        R
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
+                        data-bs-toggle="collapse" data-bs-target="#collapse-52"
+                        aria-expanded="true">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse show" id="collapse-52">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../installer/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Installer R
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 active-parent fw-bold"
+                        href="../" style="padding-left: 10px;">
+                        Les bases
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
+                        data-bs-toggle="collapse" data-bs-target="#collapse-8566"
+                        aria-expanded="true">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse show" id="collapse-8566">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../chemins/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les chemins
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../objets/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les objets
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../vecteurs/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les vecteurs
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../facteurs/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les facteurs
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../listes/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les listes
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../matrices/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les matrices
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../dataframes/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les tableaux
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 fw-bold text-primary active-child"
+                href="./"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Import
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../export/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Export
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../programmation/" style="padding-left: 10px;">
+                        Programmation
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1337"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-1337">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programmation/conditions/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les conditions
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programmation/boucles/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les boucles
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../programmation/fonctions/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Les fonctions
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../statistique-descriptive/" style="padding-left: 10px;">
+                        Statistique Descriptive
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1151"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-1151">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../probabilites/" style="padding-left: 10px;">
+                        Probabilités
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3898"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-3898">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- SECTION AVEC ENFANTS -->
+            <div class="nav-item mb-1">
+                <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    
+                    <a class="nav-link flex-grow-1 text-dark"
+                        href="../../statistique-inferentielle/" style="padding-left: 10px;">
+                        Statistique Inférentielle
+                    </a>
+
+                    <button
+                        class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5271"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-right chevron-icon"></i>
+                    </button>
+                </div>
+
+                <div class="collapse " id="collapse-5271">
+                    <nav class="nav flex-column ms-2 mt-1">
+
+                        
+                        
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../statistique-inferentielle/estimation/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Estimation
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../statistique-inferentielle/intervalles-de-confiance/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Intervalle de confiance
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../statistique-inferentielle/tests-d-hypotheses/"
+                style="padding-left: 30px; font-size: 0.9rem;">
+                Test d'hypothèses
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../ressources/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ressources
+            </a>
+            
+            
+            
+                        
+                        
+
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+            
+                    
+                    
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../../ressources/"
+                style="padding-left: 0px; font-size: 1.0rem;">
+                Ressources
+            </a>
+            
+            
+            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
 
         </div>
-      </div>
-    </main>
-  
+
+        <!-- Bloc Abonnement -->
+        <div class="p-4 bg-primary text-white rounded shadow text-center">
+            <p class="small mb-3">Abonnez-vous à la newsletter !</p>
+            <a href="#tally-open=mJzBvX&tally-layout=modal&tally-emoji-text=👋&tally-emoji-animation=wave"
+                class="btn btn-outline-light btn-sm text-uppercase w-100">
+                S'abonner
+            </a>
+        </div>
+
+    </div>
+</aside>
+
+            <!-- Contenu Principal -->
+            <main class="col-lg-9 col-md-12">
+                <article class="markdown-content bg-white p-4 p-md-5 border rounded shadow-sm">                        
+                    
+
+                    
+                    <div class="featured-image mb-5">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/04-analytics/r/covers/r-basics.png" class="img-fluid rounded shadow-sm w-100" alt="Import">
+                    </div>
+                    
+
+                    <section class="" id="blog">
+
+                        
+
+                        <p>Dans les scénarios professionnels, les données ne sont presque jamais saisies à la main dans un script. Elles proviennent d'exportations de bases de données, d'outils CRM, de fichiers plats CSV ou de classeurs Excel.</p>
+<p>R offre des fonctions natives très puissantes complétées par des bibliothèques modernes pour ingérer n'importe quel flux de données.</p>
+<hr />
+<h2 id="1-importer-des-fichiers-textes-et-csv-avec-r-de-base">1. Importer des fichiers textes et CSV avec R de base<a class="headerlink" href="#1-importer-des-fichiers-textes-et-csv-avec-r-de-base" title="Permanent link">#</a></h2>
+<p>La famille de fonctions <code>read.*</code> est nativement intégrée à R sans nécessiter l'installation d'aucun package supplémentaire :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                  Séparateurs selon les standards
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ┌───────────────────────┬───────────────────────┬───────────────────────┐
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  │ Format                │ Séparateur de colonnes│ Séparateur de décimale│
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  ├───────────────────────┼───────────────────────┼───────────────────────┤
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  │ Standard US (read.csv)│ Virgule (,)           │ Point (.)             │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  │ Standard FR (read.csv2│ Point-virgule (;)     │ Virgule (,)           │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  │ Fichier TXT générique │ Tabulation (\t) ou esp│ Configurable          │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  └───────────────────────┴───────────────────────┴───────────────────────┘
+</code></pre></div>
+<h3 id="1-fichier-csv-au-format-americain-readcsv">1. Fichier CSV au format américain (<code>read.csv</code>)<a class="headerlink" href="#1-fichier-csv-au-format-americain-readcsv" title="Permanent link">#</a></h3>
+<p>Pour un fichier délimité par des virgules avec des décimales en points (ex : <code>12.5,45.2</code>) :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Importation standard</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">donnees</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">"data/ventes_us.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="2-fichier-csv-au-format-francais-europeen-readcsv2">2. Fichier CSV au format français / européen (<code>read.csv2</code>)<a class="headerlink" href="#2-fichier-csv-au-format-francais-europeen-readcsv2" title="Permanent link">#</a></h3>
+<p>En France et en Europe continentale, Excel exporte souvent des CSV séparés par des <strong>points-virgules (<code>;</code>)</strong> et utilise des <strong>virgules (<code>,</code>)</strong> pour les décimales (ex : <code>12,5;45,2</code>) :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Importation adaptée aux paramètres régionaux français</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">donnees_fr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv2</span><span class="p">(</span><span class="s">"data/ventes_france.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="3-la-fonction-universelle-readtable">3. La fonction universelle : <code>read.table()</code><a class="headerlink" href="#3-la-fonction-universelle-readtable" title="Permanent link">#</a></h3>
+<p>C'est la fonction mère qui permet de contrôler tous les paramètres à la main :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">donnees</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"data/fichier_brut.txt"</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">          </span><span class="c1"># La première ligne contient les noms des colonnes</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">";"</span><span class="p">,</span><span class="w">              </span><span class="c1"># Séparateur de colonnes</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="n">dec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"."</span><span class="p">,</span><span class="w">              </span><span class="c1"># Séparateur décimal</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="n">na.strings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"NA"</span><span class="p">,</span><span class="w"> </span><span class="s">""</span><span class="p">,</span><span class="w"> </span><span class="s">"ND"</span><span class="p">,</span><span class="w"> </span><span class="s">"null"</span><span class="p">),</span><span class="w"> </span><span class="c1"># Valeurs à considérer comme manquantes</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">               </span><span class="c1"># Garder le texte en type caractère</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="n">encoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"UTF-8"</span><span class="w">                      </span><span class="c1"># Encodage pour préserver les accents</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="2-importer-des-classeurs-excel-xlsx">2. Importer des classeurs Excel (<code>.xlsx</code>)<a class="headerlink" href="#2-importer-des-classeurs-excel-xlsx" title="Permanent link">#</a></h2>
+<p>R de base ne lit pas nativement le format binaire propriétaire des classeurs Excel. Pour cela, la communauté a conçu le package léger et performant <strong><code>readxl</code></strong> (partie du Tidyverse) :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Installer le package si ce n'est pas déjà fait</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># install.packages("readxl")</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># Importer la première feuille d'un fichier Excel</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">classeur</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="s">"data/rapport_annuel.xlsx"</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1"># Spécifier une feuille précise (par nom ou par index)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">budget</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="s">"data/rapport_annuel.xlsx"</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Budget_2026"</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1"># Visualiser les premières lignes</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nf">head</span><span class="p">(</span><span class="n">budget</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="3-les-pieges-frequents-a-eviter">3. Les pièges fréquents à éviter<a class="headerlink" href="#3-les-pieges-frequents-a-eviter" title="Permanent link">#</a></h2>
+<blockquote>
+<p>[!WARNING]
+<strong>Les 3 erreurs classiques lors de l'import :</strong><br />
+1. <strong>Les colonnes numériques qui deviennent du texte :</strong> Si une colonne de prix contient ne serait-ce qu'une seule case avec du texte (ex : <code>"N/A"</code> ou <code>"Gratuit"</code>), R convertira toute la colonne en type <code>character</code>. Utilisez <code>na.strings</code> pour désigner ces valeurs comme manquantes.
+2. <strong>L'erreur d'encodage (les accents détruits) :</strong> Si les caractères accentués (<code>é</code>, <code>à</code>, <code>è</code>) s'affichent sous forme de hiéroglyphes (<code>Ã©</code>), précisez explicitement <code>encoding = "UTF-8"</code> ou <code>fileEncoding = "UTF-8"</code>.
+3. <strong>L'oubli de l'entête :</strong> Si <code>header = FALSE</code> alors que votre fichier contient des titres de colonnes, la première ligne sera traitée comme des données observées.</p>
+</blockquote>
+<hr />
+<h2 id="mise-en-pratique">Mise en pratique<a class="headerlink" href="#mise-en-pratique" title="Permanent link">#</a></h2>
+<ol>
+<li>Ouvrez un éditeur de texte (ou Notepad) et créez un fichier <code>produits.csv</code> dans votre dossier de travail avec le contenu suivant :
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>id;nom_produit;prix_unitaire;stock
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>1;Clavier ergonomique;49.99;25
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2;Souris sans fil;19.50;50
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>3;Écran 27 pouces;189.00;12
+</code></pre></div></li>
+<li>Importez ce fichier dans R sous le nom <code>catalogue</code> en utilisant <code>read.table()</code> ou <code>read.csv2()</code>.</li>
+<li>Vérifiez avec <code>str(catalogue)</code> que la colonne <code>prix_unitaire</code> est bien reconnue comme numérique.</li>
+</ol>
+
+                    </section>
+
+                </article>
+
+                <!-- Navigation Précédent / Suivant -->
+                <nav class="row mt-5 pt-4 border-top">
+                    <div class="col-6">
+                        
+                        <a href="../dataframes/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1"><i class="fas fa-arrow-left me-1"></i> Précédent</span>
+                            <span class="fw-bold text-primary">Les tableaux</span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-6 text-end">
+                        
+                        <a href="../export/" class="text-decoration-none">
+                            <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
+                            <span class="fw-bold text-primary">Export</span>
+                        </a>
+                        
+                    </div>
+                </nav>
+
+                <section class="mt-5 border-top pt-4">
+                    
+                    <div class="share-section mb-5">
+                        <h2 class="h4 mb-3">Partagez sur les réseaux sociaux</h2>
+                        <!-- ShareThis BEGIN -->
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <!-- ShareThis END -->
+                    </div>
+
+                    
+                    
+                    <div class="comments-section">
+                        <h2 id="__comments" class="h4 mb-4">Commentaires</h2>
+                        
+                        
+                        <script src="https://giscus.app/client.js"
+                                data-repo="joekakone/Departement-De-Maths"
+                                data-repo-id="MDEwOlJlcG9zaXRvcnkzMzY4MjEwNTY="
+                                data-category="General"
+                                data-category-id="DIC_kwDOFBN7QM4CORj9"
+                                data-mapping="pathname"
+                                data-reactions-enabled="1"
+                                data-emit-metadata="0"
+                                data-input-position="bottom"
+                                
+                                data-theme="preferred_color_scheme"
+                                data-lang="fr"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                    
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+</div>
+
+
 
 
   <!-- Tags --><!-- CTA FINAL -->

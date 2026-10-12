@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Prêt à acquérir les compétences pour lancer votre carrière en Data Science ? <br> Je suis Joseph Konka, Analyste de données Sénior et je vous accompagnerai dans votre aventure.<br> Découvrez Python, SQL, Power BI, Tensorflow et bien d'autres outils gratuitement.<br> C'est parti ! 🚀" />
+      <meta name="description" content="Maîtrisez les matrices en R : création avec matrix(), remplissage byrow, indexation 2D [ligne, colonne], concaténation (rbind, cbind) et algèbre linéaire (%*%)." />
     
 
     <!-- Page author -->
@@ -4976,7 +4976,7 @@
         <li class="drilldown-row ">
           
           <a href="../../" class="drilldown-link ">
-            Analyse de données avec R
+            Analyse de données et statistiques avec R
           </a>
 
           
@@ -5479,7 +5479,7 @@
         <li class="drilldown-row ">
           
           <a href="../../statistique-descriptive/" class="drilldown-link ">
-            Statistique Descriptive avec R
+            Statistique Descriptive avec R : Résumer et explorer les données
           </a>
 
           
@@ -5526,7 +5526,7 @@
         <li class="drilldown-row ">
           
           <a href="../../probabilites/" class="drilldown-link ">
-            Probabilités avec R
+            Probabilités avec R : Lois discrètes, continues et simulation
           </a>
 
           
@@ -5573,7 +5573,7 @@
         <li class="drilldown-row ">
           
           <a href="../../statistique-inferentielle/" class="drilldown-link ">
-            Statistique inférentielle
+            Statistique Inférentielle avec R : De l'échantillon à la population
           </a>
 
           
@@ -11791,7 +11791,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/index.md" class="drilldown-link ">
             Get Certified
           </a>
 
@@ -12697,8 +12697,8 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/" class="drilldown-link ">
-            Get Certified - Reach the next level
+          <a href="../../../../blog/get-certified/index.md" class="drilldown-link ">
+            None
           </a>
 
           
@@ -12713,7 +12713,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/pl-300/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/pl-300.md" class="drilldown-link ">
             PL-300
           </a>
 
@@ -12729,7 +12729,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/get-certified/dp-100/" class="drilldown-link ">
+          <a href="../../../../blog/get-certified/dp-100.md" class="drilldown-link ">
             DP-100
           </a>
 
@@ -12908,7 +12908,7 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../../blog/la-rubrique-ml/discover-docker-model/" class="drilldown-link ">
+          <a href="../../../../mlops/docker/discover-docker-model/" class="drilldown-link ">
             Docker Model
           </a>
 
@@ -12972,7 +12972,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../../blog/portraits/" class="drilldown-link ">
-            Parcours d'hommes
+            Portraits : Les pionniers qui ont façonné l'informatique
           </a>
 
           
@@ -13109,7 +13109,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../../blog/fiches-metiers/" class="drilldown-link ">
-            Data Analyst
+            Fiches Métiers : Les carrières de la Data et du Développement
           </a>
 
           
@@ -13204,7 +13204,7 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les matrices</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les matrices en R : Tableaux à deux dimensions et calcul matriciel</h1>
                 
             </div>
 
@@ -13222,9 +13222,9 @@
                         
                     </p>
                     <p class="small text-muted mb-0">
-                        <i class="far fa-calendar-alt me-1"></i> 20/09/2026 
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
                         <span class="mx-2">·</span> 
-                        <i class="far fa-clock me-1"></i> 1 min
+                        <i class="far fa-clock me-1"></i> 6 min
                     </p>
                 </div>
             </div>
@@ -13238,12 +13238,12 @@
                             <span class="skill-tag text-uppercase">r</span>
                         </a>
                     
-                        <a href="/tags/#bases">
-                            <span class="skill-tag text-uppercase">bases</span>
+                        <a href="/tags/#matrices">
+                            <span class="skill-tag text-uppercase">matrices</span>
                         </a>
                     
-                        <a href="/tags/#fondamentaux">
-                            <span class="skill-tag text-uppercase">fondamentaux</span>
+                        <a href="/tags/#algebre-lineaire">
+                            <span class="skill-tag text-uppercase">algebre-lineaire</span>
                         </a>
                     
                         <a href="/tags/#analytics">
@@ -13254,6 +13254,14 @@
             
 
             <!-- Description / Overview centrée et justifiée -->
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
+                        Maîtrisez les matrices en R : création avec matrix(), remplissage byrow, indexation 2D [ligne, colonne], concaténation (rbind, cbind) et algèbre linéaire (%*%).
+                    </p>
+                </div>
+            </div>
             
         </div>
     </section>
@@ -13400,13 +13408,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4666"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2606"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-4666">
+                <div class="collapse " id="collapse-2606">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13576,13 +13584,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-8977"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3663"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-8977">
+                <div class="collapse " id="collapse-3663">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13735,13 +13743,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1124"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2939"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1124">
+                <div class="collapse " id="collapse-2939">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13877,13 +13885,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9321"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-9042"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-9321">
+                <div class="collapse show" id="collapse-9042">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13926,13 +13934,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4852"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6225"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-4852">
+                <div class="collapse show" id="collapse-6225">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14121,13 +14129,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7436"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3880"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7436">
+                <div class="collapse " id="collapse-3880">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14214,13 +14222,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-6756"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-199"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-6756">
+                <div class="collapse " id="collapse-199">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14256,13 +14264,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1501"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6916"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1501">
+                <div class="collapse " id="collapse-6916">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14298,13 +14306,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-5140"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1365"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-5140">
+                <div class="collapse " id="collapse-1365">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14453,7 +14461,7 @@
 
                     
                     <div class="featured-image mb-5">
-                        <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/covers/algo-jungle-blog.webp" class="img-fluid rounded shadow-sm w-100" alt="Les matrices">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/04-analytics/r/covers/r-basics.png" class="img-fluid rounded shadow-sm w-100" alt="Les matrices">
                     </div>
                     
 
@@ -14461,7 +14469,125 @@
 
                         
 
-                        <h1 id="les-matrices">Les matrices<a class="headerlink" href="#les-matrices" title="Permanent link">#</a></h1>
+                        <p>Une <strong>matrice</strong> en R est un tableau à deux dimensions (lignes et colonnes) où tous les éléments sont obligatoirement du <strong>même type</strong> (généralement numérique). </p>
+<p>C'est la structure fondamentale utilisée pour l'algèbre linéaire, les réseaux de neurones, la résolution de systèmes d'équations et le traitement d'images.</p>
+<hr />
+<h2 id="1-creation-dune-matrice-avec-matrix">1. Création d'une matrice avec <code>matrix()</code><a class="headerlink" href="#1-creation-dune-matrice-avec-matrix" title="Permanent link">#</a></h2>
+<p>Pour concevoir une matrice, on fournit un vecteur de données ainsi que le nombre de lignes (<code>nrow</code>) ou de colonnes (<code>ncol</code>) :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Par défaut : remplissage colonne par colonne (byrow = FALSE)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">M1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">print</span><span class="p">(</span><span class="n">M1</span><span class="p">)</span>
+</code></pre></div>
+<p>Sortie :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">     </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">3</span><span class="w">    </span><span class="m">5</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">6</span>
+</code></pre></div></p>
+<p>Pour remplir la matrice <strong>ligne par ligne</strong>, activez l'argument <code>byrow = TRUE</code> :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">M2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">print</span><span class="p">(</span><span class="n">M2</span><span class="p">)</span>
+</code></pre></div>
+<p>Sortie :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">     </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">3</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">5</span><span class="w">    </span><span class="m">6</span>
+</code></pre></div></p>
+<hr />
+<h2 id="2-dimensions-et-etiquettes-rownames-colnames">2. Dimensions et étiquettes (<code>rownames</code>, <code>colnames</code>)<a class="headerlink" href="#2-dimensions-et-etiquettes-rownames-colnames" title="Permanent link">#</a></h2>
+<p>Pour connaître la taille d'une matrice :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">dim</span><span class="p">(</span><span class="n">M2</span><span class="p">)</span><span class="w">   </span><span class="c1"># [1] 2 3 (2 lignes, 3 colonnes)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nf">nrow</span><span class="p">(</span><span class="n">M2</span><span class="p">)</span><span class="w">  </span><span class="c1"># [1] 2</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nf">ncol</span><span class="p">(</span><span class="n">M2</span><span class="p">)</span><span class="w">  </span><span class="c1"># [1] 3</span>
+</code></pre></div></p>
+<p>Il est très pratique d'attribuer des noms aux lignes et colonnes :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">M2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Ligne_1"</span><span class="p">,</span><span class="w"> </span><span class="s">"Ligne_2"</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">M2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Vente_A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Vente_B"</span><span class="p">,</span><span class="w"> </span><span class="s">"Vente_C"</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nf">print</span><span class="p">(</span><span class="n">M2</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="3-lindexation-a-deux-dimensions-ligne-colonne">3. L'indexation à deux dimensions : <code>[ligne, colonne]</code><a class="headerlink" href="#3-lindexation-a-deux-dimensions-ligne-colonne" title="Permanent link">#</a></h2>
+<p>L'accès aux éléments d'une matrice se fait toujours sous la forme <strong><code>[i, j]</code></strong> où <span class="arithmatex">\(i\)</span> désigne la ligne et <span class="arithmatex">\(j\)</span> la colonne :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Élément précis à la 2e ligne, 3e colonne</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">M2</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="c1"># [1] 6</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Extraire une ligne entière (en laissant l'indice de colonne vide)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">M2</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c1"># Vente_A: 1, Vente_B: 2, Vente_C: 3</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Extraire une colonne entière</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">M2</span><span class="p">[,</span><span class="w"> </span><span class="s">"Vente_B"</span><span class="p">]</span><span class="w"> </span><span class="c1"># Ligne_1: 2, Ligne_2: 5</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1"># Extraire un sous-bloc 2x2</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">M2</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">]</span>
+</code></pre></div>
+<hr />
+<h2 id="4-combiner-des-donnees-rbind-et-cbind">4. Combiner des données : <code>rbind()</code> et <code>cbind()</code><a class="headerlink" href="#4-combiner-des-donnees-rbind-et-cbind" title="Permanent link">#</a></h2>
+<ul>
+<li><strong><code>rbind()</code> (<em>Row Bind</em>) :</strong> Empile deux matrices ou vecteurs par les lignes (l'un au-dessus de l'autre).</li>
+<li><strong><code>cbind()</code> (<em>Column Bind</em>) :</strong> Accole deux matrices ou vecteurs côte à côte par les colonnes.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">v1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">v2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">mat_lignes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbind</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">)</span><span class="w">   </span><span class="c1"># Matrice 2 x 3</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">mat_colonnes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cbind</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">)</span><span class="w"> </span><span class="c1"># Matrice 3 x 2</span>
+</code></pre></div>
+<hr />
+<h2 id="5-algebre-lineaire-et-operations-matricielles">5. Algèbre linéaire et opérations matricielles<a class="headerlink" href="#5-algebre-lineaire-et-operations-matricielles" title="Permanent link">#</a></h2>
+<p>R distingue rigoureusement le calcul terme à terme du produit matriciel de l'algèbre linéaire :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opération</th>
+<th style="text-align: left;">Opérateur R</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Produit terme à terme</strong></td>
+<td style="text-align: left;"><code>A * B</code></td>
+<td style="text-align: left;">Multiplie chaque élément <span class="arithmatex">\(A_{ij}\)</span> par <span class="arithmatex">\(B_{ij}\)</span> (mêmes dimensions requises).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Produit matriciel</strong></td>
+<td style="text-align: left;"><code>A %*% B</code></td>
+<td style="text-align: left;">Véritable produit matriciel mathématique (lignes <span class="arithmatex">\(\times\)</span> colonnes).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transposée</strong></td>
+<td style="text-align: left;"><code>t(A)</code></td>
+<td style="text-align: left;">Intervertit les lignes et les colonnes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inversion</strong></td>
+<td style="text-align: left;"><code>solve(A)</code></td>
+<td style="text-align: left;">Calcule la matrice inverse <span class="arithmatex">\(A^{-1}\)</span> (<span class="arithmatex">\(A\)</span> doit être carrée et inversible).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diagonale</strong></td>
+<td style="text-align: left;"><code>diag(A)</code></td>
+<td style="text-align: left;">Extrait le vecteur de la diagonale principale.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">A</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="c1"># Matrice 2x2</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">B</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Vrai produit matriciel</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">produit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">B</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># Inversion de A</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">A_inv</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">A</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">A_inv</span><span class="w"> </span><span class="c1"># Donne la matrice identité I</span>
+</code></pre></div>
+<hr />
+<h2 id="mise-en-pratique">Mise en pratique<a class="headerlink" href="#mise-en-pratique" title="Permanent link">#</a></h2>
+<ol>
+<li>Créez une matrice <span class="arithmatex">\(3 \times 3\)</span> nommée <code>mat</code> contenant les entiers de 1 à 9 remplis ligne par ligne.</li>
+<li>Calculez la transposée de cette matrice avec <code>t(mat)</code>.</li>
+<li>Extrayez la deuxième colonne complète de <code>mat</code>.</li>
+<li>Créez une matrice identité de taille 3 grâce à la fonction <code>diag(3)</code>.</li>
+</ol>
 
                     </section>
 
