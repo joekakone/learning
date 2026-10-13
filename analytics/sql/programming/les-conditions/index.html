@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Les boucles permettent d'exécuter des instructions plusieurs fois. Cette répétition peut se faire en fonction d'une condition ou d'un nombre défini d'itérations." />
+      <meta name="description" content="Maîtrisez le branchement logique en base de données : comparez l'expression déclarative CASE WHEN et la structure procédurale IF..THEN..ELSIF..ELSE..END IF, et appliquez-les aux pipelines de données ETL." />
     
 
     <!-- Page author -->
@@ -4648,7 +4648,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../tableau/" class="drilldown-link ">
-            Visualisation de données avec Tableau
+            Visualisation de données avec Tableau Desktop
           </a>
 
           
@@ -6090,7 +6090,7 @@
         <li class="drilldown-row ">
           
           <a href="../" class="drilldown-link ">
-            Les bases du langage PL/PGSQL
+            Introduction à la Programmation Procédurale en SQL (PL/pgSQL)
           </a>
 
           
@@ -13204,14 +13204,61 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les conditions</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Structures Conditionnelles en SQL et PL/pgSQL</h1>
                 
             </div>
 
             <!-- Infos Auteur -->
             
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 7 min
+                    </p>
+                </div>
+            </div>
+            
 
             <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#sql">
+                            <span class="skill-tag text-uppercase">sql</span>
+                        </a>
+                    
+                        <a href="/tags/#plpgsql">
+                            <span class="skill-tag text-uppercase">plpgsql</span>
+                        </a>
+                    
+                        <a href="/tags/#conditions">
+                            <span class="skill-tag text-uppercase">conditions</span>
+                        </a>
+                    
+                        <a href="/tags/#if-then-else">
+                            <span class="skill-tag text-uppercase">if-then-else</span>
+                        </a>
+                    
+                        <a href="/tags/#case-when">
+                            <span class="skill-tag text-uppercase">case-when</span>
+                        </a>
+                    
+                        <a href="/tags/#control-flow">
+                            <span class="skill-tag text-uppercase">control-flow</span>
+                        </a>
+                    
+                </div>
             
 
             <!-- Description / Overview centrée et justifiée -->
@@ -13219,7 +13266,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Les boucles permettent d'exécuter des instructions plusieurs fois. Cette répétition peut se faire en fonction d'une condition ou d'un nombre défini d'itérations.
+                        Maîtrisez le branchement logique en base de données : comparez l'expression déclarative CASE WHEN et la structure procédurale IF..THEN..ELSIF..ELSE..END IF, et appliquez-les aux pipelines de données ETL.
                     </p>
                 </div>
             </div>
@@ -13386,13 +13433,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2260"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6763"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-2260">
+                <div class="collapse " id="collapse-6763">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13511,13 +13558,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-8224"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5597"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-8224">
+                <div class="collapse show" id="collapse-5597">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13619,13 +13666,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-8354"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5711"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-8354">
+                <div class="collapse " id="collapse-5711">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13817,134 +13864,183 @@
 
                         
 
-                        <h2 id="casewhenthenelse">CASE..WHEN..THEN..ELSE..<a class="headerlink" href="#casewhenthenelse" title="Permanent link">#</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">case</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">'2024-01-01'</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">18</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">10</span><span class="w"> </span><span class="k">end</span>
-</code></pre></div>
-Cela ressemble à l'expression ternaire dans les langages de programmation classiques.</p>
-<p>Catégoriser des dates
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">case</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">'2023-08-01'</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">'1. Avant'</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">'2023-09-01'</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">'2. Pendant'</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">'2023-09-01'</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">'3. Apres'</span><span class="w"> </span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">end</span><span class="w"> </span><span class="n">periode</span>
-</code></pre></div></p>
-<p>Segementer la base client suivant les montants d'achats
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">case</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="n">total_amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">total_amount</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5000</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">'LVC'</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="n">total_amount</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5000</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">total_amount</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">70000</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">'MVC'</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="n">total_amount</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">70000</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">'HVC'</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">else</span><span class="w"> </span><span class="s1">'Inactive'</span><span class="w"> </span><span class="k">end</span><span class="w">   </span><span class="k">as</span><span class="w"> </span><span class="n">segment</span>
-</code></pre></div></p>
-<p>```sql title = "Pivot Table"
-select 
-    dt,
-    sum(case when product_category = 'Data' then amount else 0 end) data_pack_amount,
-    sum(case when product_category = 'Voice' then amount else 0 end) voice_pack_amount,
-    sum(case when product_category = 'Combo' then amount else 0 end) combo_pack_amount,
-    sum(case when product_category = 'Airtime' then amount else 0 end) airtime_amount,
-    sum(case when product_category = 'Other' then amount else 0 end) other_amount
-from edw.fct_orders
-where dt = rundt
-group by 1
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>## Structure conditionnelle `IF..THEN..`
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>La structure conditionnelle `IF` permet d'exécuter des instructions lorsqu'une condition est vérifiée.
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>```sql title="Structure conditionnelle" 
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>do
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>$$
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>declare
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    age integer;
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>begin
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    age := 35;
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    if age &gt;= 18 then
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        raise info 'You are major !';
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    end if;
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>end;
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>$$;
-</code></pre></div></p>
-<h2 id="structure-alternative">Structure alternative<a class="headerlink" href="#structure-alternative" title="Permanent link">#</a></h2>
-<div class="highlight"><span class="filename">Structure conditionnelle avec alternative</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">do</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="err">$$</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">declare</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">begin</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'You are major !'</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="k">else</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'You are minor !'</span><span class="p">;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="err">$$</span><span class="p">;</span>
-</code></pre></div>
-<h2 id="structure-conditionnelle-imbriquee">Structure conditionnelle imbriquée<a class="headerlink" href="#structure-conditionnelle-imbriquee" title="Permanent link">#</a></h2>
-<p>Dans le cadre de problèmes complexes, il peut être nécessaire 
-<div class="highlight"><span class="filename">Structure conditionnelle avec alternative</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">do</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="err">$$</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">declare</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">begin</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'You are adult !'</span><span class="p">;</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">elif</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'You are major !'</span><span class="p">;</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">else</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'You are minor !'</span><span class="p">;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="err">$$</span><span class="p">;</span>
-</code></pre></div></p>
-<h2 id="conditions-imbriquees">Conditions imbriquées<a class="headerlink" href="#conditions-imbriquees" title="Permanent link">#</a></h2>
-<p>Dans le cadre de problèmes complexes, il peut être nécessaire 
-<div class="highlight"><span class="filename">Structure conditionnelle avec alternative</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">do</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="err">$$</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">declare</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">begin</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'You are major !'</span><span class="p">;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="k">else</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'You are minor !'</span><span class="p">;</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="err">$$</span><span class="p">;</span>
-</code></pre></div></p>
-<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">if</span><span class="w"> </span><span class="n">rundt</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">'2024-01-01'</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">drop</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="n">tmp</span><span class="p">.</span><span class="n">store_orders_stg</span><span class="p">;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">tmp</span><span class="p">.</span><span class="n">store_orders_stg</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="n">prod</span><span class="p">.</span><span class="n">store_orders</span><span class="w"> </span><span class="n">t</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="k">where</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">rundt</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">            </span><span class="k">and</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rundt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="p">);</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="k">else</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="k">drop</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="n">tmp</span><span class="p">.</span><span class="n">store_orders_stg</span><span class="p">;</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">tmp</span><span class="p">.</span><span class="n">store_orders_stg</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="o">*</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="n">stagging</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="n">t</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="k">where</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">rundt</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">            </span><span class="k">and</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rundt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="p">);</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-</code></pre></div>
-<p>Arrêter l'execution pour certaines plages d'heures par exemple
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="p">(</span><span class="n">to_char</span><span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="w"> </span><span class="s1">'HH24'</span><span class="p">)</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="s1">'06'</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="s1">'20'</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">'N'</span><span class="p">;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-</code></pre></div></p>
-<p>Arrêter l'execution lorsque les données source ne sont pas disponibles
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">--- Compter le nombre de lignes</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">into</span><span class="w"> </span><span class="n">_cnt</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">from</span><span class="w"> </span><span class="n">tmp</span><span class="p">.</span><span class="n">store_orders_stg</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">where</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rundt</span><span class="p">;</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">if</span><span class="w"> </span><span class="n">_cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'Data not found !'</span><span class="p">;</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">'N'</span><span class="p">;</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-</code></pre></div></p>
+                        <p>En ingénierie de données, l'aiguillage logique est omniprésent : déclencher un recalcul uniquement si de nouvelles données sont arrivées, catégoriser des clients selon leur volume d'achat, ou interrompre un script en cas d'incohérence.</p>
+<p>Il convient de distinguer deux notions souvent confondues :
+1. L'expression déclarative <strong><code>CASE WHEN</code></strong> (utilisable partout dans le SQL standard).
+2. L'instruction de contrôle procédurale <strong><code>IF ... THEN ... ELSE</code></strong> (exclusive aux blocs PL/pgSQL).</p>
 <hr />
-<p><em>.</em></p>
+<h2 id="1-lexpression-declarative-case-when">1. L'expression déclarative : <code>CASE WHEN</code><a class="headerlink" href="#1-lexpression-declarative-case-when" title="Permanent link">#</a></h2>
+<p>L'expression <code>CASE WHEN</code> évalue une liste de conditions et retourne <strong>une valeur unique</strong>. Elle s'intègre directement dans les requêtes <code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code> ou <code>UPDATE</code>.</p>
+<h3 id="syntaxe-generale-forme-recherchee">Syntaxe générale (Forme recherchée)<a class="headerlink" href="#syntaxe-generale-forme-recherchee" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CASE</span><span class="w"> </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">condition_1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">resultat_1</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">condition_2</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">resultat_2</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">ELSE</span><span class="w"> </span><span class="n">resultat_par_defaut</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">END</span>
+</code></pre></div>
+<h3 id="cas-dusage-a-segmentation-et-scoring-metier">Cas d'usage A : Segmentation et scoring métier<a class="headerlink" href="#cas-dusage-a-segmentation-et-scoring-metier" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">id_client</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">nom</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">total_achats</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">CASE</span><span class="w"> </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">total_achats</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">50000</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'Client VIP (HVC)'</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">total_achats</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10000</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'Client Régulier (MVC)'</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">total_achats</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w">      </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'Client Occasionnel (LVC)'</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">'Inactif'</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">segment_client</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">FROM</span><span class="w"> </span><span class="n">analytics</span><span class="p">.</span><span class="n">dim_clients</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="cas-dusage-b-agregation-conditionnelle-pivot-table-en-sql-pur">Cas d'usage B : Agrégation conditionnelle (<em>Pivot Table</em> en SQL pur)<a class="headerlink" href="#cas-dusage-b-agregation-conditionnelle-pivot-table-en-sql-pur" title="Permanent link">#</a></h3>
+<p>L'association de <code>SUM()</code> et de <code>CASE WHEN</code> permet de transformer les lignes d'une catégorie en colonnes sans fonction de pivot dédiée :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">date_vente</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">categorie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Informatique'</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ca_informatique</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">categorie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Mobilier'</span><span class="w">     </span><span class="k">THEN</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ca_mobilier</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">categorie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Fournitures'</span><span class="w">  </span><span class="k">THEN</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ca_fournitures</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">montant</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ca_total</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">FROM</span><span class="w"> </span><span class="n">fct_ventes</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">date_vente</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">date_vente</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="2-linstruction-de-controle-procedurale-if-then-else">2. L'instruction de contrôle procédurale : <code>IF ... THEN ... ELSE</code><a class="headerlink" href="#2-linstruction-de-controle-procedurale-if-then-else" title="Permanent link">#</a></h2>
+<p>À la différence de <code>CASE WHEN</code> qui calcule une valeur, l'instruction <strong><code>IF</code></strong> en PL/pgSQL gouverne <strong>quelles actions exécuter</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>                    [ Condition booléenne ]
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                             │
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>               ┌─────────────┴─────────────┐
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>          VRAI │                      FAUX │
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>               ▼                           ▼
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        [ Bloc THEN ]              [ Bloc ELSIF ou ELSE ]
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>               │                           │
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>               └─────────────┬─────────────┘
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>                             ▼
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>                        [ END IF; ]
+</code></pre></div>
+<blockquote>
+<p>[!WARNING]
+En PL/pgSQL, la syntaxe pour les branches intermédiaires s'écrit obligatoirement <strong><code>ELSIF</code></strong> ou <strong><code>ELSEIF</code></strong> (avec un <code>S</code>). La syntaxe Python <code>elif</code> provoquera une erreur de syntaxe à la compilation. Tout bloc conditionnel doit obligatoirement se refermer par <strong><code>END IF;</code></strong>.</p>
+</blockquote>
+<hr />
+<h2 id="3-les-formes-de-structures-procedurales">3. Les formes de structures procédurales<a class="headerlink" href="#3-les-formes-de-structures-procedurales" title="Permanent link">#</a></h2>
+<h3 id="forme-1-condition-simple-if-then-end-if">Forme 1 : Condition simple (<code>IF ... THEN ... END IF;</code>)<a class="headerlink" href="#forme-1-condition-simple-if-then-end-if" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">DO</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="err">$$</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">v_nb_erreurs</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">BEGIN</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nb_erreurs</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs_anomalies</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">resolu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FALSE</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_nb_erreurs</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="s1">'Attention : % anomalie(s) non résolue(s) détectée(s) !'</span><span class="p">,</span><span class="w"> </span><span class="n">v_nb_erreurs</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="forme-2-alternative-binaire-if-then-else-end-if">Forme 2 : Alternative binaire (<code>IF ... THEN ... ELSE ... END IF;</code>)<a class="headerlink" href="#forme-2-alternative-binaire-if-then-else-end-if" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">DO</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="err">$$</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">v_statut_serveur</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">'PRODUCTION'</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">BEGIN</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_statut_serveur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'PRODUCTION'</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Mode sécurisé actif : journalisation stricte.'</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">ELSE</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Mode bac à sable : réinitialisation autorisée.'</span><span class="p">;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="forme-3-multi-branches-if-elsif-else-end-if">Forme 3 : Multi-branches (<code>IF ... ELSIF ... ELSE ... END IF;</code>)<a class="headerlink" href="#forme-3-multi-branches-if-elsif-else-end-if" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">DO</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="err">$$</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">v_taux_remise</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">v_anciennete_annees</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">BEGIN</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_anciennete_annees</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">v_taux_remise</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="k">ELSIF</span><span class="w"> </span><span class="n">v_anciennete_annees</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="n">v_taux_remise</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="k">ELSIF</span><span class="w"> </span><span class="n">v_anciennete_annees</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="n">v_taux_remise</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="k">ELSE</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="n">v_taux_remise</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span><span class="p">;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Remise accordée : % %'</span><span class="p">,</span><span class="w"> </span><span class="n">v_taux_remise</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s1">'%'</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="4-cas-dapplication-en-data-engineering-controle-qualite-dingestion">4. Cas d'application en Data Engineering : Contrôle qualité d'ingestion<a class="headerlink" href="#4-cas-dapplication-en-data-engineering-controle-qualite-dingestion" title="Permanent link">#</a></h2>
+<p>Dans un pipeline de données, avant de charger une table de reporting finale, on effectue des contrôles préalables de volumétrie et de cohérence :</p>
+<div class="highlight"><span class="filename">Validation de volumétrie avant chargement</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">DO</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="err">$$</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">v_nb_lignes</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">c_seuil_minimal</span><span class="w"> </span><span class="n">CONSTANT</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">BEGIN</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="c1">-- 1. Comptage des données reçues dans la table de staging</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">staging</span><span class="p">.</span><span class="n">commandes_brutes</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="c1">-- 2. Évaluation de la complétude</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="k">EXCEPTION</span><span class="w"> </span><span class="s1">'ÉCHEC PIPELINE : La table staging est vide ! Abandon immédiat.'</span><span class="p">;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="k">ELSIF</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">c_seuil_minimal</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="s1">'ALERTE : Seulement % lignes reçues (attendu : au moins %). Chargement sous surveillance.'</span><span class="p">,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">            </span><span class="n">v_nb_lignes</span><span class="p">,</span><span class="w"> </span><span class="n">c_seuil_minimal</span><span class="p">;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">        </span><span class="c1">-- Déclenchement de la procédure de chargement avec marquage</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">        </span><span class="n">PERFORM</span><span class="w"> </span><span class="n">etl</span><span class="p">.</span><span class="n">charger_avec_reserve</span><span class="p">();</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="k">ELSE</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'SUCCESS : % enregistrements prêts. Lancement de la consolidation.'</span><span class="p">,</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="p">;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">        </span><span class="n">PERFORM</span><span class="w"> </span><span class="n">etl</span><span class="p">.</span><span class="n">charger_table_finale</span><span class="p">();</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="5-mise-en-pratique-detecteur-et-nettoyeur-de-doublons">5. Mise en pratique : Détecteur et nettoyeur de doublons<a class="headerlink" href="#5-mise-en-pratique-detecteur-et-nettoyeur-de-doublons" title="Permanent link">#</a></h2>
+<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">#</a></h3>
+<p>Écrire un bloc anonyme PL/pgSQL qui :
+1. Compte le nombre d'adresses email dupliquées dans une table temporaire <code>tmp_prospects</code>.
+2. Si des doublons sont présents, journalise un avertissement avec le nombre de doublons trouvés, puis purge les doublons en ne conservant que l'entrée ayant l'identifiant le plus récent.
+3. Si aucun doublon n'existe, valide le bon état de la table.</p>
+<div class="highlight"><span class="filename">Solution de l&#x27;exercice</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">DO</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="err">$$</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">v_doublons_count</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">BEGIN</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="c1">-- Comptage des doublons sur le champ email</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_doublons_count</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">email</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">tmp_prospects</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">email</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="n">sub</span><span class="p">;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_doublons_count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="s1">'DOUBLONS DÉTECTÉS : % emails en double identifiés.'</span><span class="p">,</span><span class="w"> </span><span class="n">v_doublons_count</span><span class="p">;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">        </span><span class="c1">-- Déduplication propre : suppression des doublons anciens</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">        </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">tmp_prospects</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">tmp_prospects</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">            </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">email</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">        </span><span class="p">);</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'NETTOYAGE EFFECTUÉ : Table assainie avec succès.'</span><span class="p">;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">    </span><span class="k">ELSE</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'CONTRÔLE VALIDÉ : Aucun doublon dans la table des prospects.'</span><span class="p">;</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><em>Grâce aux conditions, vos scripts prennent des décisions autonomes et sécurisent vos données. Dans la leçon suivante, nous aborderons les <strong>Structures Répétitives (Boucles LOOP, WHILE et FOR)</strong> pour automatiser les traitements itératifs.</em></p>
 
                     </section>
 

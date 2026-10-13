@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="À la base, SQL n'est pas un langage de programmation, toutefois certains SGDBR permettent d'implémenter des logiques de programmation. Dans cette nouvelle série de publications, je vous parlerai de la programmation sous Postgres avec PL/pgSQL." />
+      <meta name="description" content="Dépassez le SQL déclaratif classique grâce à la programmation procédurale avec PL/pgSQL sous PostgreSQL : structure des blocs anonymes DO, dollar-quoting, journalisation RAISE et automatisation de traitements de données." />
     
 
     <!-- Page author -->
@@ -42,7 +42,7 @@
   
 
   <title>
-    Les bases du langage PL/PGSQL | Algo Jungle
+    Introduction à la Programmation Procédurale en SQL (PL/pgSQL) | Algo Jungle
   </title>
 
   <!-- Google Fonts -->
@@ -4648,7 +4648,7 @@
         <li class="drilldown-row ">
           
           <a href="../../tableau/" class="drilldown-link ">
-            Visualisation de données avec Tableau
+            Visualisation de données avec Tableau Desktop
           </a>
 
           
@@ -6090,7 +6090,7 @@
         <li class="drilldown-row is-active">
           
           <a href="./" class="drilldown-link active">
-            Les bases du langage PL/PGSQL
+            Introduction à la Programmation Procédurale en SQL (PL/pgSQL)
           </a>
 
           
@@ -13204,14 +13204,57 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les bases du langage PL/PGSQL</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Introduction à la Programmation Procédurale en SQL (PL/pgSQL)</h1>
                 
             </div>
 
             <!-- Infos Auteur -->
             
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 5 min
+                    </p>
+                </div>
+            </div>
+            
 
             <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#sql">
+                            <span class="skill-tag text-uppercase">sql</span>
+                        </a>
+                    
+                        <a href="/tags/#plpgsql">
+                            <span class="skill-tag text-uppercase">plpgsql</span>
+                        </a>
+                    
+                        <a href="/tags/#postgresql">
+                            <span class="skill-tag text-uppercase">postgresql</span>
+                        </a>
+                    
+                        <a href="/tags/#programming">
+                            <span class="skill-tag text-uppercase">programming</span>
+                        </a>
+                    
+                        <a href="/tags/#data-engineering">
+                            <span class="skill-tag text-uppercase">data-engineering</span>
+                        </a>
+                    
+                </div>
             
 
             <!-- Description / Overview centrée et justifiée -->
@@ -13219,7 +13262,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        À la base, SQL n'est pas un langage de programmation, toutefois certains SGDBR permettent d'implémenter des logiques de programmation. Dans cette nouvelle série de publications, je vous parlerai de la programmation sous Postgres avec PL/pgSQL.
+                        Dépassez le SQL déclaratif classique grâce à la programmation procédurale avec PL/pgSQL sous PostgreSQL : structure des blocs anonymes DO, dollar-quoting, journalisation RAISE et automatisation de traitements de données.
                     </p>
                 </div>
             </div>
@@ -13386,13 +13429,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-3065"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-4339"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-3065">
+                <div class="collapse " id="collapse-4339">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13511,13 +13554,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-835"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-9017"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-835">
+                <div class="collapse show" id="collapse-9017">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13619,13 +13662,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-6714"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-183"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-6714">
+                <div class="collapse " id="collapse-183">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13809,7 +13852,7 @@
 
                     
                     <div class="featured-image mb-5">
-                        <img src="https://algojungle.github.io/algojungle-assets/images/05-sql/covers/programming-with-sql.png" class="img-fluid rounded shadow-sm w-100" alt="Les bases du langage PL/PGSQL">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/05-sql/covers/programming-with-sql.png" class="img-fluid rounded shadow-sm w-100" alt="Introduction à la Programmation Procédurale en SQL (PL/pgSQL)">
                     </div>
                     
 
@@ -13817,22 +13860,119 @@
 
                         
 
-                        <p>Saviez-vous que l'on peut programmer avec le langage SQL ?</p>
-<p>La réponse est OUI et je vous explique tout !</p>
-<p>Comme vous le savez déjà, SQL (Structured Query Language) est le langage qui permet d'interagir avec les bases de données relationnelles. Il s'agit d'un langage descriptif.</p>
-<h2 id="scriptage">Scriptage<a class="headerlink" href="#scriptage" title="Permanent link">#</a></h2>
-<p>On peut considérer le langage PL/PGSQL comme un langage compilé. En effet il faut écrire un programme complet et structuré avant d'exécuter. Les erreurs</p>
-<h2 id="hello-world">Hello world !<a class="headerlink" href="#hello-world" title="Permanent link">#</a></h2>
-<p>Comme le veut la tradition, on démarre avec l'affichage du fameux message <strong>Hello world !</strong>.
-<div class="highlight"><span class="filename">Hello world !</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">do</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">$$</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">begin</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'Hello world !'</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="err">$$</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
-</code></pre></div></p>
+                        <p>Le langage SQL standard est par essence un langage <strong>déclaratif</strong> : vous décrivez <em>ce que</em> vous souhaitez obtenir (<code>SELECT ... FROM ... WHERE ...</code>), et le moteur de base de données détermine le plan d'exécution optimal pour vous renvoyer le jeu d'enregistrements.</p>
+<p>Cependant, dans les architectures modernes de données (Data Warehouses, pipelines ETL, maintenance d'entrepôts de données), le simple SQL déclaratif ne suffit plus. Il devient indispensable d'exécuter des calculs séquentiels, de tester des conditions d'exécution, d'itérer sur des partitions ou de gérer des exceptions. C'est ici qu'intervient la <strong>programmation procédurale</strong>.</p>
 <hr />
-<p><em>Dans la suite, j'aborderai les différentes notions de base de la programmation avec PL/PGSQL.</em></p>
+<h2 id="1-declaratif-vs-procedural-le-changement-de-paradigme">1. Déclaratif vs Procédural : le changement de paradigme<a class="headerlink" href="#1-declaratif-vs-procedural-le-changement-de-paradigme" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Caractéristique</th>
+<th style="text-align: left;">SQL Déclaratif (<code>SELECT / INSERT / UPDATE</code>)</th>
+<th style="text-align: left;">SQL Procédural (<code>PL/pgSQL</code>, <code>T-SQL</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Philosophie</strong></td>
+<td style="text-align: left;">Spécifie le résultat attendu (<em>Quoi</em>)</td>
+<td style="text-align: left;">Spécifie l'enchaînement des étapes (<em>Comment</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Structures de contrôle</strong></td>
+<td style="text-align: left;">Limitées à des expressions en ligne (<code>CASE WHEN</code>)</td>
+<td style="text-align: left;">Boucles (<code>LOOP</code>, <code>FOR</code>, <code>WHILE</code>), conditions (<code>IF / THEN / ELSE</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Variables locales</strong></td>
+<td style="text-align: left;">Non supportées nativement</td>
+<td style="text-align: left;">Déclaration de types scalaires, records et curseurs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gestion des erreurs</strong></td>
+<td style="text-align: left;">La requête échoue brutalement</td>
+<td style="text-align: left;">Blocs de capture d'exceptions (<code>BEGIN ... EXCEPTION ... END</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cas d'usage type</strong></td>
+<td style="text-align: left;">Requêtes ad hoc, rapports BI</td>
+<td style="text-align: left;">Pipelines ETL, rafraîchissement incrémental, archivage de données</td>
+</tr>
+</tbody>
+</table>
+<p>Chaque grand SGBDR dispose de son extension procédurale :
+* <strong>PostgreSQL</strong> : <strong>PL/pgSQL</strong> (<em>Procedural Language / PostgreSQL</em>)
+* <strong>Microsoft SQL Server</strong> : <strong>T-SQL</strong> (<em>Transact-SQL</em>)
+* <strong>Oracle Database</strong> : <strong>PL/SQL</strong></p>
+<p>Dans ce module, nous étudions en profondeur <strong>PL/pgSQL</strong>, qui est aujourd'hui le dialecte open-source de référence dans l'écosystème de données cloud et on-premise.</p>
+<hr />
+<h2 id="2-anatomie-dun-bloc-procedural-en-plpgsql">2. Anatomie d'un bloc procédural en PL/pgSQL<a class="headerlink" href="#2-anatomie-dun-bloc-procedural-en-plpgsql" title="Permanent link">#</a></h2>
+<p>En PL/pgSQL, le code s'écrit sous forme de <strong>blocs structurés</strong>. Lorsque l'on souhaite exécuter un script sans créer de fonction permanente dans la base, on utilise un <strong>bloc anonyme</strong> initié par la commande <code>DO</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">DO</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">$$</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">-- 1. Zone de déclaration des variables locales</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">v_message</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">'Bienvenue dans le moteur PL/pgSQL'</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">BEGIN</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">-- 2. Corps du programme (instructions impératives)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'%'</span><span class="p">,</span><span class="w"> </span><span class="n">v_message</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">EXCEPTION</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="c1">-- 3. Gestion facultative des erreurs</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">OTHERS</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="s1">'Une erreur inattendue est survenue : %'</span><span class="p">,</span><span class="w"> </span><span class="n">SQLERRM</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="le-mecanisme-du-dollar-quoting">Le mécanisme du Dollar-Quoting (<code>$$</code>)<a class="headerlink" href="#le-mecanisme-du-dollar-quoting" title="Permanent link">#</a></h3>
+<p>Remarquez les symboles <code>$$</code> encadrant le code. En SQL traditionnel, une chaîne de caractères s'écrit entre apostrophes <code>'...'</code>. Mais si votre code procédural contient lui-même des apostrophes ou des requêtes dynamiques, vous seriez contraint de doubler chaque guillemet (<code>''''</code>). </p>
+<p>La syntaxe de <strong>dollar-quoting</strong> (<code>$$ ... $$</code>) permet d'encapsuler tout le bloc de code comme un littéral textuel sans échappement fastidieux.</p>
+<hr />
+<h2 id="3-journaliser-avec-raise-notice">3. Journaliser avec <code>RAISE NOTICE</code><a class="headerlink" href="#3-journaliser-avec-raise-notice" title="Permanent link">#</a></h2>
+<p>En programmation SQL, vous ne disposez pas d'un <code>print()</code> ou d'un <code>console.log()</code> standard. L'instruction <strong><code>RAISE</code></strong> permet d'émettre des messages d'information, des avertissements ou d'interrompre l'exécution :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Message informatif (visible dans la console DBeaver ou psql)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Traitement terminé avec succès pour la partition %'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-03-01'</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">-- Signalement d'un avertissement</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">RAISE</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="s1">'Attention : la table source comporte des enregistrements orphelins.'</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">-- Levée d'une exception bloquante (annule la transaction en cours)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">RAISE</span><span class="w"> </span><span class="k">EXCEPTION</span><span class="w"> </span><span class="s1">'Arrêt critique : le contrôle qualité a échoué.'</span><span class="p">;</span>
+</code></pre></div>
+<p>Le caractère <code>%</code> agit comme un <strong>espace réservé</strong> (placeholder), remplacé séquentiellement par les arguments qui suivent la chaîne de format.</p>
+<hr />
+<h2 id="4-programme-pedagogique-du-module">4. Programme pédagogique du module<a class="headerlink" href="#4-programme-pedagogique-du-module" title="Permanent link">#</a></h2>
+<p>Dans les leçons suivantes, nous explorerons les piliers indispensables à tout Data Engineer :</p>
+<ol>
+<li><strong>Les variables</strong> : Déclaration, typage strict, affectation directe et extraction de résultats SQL avec <code>SELECT ... INTO</code>.</li>
+<li><strong>Les conditions</strong> : Maîtrise de la structure <code>IF ... ELSIF ... ELSE ... END IF</code> et comparaison avec le <code>CASE WHEN</code> SQL.</li>
+<li><strong>Les boucles</strong> : Boucles inconditionnelles <code>LOOP</code>, bornées <code>FOR ... IN 1..N</code>, et itération sur les tables de données <code>FOR record IN SELECT ... LOOP</code>.</li>
+<li><strong>Les procédures et fonctions</strong> : Création de sous-programmes réutilisables, gestion des paramètres <code>IN</code>/<code>OUT</code>, transactions et automatisation ETL.</li>
+</ol>
+<hr />
+<h2 id="5-mise-en-pratique-votre-premier-script-de-diagnostic">5. Mise en pratique : Votre premier script de diagnostic<a class="headerlink" href="#5-mise-en-pratique-votre-premier-script-de-diagnostic" title="Permanent link">#</a></h2>
+<p>Ouvrez votre client SQL (DBeaver ou pgAdmin connecté à votre instance PostgreSQL) et exécutez ce premier script :</p>
+<div class="highlight"><span class="filename">Premier diagnostic serveur PL/pgSQL</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">DO</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">$$</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">v_version</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">v_current_user</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">v_now</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">BEGIN</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">-- Récupération dynamique des métadonnées du serveur</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">version</span><span class="p">(),</span><span class="w"> </span><span class="k">current_user</span><span class="p">,</span><span class="w"> </span><span class="n">clock_timestamp</span><span class="p">()</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_version</span><span class="p">,</span><span class="w"> </span><span class="n">v_current_user</span><span class="p">,</span><span class="w"> </span><span class="n">v_now</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'=================================================='</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Connecté en tant que : %'</span><span class="p">,</span><span class="w"> </span><span class="n">v_current_user</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Horodatage serveur   : %'</span><span class="p">,</span><span class="w"> </span><span class="n">v_now</span><span class="p">;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Moteur PostgreSQL    : %'</span><span class="p">,</span><span class="w"> </span><span class="n">split_part</span><span class="p">(</span><span class="n">v_version</span><span class="p">,</span><span class="w"> </span><span class="s1">' '</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'=================================================='</span><span class="p">;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><em>Ce premier test valide que le moteur PL/pgSQL est actif sur votre serveur. Dans la prochaine leçon, nous entrerons dans le vif du sujet avec la manipulation des <strong>Variables et des types de données</strong>.</em></p>
 
                     </section>
 

@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Vous avez sûrement déjà entendu parler des procédures stockées, et nous y sommes enfin. Ces éléments sont essentiels pour organiser vos scripts en sous-programmes. Dans ce module, explorons les détails des procédures et des fonctions PL/PGSQL." />
+      <meta name="description" content="Encapsulez votre logique métier dans la base : différenciez fonctions et procédures stockées, maîtrisez les paramètres IN/OUT, les fonctions retournant des tables (RETURNS TABLE) et la gestion transactionnelle." />
     
 
     <!-- Page author -->
@@ -4648,7 +4648,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../tableau/" class="drilldown-link ">
-            Visualisation de données avec Tableau
+            Visualisation de données avec Tableau Desktop
           </a>
 
           
@@ -6090,7 +6090,7 @@
         <li class="drilldown-row ">
           
           <a href="../" class="drilldown-link ">
-            Les bases du langage PL/PGSQL
+            Introduction à la Programmation Procédurale en SQL (PL/pgSQL)
           </a>
 
           
@@ -13204,14 +13204,65 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les procédures et les fonctions PL/PGSQL</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Fonctions et Procédures Stockées en PL/pgSQL</h1>
                 
             </div>
 
             <!-- Infos Auteur -->
             
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 9 min
+                    </p>
+                </div>
+            </div>
+            
 
             <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#sql">
+                            <span class="skill-tag text-uppercase">sql</span>
+                        </a>
+                    
+                        <a href="/tags/#plpgsql">
+                            <span class="skill-tag text-uppercase">plpgsql</span>
+                        </a>
+                    
+                        <a href="/tags/#procedures-stockees">
+                            <span class="skill-tag text-uppercase">procedures-stockees</span>
+                        </a>
+                    
+                        <a href="/tags/#fonctions">
+                            <span class="skill-tag text-uppercase">fonctions</span>
+                        </a>
+                    
+                        <a href="/tags/#etl">
+                            <span class="skill-tag text-uppercase">etl</span>
+                        </a>
+                    
+                        <a href="/tags/#transactions">
+                            <span class="skill-tag text-uppercase">transactions</span>
+                        </a>
+                    
+                        <a href="/tags/#dwh">
+                            <span class="skill-tag text-uppercase">dwh</span>
+                        </a>
+                    
+                </div>
             
 
             <!-- Description / Overview centrée et justifiée -->
@@ -13219,7 +13270,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Vous avez sûrement déjà entendu parler des procédures stockées, et nous y sommes enfin. Ces éléments sont essentiels pour organiser vos scripts en sous-programmes. Dans ce module, explorons les détails des procédures et des fonctions PL/PGSQL.
+                        Encapsulez votre logique métier dans la base : différenciez fonctions et procédures stockées, maîtrisez les paramètres IN/OUT, les fonctions retournant des tables (RETURNS TABLE) et la gestion transactionnelle.
                     </p>
                 </div>
             </div>
@@ -13386,13 +13437,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1955"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7710"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1955">
+                <div class="collapse " id="collapse-7710">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13511,13 +13562,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4086"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-451"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-4086">
+                <div class="collapse show" id="collapse-451">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13619,13 +13670,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1463"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-179"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1463">
+                <div class="collapse " id="collapse-179">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13817,132 +13868,252 @@
 
                         
 
-                        <p>Les procédures et les fonctions sont des sous-programmes. Les fonctions retournent un résultat tandis que les procédures ne retournent rien.</p>
-<h2 id="procedures">Procédures<a class="headerlink" href="#procedures" title="Permanent link">#</a></h2>
-<p>Une procédure est un sous-programme qui permet 
-<div class="highlight"><span class="filename">Exemple de procédure PL/PGSQL</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">drop</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">sp_example_procedure</span><span class="p">(</span><span class="nb">date</span><span class="p">);</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">sp_example_procedure</span><span class="p">(</span><span class="n">rundt</span><span class="w"> </span><span class="nb">date</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">as</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="err">$$</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">begin</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'rundt : %'</span><span class="p">,</span><span class="w"> </span><span class="n">rundt</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="c1">--- Bloc Instructions 1 ---</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="c1">--- Bloc Instructions 2 ---</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1">--- Bloc Instructions 3 ---</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="err">$$</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
-</code></pre></div>
-Dans un bloc transactionel, la fonction est appelée grâce au mot clé <code>perform</code> comme ceci</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">call</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">sp_example_procedure</span><span class="p">(</span><span class="s1">'2022-12-01'</span><span class="p">::</span><span class="nb">date</span><span class="p">);</span>
-</code></pre></div>
-<h2 id="fonctions">Fonctions<a class="headerlink" href="#fonctions" title="Permanent link">#</a></h2>
-<p>Contrairement à une procédure, une fonction retourne un résultat qui peut être récupéré dans une variable.
-<div class="highlight"><span class="filename">Exemple de fonction PL/PGSQL</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">drop</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">fn_example_function</span><span class="p">(</span><span class="nb">date</span><span class="p">);</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">fn_example_function</span><span class="p">(</span><span class="n">rundt</span><span class="w"> </span><span class="nb">date</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">returns</span><span class="w"> </span><span class="nb">character</span><span class="w"> </span><span class="nb">varying</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">as</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="err">$$</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">begin</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'rundt : %'</span><span class="p">,</span><span class="w"> </span><span class="n">rundt</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="c1">--- Bloc Instructions 1 ---</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="c1">--- Bloc Instructions 2 ---</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="c1">--- Bloc Instructions 3 ---</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">'Y'</span><span class="p">;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="err">$$</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
-</code></pre></div></p>
-<p>Dans un bloc transactionel, la fonction est appelée grâce au mot clé <code>perform</code> comme ceci</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">perform</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">fn_example_function</span><span class="p">(</span><span class="s1">'2022-12-01'</span><span class="p">::</span><span class="nb">date</span><span class="p">);</span>
-</code></pre></div>
-<h2 id="extract-transform-load">Extract Transform Load<a class="headerlink" href="#extract-transform-load" title="Permanent link">#</a></h2>
-<p>Les procédures et les fonctions sont utlisées pour implémenter des logiques ETL</p>
-<div class="highlight"><span class="filename">Exemple de fonction PL/PGSQL</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">drop</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">fn_example_etl</span><span class="p">(</span><span class="nb">date</span><span class="p">);</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">fn_example_etl</span><span class="p">(</span><span class="n">rundt</span><span class="w"> </span><span class="nb">date</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="nb">character</span><span class="w"> </span><span class="nb">varying</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">as</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="err">$$</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">begin</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'rundt : %'</span><span class="p">,</span><span class="w"> </span><span class="n">rundt</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="c1">--- BLOCK 1 : EXTRACT ---</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">drop</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">tmp_orders_day</span><span class="p">;</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="k">create</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">tmp_orders_day</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="c1">----</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="c1">----</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="c1">----</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="p">);</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="c1">--- BLOCK 2 : TRANSFORM ---</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="c1">----</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="c1">----</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="c1">----</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="c1">--- BLOCK 3 : LOAD ---</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">edw</span><span class="p">.</span><span class="n">example_reporting_table</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rundt</span><span class="p">;</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">edw</span><span class="p">.</span><span class="n">example_reporting_table</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">        </span><span class="c1">----</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="c1">----</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">        </span><span class="c1">----</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="p">);</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">'Y'</span><span class="p">;</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="err">$$</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
-</code></pre></div>
-<h2 id="procedure-vs-fonction">Procédure vs Fonction<a class="headerlink" href="#procedure-vs-fonction" title="Permanent link">#</a></h2>
-<p>La principale différence réside dans la gestion des sorties :</p>
-<ul>
-<li>Procédures : utilisées pour exécuter des actions, sans nécessairement retourner de résultat.</li>
-<li>Fonctions : conçues pour effectuer un calcul et retourner une valeur</li>
-</ul>
+                        <p>Jusqu'à présent, nous avons exécuté des blocs anonymes (<code>DO $$ ... $$</code>). Bien qu'utiles pour des tests ponctuels, les blocs anonymes ne peuvent ni recevoir de paramètres dynamiques de l'extérieur, ni être réutilisés par d'autres applications.</p>
+<p>Pour bâtir un système d'information maintenable et performant, les Data Engineers encapsulent leur logique dans des <strong>Fonctions</strong> (<em>User-Defined Functions</em>) et des <strong>Procédures Stockées</strong> (<em>Stored Procedures</em>).</p>
+<hr />
+<h2 id="1-pourquoi-encapsuler-du-code-dans-le-serveur-sql">1. Pourquoi encapsuler du code dans le serveur SQL ?<a class="headerlink" href="#1-pourquoi-encapsuler-du-code-dans-le-serveur-sql" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>Performances accrues</strong> : Le code PL/pgSQL est analysé, compilé sous forme d'arbre d'exécution et mis en cache mémoire sur le serveur.</li>
+<li><strong>Réduction massive du trafic réseau</strong> : Au lieu de transférer 500 000 lignes brutes vers un script Python pour faire un traitement pour ensuite les renvoyer en base, tout s'exécute directement en local sur le moteur SQL.</li>
+<li><strong>Sécurité et gouvernance</strong> : Vous pouvez interdire l'accès direct en écriture aux tables sensibles aux utilisateurs et leur accorder uniquement le droit <code>GRANT EXECUTE</code> sur une procédure validée.</li>
+</ol>
+<hr />
+<h2 id="2-procedure-vs-fonction-quelle-est-la-difference">2. Procédure vs Fonction : Quelle est la différence ?<a class="headerlink" href="#2-procedure-vs-fonction-quelle-est-la-difference" title="Permanent link">#</a></h2>
+<p>C'est une des questions les plus posées en entretien technique Data :</p>
 <table>
 <thead>
 <tr>
-<th>#</th>
-<th>Procédure</th>
-<th>Fonction</th>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Fonction (<code>FUNCTION</code>)</th>
+<th style="text-align: left;">Procédure Stockée (<code>PROCEDURE</code>)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Éntrée</td>
-<td>Oui</td>
-<td>Oui</td>
+<td style="text-align: left;"><strong>Valeur de retour</strong></td>
+<td style="text-align: left;"><strong>Obligatoire</strong> (<code>RETURNS type</code> ou <code>RETURNS TABLE</code>)</td>
+<td style="text-align: left;"><strong>Aucune</strong> (ou via paramètres <code>OUT</code>)</td>
 </tr>
 <tr>
-<td>Sortie</td>
-<td>Non (directement, mais possible via OUT)</td>
-<td>Oui (retourne une valeur explicite)</td>
+<td style="text-align: left;"><strong>Commande d'appel</strong></td>
+<td style="text-align: left;">Utilisée dans un <code>SELECT</code> : <code>SELECT ma_fonction(42);</code></td>
+<td style="text-align: left;">Invoquée via <code>CALL</code> : <code>CALL ma_procedure('2024-03-01');</code></td>
 </tr>
 <tr>
-<td>Utilisation</td>
-<td>Actions complexes, mises à jour, traitements multiples</td>
-<td>Calculs spécifiques, transformation des données</td>
+<td style="text-align: left;"><strong>Contrôle transactionnel</strong></td>
+<td style="text-align: left;"><strong>Impossible</strong> : fait partie de la transaction appelante</td>
+<td style="text-align: left;"><strong>Autorisé</strong> : peut faire <code>COMMIT;</code> ou <code>ROLLBACK;</code></td>
 </tr>
 <tr>
-<td>Appel dans SQL</td>
-<td>Ne peut pas être utilisée dans une requête SQL</td>
-<td>Peut être utilisée dans une requête SQL</td>
-</tr>
-<tr>
-<td>Modification</td>
-<td>Peut modifier les données (DML autorisé)</td>
-<td>Généralement non (DML limité)</td>
+<td style="text-align: left;"><strong>Usage privilégié</strong></td>
+<td style="text-align: left;">Calculs mathématiques, transformations, vues paramétrées</td>
+<td style="text-align: left;">Pipelines ETL, purges d'archivage, maintenance par lots</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>La différence capitale</strong> : Depuis PostgreSQL 11, seules les <strong>procédures stockées</strong> (<code>PROCEDURE</code>) peuvent exécuter des instructions de validation ou d'annulation de transactions (<code>COMMIT;</code> et <code>ROLLBACK;</code>). Si vous devez traiter 10 millions de lignes par blocs de 100 000 avec un commit régulier, vous devez impérativement utiliser une procédure !</p>
+</blockquote>
 <hr />
-<p><em>Les procédures et les fonctions sont utilisées pour mettre en œuvre des logiques ETL, faisant d'elles des éléments cruciaux dans le domaine de la gestion de bases de données. Explorez davantage ces fonctionnalités pour optimiser vos projets.</em></p>
+<h2 id="3-les-fonctions-scalaires-create-function">3. Les Fonctions scalaires (<code>CREATE FUNCTION</code>)<a class="headerlink" href="#3-les-fonctions-scalaires-create-function" title="Permanent link">#</a></h2>
+<p>Une fonction scalaire reçoit des arguments et renvoie une valeur unique.</p>
+<h3 id="exemple-calcul-dun-prix-remise">Exemple : Calcul d'un prix remisé<a class="headerlink" href="#exemple-calcul-dun-prix-remise" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">analytics</span><span class="p">.</span><span class="n">fn_calculer_prix_remise</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">p_prix_ht</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">p_taux_remise</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">RETURNS</span><span class="w"> </span><span class="nb">NUMERIC</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">AS</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="err">$$</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">DECLARE</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">v_prix_final</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">BEGIN</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="c1">-- Contrôle d'intégrité sur les arguments</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">p_prix_ht</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="k">EXCEPTION</span><span class="w"> </span><span class="s1">'Le prix unitaire ne peut pas être négatif : %'</span><span class="p">,</span><span class="w"> </span><span class="n">p_prix_ht</span><span class="p">;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="n">v_prix_final</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">p_prix_ht</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p_taux_remise</span><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="n">v_prix_final</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="err">$$</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="appel-dans-une-requete-sql-standard">Appel dans une requête SQL standard :<a class="headerlink" href="#appel-dans-une-requete-sql-standard" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">nom_produit</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">prix_catalogue</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">analytics</span><span class="p">.</span><span class="n">fn_calculer_prix_remise</span><span class="p">(</span><span class="n">prix_catalogue</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">prix_solde</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">prod</span><span class="p">.</span><span class="n">produits</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="4-les-fonctions-retournant-des-tables-returns-table">4. Les Fonctions retournant des tables (<code>RETURNS TABLE</code>)<a class="headerlink" href="#4-les-fonctions-retournant-des-tables-returns-table" title="Permanent link">#</a></h2>
+<p>Une fonction peut également retourner un jeu de données complet. Elle se comporte alors comme une <strong>vue dynamique paramétrée</strong> :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">reporting</span><span class="p">.</span><span class="n">fn_top_clients_par_region</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">p_region</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">p_limite</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">5</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">RETURNS</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">client_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">nom_client</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">chiffre_affaires</span><span class="w"> </span><span class="nb">NUMERIC</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">AS</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="err">$$</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="k">BEGIN</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="n">QUERY</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">id_client</span><span class="p">,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="k">c</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="k">SUM</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">montant</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_ca</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">analytics</span><span class="p">.</span><span class="n">dim_clients</span><span class="w"> </span><span class="k">c</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">analytics</span><span class="p">.</span><span class="n">fct_ventes</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">id_client</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_region</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id_client</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">nom</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_ca</span><span class="w"> </span><span class="k">DESC</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="n">p_limite</span><span class="p">;</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="err">$$</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="interrogation-comme-une-table-native">Interrogation comme une table native :<a class="headerlink" href="#interrogation-comme-une-table-native" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">-- Récupération du Top 3 des clients de la région 'Île-de-France'</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">reporting</span><span class="p">.</span><span class="n">fn_top_clients_par_region</span><span class="p">(</span><span class="s1">'Île-de-France'</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="5-les-procedures-stockees-avec-transactions-create-procedure">5. Les Procédures Stockées avec transactions (<code>CREATE PROCEDURE</code>)<a class="headerlink" href="#5-les-procedures-stockees-avec-transactions-create-procedure" title="Permanent link">#</a></h2>
+<p>Les procédures sont créées avec le mot-clé <code>CREATE OR REPLACE PROCEDURE</code> et invoquées avec l'instruction <code>CALL</code>.</p>
+<div class="highlight"><span class="filename">Procédure d&#x27;archivage avec commit intermédiaire par lot</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">dwh</span><span class="p">.</span><span class="n">sp_archiver_donnees_anciennes</span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">p_date_limite</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">p_taille_lot</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">50000</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">AS</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="err">$$</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">DECLARE</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">v_lignes_supprimees</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">BEGIN</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Démarrage de l archivage des données antérieures au %'</span><span class="p">,</span><span class="w"> </span><span class="n">p_date_limite</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">LOOP</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="c1">-- 1. Copie d'un lot vers la table d'archives historiques</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="k">WITH</span><span class="w"> </span><span class="n">lot_a_deplacer</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">            </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prod</span><span class="p">.</span><span class="n">logs_activite</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ctid</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">                </span><span class="k">SELECT</span><span class="w"> </span><span class="n">ctid</span><span class="w"> </span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">prod</span><span class="p">.</span><span class="n">logs_activite</span><span class="w"> </span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">date_creation</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p_date_limite</span><span class="w"> </span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">                </span><span class="k">LIMIT</span><span class="w"> </span><span class="n">p_taille_lot</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">            </span><span class="p">)</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">            </span><span class="n">RETURNING</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="p">)</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">        </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">archives</span><span class="p">.</span><span class="n">logs_activite_histo</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">lot_a_deplacer</span><span class="p">;</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">        </span><span class="k">GET</span><span class="w"> </span><span class="k">DIAGNOSTICS</span><span class="w"> </span><span class="n">v_lignes_supprimees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ROW_COUNT</span><span class="p">;</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Lot de % enregistrements archivé et purgé.'</span><span class="p">,</span><span class="w"> </span><span class="n">v_lignes_supprimees</span><span class="p">;</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">        </span><span class="c1">-- 2. Validation immédiate de la transaction pour libérer le verrou</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">        </span><span class="k">COMMIT</span><span class="p">;</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">        </span><span class="c1">-- 3. Sortie dès que le dernier lot contient moins que la taille cible</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">        </span><span class="n">EXIT</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">v_lignes_supprimees</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p_taille_lot</span><span class="p">;</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Opération d archivage terminée avec succès.'</span><span class="p">;</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="err">$$</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="execution-de-la-procedure">Exécution de la procédure :<a class="headerlink" href="#execution-de-la-procedure" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CALL</span><span class="w"> </span><span class="n">dwh</span><span class="p">.</span><span class="n">sp_archiver_donnees_anciennes</span><span class="p">(</span><span class="s1">'2023-01-01'</span><span class="p">::</span><span class="nb">DATE</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="6-architecture-dun-pipeline-etl-complet-en-plpgsql">6. Architecture d'un Pipeline ETL complet en PL/pgSQL<a class="headerlink" href="#6-architecture-dun-pipeline-etl-complet-en-plpgsql" title="Permanent link">#</a></h2>
+<p>Voici comment orchestrer un pipeline ETL de production avec gestion d'erreurs intégrée :</p>
+<div class="highlight"><span class="filename">Pipeline de consolidation de Data Mart</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">etl</span><span class="p">.</span><span class="n">sp_charger_datamart_ventes</span><span class="p">(</span><span class="n">p_date_run</span><span class="w"> </span><span class="nb">DATE</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">AS</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="err">$$</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">DECLARE</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">v_start_time</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">clock_timestamp</span><span class="p">();</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">v_count_ins</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">BEGIN</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'&gt;&gt;&gt; Lancement ETL Datamart Ventes pour la date: %'</span><span class="p">,</span><span class="w"> </span><span class="n">p_date_run</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="c1">-- ÉTAPE 1 : Purge préalable de la partition cible (idempotence)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">datamart</span><span class="p">.</span><span class="n">fct_ventes_synthese</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">date_vente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_date_run</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="c1">-- ÉTAPE 2 : Transformation et insertion</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">datamart</span><span class="p">.</span><span class="n">fct_ventes_synthese</span><span class="w"> </span><span class="p">(</span><span class="n">date_vente</span><span class="p">,</span><span class="w"> </span><span class="n">id_produit</span><span class="p">,</span><span class="w"> </span><span class="n">total_quantite</span><span class="p">,</span><span class="w"> </span><span class="n">total_ca</span><span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="n">date_commande</span><span class="p">,</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="n">id_produit</span><span class="p">,</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="k">SUM</span><span class="p">(</span><span class="n">quantite</span><span class="p">),</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="k">SUM</span><span class="p">(</span><span class="n">quantite</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">prix_unitaire</span><span class="p">)</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">staging</span><span class="p">.</span><span class="n">commandes</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">date_commande</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_date_run</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">date_commande</span><span class="p">,</span><span class="w"> </span><span class="n">id_produit</span><span class="p">;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="k">GET</span><span class="w"> </span><span class="k">DIAGNOSTICS</span><span class="w"> </span><span class="n">v_count_ins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ROW_COUNT</span><span class="p">;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">    </span><span class="c1">-- ÉTAPE 3 : Journalisation dans la table de log</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">    </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etl</span><span class="p">.</span><span class="n">pipeline_logs</span><span class="w"> </span><span class="p">(</span><span class="n">nom_job</span><span class="p">,</span><span class="w"> </span><span class="n">date_cible</span><span class="p">,</span><span class="w"> </span><span class="n">lignes_traitees</span><span class="p">,</span><span class="w"> </span><span class="n">duree_ms</span><span class="p">,</span><span class="w"> </span><span class="n">statut</span><span class="p">)</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'sp_charger_datamart_ventes'</span><span class="p">,</span><span class="w"> </span><span class="n">p_date_run</span><span class="p">,</span><span class="w"> </span><span class="n">v_count_ins</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">            </span><span class="k">EXTRACT</span><span class="p">(</span><span class="n">MILLISECONDS</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">clock_timestamp</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_start_time</span><span class="p">),</span><span class="w"> </span><span class="s1">'SUCCESS'</span><span class="p">);</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">    </span><span class="k">COMMIT</span><span class="p">;</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'&gt;&gt;&gt; ETL achevé avec succès : % lignes insérées en % ms'</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">        </span><span class="n">v_count_ins</span><span class="p">,</span><span class="w"> </span><span class="k">EXTRACT</span><span class="p">(</span><span class="n">MILLISECONDS</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">clock_timestamp</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_start_time</span><span class="p">);</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="k">EXCEPTION</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">OTHERS</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="w">        </span><span class="k">ROLLBACK</span><span class="p">;</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">        </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">etl</span><span class="p">.</span><span class="n">pipeline_logs</span><span class="w"> </span><span class="p">(</span><span class="n">nom_job</span><span class="p">,</span><span class="w"> </span><span class="n">date_cible</span><span class="p">,</span><span class="w"> </span><span class="n">message_erreur</span><span class="p">,</span><span class="w"> </span><span class="n">statut</span><span class="p">)</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="w">        </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'sp_charger_datamart_ventes'</span><span class="p">,</span><span class="w"> </span><span class="n">p_date_run</span><span class="p">,</span><span class="w"> </span><span class="n">SQLERRM</span><span class="p">,</span><span class="w"> </span><span class="s1">'FAILED'</span><span class="p">);</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a><span class="w">        </span><span class="k">COMMIT</span><span class="p">;</span>
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="k">EXCEPTION</span><span class="w"> </span><span class="s1">'Échec critique du pipeline ETL : %'</span><span class="p">,</span><span class="w"> </span><span class="n">SQLERRM</span><span class="p">;</span>
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a><span class="err">$$</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="7-mise-en-pratique-creer-une-fonction-de-scoring-client">7. Mise en pratique : Créer une fonction de scoring client<a class="headerlink" href="#7-mise-en-pratique-creer-une-fonction-de-scoring-client" title="Permanent link">#</a></h2>
+<h3 id="enonce">Énoncé<a class="headerlink" href="#enonce" title="Permanent link">#</a></h3>
+<p>Créez une fonction <code>fn_score_client(p_client_id INTEGER) RETURNS VARCHAR</code> qui :
+1. Calcule le montant total des dépenses du client dans <code>fct_ventes</code>.
+2. Si le client n'a jamais commandé, renvoie <code>'NOUVEAU'</code>.
+3. S'il a dépensé moins de 1 000 €, renvoie <code>'BRONZE'</code>.
+4. Entre 1 000 € et 5 000 €, renvoie <code>'ARGENT'</code>.
+5. Au-delà de 5 000 €, renvoie <code>'OR'</code>.</p>
+<div class="highlight"><span class="filename">Solution de la fonction de scoring</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">analytics</span><span class="p">.</span><span class="n">fn_score_client</span><span class="p">(</span><span class="n">p_client_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">RETURNS</span><span class="w"> </span><span class="nb">VARCHAR</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">AS</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="err">$$</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">DECLARE</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">v_total_depenses</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">BEGIN</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">montant</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_total_depenses</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">analytics</span><span class="p">.</span><span class="n">fct_ventes</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id_client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_client_id</span><span class="p">;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_total_depenses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="k">RETURN</span><span class="w"> </span><span class="s1">'NOUVEAU'</span><span class="p">;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="k">ELSIF</span><span class="w"> </span><span class="n">v_total_depenses</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">        </span><span class="k">RETURN</span><span class="w"> </span><span class="s1">'BRONZE'</span><span class="p">;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="k">ELSIF</span><span class="w"> </span><span class="n">v_total_depenses</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5000</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">        </span><span class="k">RETURN</span><span class="w"> </span><span class="s1">'ARGENT'</span><span class="p">;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="k">ELSE</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">        </span><span class="k">RETURN</span><span class="w"> </span><span class="s1">'OR'</span><span class="p">;</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="err">$$</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><em>Félicitations ! Vous maîtrisez désormais l'ensemble de la programmation procédurale avec SQL et PL/pgSQL : variables, structures conditionnelles, itérateurs et sous-programmes modulaires transactionnels.</em></p>
 
                     </section>
 

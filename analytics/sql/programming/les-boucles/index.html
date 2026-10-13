@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Les boucles permettent d'exécuter des instructions plusieurs fois. Cette répétition peut se faire en fonction d'une condition ou d'un nombre défini d'itérations." />
+      <meta name="description" content="Explorez les structures de boucles en base de données : boucle de base LOOP avec EXIT WHEN, boucle conditionnelle WHILE, boucle numérique FOR, et itération par curseur FOR IN SELECT." />
     
 
     <!-- Page author -->
@@ -4648,7 +4648,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../tableau/" class="drilldown-link ">
-            Visualisation de données avec Tableau
+            Visualisation de données avec Tableau Desktop
           </a>
 
           
@@ -6090,7 +6090,7 @@
         <li class="drilldown-row ">
           
           <a href="../" class="drilldown-link ">
-            Les bases du langage PL/PGSQL
+            Introduction à la Programmation Procédurale en SQL (PL/pgSQL)
           </a>
 
           
@@ -13204,14 +13204,61 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Les structures itératives et répétitives</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Structures Itératives et Boucles en PL/pgSQL</h1>
                 
             </div>
 
             <!-- Infos Auteur -->
             
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 8 min
+                    </p>
+                </div>
+            </div>
+            
 
             <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#sql">
+                            <span class="skill-tag text-uppercase">sql</span>
+                        </a>
+                    
+                        <a href="/tags/#plpgsql">
+                            <span class="skill-tag text-uppercase">plpgsql</span>
+                        </a>
+                    
+                        <a href="/tags/#boucles">
+                            <span class="skill-tag text-uppercase">boucles</span>
+                        </a>
+                    
+                        <a href="/tags/#loops">
+                            <span class="skill-tag text-uppercase">loops</span>
+                        </a>
+                    
+                        <a href="/tags/#iterateurs">
+                            <span class="skill-tag text-uppercase">iterateurs</span>
+                        </a>
+                    
+                        <a href="/tags/#data-pipelines">
+                            <span class="skill-tag text-uppercase">data-pipelines</span>
+                        </a>
+                    
+                </div>
             
 
             <!-- Description / Overview centrée et justifiée -->
@@ -13219,7 +13266,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Les boucles permettent d'exécuter des instructions plusieurs fois. Cette répétition peut se faire en fonction d'une condition ou d'un nombre défini d'itérations.
+                        Explorez les structures de boucles en base de données : boucle de base LOOP avec EXIT WHEN, boucle conditionnelle WHILE, boucle numérique FOR, et itération par curseur FOR IN SELECT.
                     </p>
                 </div>
             </div>
@@ -13386,13 +13433,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-5417"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-394"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-5417">
+                <div class="collapse " id="collapse-394">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13511,13 +13558,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-5774"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5772"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-5774">
+                <div class="collapse show" id="collapse-5772">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13619,13 +13666,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-645"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6227"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-645">
+                <div class="collapse " id="collapse-6227">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13817,68 +13864,188 @@
 
                         
 
-                        <h2 id="structure-iterative-dowhile-repeter">Structure itérative <code>DO..WHILE</code> (RÉPÉTER)<a class="headerlink" href="#structure-iterative-dowhile-repeter" title="Permanent link">#</a></h2>
-<p>La boucle <strong>RÉPÉTER</strong> (ou DO..WHILE) s'exécute au moins une fois, puis continue tant que la condition spécifiée n'est pas vérifiée.
-<div class="highlight"><span class="filename">Structure itérative RÉPÉTER</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">do</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">$$</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">declare</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="nb">integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">k</span><span class="w"> </span><span class="nb">integer</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">begin</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'Table de multiplication de %'</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">loop</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'% * % = %'</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">exit</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="err">$$</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
-</code></pre></div></p>
-<h2 id="structure-repetitive-for-pour">Structure répétitive <code>FOR</code> (POUR)<a class="headerlink" href="#structure-repetitive-for-pour" title="Permanent link">#</a></h2>
-<p>La boucle <strong>POUR</strong> s'exécute un nombre d'iétarions donné.
-<div class="highlight"><span class="filename">Structure itérative POUR</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">do</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">$$</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">declare</span><span class="w"> </span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">_query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">text</span><span class="p">;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">begin</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="p">..</span><span class="mi">10</span><span class="w"> </span><span class="n">loop</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'%'</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n">_query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'perform random_function(now()::date - '</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">');'</span><span class="p">;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="k">execute</span><span class="w"> </span><span class="n">_query</span><span class="p">;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="err">$$</span><span class="p">;</span>
-</code></pre></div></p>
-<h2 id="iterer-sur-des-valeurs">Itérer sur des valeurs<a class="headerlink" href="#iterer-sur-des-valeurs" title="Permanent link">#</a></h2>
-<p>PL/PLSQL permet également d'itérer sur les enregistrements d'une requête
-<div class="highlight"><span class="filename">Itérer sur une table</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">do</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">$$</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">declare</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">item</span><span class="w"> </span><span class="n">record</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">begin</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="n">s</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="n">loop</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s1">'%'</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="p">.</span><span class="n">a</span><span class="p">;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="err">$$</span><span class="p">;</span>
-</code></pre></div></p>
-<h2 id="iterer-sur-une-table">Itérer sur une table<a class="headerlink" href="#iterer-sur-une-table" title="Permanent link">#</a></h2>
-<p>Il est possible d'itérer sur les lignes d'une table ou d'une requête.
-<div class="highlight"><span class="filename">Itérer sur une table</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">do</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="err">$$</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">declare</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">_row</span><span class="w"> </span><span class="n">record</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">begin</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">_row</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">segment</span><span class="p">,</span><span class="w"> </span><span class="n">pct</span><span class="p">::</span><span class="nb">int</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">bitmp</span><span class="p">.</span><span class="n">jk_tmp_sub_active_dactive30d_effectif</span><span class="p">)</span><span class="w"> </span><span class="n">loop</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">raise</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="s1">'yes % - % - %'</span><span class="p">,</span><span class="w"> </span><span class="n">_row</span><span class="p">.</span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">_row</span><span class="p">.</span><span class="n">segment</span><span class="p">,</span><span class="w"> </span><span class="n">_row</span><span class="p">.</span><span class="n">pct</span><span class="p">;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">end</span><span class="p">;</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="err">$$</span><span class="p">;</span>
-</code></pre></div></p>
+                        <p>Dans un moteur de base de données relationnelle, la règle fondamentale de performance est de travailler en mode <strong>ensembliste</strong> (<em>set-based</em>) : une seule instruction <code>UPDATE</code> ou <code>INSERT INTO ... SELECT</code> est toujours des centaines de fois plus rapide qu'une boucle mettant à jour les lignes une par une.</p>
+<p>Cependant, dans l'administration de bases de données et l'ingénierie ETL, les <strong>boucles procédurales</strong> sont indispensables pour :
+* Traiter des données par <strong>lots (batches)</strong> pour ne pas saturer le journal de transactions (<em>WAL</em>).
+* Générer dynamiquement des partitions ou des tables par date.
+* Itérer sur un catalogue de tables pour exécuter des scripts de maintenance.</p>
 <hr />
-<p><em>Dans la prochaine section, nous aborderons les fonctions.</em></p>
+<h2 id="1-la-boucle-inconditionnelle-loop-exit-when">1. La boucle inconditionnelle : <code>LOOP ... EXIT WHEN</code><a class="headerlink" href="#1-la-boucle-inconditionnelle-loop-exit-when" title="Permanent link">#</a></h2>
+<p>C'est la structure de répétition la plus élémentaire en PL/pgSQL. Elle s'exécute indéfiniment jusqu'à ce qu'une instruction <strong><code>EXIT</code></strong> soit rencontrée.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">DO</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">$$</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">v_compteur</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">v_total</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">BEGIN</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">LOOP</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">v_total</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">v_total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">v_compteur</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Itération % : Total cumulé = %'</span><span class="p">,</span><span class="w"> </span><span class="n">v_compteur</span><span class="p">,</span><span class="w"> </span><span class="n">v_total</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">v_compteur</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">v_compteur</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="c1">-- Condition de sortie obligatoire pour éviter la boucle infinie</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">EXIT</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">v_compteur</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Sortie de boucle réussie !'</span><span class="p">;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>[!TIP]
+Vous pouvez également utiliser l'instruction <strong><code>CONTINUE WHEN condition;</code></strong> pour interrompre le tour de boucle en cours et passer immédiatement à l'itération suivante sans exécuter les instructions restantes.</p>
+</blockquote>
+<hr />
+<h2 id="2-la-boucle-conditionnelle-while-loop">2. La boucle conditionnelle : <code>WHILE ... LOOP</code><a class="headerlink" href="#2-la-boucle-conditionnelle-while-loop" title="Permanent link">#</a></h2>
+<p>La boucle <strong><code>WHILE</code></strong> évalue une condition booléenne au début de chaque cycle. Si la condition est fausse dès le départ, le corps de la boucle n'est jamais exécuté.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">DO</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">$$</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">v_stock_disponible</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">v_taille_lot</span><span class="w"> </span><span class="n">CONSTANT</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">v_lots_expedies</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">BEGIN</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">WHILE</span><span class="w"> </span><span class="n">v_stock_disponible</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v_taille_lot</span><span class="w"> </span><span class="n">LOOP</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="n">v_stock_disponible</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">v_stock_disponible</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_taille_lot</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">v_lots_expedies</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">v_lots_expedies</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Lot #% expédié. Stock restant : % unités.'</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="n">v_lots_expedies</span><span class="p">,</span><span class="w"> </span><span class="n">v_stock_disponible</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Fin des expéditions : reliquat de % unité(s) en stock.'</span><span class="p">,</span><span class="w"> </span><span class="n">v_stock_disponible</span><span class="p">;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="3-la-boucle-bornee-numerique-for-in-1n">3. La boucle bornée numérique : <code>FOR ... IN 1..N</code><a class="headerlink" href="#3-la-boucle-bornee-numerique-for-in-1n" title="Permanent link">#</a></h2>
+<p>Lorsque vous connaissez à l'avance le nombre d'itérations, la boucle <strong><code>FOR</code></strong> est la solution la plus concise.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">DO</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">$$</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">v_table_cible</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">BEGIN</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="c1">-- Itération croissante de 1 à 4</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="mi">1</span><span class="p">..</span><span class="mi">4</span><span class="w"> </span><span class="n">LOOP</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">v_table_cible</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">'analytics.fct_ventes_t'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Génération de l index pour le trimestre T% (Table: %)'</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">v_table_cible</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="c1">-- Itération décroissante avec REVERSE et pas personnalisé avec BY</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="n">REVERSE</span><span class="w"> </span><span class="mi">10</span><span class="p">..</span><span class="mi">2</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">LOOP</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Décompte pair : %'</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>[!NOTE]
+Remarquez que la variable de compteur <code>i</code> ou <code>j</code> n'a pas besoin d'être déclarée dans la section <code>DECLARE</code> ! PostgreSQL crée et détruit automatiquement une variable locale de type <code>INTEGER</code> pendant toute la durée de la boucle <code>FOR</code>.</p>
+</blockquote>
+<hr />
+<h2 id="4-la-boucle-sur-resultats-sql-for-record-in-select-loop">4. La boucle sur résultats SQL : <code>FOR record IN SELECT ... LOOP</code><a class="headerlink" href="#4-la-boucle-sur-resultats-sql-for-record-in-select-loop" title="Permanent link">#</a></h2>
+<p>C'est sans comparaison la structure la plus utilisée et la plus utile pour un Data Engineer. Elle permet de parcourir les enregistrements d'une requête SQL sans manipuler manuellement de curseur explicite (<code>OPEN</code>, <code>FETCH</code>, <code>CLOSE</code>).</p>
+<h3 id="exemple-traitement-par-region-et-categorie">Exemple : Traitement par région et catégorie<a class="headerlink" href="#exemple-traitement-par-region-et-categorie" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">DO</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="err">$$</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="c1">-- Déclaration d'une variable générique pour accueillir chaque ligne</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">rec</span><span class="w"> </span><span class="n">RECORD</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">v_seuil_critique</span><span class="w"> </span><span class="n">CONSTANT</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">100000</span><span class="p">.</span><span class="mi">00</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">BEGIN</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="c1">-- Itération sur le résultat d'une requête SQL complexe</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="n">rec</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="n">region</span><span class="p">,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="n">categorie</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="k">SUM</span><span class="p">(</span><span class="n">montant</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ca_total</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">            </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nb_transactions</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">prod</span><span class="p">.</span><span class="n">ventes</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">categorie</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ca_total</span><span class="w"> </span><span class="k">DESC</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="n">LOOP</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="n">ca_total</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v_seuil_critique</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'[STAR] Région % | Catégorie % : % € (% ventes)'</span><span class="p">,</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">                </span><span class="n">rec</span><span class="p">.</span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="n">categorie</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="n">ca_total</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="n">nb_transactions</span><span class="p">;</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="k">ELSE</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">            </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'[NORMAL] Région % | Catégorie % : % €'</span><span class="p">,</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">                </span><span class="n">rec</span><span class="p">.</span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="n">categorie</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="n">ca_total</span><span class="p">;</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="5-cas-dapplication-en-production-traitement-de-partitions-par-dates">5. Cas d'application en production : Traitement de partitions par dates<a class="headerlink" href="#5-cas-dapplication-en-production-traitement-de-partitions-par-dates" title="Permanent link">#</a></h2>
+<p>Dans un Data Warehouse, vous devez souvent recalculer les 7 derniers jours d'historique pour intégrer les données en retard (latence de reporting).</p>
+<div class="highlight"><span class="filename">Recalcul partitionné sur 7 jours glissants</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">DO</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="err">$$</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">v_date_traitement</span><span class="w"> </span><span class="nb">DATE</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">v_query</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">BEGIN</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="c1">-- Boucle sur les 7 derniers jours</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="n">decallage</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="mi">1</span><span class="p">..</span><span class="mi">7</span><span class="w"> </span><span class="n">LOOP</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="n">v_date_traitement</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">decallage</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Traitement de la partition date : %'</span><span class="p">,</span><span class="w"> </span><span class="n">v_date_traitement</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="c1">-- Construction d'une requête dynamique sécurisée</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="n">v_query</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">format</span><span class="p">(</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">            </span><span class="s1">'DELETE FROM dwh.fct_daily_snapshot WHERE date_snapshot = %L; '</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">            </span><span class="s1">'INSERT INTO dwh.fct_daily_snapshot (date_snapshot, total_commandes) '</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">            </span><span class="s1">'SELECT date_cmd, count(*) FROM staging.commandes WHERE date_cmd = %L GROUP BY date_cmd;'</span><span class="p">,</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">            </span><span class="n">v_date_traitement</span><span class="p">,</span><span class="w"> </span><span class="n">v_date_traitement</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span><span class="p">);</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="c1">-- Exécution de la commande SQL dynamique</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="k">EXECUTE</span><span class="w"> </span><span class="n">v_query</span><span class="p">;</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Recalcul des 7 partitions achevé avec succès !'</span><span class="p">;</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="6-mise-en-pratique-audit-de-volumetrie-des-tables-dun-schema">6. Mise en pratique : Audit de volumétrie des tables d'un schéma<a class="headerlink" href="#6-mise-en-pratique-audit-de-volumetrie-des-tables-dun-schema" title="Permanent link">#</a></h2>
+<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">#</a></h3>
+<p>Écrire un bloc anonyme qui inspecte automatiquement toutes les tables présentes dans le schéma <code>public</code> via la vue système <code>information_schema.tables</code>, compte dynamiquement le nombre de lignes de chacune à l'aide d'une requête <code>EXECUTE ... INTO</code>, et alerte si une table contient plus de 10 000 lignes.</p>
+<div class="highlight"><span class="filename">Solution de l&#x27;exercice d&#x27;audit</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">DO</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="err">$$</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">DECLARE</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">rec</span><span class="w"> </span><span class="n">RECORD</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">v_nb_lignes</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">v_sql</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">BEGIN</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'=========== AUDIT DE VOLUMÉTRIE DU SCHÉMA PUBLIC ==========='</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="n">rec</span><span class="w"> </span><span class="k">IN</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">table_schema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'public'</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">          </span><span class="k">AND</span><span class="w"> </span><span class="n">table_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'BASE TABLE'</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="n">LOOP</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="c1">-- Construction de la requête de comptage dynamique</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="n">v_sql</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="s1">'SELECT COUNT(*) FROM public.%I'</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="k">table_name</span><span class="p">);</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="c1">-- Exécution et capture du résultat</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="k">EXECUTE</span><span class="w"> </span><span class="n">v_sql</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="p">;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10000</span><span class="w"> </span><span class="k">THEN</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">            </span><span class="n">RAISE</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="s1">'Table [ % ] : % lignes (SEUIL DÉPASSÉ)'</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="k">table_name</span><span class="p">,</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="p">;</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">        </span><span class="k">ELSE</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">            </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'Table [ % ] : % lignes'</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="p">.</span><span class="k">table_name</span><span class="p">,</span><span class="w"> </span><span class="n">v_nb_lignes</span><span class="p">;</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">    </span><span class="n">RAISE</span><span class="w"> </span><span class="n">NOTICE</span><span class="w"> </span><span class="s1">'============================================================='</span><span class="p">;</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><em>Vous maîtrisez désormais les variables, les conditions et les boucles. Dans la prochaine et dernière leçon de programmation, nous encapsulerons toutes ces briques dans des sous-programmes réutilisables : <strong>les Fonctions et les Procédures Stockées</strong>.</em></p>
 
                     </section>
 
