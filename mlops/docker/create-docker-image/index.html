@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Lorsqu'il s'agit de déployer les applications, Docker est la technologie de choix. Docker est simplement l'une technologie open source qui permet de déployer des applications dans des conteneurs. En tant que Data Scientist, vous êtes amenés à deployer vos modèles et Docker est une bonne solution. " />
+      <meta name="description" content="Apprenez à concevoir un Dockerfile optimisé pour la Data : choix des images de base Python slim, mise en cache stratégique des dépendances pip, fichier .dockerignore et commandes de build." />
     
 
     <!-- Page author -->
@@ -4821,7 +4821,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../analytics/python/" class="drilldown-link ">
-            Analyse de données avec Python
+            La Data Stack Python pour l'Analyse de Données
           </a>
 
           
@@ -6355,7 +6355,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../analytics/powerbi/" class="drilldown-link ">
-            Visualisation de données avec Power BI
+            Visualisation et Analyse de Données avec Power BI
           </a>
 
           
@@ -6564,7 +6564,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../analytics/powerbi/01-preparer-les-donnees/" class="drilldown-link ">
-            Préparer les données dans Power BI
+            Préparer les données dans Power BI : L'art de l'ETL moderne
           </a>
 
           
@@ -10421,7 +10421,7 @@
         <li class="drilldown-row ">
           
           <a href="../../flask/" class="drilldown-link ">
-            Développer des applications web avec Flask
+            Flask pour la Data et l'Analytics : Démystifier les APIs de Données
           </a>
 
           
@@ -10731,7 +10731,7 @@
         <li class="drilldown-row ">
           
           <a href="../" class="drilldown-link ">
-            Déploiement d'applications avec Docker
+            Docker pour la Data et l'Analytics : Démystifier la Conteneurisation
           </a>
 
           
@@ -11379,7 +11379,7 @@
         <li class="drilldown-row ">
           
           <a href="../../git/" class="drilldown-link ">
-            Gérer vos projets avec Git et GitHub
+            Git et GitHub pour la Data et l'Analytics : Domptez le Versioning
           </a>
 
           
@@ -13204,14 +13204,61 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Créer une image Docker</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Créer une Image Docker pour la Data : Le Guide du Dockerfile</h1>
                 
             </div>
 
             <!-- Infos Auteur -->
             
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 9 min
+                    </p>
+                </div>
+            </div>
+            
 
             <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#Docker">
+                            <span class="skill-tag text-uppercase">Docker</span>
+                        </a>
+                    
+                        <a href="/tags/#Dockerfile">
+                            <span class="skill-tag text-uppercase">Dockerfile</span>
+                        </a>
+                    
+                        <a href="/tags/#Python">
+                            <span class="skill-tag text-uppercase">Python</span>
+                        </a>
+                    
+                        <a href="/tags/#Data Engineering">
+                            <span class="skill-tag text-uppercase">Data Engineering</span>
+                        </a>
+                    
+                        <a href="/tags/#MLOps">
+                            <span class="skill-tag text-uppercase">MLOps</span>
+                        </a>
+                    
+                        <a href="/tags/#ETL">
+                            <span class="skill-tag text-uppercase">ETL</span>
+                        </a>
+                    
+                </div>
             
 
             <!-- Description / Overview centrée et justifiée -->
@@ -13219,7 +13266,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Lorsqu'il s'agit de déployer les applications, Docker est la technologie de choix. Docker est simplement l'une technologie open source qui permet de déployer des applications dans des conteneurs. En tant que Data Scientist, vous êtes amenés à deployer vos modèles et Docker est une bonne solution. 
+                        Apprenez à concevoir un Dockerfile optimisé pour la Data : choix des images de base Python slim, mise en cache stratégique des dépendances pip, fichier .dockerignore et commandes de build.
                     </p>
                 </div>
             </div>
@@ -13306,13 +13353,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4341"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7457"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-4341">
+                <div class="collapse " id="collapse-7457">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13431,13 +13478,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2255"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7661"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-2255">
+                <div class="collapse " id="collapse-7661">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13522,13 +13569,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-8032"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-717"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-8032">
+                <div class="collapse " id="collapse-717">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13715,13 +13762,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7280"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3948"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7280">
+                <div class="collapse " id="collapse-3948">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13806,13 +13853,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-2292"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-8717"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-2292">
+                <div class="collapse show" id="collapse-8717">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13965,13 +14012,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7637"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2772"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7637">
+                <div class="collapse " id="collapse-2772">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14014,13 +14061,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7689"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2955"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7689">
+                <div class="collapse " id="collapse-2955">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14209,13 +14256,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-3535"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-812"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-3535">
+                <div class="collapse " id="collapse-812">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14361,13 +14408,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9691"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3077"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-9691">
+                <div class="collapse " id="collapse-3077">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14503,13 +14550,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1433"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7228"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1433">
+                <div class="collapse " id="collapse-7228">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14644,84 +14691,175 @@
 
                         
 
-                        <p>Une <strong>image Docker</strong> est une représentation figée d’une application, contenant tout ce dont elle a besoin pour s’exécuter : code, dépendances, bibliothèques, fichiers de configuration, etc.</p>
-<p>Elle sert de <strong>modèle</strong> pour créer des conteneurs Docker.</p>
-<h2 id="structure-du-dockerfile">Structure du Dockerfile<a class="headerlink" href="#structure-du-dockerfile" title="Permanent link">#</a></h2>
-<p>Le Dockerfile est un fichier qui décrit la logique de déploiement d'une application. On y spécifie l'environnement</p>
+                        <p>Pour déployer un modèle de machine learning ou planifier l'exécution quotidienne d'un script d'ingestion de données, vous devez fabriquer votre propre <strong>image Docker</strong>.</p>
+<p>Une image Docker n'est pas un bloc monolithique : c'est un empilement de <strong>couches immuables en lecture seule</strong> (<em>read-only layers</em>). Chaque ligne de votre fichier <code>Dockerfile</code> ajoute une nouvelle couche par-dessus la précédente. Comprendre cette mécanique est le secret pour fabriquer des images légères, rapides à construire et parfaitement reproductibles.</p>
+<hr />
+<h2 id="lanatomie-des-instructions-cles-du-dockerfile">🏗️ L'Anatomie des Instructions Clés du Dockerfile<a class="headerlink" href="#lanatomie-des-instructions-cles-du-dockerfile" title="Permanent link">#</a></h2>
+<p>Le <code>Dockerfile</code> est le fichier sans extension (nommé exactement <code>Dockerfile</code>) situé à la racine de votre projet. Voici les instructions fondamentales que tout ingénieur Data doit maîtriser :</p>
 <table>
 <thead>
 <tr>
-<th>Mot Clé</th>
-<th>Description</th>
+<th style="text-align: left;">Mot-clé</th>
+<th style="text-align: left;">Rôle en ingénierie de données</th>
+<th style="text-align: left;">Exemple typique</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>FROM</td>
-<td>L'instruction FROM permet d'indiquer l'image Docker de base à partir de laquelle</td>
+<td style="text-align: left;"><code>FROM</code></td>
+<td style="text-align: left;">Définit l'image parente de départ (l'environnement de base)</td>
+<td style="text-align: left;"><code>FROM python:3.11-slim</code></td>
 </tr>
 <tr>
-<td>WORKDIR</td>
-<td>L'instruction WORKDIR permet d'indiquer le répertoire de  l'application.</td>
+<td style="text-align: left;"><code>WORKDIR</code></td>
+<td style="text-align: left;">Fixe le dossier de travail courant dans le conteneur</td>
+<td style="text-align: left;"><code>WORKDIR /app</code></td>
 </tr>
 <tr>
-<td>COPY</td>
-<td>L'instruction COPY permet de copier des éléments dans le conteneurs.</td>
+<td style="text-align: left;"><code>COPY</code></td>
+<td style="text-align: left;">Copie des fichiers ou dossiers depuis votre machine locale vers le conteneur</td>
+<td style="text-align: left;"><code>COPY requirements.txt .</code></td>
 </tr>
 <tr>
-<td>ADD</td>
-<td>L'instruction ADD est similaire à COPY mais peut également copier des éléments externes depuis des URLs.</td>
+<td style="text-align: left;"><code>RUN</code></td>
+<td style="text-align: left;">Exécute des commandes d'installation lors de la phase de fabrication</td>
+<td style="text-align: left;"><code>RUN pip install --no-cache-dir -r requirements.txt</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ENV</code></td>
+<td style="text-align: left;">Déclare des variables d'environnement permanentes</td>
+<td style="text-align: left;"><code>ENV PYTHONUNBUFFERED=1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EXPOSE</code></td>
+<td style="text-align: left;">Documente le port réseau sur lequel le service écoutera (informatif)</td>
+<td style="text-align: left;"><code>EXPOSE 8000</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CMD</code></td>
+<td style="text-align: left;">Commande exécutée au démarrage du conteneur (remplaçable lors du <code>run</code>)</td>
+<td style="text-align: left;"><code>CMD ["python", "main.py"]</code></td>
 </tr>
 </tbody>
 </table>
-<p><strong>FROM</strong><br>
-L'instruction FROM permet d'indiquer l'image Docker de base à partir de laquelle </p>
-<p><strong>WORKDIR</strong><br>
-L'instruction WORKDIR permet d'indiquer le répertoire de  l'application.</p>
-<p><strong>COPY</strong><br>
-L'instruction COPY permet de copier des éléments dans le conteneurs.</p>
-<p><strong>ADD</strong><br>
-L'instruction ADD est similaire à COPY mais peut également copier des éléments externes depuis des URLs.</p>
-<p><strong>RUN</strong><br>
-L'instruction RUN permet d'exécuter des instructions dans le conteneur, installer des dépendances par exemple.</p>
-<p><strong>EXPOSE</strong><br>
-L'instruction EXPOSE permet d'indiquer les ports à ouvrir dans le conteneur.</p>
-<p><strong>CMD</strong><br>
-L'instruction CMD permet d'indiquer la commande à utiliser pour démarrer l'application.</p>
-<p><strong>Exemple</strong><br>
-<div class="highlight"><span class="filename">Dockerfile for Flask Application</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.7-buster</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">ADD</span><span class="w"> </span>.<span class="w"> </span>/app
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<hr />
+<h2 id="le-choix-de-limage-de-base-pour-la-data-attention-au-piege-dalpine">💡 Le Choix de l'Image de Base pour la Data : Attention au Piège d'Alpine !<a class="headerlink" href="#le-choix-de-limage-de-base-pour-la-data-attention-au-piege-dalpine" title="Permanent link">#</a></h2>
+<p>Dans le monde du développement web traditionnel (Node.js, Go), l'image ultralégère <code>alpine</code> (environ 5 Mo) est souvent plébiscitée. </p>
+<blockquote>
+<p>[!WARNING]
+<strong>En Data Science et Data Engineering, évitez l'image Python Alpine !</strong><br />
+Alpine utilise une implémentation C différente (<code>musl libc</code> au lieu de <code>glibc</code>). Or, la quasi-totalité des bibliothèques data scientifiques (NumPy, Pandas, SciPy, Scikit-learn, PyTorch) fournissent des binaires précompilés (<em>wheels</em>) pour <code>glibc</code>. Sur Alpine, <code>pip</code> ne trouvera pas de binaire et sera obligé de <strong>recompiler tout le code C/C++ et Fortran depuis les sources</strong>. Votre build mettra 25 minutes au lieu de 40 secondes et produira au final une image souvent plus lourde !</p>
+<p><strong>Le standard de l'industrie :</strong> Utilisez toujours les variantes <strong><code>python:3.x-slim</code></strong> (basées sur Debian allégée avec <code>glibc</code>).</p>
+</blockquote>
+<hr />
+<h2 id="le-secret-de-performance-la-mise-en-cache-des-couches-layer-caching">⚡ Le Secret de Performance : La Mise en Cache des Couches (<em>Layer Caching</em>)<a class="headerlink" href="#le-secret-de-performance-la-mise-en-cache-des-couches-layer-caching" title="Permanent link">#</a></h2>
+<p>À chaque fois que vous exécutez <code>docker build</code>, Docker analyse chaque instruction. Si l'instruction et les fichiers copiés n'ont pas changé depuis le dernier build, <strong>Docker réutilise la couche en cache en 0,1 seconde</strong>.</p>
+<p>Considérez ces deux manières d'écrire votre <code>Dockerfile</code> :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>❌ LA MAUVAISE MÉTHODE (Lente et inefficace) :
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>┌────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│ FROM python:3.11-slim                                  │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│ WORKDIR /app                                           │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│ COPY . .                     ◄── Change à chaque modif │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│ RUN pip install -r requirements.txt ◄── Réinstallé à chaque fois ! (5 min de perdues)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│ CMD ["python", "etl_pipeline.py"]                      │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└────────────────────────────────────────────────────────┘
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">5000</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"python"</span><span class="p">,</span><span class="err"> </span><span class="s2">"app.py"</span><span class="p">]</span>
-</code></pre></div></p>
-<h2 id="construire-une-image">Construire une image<a class="headerlink" href="#construire-une-image" title="Permanent link">#</a></h2>
-<p>Une fois le Dockerfile prêt, il faut créer l'image Docker
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>Dockerfile<span class="w"> </span>-t<span class="w"> </span>&lt;nom<span class="w"> </span>de<span class="w"> </span>l’image&gt;<span class="w"> </span>.
-</code></pre></div></p>
-<h2 id="afficher-la-liste-des-images">Afficher la liste des images<a class="headerlink" href="#afficher-la-liste-des-images" title="Permanent link">#</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>images
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>✅ LA BONNE MÉTHODE (Optimisée pour la Data) :
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>┌────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│ FROM python:3.11-slim                                  │
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│ WORKDIR /app                                           │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│ COPY requirements.txt .      ◄── Ne change presque jamais
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│ RUN pip install -r requirements.txt ◄── 100% EN CACHE ! (0 seconde)
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│ COPY . .                     ◄── Seul votre code est recopié
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│ CMD ["python", "etl_pipeline.py"]                      │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└────────────────────────────────────────────────────────┘
 </code></pre></div>
-<div class="highlight"><span class="filename">[Output]</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>PS C:\Users\Administrateur&gt; docker images
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>hello-world   latest    9c7a54a9a43c   5 weeks ago    13.3kB
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>iflaskapp     v1        89e2ade90aae   3 months ago   924MB
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>myflaskapp    latest    163359a9e1d3   3 months ago   941MB
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>alpine/git    latest    22d84a66cda4   6 months ago   43.6MB
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>PS C:\Users\Administrateur&gt;
-</code></pre></div></p>
-<h2 id="supprimer-une-image">Supprimer une image<a class="headerlink" href="#supprimer-une-image" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>rmi<span class="w"> </span>&lt;nom<span class="w"> </span>de<span class="w"> </span>l’image&gt;
+<p>En isolant le fichier <code>requirements.txt</code> et son installation <code>pip</code> avant la copie du reste de vos scripts, vous évitez de retélécharger des centaines de mégaoctets de librairies à chaque fois que vous corrigez une ligne de code Python !</p>
+<hr />
+<h2 id="le-fichier-dockerignore-protegez-vos-donnees">🛡️ Le Fichier <code>.dockerignore</code> : Protégez vos Données !<a class="headerlink" href="#le-fichier-dockerignore-protegez-vos-donnees" title="Permanent link">#</a></h2>
+<p>En Data Analytics, nous manipulons souvent des jeux de données volumineux (<code>.csv</code>, <code>.parquet</code> de plusieurs gigaoctets), des modèles pré-entraînés lourds, des notebooks exploratoires ou des fichiers secrets <code>.env</code>.</p>
+<p>Si vous ne créez pas de fichier <code>.dockerignore</code>, Docker va transférer tous ces gigaoctets dans le <em>contexte de build</em>, ce qui ralentit considérablement la création de l'image et risque d'exposer des mots de passe en production.</p>
+<p>Créez un fichier nommé <code>.dockerignore</code> à côté de votre <code>Dockerfile</code> :</p>
+<div class="highlight"><span class="filename">.dockerignore pour un projet Data</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># Environnements virtuels locaux
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>.venv/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>env/
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>__pycache__/
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>*.pyc
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a># Données brutes et volumineuses (à monter via des volumes, pas dans l'image !)
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>data/
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>*.csv
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>*.parquet
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>*.sqlite
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a># Fichiers de configuration sensibles
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>.env
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>*.pem
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>credentials.json
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a># Fichiers système et Git
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>.git/
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>.gitignore
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>.vscode/
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>.ipynb_checkpoints/
 </code></pre></div>
 <hr />
-<p><em>Dans la prochaine section, vous découvrirez comment lancer deployer des instances de vos applications grâce aux contenuers Docker.</em></p>
+<h2 id="cas-pratique-le-dockerfile-dun-pipeline-dextraction-transformation">🧪 Cas Pratique : Le Dockerfile d'un Pipeline d'Extraction &amp; Transformation<a class="headerlink" href="#cas-pratique-le-dockerfile-dun-pipeline-dextraction-transformation" title="Permanent link">#</a></h2>
+<p>Voici le <code>Dockerfile</code> prêt pour la production d'un pipeline ETL Python qui extrait des données, calcule des agrégats avec Pandas et DuckDB, puis persiste les résultats :</p>
+<div class="highlight"><span class="filename">Dockerfile pour un pipeline ETL Python</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c"># 1. Image de base officielle Python 3.11 allégée</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c"># 2. Empêcher Python de mettre en buffer les sorties console (logs temps réel)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">PYTHONUNBUFFERED</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nv">PYTHONDONTWRITEBYTECODE</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c"># 3. Répertoire de travail de l'application</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c"># 4. Installer les dépendances Python avec mise en cache</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c"># 5. Copier les scripts métiers du pipeline</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">COPY</span><span class="w"> </span>src/<span class="w"> </span>./src/
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="k">COPY</span><span class="w"> </span>main.py<span class="w"> </span>.
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c"># 6. Commande par défaut pour exécuter le pipeline</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"python"</span><span class="p">,</span><span class="w"> </span><span class="s2">"main.py"</span><span class="p">]</span>
+</code></pre></div>
+<hr />
+<h2 id="construire-et-administrer-vos-images-en-ligne-de-commande">💻 Construire et Administrer vos Images en Ligne de Commande<a class="headerlink" href="#construire-et-administrer-vos-images-en-ligne-de-commande" title="Permanent link">#</a></h2>
+<p>Une fois votre <code>Dockerfile</code> rédigé, passons aux commandes terminal :</p>
+<h3 id="1-construire-limage-docker-build">1. Construire l'image (<code>docker build</code>)<a class="headerlink" href="#1-construire-limage-docker-build" title="Permanent link">#</a></h3>
+<p>Placez-vous dans le répertoire contenant le <code>Dockerfile</code> :</p>
+<div class="highlight"><span class="filename">Construire une image avec un nom et un tag</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>pipeline-ventes:1.0<span class="w"> </span>.
+</code></pre></div>
+<ul>
+<li><code>-t pipeline-ventes:1.0</code> : Assigne un nom (<em>repository</em>) et un tag de version à l'image.</li>
+<li><code>.</code> : Spécifie que le contexte de build est le répertoire courant.</li>
+</ul>
+<h3 id="2-lister-les-images-locales-docker-images">2. Lister les images locales (<code>docker images</code>)<a class="headerlink" href="#2-lister-les-images-locales-docker-images" title="Permanent link">#</a></h3>
+<div class="highlight"><span class="filename">Afficher toutes les images stockées localement</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>images
+</code></pre></div>
+<div class="highlight"><span class="filename">Exemple de sortie console</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>REPOSITORY        TAG       IMAGE ID       CREATED          SIZE
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>pipeline-ventes   1.0       4a8f9c1b2e3d   2 minutes ago    215MB
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>python            3.11-slim 8f14b62d3a91   2 weeks ago      130MB
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>hello-world       latest    d2c94e258dcb   3 months ago     13.3kB
+</code></pre></div>
+<h3 id="3-supprimer-une-image-docker-rmi">3. Supprimer une image (<code>docker rmi</code>)<a class="headerlink" href="#3-supprimer-une-image-docker-rmi" title="Permanent link">#</a></h3>
+<p>Pour libérer de l'espace disque en supprimant une image dont vous n'avez plus besoin :</p>
+<div class="highlight"><span class="filename">Supprimer une image par son nom ou son ID</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>rmi<span class="w"> </span>pipeline-ventes:1.0
+</code></pre></div>
+<blockquote>
+<p>[!TIP]
+<strong>Nettoyage automatique :</strong><br />
+Pour éliminer en une seule commande toutes les images intermédiaires orphelines (<em>dangling images</em>) sans tag, utilisez :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-f
+</code></pre></div></p>
+</blockquote>
+<hr />
+<p><em>Félicitations, votre image est compilée et stockée sur votre disque ! Dans la prochaine leçon, nous allons lui donner vie en lançant notre premier conteneur avec gestion des ports, des volumes et des variables d'environnement.</em></p>
 
                     </section>
 
