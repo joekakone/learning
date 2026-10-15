@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="Pour que votre pipeline puisse charger des données dans votre base de données, Airflow doit connaître l'adresse, ainsi que les identifiants. Pour des raisons de sécurité, on ne les écrit jamais directement dans le code du DAG. On utilise le menu Connections." />
+      <meta name="description" content="Découvrez comment déclarer et sécuriser vos connexions de bases de données dans Airflow : interface web, variables d'environnement, chiffrement Fernet et utilisation des Hooks." />
     
 
     <!-- Page author -->
@@ -1833,7 +1833,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../programmation/" class="drilldown-link ">
-            Introduction à la programmation informatique
+            Introduction à la programmation en langage C
           </a>
 
           
@@ -2250,7 +2250,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../programmation/partie-2-fonctions/" class="drilldown-link ">
-            Les fonctions
+            Partie 2 - Les fonctions et la programmation modulaire en C
           </a>
 
           
@@ -2369,7 +2369,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../programmation/partie-3-tableaux/" class="drilldown-link ">
-            Les tableaux
+            Partie 3 - Les tableaux et matrices en langage C
           </a>
 
           
@@ -2488,7 +2488,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../programmation/partie-4-pointeurs/" class="drilldown-link ">
-            Les pointeurs
+            Introduction aux Pointeurs et Adresses mémoire en langage C
           </a>
 
           
@@ -2589,7 +2589,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../programmation/partie-5-structures/" class="drilldown-link ">
-            Les structures
+            Les Structures (struct) et Types Personnalisés (typedef) en C
           </a>
 
           
@@ -2654,7 +2654,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../programmation/partie-6-chaines-de-caracteres/" class="drilldown-link ">
-            Les chaînes de caractères
+            Partie 6 - Les chaînes de caractères en langage C
           </a>
 
           
@@ -2755,7 +2755,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../programmation/partie-7-fichiers/" class="drilldown-link ">
-            Les fichiers
+            Les fichiers en langage C
           </a>
 
           
@@ -3456,7 +3456,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../python/partie-2-les-structures-de-donnees/" class="drilldown-link ">
-            Les structures de données
+            Les structures de données en Python
           </a>
 
           
@@ -3575,7 +3575,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../python/partie-3-les-fonctions/" class="drilldown-link ">
-            Les fonctions Python
+            Les fonctions en Python
           </a>
 
           
@@ -3658,7 +3658,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../python/partie-4-les-modules/" class="drilldown-link ">
-            Les modules Python
+            Les modules et la bibliothèque standard en Python
           </a>
 
           
@@ -3831,7 +3831,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../python/partie-5-les-fichiers/" class="drilldown-link ">
-            Manipuler les fichiers avec Python
+            La gestion des fichiers en Python
           </a>
 
           
@@ -3932,7 +3932,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../python/partie-6-chaines-de-caracteres/" class="drilldown-link ">
-            Les chaînes de caractères
+            Les chaînes de caractères en Python
           </a>
 
           
@@ -3997,7 +3997,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../python/partie-7-oriente-objet/" class="drilldown-link ">
-            Programmation Orientée Objet
+            Programmation Orientée Objet en Python
           </a>
 
           
@@ -4062,7 +4062,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../python/partie-8-tests-unitaires/" class="drilldown-link ">
-            Les tests unitaires avec Unittest
+            Les tests unitaires avec unittest en Python
           </a>
 
           
@@ -6665,7 +6665,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../analytics/powerbi/02-modeliser-les-donnnees/" class="drilldown-link ">
-            Modéliser les données dans Power BI
+            Modéliser les données dans Power BI : L'Art du Schéma en Étoile et du DAX
           </a>
 
           
@@ -6874,7 +6874,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../analytics/powerbi/03-visualiser-les-donnees/" class="drilldown-link ">
-            Visualiser les données dans Power BI
+            Visualiser les Données dans Power BI : L'Art du Data Storytelling
           </a>
 
           
@@ -6905,8 +6905,8 @@
 
         <li class="drilldown-row ">
           
-          <a href="../../../analytics/powerbi/03-visualiser-les-donnees/les-cartes/" class="drilldown-link ">
-            Les cartes
+          <a href="../../../analytics/powerbi/03-visualiser-les-donnees/les-diagrammes-a-barres/" class="drilldown-link ">
+            Les diagrammes à barres
           </a>
 
           
@@ -7094,7 +7094,7 @@
         <li class="drilldown-row ">
           
           <a href="../../../analytics/powerbi/05-deployer-des-livrables/" class="drilldown-link ">
-            Déployer et gérer les ressources Power BI
+            Déployer et gouverner les livrables Power BI
           </a>
 
           
@@ -7583,7 +7583,7 @@
         <li class="drilldown-row ">
           
           <a href="../../analysis-services/" class="drilldown-link ">
-            Création de cubes avec Analysis Services
+            Introduction à SQL Server Analysis Services (SSAS)
           </a>
 
           
@@ -13204,14 +13204,61 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Créer une connexion de base de données</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Gérer les connexions et sécuriser les sources de données</h1>
                 
             </div>
 
             <!-- Infos Auteur -->
             
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 8 min
+                    </p>
+                </div>
+            </div>
+            
 
             <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#big-data">
+                            <span class="skill-tag text-uppercase">big-data</span>
+                        </a>
+                    
+                        <a href="/tags/#apache-airflow">
+                            <span class="skill-tag text-uppercase">apache-airflow</span>
+                        </a>
+                    
+                        <a href="/tags/#connections">
+                            <span class="skill-tag text-uppercase">connections</span>
+                        </a>
+                    
+                        <a href="/tags/#security">
+                            <span class="skill-tag text-uppercase">security</span>
+                        </a>
+                    
+                        <a href="/tags/#hooks">
+                            <span class="skill-tag text-uppercase">hooks</span>
+                        </a>
+                    
+                        <a href="/tags/#postgresql">
+                            <span class="skill-tag text-uppercase">postgresql</span>
+                        </a>
+                    
+                </div>
             
 
             <!-- Description / Overview centrée et justifiée -->
@@ -13219,7 +13266,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        Pour que votre pipeline puisse charger des données dans votre base de données, Airflow doit connaître l'adresse, ainsi que les identifiants. Pour des raisons de sécurité, on ne les écrit jamais directement dans le code du DAG. On utilise le menu Connections.
+                        Découvrez comment déclarer et sécuriser vos connexions de bases de données dans Airflow : interface web, variables d'environnement, chiffrement Fernet et utilisation des Hooks.
                     </p>
                 </div>
             </div>
@@ -13300,13 +13347,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-3646"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-8767"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-3646">
+                <div class="collapse " id="collapse-8767">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13459,13 +13506,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-3050"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5864"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-3050">
+                <div class="collapse " id="collapse-5864">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13567,13 +13614,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4273"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6493"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-4273">
+                <div class="collapse " id="collapse-6493">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13675,13 +13722,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-6097"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6988"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-6097">
+                <div class="collapse " id="collapse-6988">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13715,13 +13762,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1261"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5564"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1261">
+                <div class="collapse " id="collapse-5564">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13857,13 +13904,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9331"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7342"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-9331">
+                <div class="collapse show" id="collapse-7342">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14084,13 +14131,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9698"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1882"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-9698">
+                <div class="collapse " id="collapse-1882">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14333,42 +14380,113 @@
 
                         
 
-                        <h2 id="acceder-au-menu-des-connexions">Accéder au menu des connexions<a class="headerlink" href="#acceder-au-menu-des-connexions" title="Permanent link">#</a></h2>
-<ol>
-<li>Connectez-vous à l'interface web d'Airflow (généralement sur le port <code>8080</code>).</li>
-<li>Dans la barre de navigation supérieure, cliquez sur <strong>Admin</strong> puis sur <strong>Connections</strong>.</li>
-</ol>
-<h2 id="ajouter-une-nouvelle-connexion">Ajouter une nouvelle connexion<a class="headerlink" href="#ajouter-une-nouvelle-connexion" title="Permanent link">#</a></h2>
-<p>Cliquez sur le bouton + (Add a new record) pour ouvrir le formulaire de création. Remplissez les champs suivants :</p>
-<ul>
-<li><strong>Connection Id</strong> : <code>postgres_default</code> (C'est le nom que vous utiliserez dans votre code Python via le paramètre <code>postgres_conn_id</code>).</li>
-<li><strong>Connection Type</strong> : Sélectionnez <code>Postgres</code>.</li>
-<li><strong>Host</strong> : L'adresse de votre serveur (ex: <code>localhost</code> ou le nom du service docker <code>postgres</code>).</li>
-<li><strong>Schema</strong> : Le nom de votre base de données (ex: <code>my_database</code>).</li>
-<li><strong>Login</strong> : Votre nom d'utilisateur.</li>
-<li><strong>Password</strong> : Votre mot de passe.</li>
-<li><strong>Port</strong> : <code>5432</code>.</li>
-</ul>
-<p><strong>Note</strong> : Si vous utilisez Docker Compose, le "Host" est souvent le nom du service défini dans votre fichier YAML (par exemple <code>postgres</code>).</p>
-<h2 id="utiliser-la-connexion-dans-un-dag">Utiliser la connexion dans un DAG<a class="headerlink" href="#utiliser-la-connexion-dans-un-dag" title="Permanent link">#</a></h2>
-<p>Une fois la connexion enregistrée, vous pouvez l'appeler très simplement dans vos opérateurs. Airflow s'occupe de récupérer les secrets en arrière-plan.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.common.sql.operators.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLExecuteQueryOperator</span> <span class="k">as</span> <span class="n">PostgresOperator</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># ID 'postgres_default'</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">setup_table</span> <span class="o">=</span> <span class="n">PostgresOperator</span><span class="p">(</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">"create_table"</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">postgres_conn_id</span><span class="o">=</span><span class="s2">"postgres_default"</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">sql</span><span class="o">=</span><span class="s2">"CREATE TABLE IF NOT EXISTS my_table (id SERIAL PRIMARY KEY, data TEXT);"</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+                        <p>Dans les scripts Python de débutants, il n'est pas rare de voir des chaînes de connexion codées en dur : <code>psycopg2.connect(user="postgres", password="SecretPassword123", host="192.168.1.50")</code>. </p>
+<p>Cette pratique est une faille de sécurité majeure en entreprise : les mots de passe sont visibles en clair sur GitHub, s'affichent dans les journaux de logs d'Airflow et obligent à modifier le code source dès qu'un mot de passe expire.</p>
+<p>Pour respecter le principe de séparation stricte entre le code et la configuration (<strong>12-Factor App</strong>), Apache Airflow centralise la gestion des accès via son système de <strong>Connexions (Connections)</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart LR
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    subgraph GestionnaireSecrets["Gestionnaire Sécurisé Airflow"]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        UI["Interface Web : Admin &gt; Connections"]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        ENV["Variables d'environnement : AIRFLOW_CONN_*"]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        VAULT["Secret Backends : HashiCorp Vault / AWS Secrets"]
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    end
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    subgraph Chiffrement["Sécurité au Repos"]
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        FERNET["Clé Fernet AES-128&lt;br&gt;&lt;i&gt;AIRFLOW__CORE__FERNET_KEY&lt;/i&gt;"]
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    end
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    subgraph Utilisation["Code Python des Tâches"]
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        HOOK["PostgresHook / SQLExecuteQueryOperator&lt;br&gt;&lt;b&gt;conn_id = 'postgres_production'&lt;/b&gt;"]
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    end
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    GestionnaireSecrets --&gt; Chiffrement
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    Chiffrement --&gt;|Injection transparente| Utilisation
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    style GestionnaireSecrets fill:#f1f5f9,stroke:#64748b
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    style Chiffrement fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#0f172a
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    style Utilisation fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#0f172a
 </code></pre></div>
-<h2 id="pourquoi-utiliser-les-connexions">Pourquoi utiliser les connexions ?<a class="headerlink" href="#pourquoi-utiliser-les-connexions" title="Permanent link">#</a></h2>
-<ol>
-<li><strong>Sécurité</strong> : Vos mots de passe ne sont pas visibles sur GitHub ou dans vos fichiers de logs.</li>
-<li><strong>Portabilité</strong> : Vous pouvez avoir une connexion postgres_default sur votre environnement de test et une autre sur votre environnement de production avec le même code de DAG.</li>
-<li><strong>Maintenance</strong> : Si votre mot de passe change, vous le modifiez à un seul endroit dans l'UI d'Airflow.</li>
-</ol>
 <hr />
-<p><em>Félicitations ! Votre environnement est maintenant prêt à communiquer avec le monde extérieur. Dans le module suivant, nous allons mettre tout cela en pratique en créant notre premier script d'extraction de données depuis une API.</em></p>
+<h2 id="1-creer-une-connexion-via-linterface-web">1. Créer une connexion via l'interface Web<a class="headerlink" href="#1-creer-une-connexion-via-linterface-web" title="Permanent link">#</a></h2>
+<ol>
+<li>Connectez-vous sur l'interface d'Airflow (<a href="http://localhost:8080/">http://localhost:8080/</a>).</li>
+<li>Dans la barre de menus supérieure, cliquez sur <strong>Admin</strong> &gt; <strong>Connections</strong>.</li>
+<li>Cliquez sur le bouton bleu <strong>+ (Add a new record)</strong> pour ouvrir le formulaire de saisie.</li>
+</ol>
+<h3 id="les-champs-essentiels-a-renseigner">Les champs essentiels à renseigner :<a class="headerlink" href="#les-champs-essentiels-a-renseigner" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Connection Id</strong> : Le nom unique utilisé dans votre code Python (par exemple <code>postgres_production</code> ou <code>snowflake_dw</code>).</li>
+<li><strong>Connection Type</strong> : Sélectionnez le type de connecteur (ex. : <code>Postgres</code>, <code>MySQL</code>, <code>Amazon Web Services</code>, <code>Snowflake</code>, <code>HTTP</code>).</li>
+<li><strong>Host</strong> : L'adresse IP ou le nom d'hôte du serveur de base de données.<blockquote>
+<p>[!TIP]
+Si votre base PostgreSQL tourne dans le même réseau Docker Compose qu'Airflow, le champ <em>Host</em> est simplement le nom du service Docker : <code>postgres</code>.</p>
+</blockquote>
+</li>
+<li><strong>Database / Schema</strong> : Le nom de la base de données cible (ex. : <code>entrepot_ventes</code>).</li>
+<li><strong>Login</strong> : L'identifiant de l'utilisateur de base de données.</li>
+<li><strong>Password</strong> : Le mot de passe associé (chiffré automatiquement dans la base de métadonnées).</li>
+<li><strong>Port</strong> : Le port réseau (ex. : <code>5432</code> pour PostgreSQL, <code>3306</code> pour MySQL, <code>1433</code> pour SQL Server).</li>
+<li>
+<p><strong>Extra</strong> : Champ JSON optionnel permettant de transmettre des paramètres avancés (options SSL, tokens d'API, chemins de clés privées).</p>
+</li>
+<li>
+<p>Cliquez sur le bouton <strong>Test</strong> en bas du formulaire : si les identifiants et le réseau sont corrects, un bandeau vert confirme le succès de la connexion.</p>
+</li>
+<li>Cliquez sur <strong>Save</strong>.</li>
+</ul>
+<hr />
+<h2 id="2-declarer-des-connexions-via-des-variables-denvironnement-production-cicd">2. Déclarer des connexions via des variables d'environnement (Production &amp; CI/CD)<a class="headerlink" href="#2-declarer-des-connexions-via-des-variables-denvironnement-production-cicd" title="Permanent link">#</a></h2>
+<p>En environnement de production conteneurisé (Kubernetes, AWS ECS) ou dans vos pipelines d'intégration continue, il est déconseillé de saisir manuellement les connexions dans l'interface graphique.</p>
+<p>Airflow permet de déclarer des connexions sous forme de variables d'environnement au format URI :</p>
+<div class="highlight"><span class="filename">Syntaxe : AIRFLOW_CONN_&lt;ID_EN_MAJUSCULES&gt;</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>AIRFLOW_CONN_POSTGRES_PRODUCTION='postgresql://user_bi:SuperSecretPassword@postgres:5432/entrepot_ventes'
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>AIRFLOW_CONN_AWS_S3='aws://AKIAIOSFODNN7EXAMPLE:wJalrXUtnFEMI%2FK7MDENG%2FbPxRfiCYEXAMPLEKEY@/?region_name=eu-west-3'
+</code></pre></div>
+<p>Airflow détecte instantanément ces variables d'environnement sans nécessiter aucune insertion en base de données !</p>
+<hr />
+<h2 id="3-chiffrement-au-repos-la-cle-fernet">3. Chiffrement au repos : La clé Fernet<a class="headerlink" href="#3-chiffrement-au-repos-la-cle-fernet" title="Permanent link">#</a></h2>
+<p>Les mots de passe saisis dans l'interface web sont automatiquement chiffrés dans la table <code>connection</code> de PostgreSQL grâce à l'algorithme <strong>Fernet (AES-128)</strong>.</p>
+<p>Cette clé de chiffrement est définie dans votre configuration :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AIRFLOW__CORE__FERNET_KEY=votre_cle_secrete_fernet_generee
+</code></pre></div>
+<blockquote>
+<p>[!CAUTION]
+Conservez précieusement votre clé Fernet lors des migrations de serveurs. Si vous perdez cette clé, vous ne pourrez plus déchiffrer aucun mot de passe de vos connexions existantes !</p>
+</blockquote>
+<hr />
+<h2 id="4-utiliser-la-connexion-dans-un-dag">4. Utiliser la connexion dans un DAG<a class="headerlink" href="#4-utiliser-la-connexion-dans-un-dag" title="Permanent link">#</a></h2>
+<p>Une fois la connexion déclarée avec l'identifiant <code>postgres_production</code>, vous pouvez l'exploiter de deux façons :</p>
+<h3 id="approche-1-dans-les-operateurs-natifs">Approche 1 : Dans les Opérateurs natifs<a class="headerlink" href="#approche-1-dans-les-operateurs-natifs" title="Permanent link">#</a></h3>
+<p>L'opérateur SQL officiel se charge d'ouvrir et fermer la session de manière totalement sécurisée :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.common.sql.operators.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SQLExecuteQueryOperator</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">tache_purge</span> <span class="o">=</span> <span class="n">SQLExecuteQueryOperator</span><span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">task_id</span><span class="o">=</span><span class="s2">"purger_table_staging"</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">conn_id</span><span class="o">=</span><span class="s2">"postgres_production"</span><span class="p">,</span>  <span class="c1"># Appel de l'identifiant déclaré</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">sql</span><span class="o">=</span><span class="s2">"TRUNCATE TABLE staging.commandes_du_jour;"</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="approche-2-dans-du-code-python-avec-les-hooks">Approche 2 : Dans du code Python avec les Hooks<a class="headerlink" href="#approche-2-dans-du-code-python-avec-les-hooks" title="Permanent link">#</a></h3>
+<p>Les <strong>Hooks</strong> sont l'interface de programmation bas niveau d'Airflow vers les systèmes externes. Le <code>PostgresHook</code> permet d'exécuter des scripts arbitraires ou de charger des données directement dans des DataFrames <strong>Pandas</strong> :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">airflow.providers.postgres.hooks.postgres</span><span class="w"> </span><span class="kn">import</span> <span class="n">PostgresHook</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">extraire_et_analyser</span><span class="p">():</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="c1"># Instanciation du Hook en fournissant l'ID de connexion</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">hook</span> <span class="o">=</span> <span class="n">PostgresHook</span><span class="p">(</span><span class="n">postgres_conn_id</span><span class="o">=</span><span class="s2">"postgres_production"</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="c1"># 1. Exécution directe d'une requête et conversion en DataFrame Pandas</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">requete</span> <span class="o">=</span> <span class="s2">"SELECT client_id, SUM(montant) AS ca FROM ventes GROUP BY client_id;"</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">get_pandas_df</span><span class="p">(</span><span class="n">requete</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Extraction de </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2"> clients acheteurs."</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="c1"># 2. Récupération d'un moteur SQLAlchemy pour des opérations avancées</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="n">moteur</span> <span class="o">=</span> <span class="n">hook</span><span class="o">.</span><span class="n">get_sqlalchemy_engine</span><span class="p">()</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">"synthese_clients"</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">moteur</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s2">"replace"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="recapitulatif">Récapitulatif<a class="headerlink" href="#recapitulatif" title="Permanent link">#</a></h2>
+<ul>
+<li>Ne codez <strong>jamais</strong> d'identifiants sensibles en clair dans vos fichiers <code>.py</code>.</li>
+<li>Donnez un nom standard et explicite à vos connexions (ex. : <code>postgres_oltp</code>, <code>snowflake_dw</code>).</li>
+<li>Utilisez les <strong>Hooks</strong> pour interfacer facilement le monde Python/Pandas avec vos bases de données d'entreprise.</li>
+</ul>
+<hr />
+<p><em>Vous maîtrisez désormais les composants fondamentaux d'Apache Airflow. Dans la leçon suivante, nous allons mobiliser toutes ces connaissances à travers un atelier pratique complet d'intégration de données !</em></p>
 
                     </section>
 
