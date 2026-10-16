@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="MongoDB est un système de gestion de base de données orienté documents, qui repose sur le format BSON (Binary JSON). C’est une solution NoSQL populaire qui permet de stocker des données de manière flexible et évolutive. Utilisé dans de nombreux projets modernes, MongoDB s’adapte parfaitement aux besoins du Big Data, des applications web, mobiles et du temps réel." />
+      <meta name="description" content="Maîtrisez les opérations fondamentales CRUD dans MongoDB. Apprenez à manipuler les documents BSON avec le shell mongosh, les interfaces graphiques (Compass, DBeaver) et le pilote PyMongo." />
     
 
     <!-- Page author -->
@@ -7756,7 +7756,7 @@
         <li class="drilldown-row ">
           
           <a href="../" class="drilldown-link ">
-            Prise en main de MongoDB - Le guide ultime
+            Prise en main de MongoDB - Le guide complet NoSQL
           </a>
 
           
@@ -7875,7 +7875,7 @@
         <li class="drilldown-row ">
           
           <a href="../../neo4j/" class="drilldown-link ">
-            Prise en main de Neo4j - Le guide ultime
+            Prise en main de Neo4j - La base de données orientée graphe
           </a>
 
           
@@ -7994,7 +7994,71 @@
         <li class="drilldown-row ">
           
           <a href="../../cassandra/" class="drilldown-link ">
-            cqlsh
+            Prise en main d'Apache Cassandra - Le guide NoSQL distribué
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="../../cassandra/installer/" class="drilldown-link ">
+            Installer Cassandra
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="../../cassandra/cql/" class="drilldown-link ">
+            Modélisation & CQL
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="../../cassandra/applications/" class="drilldown-link ">
+            Applications
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="../../cassandra/ressources/" class="drilldown-link ">
+            Ressources
           </a>
 
           
@@ -8005,6 +8069,14 @@
   </div>
 
   
+  
+    
+  
+    
+  
+    
+  
+    
   
     
   
@@ -13204,14 +13276,61 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Interagir avec Mongo DB</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Interagir avec MongoDB - CRUD, mongosh & Python</h1>
                 
             </div>
 
             <!-- Infos Auteur -->
             
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                
+                <img src="https://avatars.githubusercontent.com/joekakone" alt="@joekakone" class="rounded-circle me-3 border border-2 border-primary" style="width: 55px; height: 55px; object-fit: cover;">
+                
+                <div class="text-start">
+                    <p class="mb-0 fw-bold text-dark">
+                        Joseph Konka 
+                        
+                        <a href="https://github.com/joekakone" class="text-primary text-decoration-none small">@joekakone</a>
+                        
+                    </p>
+                    <p class="small text-muted mb-0">
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
+                        <span class="mx-2">·</span> 
+                        <i class="far fa-clock me-1"></i> 15 min
+                    </p>
+                </div>
+            </div>
+            
 
             <!-- Tags -->
+            
+                <div class="tags">
+                    
+                        <a href="/tags/#MongoDB">
+                            <span class="skill-tag text-uppercase">MongoDB</span>
+                        </a>
+                    
+                        <a href="/tags/#mongosh">
+                            <span class="skill-tag text-uppercase">mongosh</span>
+                        </a>
+                    
+                        <a href="/tags/#CRUD">
+                            <span class="skill-tag text-uppercase">CRUD</span>
+                        </a>
+                    
+                        <a href="/tags/#PyMongo">
+                            <span class="skill-tag text-uppercase">PyMongo</span>
+                        </a>
+                    
+                        <a href="/tags/#DBeaver">
+                            <span class="skill-tag text-uppercase">DBeaver</span>
+                        </a>
+                    
+                        <a href="/tags/#Requetes">
+                            <span class="skill-tag text-uppercase">Requetes</span>
+                        </a>
+                    
+                </div>
             
 
             <!-- Description / Overview centrée et justifiée -->
@@ -13219,7 +13338,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        MongoDB est un système de gestion de base de données orienté documents, qui repose sur le format BSON (Binary JSON). C’est une solution NoSQL populaire qui permet de stocker des données de manière flexible et évolutive. Utilisé dans de nombreux projets modernes, MongoDB s’adapte parfaitement aux besoins du Big Data, des applications web, mobiles et du temps réel.
+                        Maîtrisez les opérations fondamentales CRUD dans MongoDB. Apprenez à manipuler les documents BSON avec le shell mongosh, les interfaces graphiques (Compass, DBeaver) et le pilote PyMongo.
                     </p>
                 </div>
             </div>
@@ -13300,13 +13419,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-7805"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3158"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-7805">
+                <div class="collapse " id="collapse-3158">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13459,13 +13578,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-5738"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5660"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-5738">
+                <div class="collapse show" id="collapse-5660">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13567,13 +13686,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-5507"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6371"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-5507">
+                <div class="collapse " id="collapse-6371">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13675,17 +13794,85 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4378"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7000"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-4378">
+                <div class="collapse " id="collapse-7000">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
                         
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../cassandra/installer/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Installer Cassandra
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../cassandra/cql/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Modélisation & CQL
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../cassandra/applications/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Applications
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="../../cassandra/ressources/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ressources
+            </a>
+            
+            
+            
                         
                         
 
@@ -13715,13 +13902,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-6906"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-5638"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-6906">
+                <div class="collapse " id="collapse-5638">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13857,13 +14044,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9210"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2847"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-9210">
+                <div class="collapse " id="collapse-2847">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14084,13 +14271,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-6971"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3577"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-6971">
+                <div class="collapse " id="collapse-3577">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14333,10 +14520,393 @@
 
                         
 
-                        <h2 id="avec-dbeaver">Avec DBeaver<a class="headerlink" href="#avec-dbeaver" title="Permanent link">#</a></h2>
-<h2 id="avec-python">Avec Python<a class="headerlink" href="#avec-python" title="Permanent link">#</a></h2>
+                        <h1 id="interagir-avec-mongodb-crud-mongosh-et-python">Interagir avec MongoDB : CRUD, mongosh et Python<a class="headerlink" href="#interagir-avec-mongodb-crud-mongosh-et-python" title="Permanent link">#</a></h1>
+<p>Une fois votre serveur MongoDB déployé, l'étape suivante consiste à maîtriser les opérations fondamentales de manipulation de données, regroupées sous l'acronyme <strong>CRUD</strong> (<em>Create, Read, Update, Delete</em>).</p>
+<p>Dans ce chapitre, nous allons étudier en détail les instructions du shell interactif <strong><code>mongosh</code></strong>, explorer l'utilisation d'outils graphiques comme <strong>DBeaver</strong> et <strong>MongoDB Compass</strong>, puis concevoir un script d'automatisation en <strong>Python</strong> avec le pilote officiel <strong>PyMongo</strong>.</p>
 <hr />
-<p><em>.</em></p>
+<h2 id="1-commandes-dadministration-de-base-dans-mongosh">1. Commandes d'administration de base dans <code>mongosh</code><a class="headerlink" href="#1-commandes-dadministration-de-base-dans-mongosh" title="Permanent link">#</a></h2>
+<p>Pour débuter, connectez-vous au shell interactif :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>analytics-mongo-1<span class="w"> </span>mongosh<span class="w"> </span>-u<span class="w"> </span>admin<span class="w"> </span>-p<span class="w"> </span>Password123<span class="w"> </span>--authenticationDatabase<span class="w"> </span>admin
+</code></pre></div>
+<h3 id="navigation-et-creation-a-la-volee">Navigation et création à la volée<a class="headerlink" href="#navigation-et-creation-a-la-volee" title="Permanent link">#</a></h3>
+<p>Dans MongoDB, les bases de données et les collections sont créées de manière paresseuse (<em>lazy creation</em>) : elles n'apparaissent physiquement sur le disque que dès l'insertion du tout premier document.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// 1. Lister les bases de données existantes</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">show</span><span class="w"> </span><span class="nx">dbs</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// 2. Basculer sur une nouvelle base (ex: 'catalogue_db')</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">use</span><span class="w"> </span><span class="nx">catalogue_db</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// 3. Vérifier la base active</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nx">db</span><span class="p">.</span><span class="nx">getName</span><span class="p">()</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// 4. Lister les collections de la base active</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nx">show</span><span class="w"> </span><span class="nx">collections</span>
+</code></pre></div>
+<hr />
+<h2 id="2-operations-crud-en-console-mongosh">2. Opérations CRUD en console <code>mongosh</code><a class="headerlink" href="#2-operations-crud-en-console-mongosh" title="Permanent link">#</a></h2>
+<h3 id="c-create-insertion-de-documents">C — CREATE : Insertion de documents<a class="headerlink" href="#c-create-insertion-de-documents" title="Permanent link">#</a></h3>
+<p>MongoDB fournit deux méthodes principales d'insertion : <code>insertOne()</code> et <code>insertMany()</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Insertion d'un document unitaire</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">reference</span><span class="o">:</span><span class="w"> </span><span class="s2">"LAPTOP-01"</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"MacBook Pro 16"</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nx">categorie</span><span class="o">:</span><span class="w"> </span><span class="s2">"Informatique"</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">2499.00</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s2">"laptop"</span><span class="p">,</span><span class="w"> </span><span class="s2">"m3"</span><span class="p">],</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nx">caracteristiques</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nx">ram_go</span><span class="o">:</span><span class="w"> </span><span class="mf">36</span><span class="p">,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nx">stockage_go</span><span class="o">:</span><span class="w"> </span><span class="mf">512</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nx">couleur</span><span class="o">:</span><span class="w"> </span><span class="s2">"Gris Sidéral"</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nx">date_ajout</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">})</span>
+</code></pre></div>
+<p>Sortie retournée par le moteur :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nx">insertedId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">"65f32a10e08b3941a39fbc11"</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</code></pre></div></p>
+<blockquote>
+<p>[!NOTE]
+<strong>Qu'est-ce qu'un <code>ObjectId</code> ?</strong><br />
+Si vous ne spécifiez pas explicitement de champ <code>_id</code>, MongoDB génère un <code>ObjectId</code> unique de <strong>12 octets</strong> encodé en hexadécimal sur 24 caractères :
+- 4 octets : Horodatage de création (timestamp Unix en secondes).
+- 5 octets : Identifiant aléatoire unique de la machine et du processus.
+- 3 octets : Compteur séquentiel auto-incrémenté démarré à une valeur aléatoire.<br />
+Cet identifiant est naturellement ordonné chronologiquement par date de création !</p>
+</blockquote>
+<p>Pour insérer plusieurs documents en une seule requête réseau optimisée :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nx">reference</span><span class="o">:</span><span class="w"> </span><span class="s2">"MOUSE-01"</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"Souris Ergonomique MX Master"</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="nx">categorie</span><span class="o">:</span><span class="w"> </span><span class="s2">"Accessoires"</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">109.90</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"bluetooth"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bureautique"</span><span class="p">]</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="nx">reference</span><span class="o">:</span><span class="w"> </span><span class="s2">"KEYB-01"</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"Clavier Mécanique RGB"</span><span class="p">,</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="nx">categorie</span><span class="o">:</span><span class="w"> </span><span class="s2">"Accessoires"</span><span class="p">,</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">149.00</span><span class="p">,</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"gamer"</span><span class="p">,</span><span class="w"> </span><span class="s2">"usb-c"</span><span class="p">]</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span><span class="nx">reference</span><span class="o">:</span><span class="w"> </span><span class="s2">"SCREEN-01"</span><span class="p">,</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"Écran UltraWide 34 pouces"</span><span class="p">,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="nx">categorie</span><span class="o">:</span><span class="w"> </span><span class="s2">"Informatique"</span><span class="p">,</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">689.00</span><span class="p">,</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">        </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"ecran"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4k"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hdr"</span><span class="p">]</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">])</span>
+</code></pre></div>
+<hr />
+<h3 id="r-read-recherche-filtrage-et-projection">R — READ : Recherche, filtrage et projection<a class="headerlink" href="#r-read-recherche-filtrage-et-projection" title="Permanent link">#</a></h3>
+<p>La méthode fondamentale de recherche est <code>find(filtre, projection)</code>. Appelée sans argument, elle retourne tous les documents de la collection.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Afficher tous les produits</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="operateurs-de-comparaison-courants">Opérateurs de comparaison courants<a class="headerlink" href="#operateurs-de-comparaison-courants" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Opérateur</th>
+<th style="text-align: left;">Signification</th>
+<th style="text-align: left;">Exemple d'utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><code>$eq</code></strong></td>
+<td style="text-align: left;">Égal à</td>
+<td style="text-align: left;"><code>{ categorie: { $eq: "Informatique" } }</code> ou plus simplement <code>{ categorie: "Informatique" }</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>$ne</code></strong></td>
+<td style="text-align: left;">Différent de</td>
+<td style="text-align: left;"><code>{ en_stock: { $ne: false } }</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>$gt</code></strong> / <strong><code>$gte</code></strong></td>
+<td style="text-align: left;">Strictement supérieur / Supérieur ou égal</td>
+<td style="text-align: left;"><code>{ prix: { $gte: 200 } }</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>$lt</code></strong> / <strong><code>$lte</code></strong></td>
+<td style="text-align: left;">Strictement inférieur / Inférieur ou égal</td>
+<td style="text-align: left;"><code>{ prix: { $lt: 1000 } }</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>$in</code></strong></td>
+<td style="text-align: left;">Appartient à une liste</td>
+<td style="text-align: left;"><code>{ categorie: { $in: ["Informatique", "Accessoires"] } }</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><code>$nin</code></strong></td>
+<td style="text-align: left;">N'appartient pas à la liste</td>
+<td style="text-align: left;"><code>{ reference: { $nin: ["KEYB-01"] } }</code></td>
+</tr>
+</tbody>
+</table>
+<p>Exemple : Trouver les produits de la catégorie « Informatique » dont le prix est supérieur ou égal à 500 € :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nx">categorie</span><span class="o">:</span><span class="w"> </span><span class="s2">"Informatique"</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gte</span><span class="o">:</span><span class="w"> </span><span class="mf">500</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">})</span>
+</code></pre></div>
+<h4 id="operateurs-logiques-or-and-nor">Opérateurs logiques (<code>$or</code>, <code>$and</code>, <code>$nor</code>)<a class="headerlink" href="#operateurs-logiques-or-and-nor" title="Permanent link">#</a></h4>
+<p>Rechercher les produits qui sont soit en rupture de stock, soit d'un prix inférieur à 120 € :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nx">$or</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$lt</span><span class="o">:</span><span class="w"> </span><span class="mf">120</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">})</span>
+</code></pre></div>
+<h4 id="requetes-sur-champs-imbriques-et-tableaux">Requêtes sur champs imbriqués et tableaux<a class="headerlink" href="#requetes-sur-champs-imbriques-et-tableaux" title="Permanent link">#</a></h4>
+<p>Grâce à la <strong>Dot Notation</strong> (<code>champs.sous_champ</code>), vous pouvez filtrer directement au cœur des documents hiérarchiques :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// Filtrer sur un sous-document</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"caracteristiques.ram_go"</span><span class="o">:</span><span class="w"> </span><span class="mf">36</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">// Filtrer sur la présence d'un élément dans un tableau</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="s2">"bluetooth"</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">// Filtrer avec plusieurs tags obligatoires ($all)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$all</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"ecran"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4k"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<h4 id="projections-selection-des-colonnes">Projections (Sélection des colonnes)<a class="headerlink" href="#projections-selection-des-colonnes" title="Permanent link">#</a></h4>
+<p>Le second argument de <code>find()</code> permet d'inclure (<code>1</code>) ou d'exclure (<code>0</code>) des champs du résultat final pour alléger le transit réseau :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Renvoyer uniquement le nom et le prix (en masquant l'identifiant _id)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">)</span>
+</code></pre></div>
+<h4 id="tri-saut-et-pagination">Tri, Saut et Pagination<a class="headerlink" href="#tri-saut-et-pagination" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// Trier par prix décroissant (-1) et ne conserver que les 2 plus chers</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="w"> </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"> </span><span class="p">}).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1">// Pagination : ignorer les 2 premiers et prendre les 2 suivants</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="w"> </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}).</span><span class="nx">skip</span><span class="p">(</span><span class="mf">2</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="u-update-modification-ciblee">U — UPDATE : Modification ciblée<a class="headerlink" href="#u-update-modification-ciblee" title="Permanent link">#</a></h3>
+<blockquote>
+<p>[!WARNING]
+Dans MongoDB, l'utilisation d'opérateurs de mise à jour atomiques (comme <code>$set</code>) est <strong>obligatoire</strong>. Si vous omettez <code>$set</code> et écrivez <code>db.produits.updateOne({ ref: "X" }, { prix: 50 })</code>, le document entier sera écrasé et remplacé par l'unique champ <code>{ prix: 50 }</code>, perdant ainsi toutes ses autres propriétés !</p>
+</blockquote>
+<h4 id="operateurs-de-modification-atomiques">Opérateurs de modification atomiques<a class="headerlink" href="#operateurs-de-modification-atomiques" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opérateur</th>
+<th style="text-align: left;">Action effectuée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>$set</code></strong></td>
+<td style="text-align: left;">Modifie la valeur d'un ou plusieurs champs (ou les crée s'ils n'existent pas).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>$unset</code></strong></td>
+<td style="text-align: left;">Supprime un champ spécifique du document.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>$inc</code></strong></td>
+<td style="text-align: left;">Incrémente ou décrémente une valeur numérique (ex: stock, vues).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>$push</code></strong></td>
+<td style="text-align: left;">Ajoute un élément à la fin d'un tableau existant.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>$pull</code></strong></td>
+<td style="text-align: left;">Retire tous les éléments correspondant à une condition d'un tableau.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>$addToSet</code></strong></td>
+<td style="text-align: left;">Ajoute un élément dans un tableau uniquement s'il n'y figure pas déjà (garantit l'unicité).</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple : Mettre à jour le prix et réapprovisionner le stock :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">updateOne</span><span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">reference</span><span class="o">:</span><span class="w"> </span><span class="s2">"KEYB-01"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="nx">$set</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">139.90</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">        </span><span class="nx">$push</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="s2">"promo"</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">)</span>
+</code></pre></div>
+<p>Mise à jour multiple de masse :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// Appliquer une augmentation de 5 € sur tous les accessoires</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">updateMany</span><span class="p">(</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">categorie</span><span class="o">:</span><span class="w"> </span><span class="s2">"Accessoires"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">$inc</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prix</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="d-delete-suppression-de-documents">D — DELETE : Suppression de documents<a class="headerlink" href="#d-delete-suppression-de-documents" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// Supprimer un seul document correspondant au critère</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">deleteOne</span><span class="p">({</span><span class="w"> </span><span class="nx">reference</span><span class="o">:</span><span class="w"> </span><span class="s2">"MOUSE-01"</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1">// Supprimer tous les articles en rupture de stock</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">deleteMany</span><span class="p">({</span><span class="w"> </span><span class="nx">en_stock</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1">// Supprimer l'intégralité des documents d'une collection</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">deleteMany</span><span class="p">({})</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1">// Supprimer complètement la collection elle-même</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="nx">db</span><span class="p">.</span><span class="nx">produits</span><span class="p">.</span><span class="nx">drop</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="3-interagir-via-des-outils-graphiques">3. Interagir via des outils graphiques<a class="headerlink" href="#3-interagir-via-des-outils-graphiques" title="Permanent link">#</a></h2>
+<h3 id="mongodb-compass-recommande">MongoDB Compass (Recommandé)<a class="headerlink" href="#mongodb-compass-recommande" title="Permanent link">#</a></h3>
+<p>Téléchargeable gratuitement sur le site officiel, <strong>MongoDB Compass</strong> offre :
+- Un explorateur visuel d'arborescences de documents.
+- L'outil <strong>Schema Tab</strong> : analyse automatique de la structure de vos collections, avec détection des pourcentages de types et graphiques de distribution des valeurs numériques.
+- Un éditeur d'agrégations interactif permettant de visualiser le résultat étape par étape (<em>Pipeline Builder</em>).
+- La génération automatique du code de votre requête vers Python, Node.js, Java ou C#.</p>
+<h3 id="dbeaver">DBeaver<a class="headerlink" href="#dbeaver" title="Permanent link">#</a></h3>
+<p>Si vous utilisez déjà <strong>DBeaver</strong> pour vos bases SQL :
+1. Créez une nouvelle connexion en choisissant le pilote <strong>MongoDB</strong>.
+2. Renseignez l'hôte (<code>localhost</code>), le port (<code>27017</code>), l'utilisateur (<code>admin</code>), le mot de passe (<code>Password123</code>) et la base d'authentification (<code>admin</code>).
+3. DBeaver permet d'exécuter des requêtes au format JSON directement dans son éditeur SQL.</p>
+<hr />
+<h2 id="4-interagir-en-python-avec-pymongo">4. Interagir en Python avec <code>pymongo</code><a class="headerlink" href="#4-interagir-en-python-avec-pymongo" title="Permanent link">#</a></h2>
+<p>Le pilote officiel de référence pour Python est <strong>PyMongo</strong>. Il traduit automatiquement les dictionnaires Python en BSON et inversement.</p>
+<h3 id="installation-de-la-bibliotheque">Installation de la bibliothèque<a class="headerlink" href="#installation-de-la-bibliotheque" title="Permanent link">#</a></h3>
+<p>Dans votre environnement virtuel Python :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pymongo
+</code></pre></div>
+<h3 id="script-complet-de-manipulation-des-donnees">Script complet de manipulation des données<a class="headerlink" href="#script-complet-de-manipulation-des-donnees" title="Permanent link">#</a></h3>
+<p>Créez un fichier <code>demo_mongodb.py</code> :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="sd">"""</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="sd">Exemple complet d'opérations CRUD sur MongoDB avec PyMongo.</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="sd">Auteur : Joseph Konka (AlgoJungle)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="sd">"""</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pymongo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MongoClient</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pymongo.errors</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConnectionFailure</span><span class="p">,</span> <span class="n">PyMongoError</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="c1"># Chaîne de connexion standardisée avec base d'authentification</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">URI_MONGODB</span> <span class="o">=</span> <span class="s2">"mongodb://admin:Password123@localhost:27017/?authSource=admin"</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>        <span class="c1"># 1. Établissement de la connexion cliente</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"⏳ Connexion au serveur MongoDB..."</span><span class="p">)</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>        <span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">URI_MONGODB</span><span class="p">,</span> <span class="n">serverSelectionTimeoutMS</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>        <span class="c1"># Vérification immédiate de la communication (Ping)</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>        <span class="n">client</span><span class="o">.</span><span class="n">admin</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s2">"ping"</span><span class="p">)</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Connexion réussie à MongoDB !"</span><span class="p">)</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>        <span class="c1"># 2. Sélection de la base et de la collection</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>        <span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="p">[</span><span class="s2">"formation_db"</span><span class="p">]</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>        <span class="n">collection_etudiants</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s2">"etudiants"</span><span class="p">]</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>        <span class="c1"># Nettoyage initial pour assurer la reproductibilité du test</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>        <span class="n">collection_etudiants</span><span class="o">.</span><span class="n">delete_many</span><span class="p">({})</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>        <span class="c1"># 3. CREATE : Insertion de documents</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>        <span class="n">etudiants</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>            <span class="p">{</span>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>                <span class="s2">"matricule"</span><span class="p">:</span> <span class="s2">"ETU-001"</span><span class="p">,</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>                <span class="s2">"nom"</span><span class="p">:</span> <span class="s2">"Alice Martin"</span><span class="p">,</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>                <span class="s2">"filiere"</span><span class="p">:</span> <span class="s2">"Data Science"</span><span class="p">,</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>                <span class="s2">"notes"</span><span class="p">:</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mf">14.5</span><span class="p">],</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>                <span class="s2">"inscription"</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>            <span class="p">},</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>            <span class="p">{</span>
+<a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>                <span class="s2">"matricule"</span><span class="p">:</span> <span class="s2">"ETU-002"</span><span class="p">,</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>                <span class="s2">"nom"</span><span class="p">:</span> <span class="s2">"Bob Durand"</span><span class="p">,</span>
+<a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>                <span class="s2">"filiere"</span><span class="p">:</span> <span class="s2">"Cybersécurité"</span><span class="p">,</span>
+<a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>                <span class="s2">"notes"</span><span class="p">:</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mf">13.5</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+<a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a>                <span class="s2">"inscription"</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+<a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>            <span class="p">},</span>
+<a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a>            <span class="p">{</span>
+<a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a>                <span class="s2">"matricule"</span><span class="p">:</span> <span class="s2">"ETU-003"</span><span class="p">,</span>
+<a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a>                <span class="s2">"nom"</span><span class="p">:</span> <span class="s2">"Claire Dubois"</span><span class="p">,</span>
+<a id="__codelineno-15-50" name="__codelineno-15-50" href="#__codelineno-15-50"></a>                <span class="s2">"filiere"</span><span class="p">:</span> <span class="s2">"Data Science"</span><span class="p">,</span>
+<a id="__codelineno-15-51" name="__codelineno-15-51" href="#__codelineno-15-51"></a>                <span class="s2">"notes"</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mf">17.5</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>
+<a id="__codelineno-15-52" name="__codelineno-15-52" href="#__codelineno-15-52"></a>                <span class="s2">"inscription"</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+<a id="__codelineno-15-53" name="__codelineno-15-53" href="#__codelineno-15-53"></a>            <span class="p">},</span>
+<a id="__codelineno-15-54" name="__codelineno-15-54" href="#__codelineno-15-54"></a>        <span class="p">]</span>
+<a id="__codelineno-15-55" name="__codelineno-15-55" href="#__codelineno-15-55"></a>
+<a id="__codelineno-15-56" name="__codelineno-15-56" href="#__codelineno-15-56"></a>        <span class="n">resultat_insertion</span> <span class="o">=</span> <span class="n">collection_etudiants</span><span class="o">.</span><span class="n">insert_many</span><span class="p">(</span><span class="n">etudiants</span><span class="p">)</span>
+<a id="__codelineno-15-57" name="__codelineno-15-57" href="#__codelineno-15-57"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"📥 </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">resultat_insertion</span><span class="o">.</span><span class="n">inserted_ids</span><span class="p">)</span><span class="si">}</span><span class="s2"> étudiants insérés."</span><span class="p">)</span>
+<a id="__codelineno-15-58" name="__codelineno-15-58" href="#__codelineno-15-58"></a>
+<a id="__codelineno-15-59" name="__codelineno-15-59" href="#__codelineno-15-59"></a>        <span class="c1"># 4. READ : Recherche avec filtre et projection</span>
+<a id="__codelineno-15-60" name="__codelineno-15-60" href="#__codelineno-15-60"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">🔍 Étudiants inscrits en Data Science :"</span><span class="p">)</span>
+<a id="__codelineno-15-61" name="__codelineno-15-61" href="#__codelineno-15-61"></a>        <span class="n">curseur</span> <span class="o">=</span> <span class="n">collection_etudiants</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+<a id="__codelineno-15-62" name="__codelineno-15-62" href="#__codelineno-15-62"></a>            <span class="p">{</span><span class="s2">"filiere"</span><span class="p">:</span> <span class="s2">"Data Science"</span><span class="p">},</span>
+<a id="__codelineno-15-63" name="__codelineno-15-63" href="#__codelineno-15-63"></a>            <span class="p">{</span><span class="s2">"nom"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"matricule"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"notes"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"_id"</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<a id="__codelineno-15-64" name="__codelineno-15-64" href="#__codelineno-15-64"></a>        <span class="p">)</span>
+<a id="__codelineno-15-65" name="__codelineno-15-65" href="#__codelineno-15-65"></a>
+<a id="__codelineno-15-66" name="__codelineno-15-66" href="#__codelineno-15-66"></a>        <span class="k">for</span> <span class="n">etu</span> <span class="ow">in</span> <span class="n">curseur</span><span class="p">:</span>
+<a id="__codelineno-15-67" name="__codelineno-15-67" href="#__codelineno-15-67"></a>            <span class="n">moyenne</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">etu</span><span class="p">[</span><span class="s2">"notes"</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">etu</span><span class="p">[</span><span class="s2">"notes"</span><span class="p">])</span>
+<a id="__codelineno-15-68" name="__codelineno-15-68" href="#__codelineno-15-68"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  - </span><span class="si">{</span><span class="n">etu</span><span class="p">[</span><span class="s1">'nom'</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">etu</span><span class="p">[</span><span class="s1">'matricule'</span><span class="p">]</span><span class="si">}</span><span class="s2">) | Moyenne: </span><span class="si">{</span><span class="n">moyenne</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">/20"</span><span class="p">)</span>
+<a id="__codelineno-15-69" name="__codelineno-15-69" href="#__codelineno-15-69"></a>
+<a id="__codelineno-15-70" name="__codelineno-15-70" href="#__codelineno-15-70"></a>        <span class="c1"># 5. UPDATE : Ajout d'une nouvelle note avec $push</span>
+<a id="__codelineno-15-71" name="__codelineno-15-71" href="#__codelineno-15-71"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">✏️ Ajout d'une note de 20/20 à Alice Martin..."</span><span class="p">)</span>
+<a id="__codelineno-15-72" name="__codelineno-15-72" href="#__codelineno-15-72"></a>        <span class="n">collection_etudiants</span><span class="o">.</span><span class="n">update_one</span><span class="p">(</span>
+<a id="__codelineno-15-73" name="__codelineno-15-73" href="#__codelineno-15-73"></a>            <span class="p">{</span><span class="s2">"matricule"</span><span class="p">:</span> <span class="s2">"ETU-001"</span><span class="p">},</span>
+<a id="__codelineno-15-74" name="__codelineno-15-74" href="#__codelineno-15-74"></a>            <span class="p">{</span><span class="s2">"$push"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"notes"</span><span class="p">:</span> <span class="mi">20</span><span class="p">}}</span>
+<a id="__codelineno-15-75" name="__codelineno-15-75" href="#__codelineno-15-75"></a>        <span class="p">)</span>
+<a id="__codelineno-15-76" name="__codelineno-15-76" href="#__codelineno-15-76"></a>
+<a id="__codelineno-15-77" name="__codelineno-15-77" href="#__codelineno-15-77"></a>        <span class="c1"># Vérification après mise à jour</span>
+<a id="__codelineno-15-78" name="__codelineno-15-78" href="#__codelineno-15-78"></a>        <span class="n">alice</span> <span class="o">=</span> <span class="n">collection_etudiants</span><span class="o">.</span><span class="n">find_one</span><span class="p">({</span><span class="s2">"matricule"</span><span class="p">:</span> <span class="s2">"ETU-001"</span><span class="p">})</span>
+<a id="__codelineno-15-79" name="__codelineno-15-79" href="#__codelineno-15-79"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Notes actualisées d'Alice : </span><span class="si">{</span><span class="n">alice</span><span class="p">[</span><span class="s1">'notes'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-15-80" name="__codelineno-15-80" href="#__codelineno-15-80"></a>
+<a id="__codelineno-15-81" name="__codelineno-15-81" href="#__codelineno-15-81"></a>        <span class="c1"># 6. DELETE : Suppression d'un enregistrement</span>
+<a id="__codelineno-15-82" name="__codelineno-15-82" href="#__codelineno-15-82"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">🗑️ Radiation de l'étudiant ETU-002..."</span><span class="p">)</span>
+<a id="__codelineno-15-83" name="__codelineno-15-83" href="#__codelineno-15-83"></a>        <span class="n">collection_etudiants</span><span class="o">.</span><span class="n">delete_one</span><span class="p">({</span><span class="s2">"matricule"</span><span class="p">:</span> <span class="s2">"ETU-002"</span><span class="p">})</span>
+<a id="__codelineno-15-84" name="__codelineno-15-84" href="#__codelineno-15-84"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Nombre total d'étudiants restants : </span><span class="si">{</span><span class="n">collection_etudiants</span><span class="o">.</span><span class="n">count_documents</span><span class="p">({})</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-15-85" name="__codelineno-15-85" href="#__codelineno-15-85"></a>
+<a id="__codelineno-15-86" name="__codelineno-15-86" href="#__codelineno-15-86"></a>    <span class="k">except</span> <span class="n">ConnectionFailure</span><span class="p">:</span>
+<a id="__codelineno-15-87" name="__codelineno-15-87" href="#__codelineno-15-87"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"❌ Impossible de joindre le serveur MongoDB. Le conteneur Docker est-il allumé ?"</span><span class="p">)</span>
+<a id="__codelineno-15-88" name="__codelineno-15-88" href="#__codelineno-15-88"></a>    <span class="k">except</span> <span class="n">PyMongoError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<a id="__codelineno-15-89" name="__codelineno-15-89" href="#__codelineno-15-89"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"❌ Erreur MongoDB : </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-15-90" name="__codelineno-15-90" href="#__codelineno-15-90"></a>    <span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-15-91" name="__codelineno-15-91" href="#__codelineno-15-91"></a>        <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-15-92" name="__codelineno-15-92" href="#__codelineno-15-92"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">🔒 Connexion cliente fermée proprement."</span><span class="p">)</span>
+<a id="__codelineno-15-93" name="__codelineno-15-93" href="#__codelineno-15-93"></a>
+<a id="__codelineno-15-94" name="__codelineno-15-94" href="#__codelineno-15-94"></a>
+<a id="__codelineno-15-95" name="__codelineno-15-95" href="#__codelineno-15-95"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<a id="__codelineno-15-96" name="__codelineno-15-96" href="#__codelineno-15-96"></a>    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="execution-du-script">Exécution du script<a class="headerlink" href="#execution-du-script" title="Permanent link">#</a></h3>
+<p>Lancez le script depuis votre terminal :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>python<span class="w"> </span>demo_mongodb.py
+</code></pre></div>
+<p>Résultat obtenu dans le terminal :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>⏳ Connexion au serveur MongoDB...
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>✅ Connexion réussie à MongoDB !
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>📥 3 étudiants insérés.
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>🔍 Étudiants inscrits en Data Science :
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>  - Alice Martin (ETU-001) | Moyenne: 16.17/20
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>  - Claire Dubois (ETU-003) | Moyenne: 18.17/20
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>✏️ Ajout d'une note de 20/20 à Alice Martin...
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>  Notes actualisées d'Alice : [16, 18, 14.5, 20]
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>🗑️ Radiation de l'étudiant ETU-002...
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>  Nombre total d'étudiants restants : 2
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>🔒 Connexion cliente fermée proprement.
+</code></pre></div></p>
+<hr />
+<p>Vous maîtrisez à présent l'ensemble du cycle CRUD sur MongoDB. Dans le chapitre suivant, nous allons nous attaquer à un cas d'application d'entreprise complet mobilisant le puissant <strong>Pipeline d'Agrégation</strong> pour l'analyse de données massives !</p>
 
                     </section>
 

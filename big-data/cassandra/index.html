@@ -11,7 +11,7 @@
 
     <!-- Page description -->
     
-      <meta name="description" content="ATTENTION: All commands will be saved to history file: /root/.cassandra/cqlsh_history This may include sensitive information such as passwords. To disable history, use --disable-history or set 'disabled = true' in the [history] section of cqlshrc. See https://cassandra.apache.org/doc/latest/tools..." />
+      <meta name="description" content="Découvrez Apache Cassandra, la base de données NoSQL distribuée sans maître (Masterless) conçue pour la haute disponibilité, l'évolutivité linéaire et l'ingestion massive de données sans point de défaillance unique (SPOF)." />
     
 
     <!-- Page author -->
@@ -31,7 +31,7 @@
 
     <!-- Next page -->
     
-      <link rel="next" href="../apache-spark/" />
+      <link rel="next" href="installer/" />
     
 
     <!-- Favicon -->
@@ -42,7 +42,7 @@
   
 
   <title>
-    cqlsh | Algo Jungle
+    Prise en main d'Apache Cassandra - Le guide NoSQL distribué | Algo Jungle
   </title>
 
   <!-- Google Fonts -->
@@ -7756,7 +7756,7 @@
         <li class="drilldown-row ">
           
           <a href="../mongo-db/" class="drilldown-link ">
-            Prise en main de MongoDB - Le guide ultime
+            Prise en main de MongoDB - Le guide complet NoSQL
           </a>
 
           
@@ -7875,7 +7875,7 @@
         <li class="drilldown-row ">
           
           <a href="../neo4j/" class="drilldown-link ">
-            Prise en main de Neo4j - Le guide ultime
+            Prise en main de Neo4j - La base de données orientée graphe
           </a>
 
           
@@ -7994,7 +7994,71 @@
         <li class="drilldown-row is-active">
           
           <a href="./" class="drilldown-link active">
-            cqlsh
+            Prise en main d'Apache Cassandra - Le guide NoSQL distribué
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="installer/" class="drilldown-link ">
+            Installer Cassandra
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="cql/" class="drilldown-link ">
+            Modélisation & CQL
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="applications/" class="drilldown-link ">
+            Applications
+          </a>
+
+          
+          
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="drilldown-row ">
+          
+          <a href="ressources/" class="drilldown-link ">
+            Ressources
           </a>
 
           
@@ -8005,6 +8069,14 @@
   </div>
 
   
+  
+    
+  
+    
+  
+    
+  
+    
   
     
   
@@ -13204,7 +13276,7 @@
             
             <div class="pt-5 mt-5">
                 
-                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">cqlsh</h1>
+                    <h1 class="text-uppercase fw-bold mb-4 display-5" style="color: #333;">Prise en main d'Apache Cassandra - Le guide NoSQL distribué</h1>
                 
             </div>
 
@@ -13222,9 +13294,9 @@
                         
                     </p>
                     <p class="small text-muted mb-0">
-                        <i class="far fa-calendar-alt me-1"></i> 20/09/2026 
+                        <i class="far fa-calendar-alt me-1"></i> 03/03/2026 
                         <span class="mx-2">·</span> 
-                        <i class="far fa-clock me-1"></i> 1 min
+                        <i class="far fa-clock me-1"></i> 12 min
                     </p>
                 </div>
             </div>
@@ -13234,16 +13306,24 @@
             
                 <div class="tags">
                     
-                        <a href="/tags/#fondamentaux">
-                            <span class="skill-tag text-uppercase">fondamentaux</span>
+                        <a href="/tags/#Cassandra">
+                            <span class="skill-tag text-uppercase">Cassandra</span>
                         </a>
                     
-                        <a href="/tags/#big-data">
-                            <span class="skill-tag text-uppercase">big-data</span>
+                        <a href="/tags/#NoSQL">
+                            <span class="skill-tag text-uppercase">NoSQL</span>
                         </a>
                     
-                        <a href="/tags/#cassandra">
-                            <span class="skill-tag text-uppercase">cassandra</span>
+                        <a href="/tags/#BigData">
+                            <span class="skill-tag text-uppercase">BigData</span>
+                        </a>
+                    
+                        <a href="/tags/#Distributed">
+                            <span class="skill-tag text-uppercase">Distributed</span>
+                        </a>
+                    
+                        <a href="/tags/#Masterless">
+                            <span class="skill-tag text-uppercase">Masterless</span>
                         </a>
                     
                 </div>
@@ -13254,7 +13334,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <p class="lead text-muted cust-justify mb-0" style="line-height: 1.6;">
-                        ATTENTION: All commands will be saved to history file: /root/.cassandra/cqlsh_history This may include sensitive information such as passwords. To disable history, use --disable-history or set 'disabled = true' in the [history] section of cqlshrc. See https://cassandra.apache.org/doc/latest/tools...
+                        Découvrez Apache Cassandra, la base de données NoSQL distribuée sans maître (Masterless) conçue pour la haute disponibilité, l'évolutivité linéaire et l'ingestion massive de données sans point de défaillance unique (SPOF).
                     </p>
                 </div>
             </div>
@@ -13335,13 +13415,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-358"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-6044"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-358">
+                <div class="collapse " id="collapse-6044">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13494,13 +13574,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-5214"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3981"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-5214">
+                <div class="collapse " id="collapse-3981">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13602,13 +13682,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-4176"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-582"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-4176">
+                <div class="collapse " id="collapse-582">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13710,17 +13790,85 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger "
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9794"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-294"
                         aria-expanded="true">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse show" id="collapse-9794">
+                <div class="collapse show" id="collapse-294">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
                         
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="installer/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Installer Cassandra
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="cql/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Modélisation & CQL
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="applications/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Applications
+            </a>
+            
+            
+            
+                        
+                        
+                        
+                        
+            
+            
+
+            
+            <!-- LIEN SIMPLE -->
+            <a class="nav-link py-1 text-muted"
+                href="ressources/"
+                style="padding-left: 15px; font-size: 0.95rem;">
+                Ressources
+            </a>
+            
+            
+            
                         
                         
 
@@ -13750,13 +13898,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-1483"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7324"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-1483">
+                <div class="collapse " id="collapse-7324">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -13892,13 +14040,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-9152"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-7178"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-9152">
+                <div class="collapse " id="collapse-7178">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14119,13 +14267,13 @@
 
                     <button
                         class="btn btn-link p-2 text-decoration-none shadow-none collapse-trigger collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-8244"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-8671"
                         aria-expanded="false">
                         <i class="fas fa-chevron-right chevron-icon"></i>
                     </button>
                 </div>
 
-                <div class="collapse " id="collapse-8244">
+                <div class="collapse " id="collapse-8671">
                     <nav class="nav flex-column ms-2 mt-1">
 
                         
@@ -14360,7 +14508,7 @@
 
                     
                     <div class="featured-image mb-5">
-                        <img src="https://algojungle.github.io/algojungle-assets/images/11-blog/covers/algo-jungle-blog.webp" class="img-fluid rounded shadow-sm w-100" alt="cqlsh">
+                        <img src="https://algojungle.github.io/algojungle-assets/images/07-big-data/cassandra/covers/cassandra.png" class="img-fluid rounded shadow-sm w-100" alt="Prise en main d'Apache Cassandra - Le guide NoSQL distribué">
                     </div>
                     
 
@@ -14368,51 +14516,128 @@
 
                         
 
-                        <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># cqlsh 
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ATTENTION: All commands will be saved to history file: /root/.cassandra/cqlsh_history
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>This may include sensitive information such as passwords.
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>To disable history, use --disable-history or set 'disabled = true' in the [history] section of cqlshrc.
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>See https://cassandra.apache.org/doc/latest/tools/cqlsh.html for more information.
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Connected to AnalyticsCluster at 127.0.0.1:9042
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>[cqlsh 6.2.0 | Cassandra 5.0.8 | CQL spec 3.4.7 | Native protocol v5]
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Use HELP for help.
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>cqlsh&gt; -- Create a keyspace
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>cqlsh&gt; CREATE KEYSPACE IF NOT EXISTS store WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : '1' };
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>cqlsh&gt; -- Create a table
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>cqlsh&gt; CREATE TABLE IF NOT EXISTS store.shopping_cart (
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>   ... userid text PRIMARY KEY,
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>   ... item_count int,
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>   ... last_update_timestamp timestamp
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>   ... );
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>cqlsh&gt; -- Insert some data
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>cqlsh&gt; INSERT INTO store.shopping_cart
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>   ... (userid, item_count, last_update_timestamp)
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>   ... VALUES ('9876', 2, toTimeStamp(now()));
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>cqlsh&gt; INSERT INTO store.shopping_cart
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>   ... (userid, item_count, last_update_timestamp)
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>   ... VALUES ('1234', 5, toTimeStamp(now()));
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>cqlsh&gt; SELECT * FROM store.shopping_cart;
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a> userid | item_count | last_update_timestamp
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>--------+------------+---------------------------------
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>   1234 |          5 | 2026-06-15 21:20:34.290000+0000
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>   9876 |          2 | 2026-06-15 21:20:32.620000+0000
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>(2 rows)
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>cqlsh&gt;  INSERT INTO store.shopping_cart (userid, item_count) VALUES ('4567', 20);
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>cqlsh&gt; SELECT * FROM store.shopping_cart;
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a> userid | item_count | last_update_timestamp
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>--------+------------+---------------------------------
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>   4567 |         20 |                            null
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>   1234 |          5 | 2026-06-15 21:20:34.290000+0000
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>   9876 |          2 | 2026-06-15 21:20:32.620000+0000
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>(3 rows)
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>cqlsh&gt;
+                        <h1 id="prise-en-main-dapache-cassandra-le-guide-nosql-distribue">Prise en main d'Apache Cassandra : Le guide NoSQL distribué<a class="headerlink" href="#prise-en-main-dapache-cassandra-le-guide-nosql-distribue" title="Permanent link">#</a></h1>
+<p>Dans les architectures Big Data, certains cas d'usage exigent d'ingérer des millions d'écritures par seconde avec un temps de réponse inférieur à la dizaine de millisecondes, sans jamais subir la moindre interruption de service, même en cas de crash simultané de plusieurs serveurs physiques.</p>
+<p>Pour relever ce défi monumental, <strong>Apache Cassandra</strong> s'est imposé comme la référence absolue des bases de données <strong>NoSQL distribuées à colonnes larges</strong> (<em>Wide-Column Store</em>). Utilisé par des géants comme Netflix, Apple, Uber, Discord et Spotify pour gérer des pétaoctets de données critiques sur des milliers de nœuds, Cassandra offre une disponibilité continue sans aucun point de défaillance unique (<em>Zero Single Point of Failure</em>).</p>
+<hr />
+<h2 id="1-genese-origines-dapache-cassandra">1. Genèse &amp; Origines d'Apache Cassandra<a class="headerlink" href="#1-genese-origines-dapache-cassandra" title="Permanent link">#</a></h2>
+<p>Apache Cassandra est né chez <strong>Facebook en 2008</strong>, conçu par Avinash Lakshman (l'un des pères d'Amazon Dynamo) et Prashant Malik pour résoudre le problème de l'indexation et de la recherche en temps réel dans la boîte de messagerie des utilisateurs (<em>Inbox Search</em>).</p>
+<p>Pour concevoir ce moteur d'exception, ses créateurs ont fusionné le meilleur de deux architectures de rupture :
+1. <strong>L'architecture distribuée d'Amazon Dynamo</strong> :
+   - Un modèle entièrement pair-à-pair et sans maître (<strong>Masterless</strong>).
+   - Un anneau de hachage cohérent (<em>Consistent Hashing Ring</em>).
+   - Le protocole de découverte décentralisé <strong>Gossip</strong>.
+   - La gestion de la cohérence ajustable (<em>Tunable Consistency</em>).
+2. <strong>Le modèle de données de Google Bigtable</strong> :
+   - Un modèle de stockage orienté colonnes larges (<em>Wide-Column Store</em>).
+   - Un moteur d'écriture en mémoire et sur disque basé sur les structures <strong>LSM-Tree</strong> (<em>Log-Structured Merge-tree</em> : CommitLog, Memtables et SSTables).</p>
+<p>Donné à la fondation Apache en 2009, Cassandra est devenu un projet <em>Top-Level</em> en 2010 et constitue aujourd'hui l'un des piliers technologiques les plus matures du traitement de données distribuées.</p>
+<hr />
+<h2 id="2-larchitecture-masterless-zero-point-de-defaillance-zero-spof">2. L'architecture « Masterless » : Zéro point de défaillance (Zero SPOF)<a class="headerlink" href="#2-larchitecture-masterless-zero-point-de-defaillance-zero-spof" title="Permanent link">#</a></h2>
+<p>La plupart des systèmes de bases de données traditionnels (relationnels ou NoSQL comme MongoDB) adoptent une topologie Maître/Esclave (<em>Primary/Secondary</em>). Dans ces systèmes, un nœud unique traite les écritures et les réplique aux autres. Si le maître tombe en panne, le système doit organiser une élection complexe, provoquant une coupure temporaire de service.</p>
+<p>Cassandra adopte une philosophie radicalement différente : <strong>l'architecture sans maître (Masterless)</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart TD
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    subgraph Cluster_Cassandra ["Anneau Cassandra (Ring) - Tous les nœuds sont égaux"]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        N1["Nœud 1&lt;br/&gt;Tokens: 0 - 24"] --- N2["Nœud 2&lt;br/&gt;Tokens: 25 - 49"]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        N2 --- N3["Nœud 3&lt;br/&gt;Tokens: 50 - 74"]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        N3 --- N4["Nœud 4&lt;br/&gt;Tokens: 75 - 99"]
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        N4 --- N1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    end
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    Client[Application Cliente] --&gt;|N'importe quelle requête| N2
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    N2 -.-&gt;|Rôle de Coordinateur| N1
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    N2 -.-&gt;|Rôle de Coordinateur| N3
 </code></pre></div>
+<h3 id="principes-cles-de-lanneau">Principes clés de l'anneau :<a class="headerlink" href="#principes-cles-de-lanneau" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>Tous les nœuds sont strictement identiques</strong> : Il n'existe aucun nœud maître, aucun nœud esclave, aucun serveur de configuration central.</li>
+<li><strong>Le rôle de Coordinateur</strong> : Lorsqu'un client envoie une requête (lecture ou écriture) à n'importe quel nœud du cluster, ce nœud devient le <strong>Coordinateur</strong> de la requête. Il calcule quel nœud héberge la donnée grâce à la clé de partition, transmet la requête aux répliques concernées, rassemble les réponses et renvoie le résultat au client.</li>
+<li><strong>Le protocole Gossip</strong> : Toutes les secondes, chaque nœud échange des messages d'état (<em>Gossip Messages</em>) avec quelques voisins choisis aléatoirement. En quelques millisecondes, l'information sur l'état de santé, la topologie et la charge de l'ensemble du cluster se propage de manière épidémique à tous les nœuds sans solliciter de serveur central.</li>
+</ol>
+<hr />
+<h2 id="3-le-theoreme-cap-la-coherence-ajustable-tunable-consistency">3. Le Théorème CAP &amp; La Cohérence Ajustable (<em>Tunable Consistency</em>)<a class="headerlink" href="#3-le-theoreme-cap-la-coherence-ajustable-tunable-consistency" title="Permanent link">#</a></h2>
+<p>D'après le <strong>théorème CAP</strong> d'Eric Brewer, un système distribué ne peut garantir simultanément que deux des trois propriétés suivantes :
+- <strong>C</strong>ohérence (<em>Consistency</em>) : Tous les nœuds voient la même donnée au même instant.
+- <strong>D</strong>isponibilité (<em>Availability</em>) : Chaque requête reçoit une réponse sans erreur.
+- <strong>T</strong>olérance au partitionnement (<em>Partition Tolerance</em>) : Le système continue de fonctionner malgré des pannes réseau entre les nœuds.</p>
+<p>Cassandra est fondamentalement un système <strong>AP</strong> : il privilégie la disponibilité absolue et la tolérance aux coupures réseau. Cependant, sa véritable force réside dans sa <strong>cohérence ajustable (Tunable Consistency)</strong>, que le développeur peut paramétrer pour chaque requête en fonction du besoin métier.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flowchart LR
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    A["Niveaux de Cohérence (Consistency Levels)"] --&gt; B["ONE / TWO / THREE : Ultra-rapide, risque de données périmées"]
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    A --&gt; C["QUORUM / LOCAL_QUORUM : Majorité stricte des répliques"]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    A --&gt; D["ALL : Cohérence absolue, disponibilité compromise si 1 nœud tombe"]
+</code></pre></div>
+<h3 id="la-formule-de-la-coherence-forte-strong-consistency">La formule de la cohérence forte (<em>Strong Consistency</em>)<a class="headerlink" href="#la-formule-de-la-coherence-forte-strong-consistency" title="Permanent link">#</a></h3>
+<p>Pour garantir qu'une lecture renverra toujours la valeur la plus récente écrite dans le cluster, il suffit d'appliquer la règle mathématique du quorum :</p>
+<div class="arithmatex">\[R + W &gt; N\]</div>
+<p>où :
+- <strong><span class="arithmatex">\(N\)</span></strong> = Facteur de réplication (<em>Replication Factor</em>), soit le nombre de copies physiques de la donnée sur le cluster (généralement 3 en production).
+- <strong><span class="arithmatex">\(W\)</span></strong> = Niveau de cohérence en écriture (<em>Write Consistency Level</em>).
+- <strong><span class="arithmatex">\(R\)</span></strong> = Niveau de cohérence en lecture (<em>Read Consistency Level</em>).</p>
+<p><em>Exemple</em> : Avec <span class="arithmatex">\(N = 3\)</span>, si vous écrivez avec <span class="arithmatex">\(W = \text{QUORUM}\)</span> (2 nœuds sur 3 acquittent) et lisez avec <span class="arithmatex">\(R = \text{QUORUM}\)</span> (2 nœuds consultés), alors <span class="arithmatex">\(2 + 2 = 4 &gt; 3\)</span>. L'intersection mathématique garantit qu'au moins un des nœuds lus contient la toute dernière écriture horodatée !</p>
+<hr />
+<h2 id="4-le-modele-oriente-colonnes-larges-wide-column-store">4. Le modèle Orienté Colonnes Larges (<em>Wide-Column Store</em>)<a class="headerlink" href="#4-le-modele-oriente-colonnes-larges-wide-column-store" title="Permanent link">#</a></h2>
+<p>Bien que le langage d'interrogation de Cassandra (<strong>CQL</strong> - <em>Cassandra Query Language</em>) ressemble très fortement au SQL, le modèle de stockage sous-jacent est radicalement différent.</p>
+<h3 id="hierarchie-des-donnees-dans-cassandra">Hiérarchie des données dans Cassandra :<a class="headerlink" href="#hierarchie-des-donnees-dans-cassandra" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>Cluster</strong> : L'ensemble des machines physiques ou virtuelles interconnectées.</li>
+<li><strong>Keyspace</strong> : Le conteneur logique de données (analogue à une base de données en SQL), qui définit la stratégie de réplication et le nombre de copies (<span class="arithmatex">\(N\)</span>).</li>
+<li><strong>Table (Column Family)</strong> : L'ensemble des partitions de données.</li>
+<li><strong>Partition</strong> : L'unité de base de stockage physique. Toutes les lignes partageant la même <strong>Partition Key</strong> sont stockées sur le même nœud et triées ensemble sur disque.</li>
+<li><strong>Ligne (<em>Row</em>) &amp; Colonne (<em>Column</em>)</strong> : Chaque ligne au sein d'une partition peut comporter des colonnes différentes, horodatées individuellement à la microseconde.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>classDiagram
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    class Keyspace {
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        +String nom
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        +ReplicationStrategy strategie
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        +int replication_factor
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    }
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    class Table {
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        +String nom
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        +PrimaryKey cle_primaire
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    }
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    class Partition {
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        +PartitionKey cle_partition
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        +List~Row~ lignes_triees
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    }
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    class Cellule {
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        +String nom_colonne
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        +Value valeur
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        +long timestamp_microsec
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        +int ttl
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    }
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    Keyspace "1" *-- "many" Table
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    Table "1" *-- "many" Partition
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    Partition "1" *-- "many" Cellule
+</code></pre></div>
+<hr />
+<h2 id="5-cas-dusage-dexcellence-quand-leviter">5. Cas d'usage d'excellence &amp; Quand l'éviter<a class="headerlink" href="#5-cas-dusage-dexcellence-quand-leviter" title="Permanent link">#</a></h2>
+<h3 id="pourquoi-choisir-apache-cassandra">Pourquoi choisir Apache Cassandra ?<a class="headerlink" href="#pourquoi-choisir-apache-cassandra" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Ingestion massive et continue de données de capteurs (IoT &amp; Télémesure)</strong> : Débit d'écriture linéaire époustouflant sans verrouillage (<em>No locks, Append-Only writes</em>).</li>
+<li><strong>Séries temporelles (<em>Time-Series</em>) et journaux d'événements</strong> : Stockage chronologique naturel au sein des partitions.</li>
+<li><strong>Messageries instantanées et réseaux sociaux</strong> : Boîtes de réception, notifications et fils d'actualité.</li>
+<li><strong>Déploiements multi-datacenters mondiaux</strong> : Réplication géographique active/active sans latence perceptible pour l'utilisateur local.</li>
+</ul>
+<h3 id="quand-eviter-cassandra">Quand éviter Cassandra ?<a class="headerlink" href="#quand-eviter-cassandra" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Besoins transactionnels financiers multi-tables (ACID stricts)</strong> : Cassandra ne supporte ni les clés étrangères, ni les transactions multi-lignes distribuées complexes.</li>
+<li><strong>Analyses exploratoires ad-hoc avec jointures multiples</strong> : Cassandra interdit les <code>JOIN</code>. Toute requête analytique non anticipée à la modélisation nécessite de balayer tout le cluster ou de dupliquer les tables.</li>
+</ul>
+<hr />
+<h2 id="6-programme-de-la-formation">6. Programme de la formation<a class="headerlink" href="#6-programme-de-la-formation" title="Permanent link">#</a></h2>
+<p>Notre formation est organisée en 4 volets pratiques et progressifs :</p>
+<ol>
+<li><a href="file:///d:/Workspace/training/algojungle-core/docs/big-data/cassandra/installer.md">Installer Apache Cassandra</a> : Déploiement conteneurisé avec Docker Compose, configuration mémoire, ports réseau et découverte des outils CLI <code>cqlsh</code> et <code>nodetool</code>.</li>
+<li><a href="file:///d:/Workspace/training/algojungle-core/docs/big-data/cassandra/cql.md">Modélisation &amp; CQL</a> : Maîtrise de la modélisation <em>Query-First</em>, distinction entre Partition Key et Clustering Key, types collections et requêtage sans antipatterns.</li>
+<li><a href="file:///d:/Workspace/training/algojungle-core/docs/big-data/cassandra/applications.md">Cas Pratique IoT &amp; Télémétrie</a> : Projet complet d'ingestion de flotte automobile connectée avec requêtes temporelles et script d'automatisation Python (<code>cassandra-driver</code>).</li>
+<li><a href="file:///d:/Workspace/training/algojungle-core/docs/big-data/cassandra/ressources.md">Ressources &amp; Architecture avancée</a> : Moteur interne LSM-Tree (CommitLog, Memtable, SSTable, Compaction), certifications officielles et grand quiz technique d'évaluation.</li>
+</ol>
+<hr />
+<blockquote>
+<p>[!TIP]
+Prêt à plonger dans l'univers de la haute scalabilité distribuée ? Rendez-vous dans le chapitre suivant pour installer votre cluster Cassandra local !</p>
+</blockquote>
 
                     </section>
 
@@ -14430,9 +14655,9 @@
                     </div>
                     <div class="col-6 text-end">
                         
-                        <a href="../apache-spark/" class="text-decoration-none">
+                        <a href="installer/" class="text-decoration-none">
                             <span class="d-block small text-muted text-uppercase mb-1">Suivant <i class="fas fa-arrow-right ms-1"></i></span>
-                            <span class="fw-bold text-primary">Prise en main de PySpark - Le guide ultime</span>
+                            <span class="fw-bold text-primary">Installer Cassandra</span>
                         </a>
                         
                     </div>
