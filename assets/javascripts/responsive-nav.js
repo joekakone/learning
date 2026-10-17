@@ -18,10 +18,31 @@
     }
 
     // =========================================================================
+    // 0. Verrouillage absolu du défilement horizontal (anti-décalage)
+    // =========================================================================
+
+    function enforceZeroHorizontalScroll() {
+      if (drilldownContainer && drilldownContainer.scrollLeft !== 0) {
+        drilldownContainer.scrollLeft = 0;
+      }
+      if (mobileDrawer && mobileDrawer.scrollLeft !== 0) {
+        mobileDrawer.scrollLeft = 0;
+      }
+    }
+
+    if (drilldownContainer) {
+      drilldownContainer.addEventListener('scroll', enforceZeroHorizontalScroll, { passive: true });
+    }
+    if (mobileDrawer) {
+      mobileDrawer.addEventListener('scroll', enforceZeroHorizontalScroll, { passive: true });
+    }
+
+    // =========================================================================
     // 1. Gestion de l'Ouverture / Fermeture du Tiroir Mobile
     // =========================================================================
 
     function openMobileDrawer() {
+      enforceZeroHorizontalScroll();
       mobileDrawer.classList.add('is-open');
       if (mobileOverlay) {
         mobileOverlay.classList.add('is-open');
@@ -29,8 +50,9 @@
       document.body.classList.add('mobile-nav-open');
       mobileDrawer.setAttribute('aria-hidden', 'false');
 
-      // Auto-Focus sur la page active à l'ouverture
-      autoFocusActivePage();
+      // Caler le panneau actif et le scroll vertical sans animation parasite
+      setupNavState(true);
+      enforceZeroHorizontalScroll();
     }
 
     function closeMobileDrawer() {
@@ -40,6 +62,7 @@
       }
       document.body.classList.remove('mobile-nav-open');
       mobileDrawer.setAttribute('aria-hidden', 'true');
+      enforceZeroHorizontalScroll();
     }
 
     mobileToggle.addEventListener('click', function (e) {
@@ -93,6 +116,8 @@
           nextPanel.classList.remove('is-ancestor');
           nextPanel.classList.add('is-active');
           nextPanel.scrollTop = 0;
+          nextPanel.scrollLeft = 0;
+          enforceZeroHorizontalScroll();
         }
         return;
       }
@@ -114,20 +139,20 @@
           // Le panneau parent revient depuis la gauche vers le centre (0)
           parentPanel.classList.remove('is-ancestor');
           parentPanel.classList.add('is-active');
+          parentPanel.scrollLeft = 0;
+          enforceZeroHorizontalScroll();
         }
       }
     });
 
 
     // =========================================================================
-    // 3. Gestion Contextuelle de la Page Active (Auto-Focus)
+    // 3. Gestion Contextuelle de la Page Active & Positionnement Initial
     // =========================================================================
 
     function normalizePath(urlPath) {
       if (!urlPath) return '';
-      // Retirer query string et hash
       let clean = urlPath.split('?')[0].split('#')[0];
-      // Normaliser index.html et slashes de fin
       clean = clean.replace(/\/index\.html$/, '/');
       if (clean.length > 1 && clean.endsWith('/')) {
         clean = clean.slice(0, -1);
@@ -135,7 +160,30 @@
       return clean.toLowerCase();
     }
 
-    function autoFocusActivePage() {
+    function scrollToActiveLink(panel, link) {
+      if (!panel || !link) return;
+      
+      // Calcul précis du défilement vertical uniquement, sans impacter l'axe X
+      let offsetTop = 0;
+      let curr = link;
+      while (curr && curr !== panel) {
+        offsetTop += curr.offsetTop;
+        curr = curr.offsetParent;
+      }
+
+      const targetScrollTop = offsetTop - (panel.clientHeight / 2) + (link.clientHeight / 2);
+      panel.scrollTop = Math.max(0, targetScrollTop);
+
+      // Verrouillage de sécurité horizontal
+      panel.scrollLeft = 0;
+      enforceZeroHorizontalScroll();
+    }
+
+    function setupNavState(isImmediate) {
+      if (isImmediate && drilldownContainer) {
+        drilldownContainer.classList.add('no-drilldown-transition');
+      }
+
       const currentPath = normalizePath(window.location.pathname);
       const allLinks = Array.from(mobileDrawer.querySelectorAll('.drilldown-link'));
 
@@ -155,7 +203,7 @@
         }
       }
 
-      // 2. Si pas trouvé par URL, chercher par classe active existante (le plus profond dans l'arborescence)
+      // 2. Si non trouvé par URL, chercher par classe active existante
       if (!activeLink) {
         const activeElements = mobileDrawer.querySelectorAll('.drilldown-link.active');
         if (activeElements.length > 0) {
@@ -163,16 +211,17 @@
         }
       }
 
-      // Réinitialiser tous les panneaux
+      // Réinitialiser l'état actif de tous les panneaux
       const allPanels = Array.from(mobileDrawer.querySelectorAll('.drilldown-panel'));
       allPanels.forEach(panel => {
         panel.classList.remove('is-active', 'is-ancestor');
+        panel.scrollLeft = 0;
       });
 
       const rootPanel = document.getElementById('panel-root');
 
       if (activeLink) {
-        // Mettre en valeur l'élément actif en bleu (#3498db)
+        // Mettre en valeur l'élément actif
         allLinks.forEach(l => l.classList.remove('active'));
         mobileDrawer.querySelectorAll('.drilldown-row').forEach(r => r.classList.remove('is-active'));
 
@@ -187,34 +236,46 @@
 
         if (targetPanel && targetPanel !== rootPanel) {
           // Activer le panneau de la page
+          targetPanel.classList.remove('is-ancestor');
           targetPanel.classList.add('is-active');
 
-          // Remonter toute la chaîne des parents jusqu'au root pour marquer les ancêtres
+          // Marquer tous les ancêtres stricts jusqu'au panneau racine
           let currentParentId = targetPanel.getAttribute('data-parent');
           while (currentParentId) {
             const parentPanel = document.getElementById(currentParentId);
-            if (parentPanel) {
+            if (parentPanel && parentPanel !== targetPanel) {
+              parentPanel.classList.remove('is-active');
               parentPanel.classList.add('is-ancestor');
+              parentPanel.scrollLeft = 0;
               currentParentId = parentPanel.getAttribute('data-parent');
             } else {
               break;
             }
           }
 
-          // Centrer visuellement l'élément actif dans son panneau
-          setTimeout(function () {
-            activeLink.scrollIntoView({ block: 'center', behavior: 'smooth' });
-          }, 150);
-
-          return;
+          scrollToActiveLink(targetPanel, activeLink);
+        } else if (rootPanel) {
+          rootPanel.classList.remove('is-ancestor');
+          rootPanel.classList.add('is-active');
+          scrollToActiveLink(rootPanel, activeLink);
         }
+      } else if (rootPanel) {
+        rootPanel.classList.add('is-active');
+        rootPanel.scrollTop = 0;
+        rootPanel.scrollLeft = 0;
       }
 
-      // Si aucun sous-panneau spécifique n'est actif, afficher le panneau racine
-      if (rootPanel) {
-        rootPanel.classList.add('is-active');
+      enforceZeroHorizontalScroll();
+
+      if (isImmediate && drilldownContainer) {
+        // Forcer le reflow synchrone avant de réactiver les transitions CSS pour les interactions utilisateur
+        void drilldownContainer.offsetHeight;
+        drilldownContainer.classList.remove('no-drilldown-transition');
       }
     }
+
+    // Initialisation immédiate au chargement du DOM (sans attendre l'ouverture)
+    setupNavState(true);
 
   });
 })();

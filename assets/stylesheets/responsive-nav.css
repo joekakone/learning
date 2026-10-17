@@ -96,7 +96,9 @@
   box-shadow: 4px 0 25px rgba(0, 0, 0, 0.18);
   transform: translateX(-100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
 }
 
 .mobile-nav-drawer.is-open {
@@ -112,6 +114,7 @@
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .mobile-nav-brand {
@@ -141,6 +144,7 @@
   color: #64748b;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .mobile-nav-close:hover {
@@ -155,18 +159,22 @@
 .drilldown-container {
   position: relative;
   flex: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
 }
 
 /* Panneau individuel */
 .drilldown-panel {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
   -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
   transition: transform 0.32s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.25s ease;
@@ -175,24 +183,30 @@
   visibility: hidden;
   pointer-events: none;
   z-index: 1;
+  box-sizing: border-box;
 }
 
-/* Panneau actif (actuellement affiché) */
+/* Désactivation des animations pour positionnement initial sans flash */
+.no-drilldown-transition .drilldown-panel {
+  transition: none !important;
+}
+
+/* Panneau actif (actuellement affiché) - priorité absolue */
 .drilldown-panel.is-active {
-  transform: translateX(0);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  z-index: 3;
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
 }
 
-/* Panneau parent / ancêtre (en arrière-plan à gauche) */
-.drilldown-panel.is-ancestor {
-  transform: translateX(-30%);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 2;
+/* Panneau parent / ancêtre (en arrière-plan à gauche) uniquement s'il n'est pas actif */
+.drilldown-panel.is-ancestor:not(.is-active) {
+  transform: translateX(-30%) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
 }
 
 
@@ -210,6 +224,8 @@
   top: 0;
   z-index: 10;
   min-height: 48px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .drilldown-title {
@@ -218,10 +234,12 @@
   color: #0f172a;
   padding: 14px 16px;
   flex: 1;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .drilldown-back-btn {
@@ -239,6 +257,7 @@
   flex-shrink: 0;
   box-shadow: none;
   border-radius: 0;
+  box-sizing: border-box;
 }
 
 .drilldown-back-btn:hover {
@@ -254,14 +273,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .drilldown-row {
   display: flex;
   align-items: center;
+  width: 100%;
   border-bottom: 1px solid #f1f5f9;
   transition: background-color 0.15s ease;
   position: relative;
+  box-sizing: border-box;
 }
 
 .drilldown-row:hover {
@@ -271,6 +294,7 @@
 /* Lien cliquable menant directement à la page */
 .drilldown-link {
   flex: 1;
+  min-width: 0;
   padding: 14px 16px;
   color: #334155;
   text-decoration: none;
@@ -279,6 +303,8 @@
   line-height: 1.4;
   transition: color 0.2s ease, background-color 0.2s ease;
   display: block;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
 .drilldown-link:hover {
@@ -300,6 +326,7 @@
   transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
   flex-shrink: 0;
   border-left: 1px solid #f1f5f9;
+  box-sizing: border-box;
 }
 
 .drilldown-forward-btn:hover {
